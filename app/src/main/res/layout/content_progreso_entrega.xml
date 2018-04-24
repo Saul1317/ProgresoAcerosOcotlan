@@ -5,16 +5,25 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.acerosocotlan.progresoacerosocotlan.ProgresoEntregaActivity"
+    tools:context="com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity"
     tools:showIn="@layout/activity_progreso_entrega">
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <ImageView
+            android:id="@+id/imagen_progress_bar_estatus"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/progressbar_aceros_ocotlan_version_5_4"/>
+            android:scaleType="fitXY"/>
+        <TextView
+            android:id="@+id/fecha_llegada"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:textSize="70dp"
+            android:textStyle="bold"
+            android:layout_gravity="center"/>
     </FrameLayout>
 
 </android.support.constraint.ConstraintLayout>

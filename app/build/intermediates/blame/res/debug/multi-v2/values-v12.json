@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Saul\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v12\\values-v12.xml",
+            "outputFile": "C:\\Users\\Administrador\\StudioProjects\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v12\\values-v12.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Saul\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\5f9f3a23a367f2924f4a416c50a1dc4a\\res\\values-v12\\values-v12.xml",
+                    "source": "C:\\Users\\Administrador\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\c8662472ea2687882c71cd6f661d0c71\\res\\values-v12\\values-v12.xml",
                     "from": {
                         "startLines": "2,5,8,9",
                         "startColumns": "4,4,4,4",

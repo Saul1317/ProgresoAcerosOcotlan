@@ -1,4 +1,4 @@
-#Mon Apr 02 10:02:32 CDT 2018
-base.0=C\:\\Users\\Saul\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\10
+#Mon Apr 23 11:12:41 CDT 2018
+base.0=C\:\\Users\\Administrador\\StudioProjects\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\10
 path.0=classes.dex
 renamed.0=classes.dex

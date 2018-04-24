@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.acerosocotlan.progresoacerosocotlan.Splash">
+    tools:context="com.acerosocotlan.progresoacerosocotlan.Controlador.Splash">
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -33,7 +33,7 @@
             android:id="@+id/cardview_edittext"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="250dp"
+            android:layout_marginTop="230dp"
             android:layout_gravity="center_horizontal">
             <android.support.v7.widget.CardView
                 xmlns:cardview="http://schemas.android.com/apk/res-auto"
@@ -66,10 +66,13 @@
                             android:layout_weight="0.4"
                             android:orientation="vertical">
                             <android.support.design.widget.TextInputEditText
-                                android:id="@+id/text_input_layout_kilometraje"
+                                android:id="@+id/text_id_entrega"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:hint="Introduzca su entrega"
+                                android:inputType="text"
+                                android:textStyle="bold"
+                                android:textSize="18sp"
                                 android:textAlignment="center"
                                 android:theme="@style/edittext_enviar_formulario">
                             </android.support.design.widget.TextInputEditText>
