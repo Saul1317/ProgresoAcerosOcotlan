@@ -69,10 +69,10 @@
                                 android:id="@+id/text_id_entrega"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:hint="Introduzca su entrega"
+                                android:hint="Introduzca su codigo"
                                 android:inputType="text"
                                 android:textStyle="bold"
-                                android:textSize="18sp"
+                                android:textSize="14sp"
                                 android:textAlignment="center"
                                 android:theme="@style/edittext_enviar_formulario">
                             </android.support.design.widget.TextInputEditText>

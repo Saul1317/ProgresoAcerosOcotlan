@@ -12,6 +12,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -28,8 +29,9 @@ import retrofit2.Response;
 
 public class ProgresoEntregaActivity extends AppCompatActivity {
 
+    LinearLayout layout_filtro;
     ImageView imagen_progress_bar;
-    TextView fecha_entregado;
+    TextView fecha_entregado,text_num_pedido, text_hora_entrega;
     //SHARED PREFERENCE
     private SharedPreferences prs;
     String codigo_entrega;
@@ -48,11 +50,16 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
             }
         });
     }
-
     public void Inicializador(){
         imagen_progress_bar = (ImageView) findViewById(R.id.imagen_progress_bar_estatus);
+        layout_filtro = (LinearLayout) findViewById(R.id.linear_layout_filtro);
         fecha_entregado= (TextView) findViewById(R.id.fecha_llegada);
+        text_hora_entrega= (TextView) findViewById(R.id.hora_llegada);
+        text_num_pedido= (TextView) findViewById(R.id.pedido);
+        text_hora_entrega.setVisibility(View.INVISIBLE);
+        text_num_pedido.setVisibility(View.INVISIBLE);
         fecha_entregado.setVisibility(View.INVISIBLE);
+        layout_filtro.setVisibility(View.INVISIBLE);
         prs = getSharedPreferences("usuarioDatos", Context.MODE_PRIVATE);
         codigo_entrega = MetodosSharedPreference.ObtenerCodigoEntregaPref(prs);
     }
@@ -74,48 +81,51 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
     }
     private void ValidarEstatusActualEntrega(List<StatuEntrega> respuesta) {
         String status = respuesta.get(0).getEstatus();
-
         if(status.equals("Programado")){
             imagen_progress_bar.setImageResource(R.drawable.progressbar_aceros_ocotlan_version_5_4);
+            fecha_entregado.setVisibility(View.INVISIBLE);
+            text_hora_entrega.setVisibility(View.INVISIBLE);
+            text_num_pedido.setVisibility(View.INVISIBLE);
+            layout_filtro.setVisibility(View.INVISIBLE);
         }
         else if(status.equals("En Ruta")){
             imagen_progress_bar.setImageResource(R.drawable.progressbar_aceros_ocotlan_version_6_1);
+            fecha_entregado.setVisibility(View.INVISIBLE);
+            text_hora_entrega.setVisibility(View.INVISIBLE);
+            text_num_pedido.setVisibility(View.INVISIBLE);
+            layout_filtro.setVisibility(View.INVISIBLE);
         }
         else if(status.equals("Proximo")){
             imagen_progress_bar.setImageResource(R.drawable.progressbar_aceros_ocotlan_version_6_2);
+            fecha_entregado.setVisibility(View.INVISIBLE);
+            text_hora_entrega.setVisibility(View.INVISIBLE);
+            text_num_pedido.setVisibility(View.INVISIBLE);
+            layout_filtro.setVisibility(View.INVISIBLE);
         }
         else if(status.equals("Descargando")){
             imagen_progress_bar.setImageResource(R.drawable.progressbar_aceros_ocotlan_version_3_completado);
-
+            fecha_entregado.setVisibility(View.INVISIBLE);
+            text_hora_entrega.setVisibility(View.INVISIBLE);
+            text_num_pedido.setVisibility(View.INVISIBLE);
+            layout_filtro.setVisibility(View.INVISIBLE);
         }
         else if(status.equals("Entregado")){
             imagen_progress_bar.setImageResource(R.drawable.progressbar_aceros_ocotlan_version_3_completado);
+            Log.i("ESTATUS","Cancelada "+ "El pedido "+respuesta.get(0).getPedido().toString()+" fue completado");
             fecha_entregado.setVisibility(View.VISIBLE);
-            fecha_entregado.setText(respuesta.get(0).getFLlegadaEntrega().toString());
+            text_hora_entrega.setVisibility(View.VISIBLE);
+            text_num_pedido.setVisibility(View.VISIBLE);
+            layout_filtro.setVisibility(View.VISIBLE);
+            text_num_pedido.setText("El pedido "+respuesta.get(0).getPedido().toString()+" fue completado");
+            fecha_entregado.setText(respuesta.get(0).getfSalidaEntrega().toString()+", ");
+            text_hora_entrega.setText(respuesta.get(0).gethSalidaEntrega().toString());
         }
-        else if(status.equals("Cancelada")){
+        else if(status.equals("Cancelado")){
             imagen_progress_bar.setImageResource(R.drawable.progressbar_aceros_ocotlan_version_3_revision);
+            fecha_entregado.setVisibility(View.INVISIBLE);
+            text_hora_entrega.setVisibility(View.INVISIBLE);
+            text_num_pedido.setVisibility(View.INVISIBLE);
+            layout_filtro.setVisibility(View.INVISIBLE);
         }
     }
-    private void ValidarEstatusActualEntregaPorFechas(List<StatuEntrega> respuesta) {
-        //respuesta.get(0).getEstatus();
-
-        if(respuesta.get(0).getFInicioRuta().isEmpty() && respuesta.get(0).getFInicioRuta().isEmpty()
-                && respuesta.get(0).getFInicioEntrega().isEmpty() && respuesta.get(0).getFLlegadaEntrega().isEmpty()){
-            imagen_progress_bar.setImageResource(R.drawable.progressbar_aceros_ocotlan_version_5_4);
-        }
-        else if(!respuesta.get(0).getFInicioRuta().isEmpty()&& respuesta.get(0).getFInicioRuta().isEmpty()
-                && respuesta.get(0).getFInicioEntrega().isEmpty() && respuesta.get(0).getFLlegadaEntrega().isEmpty()){
-            imagen_progress_bar.setImageResource(R.drawable.progressbar_aceros_ocotlan_version_6_1);
-        }
-        else if(!respuesta.get(0).getFInicioRuta().isEmpty()&&!respuesta.get(0).getFInicioEntrega().isEmpty()
-                && respuesta.get(0).getFLlegadaEntrega().isEmpty()){
-            imagen_progress_bar.setImageResource(R.drawable.progressbar_aceros_ocotlan_version_6_2);
-        }
-        else if(!respuesta.get(0).getFInicioRuta().isEmpty()&&!respuesta.get(0).getFInicioEntrega().isEmpty()
-                && !respuesta.get(0).getFLlegadaEntrega().isEmpty()&&!respuesta.get(0).getFLlegadaEntrega().isEmpty()){
-            imagen_progress_bar.setImageResource(R.drawable.progressbar_aceros_ocotlan_version_3_completado);
-        }
-    }
-
 }

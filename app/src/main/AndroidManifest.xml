@@ -13,7 +13,8 @@
         <activity
             android:name=".Controlador.Splash"
             android:label="@string/app_name"
-            android:theme="@style/pantalla_completa">
+            android:theme="@style/pantalla_completa"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
