@@ -7,7 +7,6 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity"
     tools:showIn="@layout/activity_progreso_entrega">
-
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -15,7 +14,7 @@
             android:id="@+id/imagen_progress_bar_estatus"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/progressbar_aceros_ocotlan_version_3_revision"
+            android:background="#cbf3ff"
             android:scaleType="fitXY"/>
         <LinearLayout
             android:id="@+id/linear_layout_filtro"
@@ -23,7 +22,59 @@
             android:layout_height="match_parent"
             android:background="@color/colorPrimaryDark"
             android:alpha="0.4"
-            android:orientation="horizontal"></LinearLayout>
+            android:visibility="invisible"
+            android:orientation="horizontal">
+        </LinearLayout>
+        <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:cardview="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/cardview__menu_progreso"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="155dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="50dp"
+            android:alpha="0.9"
+            cardview:cardBackgroundColor="@color/colorPrimaryDark"
+            cardview:cardCornerRadius="16dp"
+            cardview:cardElevation="16dp">
+            <LinearLayout
+                android:id="@+id/linear_layout_menu_progreso"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                android:visibility="visible"
+                android:gravity="center"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ocotlan_copia"
+                    android:layout_marginBottom="5dp"
+                    android:layout_gravity="center"/>
+                <Button
+                    android:id="@+id/btn_mostrar_detalles_entrega"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Detalles del pedido"
+                    android:theme="@style/Boton_menu_progreso"/>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Descarga tu factura"
+                    android:theme="@style/Boton_menu_progreso"/>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Ver Ofertas"
+                    android:theme="@style/Boton_menu_progreso"/>
+                <Button
+                    android:id="@+id/btn_nuevo_rastreo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Nuevo rastreo"
+                    android:theme="@style/Boton_menu_progreso"/>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -60,7 +111,5 @@
                     android:layout_gravity="center"/>
             </LinearLayout>
         </LinearLayout>
-
     </FrameLayout>
-
 </android.support.constraint.ConstraintLayout>

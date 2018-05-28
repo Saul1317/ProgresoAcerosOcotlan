@@ -9,4 +9,5 @@
     <color name="divider">#BDBDBD</color>
     <color name="colorFondo">#FAFAFA</color>
     <color name="texto_blanco">#FFFFFF</color>
+    <color name="colorVerde">#4CAF50</color>
 </resources>
