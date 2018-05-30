@@ -39,6 +39,7 @@ public class DetalleEntregaActivity2 extends AppCompatActivity {
     private ImageView imageViewFondoDetallesEntrega;
     private TextView textViewEstatus_detalle;
     private LinearLayout linear_layout_filtro_detalle;
+    String status;
     private SharedPreferences prs;
 
     @Override
@@ -46,7 +47,6 @@ public class DetalleEntregaActivity2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detalle_entrega2);
         inicializador();
-        ValidarEstatusActualEntrega();
         ObtenerDetalleEntrega();
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab_nuevo_codigo);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -79,37 +79,45 @@ public class DetalleEntregaActivity2 extends AppCompatActivity {
         AdapterRecyclerView arv = new AdapterRecyclerView(detalleEntrega_retrofits,R.layout.cardview_detalle_entrega, DetalleEntregaActivity2.this, getApplicationContext());
         detallesRecyclerview.setAdapter(arv);
     }
-    private void ValidarEstatusActualEntrega() {
-        String status = MetodosSharedPreference.ObtenerEstatusEntregaPref(prs);
+    public void RecogerEstatusEntrega(){
+        Call<List<StatuEntrega>> call = NetworkAdapter.getApiService().EstatusEntrega(
+                "statusentrega_"+MetodosSharedPreference.ObtenerCodigoEntregaPref(prs)+"/gao");
+        call.enqueue(new Callback<List<StatuEntrega>>() {
+            @Override
+            public void onResponse(Call<List<StatuEntrega>> call, Response<List<StatuEntrega>> response) {
+                List<StatuEntrega> respuesta = response.body();
+                status = respuesta.get(0).getEstatus();
+                MetodosSharedPreference.GuardarEstatusEntrega(prs,status);
+                ValidarEstatusActualEntrega(respuesta);
+            }
+
+            @Override
+            public void onFailure(Call<List<StatuEntrega>> call, Throwable t) {
+
+            }
+        });
+    }
+    private void ValidarEstatusActualEntrega(List<StatuEntrega> respuesta) {
         if(status.equals("Programado")){
-            imageViewFondoDetallesEntrega.setBackgroundResource(R.drawable.progressbar_aceros_ocotlan_version_5_4);
-            linear_layout_filtro_detalle.setVisibility(View.INVISIBLE);
-            textViewEstatus_detalle.setVisibility(View.INVISIBLE);
+            imageViewFondoDetallesEntrega.setImageResource(R.drawable.progressbar_aceros_ocotlan_version_5_4);
         }
         else if(status.equals("En Ruta")){
-            imageViewFondoDetallesEntrega.setBackgroundResource(R.drawable.proceso1);
-            linear_layout_filtro_detalle.setVisibility(View.INVISIBLE);
-            textViewEstatus_detalle.setVisibility(View.INVISIBLE);
+            imageViewFondoDetallesEntrega.setImageResource(R.drawable.proceso1);
         }
         else if(status.equals("Proximo")){
-            imageViewFondoDetallesEntrega.setBackgroundResource(R.drawable.proceso2);
-            linear_layout_filtro_detalle.setVisibility(View.INVISIBLE);
-            textViewEstatus_detalle.setVisibility(View.INVISIBLE);
+            imageViewFondoDetallesEntrega.setImageResource(R.drawable.proceso2);
+        }
+        else if(status.equals("En sitio")){
+            imageViewFondoDetallesEntrega.setBackgroundResource(R.drawable.proceso3);
         }
         else if(status.equals("Descargando")){
-            imageViewFondoDetallesEntrega.setBackgroundResource(R.drawable.proceso4);
-            linear_layout_filtro_detalle.setVisibility(View.INVISIBLE);
-            textViewEstatus_detalle.setVisibility(View.INVISIBLE);
+            imageViewFondoDetallesEntrega.setImageResource(R.drawable.proceso4);
         }
         else if(status.equals("Entregado")){
-            imageViewFondoDetallesEntrega.setBackgroundResource(R.drawable.proceso5);
-            linear_layout_filtro_detalle.setVisibility(View.VISIBLE);
-            textViewEstatus_detalle.setVisibility(View.VISIBLE);
+            imageViewFondoDetallesEntrega.setImageResource(R.drawable.proceso5);
         }
         else if(status.equals("Cancelado")){
-            imageViewFondoDetallesEntrega.setBackgroundResource(R.drawable.progressbar_aceros_ocotlan_version_3_revision);
-            linear_layout_filtro_detalle.setVisibility(View.INVISIBLE);
-            textViewEstatus_detalle.setVisibility(View.INVISIBLE);
+            imageViewFondoDetallesEntrega.setImageResource(R.drawable.progressbar_aceros_ocotlan_version_3_revision);
         }
     }
     private void inicializador(){
@@ -121,6 +129,7 @@ public class DetalleEntregaActivity2 extends AppCompatActivity {
         //collapsingToolbarLayout = (CollapsingToolbarLayout) findViewById(R.id.toolbar_layout);
         linear_layout_filtro_detalle.setVisibility(View.INVISIBLE);
         textViewEstatus_detalle.setVisibility(View.INVISIBLE);
+        RecogerEstatusEntrega();
 
         //Log.i("CODIGO",MetodosSharedPreference.ObtenerCodigoEntregaPref(prs));
         //Log.i("ESTATUS",MetodosSharedPreference.ObtenerEstatusEntregaPref(prs));

@@ -22,7 +22,6 @@ import com.acerosocotlan.progresoacerosocotlan.R;
 
 public class Splash extends AppCompatActivity {
 
-    private static final long DURATION_TRANSITION = 1000;
     Animation nubesAnimacion, carroAnimacion, textoAnimacion;
     LinearLayout textoLayout;
     FrameLayout nubesLayout, carroLayout;
@@ -30,6 +29,7 @@ public class Splash extends AppCompatActivity {
     private SharedPreferences prs;
     //Transition
     private Transition transition;
+    //36610
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,11 +53,12 @@ public class Splash extends AppCompatActivity {
         Intent intentCodigoIngreso = new Intent(Splash.this,CodigoIngreso.class);
         Intent intentEncuesta = new Intent(Splash.this, EncuestaActivity.class);
         Intent intentProcesoEntrega = new Intent(Splash.this, ProgresoEntregaActivity.class);
+        Intent intentVerOfertaEntrega = new Intent(Splash.this, VerOferta.class);
         if (!TextUtils.isEmpty(MetodosSharedPreference.ObtenerCodigoEntregaPref(prs))){
-            startActivity(intentEncuesta);
-            overridePendingTransition(R.anim.activity_transition_in,R.anim.activity_transition_in);
+            startActivity(intentProcesoEntrega);
         }else{
-            startActivity(intentEncuesta);
+            startActivity(intentCodigoIngreso);
+            overridePendingTransition(R.anim.activity_transition_in,R.anim.activity_transition_in);
         }
         finish();
     }

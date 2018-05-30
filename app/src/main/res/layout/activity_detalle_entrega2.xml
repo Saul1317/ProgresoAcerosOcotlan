@@ -13,7 +13,7 @@
             android:id="@+id/imagen_fondo_detalles_estatus"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/progressbar_aceros_ocotlan_version_3_revision"
+            android:background="#cbf3ff"
             android:scaleType="fitXY"/>
         <LinearLayout
             android:id="@+id/linear_layout_filtro_detalle"

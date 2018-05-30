@@ -10,7 +10,15 @@
         android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_margin="@dimen/fab_margin"
+        app:elevation="10dp"
+        app:srcCompat="@drawable/ic_menu" />
+    <!--<android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_cargar_estatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@drawable/ic_visibility" />
+        app:srcCompat="@drawable/ic_replay" />-->
 </android.support.design.widget.CoordinatorLayout>

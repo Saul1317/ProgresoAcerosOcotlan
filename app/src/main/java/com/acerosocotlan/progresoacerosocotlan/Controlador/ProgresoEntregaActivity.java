@@ -45,7 +45,7 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
     ImageView imagen_progress_bar;
     CardView cardview__menu_progreso;
     TextView fecha_entregado,text_num_pedido, text_hora_entrega;
-    Button btn_mostrar_detalles_entrega, btn_nuevo_rastreo;
+    Button btn_mostrar_detalles_entrega, btn_nuevo_rastreo, btn_ver_ofertas;
 
     //SHARED PREFERENCE
     private SharedPreferences prs;
@@ -63,6 +63,7 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                RecogerEstatusEntrega();
                 if (menu_estatus==false) {
                     cardview__menu_progreso.setVisibility(View.VISIBLE);
                     cardviewAnimacion= AnimationUtils.loadAnimation(ProgresoEntregaActivity.this,R.anim.menu_mostrar);
@@ -87,7 +88,18 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
         btn_nuevo_rastreo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Intent i = new Intent(ProgresoEntregaActivity.this, CodigoIngreso.class);
+                startActivity(i);
+                i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 remover_variables_sharedpreference();
+            }
+        });
+
+        btn_ver_ofertas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(ProgresoEntregaActivity.this, VerOferta.class);
+                startActivity(i);
             }
         });
     }
@@ -100,6 +112,7 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
         text_num_pedido= (TextView) findViewById(R.id.pedido);
         btn_mostrar_detalles_entrega = (Button) findViewById(R.id.btn_mostrar_detalles_entrega);
         btn_nuevo_rastreo = (Button) findViewById(R.id.btn_nuevo_rastreo);
+        btn_ver_ofertas = (Button) findViewById(R.id.btn_ver_ofertas);
         cardview__menu_progreso = (CardView) findViewById(R.id.cardview__menu_progreso);
 
         cardview__menu_progreso.setVisibility(View.INVISIBLE);
@@ -131,7 +144,6 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
         });
     }
     private void ValidarEstatusActualEntrega(List<StatuEntrega> respuesta) {
-
         if(status.equals("Programado")){
             imagen_progress_bar.setImageResource(R.drawable.progressbar_aceros_ocotlan_version_5_4);
             fecha_entregado.setVisibility(View.INVISIBLE);
@@ -148,6 +160,13 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
         }
         else if(status.equals("Proximo")){
             imagen_progress_bar.setImageResource(R.drawable.proceso2);
+            fecha_entregado.setVisibility(View.INVISIBLE);
+            text_hora_entrega.setVisibility(View.INVISIBLE);
+            text_num_pedido.setVisibility(View.INVISIBLE);
+            layout_filtro.setVisibility(View.INVISIBLE);
+        }
+        else if(status.equals("En sitio")){
+            imagen_progress_bar.setImageResource(R.drawable.proceso3);
             fecha_entregado.setVisibility(View.INVISIBLE);
             text_hora_entrega.setVisibility(View.INVISIBLE);
             text_num_pedido.setVisibility(View.INVISIBLE);
@@ -177,12 +196,6 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
             text_num_pedido.setVisibility(View.INVISIBLE);
             layout_filtro.setVisibility(View.INVISIBLE);
         }
-    }
-    private void salir_sesion(){
-        Intent i = new Intent(ProgresoEntregaActivity.this, Splash.class);
-        startActivity(i);
-        i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
-        remover_variables_sharedpreference();
     }
     private void remover_variables_sharedpreference(){
         prs.edit().clear().apply();

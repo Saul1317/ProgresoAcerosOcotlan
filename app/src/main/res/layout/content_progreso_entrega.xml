@@ -63,16 +63,17 @@
                     android:text="Descarga tu factura"
                     android:theme="@style/Boton_menu_progreso"/>
                 <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Ver Ofertas"
-                    android:theme="@style/Boton_menu_progreso"/>
-                <Button
                     android:id="@+id/btn_nuevo_rastreo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Nuevo rastreo"
                     android:theme="@style/Boton_menu_progreso"/>
+                <Button
+                    android:id="@+id/btn_ver_ofertas"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Ver Ofertas"
+                    android:theme="@style/Boton_ver_oferta"/>
             </LinearLayout>
         </android.support.v7.widget.CardView>
         <LinearLayout

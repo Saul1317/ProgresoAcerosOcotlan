@@ -4,6 +4,7 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
         android:allowBackup="true"
@@ -49,7 +50,8 @@
         <activity
             android:name=".Controlador.VerOferta"
             android:label="@string/title_activity_ver_oferta"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:screenOrientation="landscape"
+            android:theme="@style/pantalla_completa"></activity>
     </application>
 
 </manifest>
