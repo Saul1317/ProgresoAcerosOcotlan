@@ -141,13 +141,13 @@ ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\And
 	android:name
 		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:38:13-54
 activity#com.acerosocotlan.progresoacerosocotlan.Controlador.EncuestaActivity
-ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:41:9-45:56
+ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:41:9-45:57
 	android:screenOrientation
 		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:44:13-50
 	android:label
 		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:43:13-60
 	android:theme
-		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:45:13-53
+		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:45:13-54
 	android:name
 		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:42:13-57
 activity#com.acerosocotlan.progresoacerosocotlan.Controlador.EncuestaComentario

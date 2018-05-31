@@ -48,13 +48,6 @@ public class DetalleEntregaActivity2 extends AppCompatActivity {
         setContentView(R.layout.activity_detalle_entrega2);
         inicializador();
         ObtenerDetalleEntrega();
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab_nuevo_codigo);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        });
     }
     private void ObtenerDetalleEntrega(){
         Call<List<DetalleEntrega_retrofit>> call = NetworkAdapter.getApiService().detalleEntrega("detalle_"+MetodosSharedPreference.ObtenerCodigoEntregaPref(prs)+"/gao");

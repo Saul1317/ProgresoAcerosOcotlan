@@ -180,14 +180,18 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
             layout_filtro.setVisibility(View.INVISIBLE);
         }
         else if(status.equals("Entregado")){
-            imagen_progress_bar.setImageResource(R.drawable.proceso5);
+            /*imagen_progress_bar.setImageResource(R.drawable.proceso5);
             fecha_entregado.setVisibility(View.INVISIBLE);
             text_hora_entrega.setVisibility(View.INVISIBLE);
             text_num_pedido.setVisibility(View.INVISIBLE);
             layout_filtro.setVisibility(View.INVISIBLE);
+
             text_num_pedido.setText("El pedido "+respuesta.get(0).getPedido().toString()+" fue entregado");
             fecha_entregado.setText(respuesta.get(0).getfSalidaEntrega().toString()+", ");
-            text_hora_entrega.setText(respuesta.get(0).gethSalidaEntrega().toString());
+            text_hora_entrega.setText(respuesta.get(0).gethSalidaEntrega().toString());*/
+
+            Intent i = new Intent(ProgresoEntregaActivity.this, EncuestaActivity.class);
+            startActivity(i);
         }
         else if(status.equals("Cancelado")){
             imagen_progress_bar.setImageResource(R.drawable.progressbar_aceros_ocotlan_version_3_revision);

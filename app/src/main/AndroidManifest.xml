@@ -42,7 +42,7 @@
             android:name=".Controlador.EncuestaActivity"
             android:label="@string/title_activity_encuesta"
             android:screenOrientation="landscape"
-            android:theme="@style/pantalla_completa" />
+            android:theme="@style/pantalla_completa2" />
         <activity
             android:name=".Controlador.EncuestaComentario"
             android:label="@string/title_activity_encuesta_comentario"
