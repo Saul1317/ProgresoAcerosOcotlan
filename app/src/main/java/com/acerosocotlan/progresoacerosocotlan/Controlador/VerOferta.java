@@ -10,6 +10,7 @@ import android.location.LocationManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
@@ -49,9 +50,9 @@ import static android.Manifest.permission.CALL_PHONE;
 
 public class VerOferta extends AppCompatActivity {
 
-    Animation deslizamientoManoAnimacion;
+    Animation deslizamientoManoAnimacion,touchAnimation;
     RecyclerView ofertasRecyclerView;
-    ImageView imagen_fondo_estatus, deslizamiento_tuto;
+    ImageView imagen_fondo_estatus, deslizamiento_tuto, imagen_touch_mano_ver_ofertas;
     String status;
     LinearLayout linear_layout_filtro_ofertas;
     private SharedPreferences prs;
@@ -62,6 +63,14 @@ public class VerOferta extends AppCompatActivity {
         setContentView(R.layout.activity_ver_oferta);
         Inicializador();
         ObtenerOfertas();
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                imagen_touch_mano_ver_ofertas.setVisibility(View.VISIBLE);
+                imagen_touch_mano_ver_ofertas.setAnimation(touchAnimation);
+                imagen_touch_mano_ver_ofertas.setVisibility(View.INVISIBLE);
+            }
+        },2000);
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab_telefono_llamada);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -126,7 +135,9 @@ public class VerOferta extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<List<VerOfertas_retrofit>> call, Throwable t) {
-
+                Intent intentErrorConexion = new Intent(VerOferta.this, ErrorConexionActivity.class);
+                intentErrorConexion.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(intentErrorConexion);
             }
         });
     }
@@ -139,9 +150,12 @@ public class VerOferta extends AppCompatActivity {
     }
     public void DialogoConfirmacionLlamada(){
         AlertDialog.Builder alert = new AlertDialog.Builder(this);
-        alert.setTitle("Aviso de confirmación");
         alert.setMessage("¿Desea comunicarse con nosotros para más información?");
-        alert.setPositiveButton("Entendido", new DialogInterface.OnClickListener(){
+        alert.setNegativeButton("No", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int whichButton) {
+            }
+        });
+        alert.setPositiveButton("Si", new DialogInterface.OnClickListener(){
             public void onClick(DialogInterface dialog, int whichButton) {
                 if (Build.VERSION.SDK_INT>=Build.VERSION_CODES.M) {
                     if (ActivityCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
@@ -154,11 +168,6 @@ public class VerOferta extends AppCompatActivity {
                 }
             }
         });
-
-        alert.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int whichButton) {
-            }
-        });
         alert.show();
     }
     private void Inicializador(){
@@ -167,6 +176,8 @@ public class VerOferta extends AppCompatActivity {
         imagen_fondo_estatus=(ImageView) findViewById(R.id.imagen_fondo_estatus);
         deslizamiento_tuto=(ImageView) findViewById(R.id.deslizamiento_tuto);
         linear_layout_filtro_ofertas= (LinearLayout) findViewById(R.id.linear_layout_filtro_ofertas);
+        imagen_touch_mano_ver_ofertas=(ImageView) findViewById(R.id.imagen_touch_mano_ver_ofertas);
+        touchAnimation  = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.touchclick2);
         RecogerEstatusEntrega();
     }
 }

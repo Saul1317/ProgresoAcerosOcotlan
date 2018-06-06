@@ -6,19 +6,42 @@
     android:layout_height="match_parent"
     tools:context="com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity">
     <include layout="@layout/content_progreso_entrega" />
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
+    <FrameLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="end"
-        android:layout_margin="@dimen/fab_margin"
-        app:elevation="10dp"
-        app:srcCompat="@drawable/ic_menu" />
-    <!--<android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab_cargar_estatus"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@drawable/ic_replay" />-->
+        android:layout_gravity="end">
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end">
+            <ImageView
+                android:id="@+id/imagen_touch_mano"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:elevation="5dp"
+                android:visibility="invisible"
+                android:src="@drawable/touch2"/>
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/fab_margin"
+                app:elevation="6dp"
+                app:srcCompat="@drawable/ic_menu" />
+        </FrameLayout>
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/imagen_mano_click"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="invisible"
+                android:elevation="10dp"
+                android:src="@drawable/aprovechar"/>
+        </FrameLayout>
+    </FrameLayout>
 </android.support.design.widget.CoordinatorLayout>

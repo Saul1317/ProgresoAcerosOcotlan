@@ -144,14 +144,14 @@ public class EncuestaActivity extends AppCompatActivity {
             }
         });
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab_agregar_comentario);
+        /*FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab_agregar_comentario);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(EncuestaActivity.this, EncuestaComentario.class);
                 startActivity(i);
             }
-        });
+        });*/
     }
     private void EfectoPregunta(int pregunta) {
         switch (pregunta){
@@ -229,6 +229,8 @@ public class EncuestaActivity extends AppCompatActivity {
             @Override
             public void onFailure(Call<List<String>> call, Throwable t) {
                 Log.i("ERROR ENCUESTA", t.getMessage());
+                Intent intentErrorConexion = new Intent(EncuestaActivity.this, ErrorConexionActivity.class);
+                startActivity(intentErrorConexion);
             }
         });
     }

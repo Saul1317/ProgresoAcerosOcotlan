@@ -54,8 +54,10 @@ public class Splash extends AppCompatActivity {
         Intent intentEncuesta = new Intent(Splash.this, EncuestaActivity.class);
         Intent intentProcesoEntrega = new Intent(Splash.this, ProgresoEntregaActivity.class);
         Intent intentVerOfertaEntrega = new Intent(Splash.this, VerOferta.class);
+        Intent intentErrorConexion = new Intent(Splash.this, ErrorConexionActivity.class);
+
         if (!TextUtils.isEmpty(MetodosSharedPreference.ObtenerCodigoEntregaPref(prs))){
-            startActivity(intentEncuesta);
+            startActivity(intentProcesoEntrega);
         }else{
             startActivity(intentCodigoIngreso);
             overridePendingTransition(R.anim.activity_transition_in,R.anim.activity_transition_in);

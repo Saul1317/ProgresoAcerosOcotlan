@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:2:1-57:12
-INJECTED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:2:1-57:12
-INJECTED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:2:1-57:12
-INJECTED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:2:1-57:12
+ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:2:1-65:12
+INJECTED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:2:1-65:12
+INJECTED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:2:1-65:12
+INJECTED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:2:1-65:12
 MERGED from [com.android.support:cardview-v7:26.1.0] C:\Users\Administrador\.gradle\caches\transforms-1\files-1.1\cardview-v7-26.1.0.aar\a8c76fc38ea191672f37d070170163fc\AndroidManifest.xml:17:1-28:12
 MERGED from [com.android.support:design:26.1.0] C:\Users\Administrador\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\1b3a8a698a9befa98fceaeab9f3a404f\AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\Administrador\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\8103d4f4246be01abd96aa3b1778c978\AndroidManifest.xml:17:1-31:12
@@ -19,37 +19,49 @@ MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\Administrad
 MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\Administrador\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\a40ee63e214faefd3c26493c9af860f6\AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support:support-compat:26.1.0] C:\Users\Administrador\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\412bb603040f2e168baaba12b6ff2230\AndroidManifest.xml:17:1-31:12
 MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Administrador\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\96b776d51d4386910a98f865dbe642aa\AndroidManifest.xml:17:1-30:12
-INJECTED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:2:1-57:12
-INJECTED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:2:1-57:12
-INJECTED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:2:1-57:12
+INJECTED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:2:1-65:12
+INJECTED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:2:1-65:12
+INJECTED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:2:1-65:12
 	package
 		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:3:5-54
 		INJECTED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:2:1-57:12
+		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:2:1-65:12
 		INJECTED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:2:1-57:12
+		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:2:1-65:12
 		INJECTED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:2:11-69
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:5:5-79
+	android:name
+		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:5:22-76
 uses-permission#android.permission.INTERNET
-ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:5:5-67
+ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:6:5-67
 	android:name
-		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:5:22-64
+		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:6:22-64
 uses-permission#android.permission.VIBRATE
-ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:6:5-66
+ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:7:5-66
 	android:name
-		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:6:22-63
+		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:7:22-63
 uses-permission#android.permission.CALL_PHONE
-ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:7:5-69
+ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:8:5-69
 	android:name
-		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:7:22-66
+		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:8:22-66
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:9:5-80
+	android:name
+		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:9:22-78
+uses-permission#android.permission.READ_PHONE_STATE
+ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:10:5-74
+	android:name
+		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:10:22-72
 application
-ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:9:5-55:19
+ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:12:5-63:19
 MERGED from [com.android.support:cardview-v7:26.1.0] C:\Users\Administrador\.gradle\caches\transforms-1\files-1.1\cardview-v7-26.1.0.aar\a8c76fc38ea191672f37d070170163fc\AndroidManifest.xml:22:5-26:19
 MERGED from [com.android.support:cardview-v7:26.1.0] C:\Users\Administrador\.gradle\caches\transforms-1\files-1.1\cardview-v7-26.1.0.aar\a8c76fc38ea191672f37d070170163fc\AndroidManifest.xml:22:5-26:19
 MERGED from [com.android.support:design:26.1.0] C:\Users\Administrador\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\1b3a8a698a9befa98fceaeab9f3a404f\AndroidManifest.xml:25:5-29:19
@@ -81,93 +93,103 @@ MERGED from [com.android.support:support-compat:26.1.0] C:\Users\Administrador\.
 MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Administrador\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\96b776d51d4386910a98f865dbe642aa\AndroidManifest.xml:24:5-28:19
 MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Administrador\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\96b776d51d4386910a98f865dbe642aa\AndroidManifest.xml:24:5-28:19
 	android:supportsRtl
-		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:14:9-35
+		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:17:9-35
 	android:label
-		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:12:9-41
+		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:15:9-41
 	android:roundIcon
-		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:13:9-54
+		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:16:9-54
 	android:icon
-		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:11:9-43
+		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:14:9-43
 	android:allowBackup
-		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:10:9-35
+		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:13:9-35
 	android:theme
-		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:15:9-40
+		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:18:9-40
 activity#com.acerosocotlan.progresoacerosocotlan.Controlador.Splash
-ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:16:9-26:20
+ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:19:9-29:20
 	android:screenOrientation
-		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:19:13-49
+		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:22:13-49
 	android:label
-		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:18:13-45
+		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:21:13-45
 	android:theme
-		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:20:13-53
+		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:23:13-53
 	android:name
-		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:17:13-47
+		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:20:13-47
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:21:13-25:29
+ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:24:13-28:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:22:17-69
+ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:25:17-69
 	android:name
-		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:22:25-66
+		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:25:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:24:17-77
+ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:27:17-77
 	android:name
-		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:24:27-74
+		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:27:27-74
 activity#com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity
-ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:27:9-31:56
+ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:30:9-34:57
 	android:screenOrientation
-		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:30:13-50
+		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:33:13-50
 	android:label
-		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:29:13-68
+		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:32:13-68
 	android:theme
-		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:31:13-53
+		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:34:13-54
 	android:name
-		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:28:13-64
+		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:31:13-64
 activity#com.acerosocotlan.progresoacerosocotlan.Controlador.DetalleEntregaActivity2
-ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:32:9-36:56
+ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:35:9-39:56
 	android:screenOrientation
-		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:35:13-50
+		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:38:13-50
 	android:label
-		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:34:13-51
+		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:37:13-51
 	android:theme
-		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:36:13-53
+		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:39:13-53
 	android:name
-		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:33:13-64
+		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:36:13-64
 activity#com.acerosocotlan.progresoacerosocotlan.Controlador.CodigoIngreso
-ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:37:9-40:57
+ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:40:9-43:57
 	android:screenOrientation
-		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:39:13-49
+		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:42:13-49
 	android:theme
-		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:40:13-54
+		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:43:13-54
 	android:name
-		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:38:13-54
+		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:41:13-54
 activity#com.acerosocotlan.progresoacerosocotlan.Controlador.EncuestaActivity
-ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:41:9-45:57
+ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:44:9-48:57
 	android:screenOrientation
-		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:44:13-50
+		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:47:13-50
 	android:label
-		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:43:13-60
+		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:46:13-60
 	android:theme
-		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:45:13-54
+		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:48:13-54
 	android:name
-		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:42:13-57
+		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:45:13-57
 activity#com.acerosocotlan.progresoacerosocotlan.Controlador.EncuestaComentario
-ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:46:9-49:56
+ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:49:9-52:56
 	android:label
-		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:48:13-71
+		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:51:13-71
 	android:theme
-		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:49:13-53
+		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:52:13-53
 	android:name
-		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:47:13-59
+		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:50:13-59
 activity#com.acerosocotlan.progresoacerosocotlan.Controlador.VerOferta
-ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:50:9-54:65
+ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:53:9-57:56
 	android:screenOrientation
-		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:53:13-50
+		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:56:13-50
 	android:label
-		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:52:13-62
+		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:55:13-62
 	android:theme
-		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:54:13-53
+		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:57:13-53
 	android:name
-		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:51:13-50
+		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:54:13-50
+activity#com.acerosocotlan.progresoacerosocotlan.Controlador.ErrorConexionActivity
+ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:58:9-62:65
+	android:screenOrientation
+		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:61:13-50
+	android:label
+		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:60:13-66
+	android:theme
+		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:62:13-53
+	android:name
+		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:59:13-62
 uses-sdk
 INJECTED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml

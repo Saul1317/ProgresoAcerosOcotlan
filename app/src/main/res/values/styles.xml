@@ -56,7 +56,6 @@
     </style>
 
 
-
     <style name="edittext_enviar_formulario" parent="TextAppearance.AppCompat">
         <item name="colorAccent">@color/colorPrimaryDark</item>
         <item name="colorControlNormal">@color/colorPrimaryDark</item>

@@ -19,12 +19,14 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.acerosocotlan.progresoacerosocotlan.Adaptador.AdapterRecyclerView;
 import com.acerosocotlan.progresoacerosocotlan.Modelo.DetalleEntrega_retrofit;
 import com.acerosocotlan.progresoacerosocotlan.Modelo.MetodosSharedPreference;
 import com.acerosocotlan.progresoacerosocotlan.Modelo.NetworkAdapter;
 import com.acerosocotlan.progresoacerosocotlan.Modelo.StatuEntrega;
+import com.acerosocotlan.progresoacerosocotlan.Modelo.ValidacionConexion;
 import com.acerosocotlan.progresoacerosocotlan.R;
 
 import java.util.List;
@@ -62,6 +64,9 @@ public class DetalleEntregaActivity2 extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<List<DetalleEntrega_retrofit>> call, Throwable t) {
+                Intent i = new Intent(DetalleEntregaActivity2.this, ErrorConexionActivity.class);
+                i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(i);
             }
         });
     }
@@ -86,7 +91,9 @@ public class DetalleEntregaActivity2 extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<List<StatuEntrega>> call, Throwable t) {
-
+                Intent intentErrorConexion = new Intent(DetalleEntregaActivity2.this, ErrorConexionActivity.class);
+                intentErrorConexion.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(intentErrorConexion);
             }
         });
     }

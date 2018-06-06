@@ -21,7 +21,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/colorPrimaryDark"
-            android:alpha="0.4"
+            android:alpha="0.3"
             android:visibility="invisible"
             android:orientation="horizontal">
         </LinearLayout>
@@ -34,9 +34,10 @@
             android:layout_marginTop="10dp"
             android:layout_marginBottom="50dp"
             android:alpha="0.9"
+            android:visibility="gone"
             cardview:cardBackgroundColor="@color/colorPrimaryDark"
             cardview:cardCornerRadius="16dp"
-            cardview:cardElevation="16dp">
+            cardview:cardElevation="4dp">
             <LinearLayout
                 android:id="@+id/linear_layout_menu_progreso"
                 android:layout_width="match_parent"
@@ -58,6 +59,7 @@
                     android:text="Detalles del pedido"
                     android:theme="@style/Boton_menu_progreso"/>
                 <Button
+                    android:id="@+id/btn_descargar_factura"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Descarga tu factura"

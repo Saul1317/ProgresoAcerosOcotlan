@@ -8,9 +8,12 @@
         android:minSdkVersion="20"
         android:targetSdkVersion="26" />
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
     <application
         android:allowBackup="true"
@@ -36,7 +39,7 @@
             android:name="com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity"
             android:label="@string/title_activity_progreso_entrega"
             android:screenOrientation="landscape"
-            android:theme="@style/pantalla_completa" />
+            android:theme="@style/pantalla_completa2" />
         <activity
             android:name="com.acerosocotlan.progresoacerosocotlan.Controlador.DetalleEntregaActivity2"
             android:label="Detalles de su entrega"
@@ -58,6 +61,11 @@
         <activity
             android:name="com.acerosocotlan.progresoacerosocotlan.Controlador.VerOferta"
             android:label="@string/title_activity_ver_oferta"
+            android:screenOrientation="landscape"
+            android:theme="@style/pantalla_completa" />
+        <activity
+            android:name="com.acerosocotlan.progresoacerosocotlan.Controlador.ErrorConexionActivity"
+            android:label="@string/title_activity_error_conexion"
             android:screenOrientation="landscape"
             android:theme="@style/pantalla_completa" />
 

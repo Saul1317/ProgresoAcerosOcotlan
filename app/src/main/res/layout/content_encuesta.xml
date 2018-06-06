@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <ImageView
-            android:id="@+id/imagen_fondo_detalles_estatus"
+            android:id="@+id/imagen_fondo_detalles_encuesta"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/proceso5alternativo"

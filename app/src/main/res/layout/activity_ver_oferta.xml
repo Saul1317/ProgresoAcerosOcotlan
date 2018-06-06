@@ -6,11 +6,25 @@
     android:layout_height="match_parent"
     tools:context=".Controlador.VerOferta">
     <include layout="@layout/content_ver_oferta" />
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab_telefono_llamada"
+    <FrameLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@drawable/ic_action_phone_start" />
+        android:layout_gravity="bottom|end">
+            <ImageView
+                android:id="@+id/imagen_touch_mano_ver_ofertas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:elevation="5dp"
+                android:visibility="invisible"
+                android:src="@drawable/touch3"/>
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab_telefono_llamada"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/fab_margin"
+                app:elevation="6dp"
+                app:srcCompat="@drawable/ic_action_phone_start" />
+        </FrameLayout>
 </android.support.design.widget.CoordinatorLayout>

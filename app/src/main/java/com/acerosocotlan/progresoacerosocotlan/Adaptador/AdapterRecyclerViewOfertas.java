@@ -12,6 +12,7 @@ import android.widget.TextView;
 import com.acerosocotlan.progresoacerosocotlan.Modelo.DetalleEntrega_retrofit;
 import com.acerosocotlan.progresoacerosocotlan.Modelo.VerOfertas_retrofit;
 import com.acerosocotlan.progresoacerosocotlan.R;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -28,21 +29,19 @@ public class AdapterRecyclerViewOfertas extends RecyclerView.Adapter<AdapterRecy
         this.activity = activity;
         this.context = context;
     }
-
     @Override
     public AdapterRecyclerHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(resource, parent,false);
         return new AdapterRecyclerViewOfertas.AdapterRecyclerHolder(view);
     }
-
     @Override
     public void onBindViewHolder(AdapterRecyclerHolder holder, int position) {
         VerOfertas_retrofit verOfertas_retrofit = arraylistVerOfertas.get(position);
         holder.txt_nombre_producto_oferta.setText(verOfertas_retrofit.getProducto()+" ");
         holder.txt_fecha_vigencia_producto_oferta.setText(verOfertas_retrofit.getVigencia()+" ");
         holder.txt_precio_producto_oferta.setText("$"+verOfertas_retrofit.getPrecio()+" ");
+        Picasso.with(context).load(""+verOfertas_retrofit.getFoto()).fit().placeholder(R.drawable.vigaejemplo).into(holder.img_producto_oferta);
     }
-
     @Override
     public int getItemCount() {
         return arraylistVerOfertas.size();
@@ -57,6 +56,7 @@ public class AdapterRecyclerViewOfertas extends RecyclerView.Adapter<AdapterRecy
             txt_nombre_producto_oferta= (TextView) itemView.findViewById(R.id.txt_nombre_producto_oferta);
             txt_fecha_vigencia_producto_oferta= (TextView) itemView.findViewById(R.id.txt_fecha_vigencia_producto_oferta);
             txt_precio_producto_oferta= (TextView) itemView.findViewById(R.id.txt_precio_producto_oferta);
+
         }
     }
 }
