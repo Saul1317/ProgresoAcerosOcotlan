@@ -2,16 +2,19 @@ package com.acerosocotlan.progresoacerosocotlan.Adaptador;
 
 import android.app.Activity;
 import android.content.Context;
+import android.net.Uri;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.acerosocotlan.progresoacerosocotlan.Modelo.DetalleEntrega_retrofit;
 import com.acerosocotlan.progresoacerosocotlan.Modelo.VerOfertas_retrofit;
 import com.acerosocotlan.progresoacerosocotlan.R;
+import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -40,7 +43,10 @@ public class AdapterRecyclerViewOfertas extends RecyclerView.Adapter<AdapterRecy
         holder.txt_nombre_producto_oferta.setText(verOfertas_retrofit.getProducto()+" ");
         holder.txt_fecha_vigencia_producto_oferta.setText(verOfertas_retrofit.getVigencia()+" ");
         holder.txt_precio_producto_oferta.setText("$"+verOfertas_retrofit.getPrecio()+" ");
-        Picasso.with(context).load(""+verOfertas_retrofit.getFoto()).fit().placeholder(R.drawable.vigaejemplo).into(holder.img_producto_oferta);
+        Picasso.with(context).load(verOfertas_retrofit.getPrecio().toString())
+                .placeholder(R.drawable.vigaejemplo)
+                .error(R.drawable.viga)
+                .into(holder.img_producto_oferta);
     }
     @Override
     public int getItemCount() {

@@ -1,14 +1,22 @@
 package com.acerosocotlan.progresoacerosocotlan.Controlador;
 
+import android.Manifest;
 import android.app.DownloadManager;
+import android.content.ActivityNotFoundException;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.support.design.widget.FloatingActionButton;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.FileProvider;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
 import android.util.Log;
@@ -25,6 +33,7 @@ import com.acerosocotlan.progresoacerosocotlan.Modelo.MetodosSharedPreference;
 import com.acerosocotlan.progresoacerosocotlan.Modelo.NetworkAdapter;
 import com.acerosocotlan.progresoacerosocotlan.Modelo.StatuEntrega;
 import com.acerosocotlan.progresoacerosocotlan.Modelo.ValidarDescarga;
+import com.acerosocotlan.progresoacerosocotlan.Modelo.VerOfertas_retrofit;
 import com.acerosocotlan.progresoacerosocotlan.R;
 
 import java.io.File;
@@ -39,20 +48,22 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+import static android.Manifest.permission.CALL_PHONE;
+
 public class ProgresoEntregaActivity extends AppCompatActivity {
 
     //VIEWS
-    private Animation clickdedoAnimation,cardviewAnimacion,carroAnimacion,touchAnimation;
+    private Animation clickdedoAnimation,cardviewAnimacion,carroAnimacion,touchAnimation, flatbutton_animation;
     private LinearLayout layout_filtro, linear_layout_menu_progreso;
     private ImageView imagen_progress_bar,imagen_mano_click,imagen_touch_mano;
     private CardView cardview__menu_progreso;
     private TextView fecha_entregado,text_num_pedido, text_hora_entrega;
     private Button btn_mostrar_detalles_entrega, btn_nuevo_rastreo, btn_ver_ofertas,btn_descargar_factura;
+    FloatingActionButton fab;
     //SHARED PREFERENCE
     private SharedPreferences prs;
     //VARIABLES
-    private String URL="http://www.iiswc.org/iiswc2009/sample.doc";
-    DownloadManager downloadManager;
+    private DownloadManager downloadManager;
     private String codigo_entrega;
     private String status;
     private boolean menu_estatus = false;
@@ -61,21 +72,10 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_progreso_entrega);
         Inicializador();
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (menu_estatus==false) {
-                    cardview__menu_progreso.setVisibility(View.VISIBLE);
-                    cardviewAnimacion= AnimationUtils.loadAnimation(ProgresoEntregaActivity.this,R.anim.menu_mostrar);
-                    cardview__menu_progreso.setAnimation(cardviewAnimacion);
-                    menu_estatus=true;
-                }else{
-                    carroAnimacion = AnimationUtils.loadAnimation(ProgresoEntregaActivity.this,R.anim.menu_ocultar);
-                    cardview__menu_progreso.setAnimation(carroAnimacion);
-                    cardview__menu_progreso.setVisibility(View.INVISIBLE);
-                    menu_estatus=false;
-                }
+                AbrirMenuUsuario();
             }
         });
         imagen_progress_bar.setOnClickListener(new View.OnClickListener() {
@@ -87,7 +87,6 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
                     cardview__menu_progreso.setVisibility(View.INVISIBLE);
                     menu_estatus=false;
                 }else{
-
                 }*/
             }
         });
@@ -103,11 +102,7 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
         btn_nuevo_rastreo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                BloquearBotones();
-                Intent i = new Intent(ProgresoEntregaActivity.this, CodigoIngreso.class);
-                startActivity(i);
-                i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                remover_variables_sharedpreference();
+                DialogoConfirmacionSalida();
             }
         });
 
@@ -123,27 +118,85 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
         btn_descargar_factura.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                registerReceiver(new ValidarDescarga(), new IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE));
-                downloadManager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
-                Uri uri= Uri.parse("https://www.androidtutorialpoint.com/wp-content/uploads/kalins-pdf/singles/retrofit-android-tutorial.pdf");
-                DownloadManager.Request request= new DownloadManager.Request(uri);
-                request.setDestinationInExternalFilesDir(ProgresoEntregaActivity.this, Environment.DIRECTORY_DOWNLOADS,
-                        MetodosSharedPreference.ObtenerCodigoEntregaPref(prs)+"-factura.pdf");
-                request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
-                Long reference= downloadManager.enqueue(request);
+                DialogoConfirmacionDescargarFactura();
             }
         });
     }
-
-    @Override
-    public void onBackPressed() {
+    @Override protected void onResume() {
+        super.onResume();
+        Desbloquearbotones();
+    }
+    @Override public void onBackPressed() {
         if (menu_estatus==true) {
             carroAnimacion = AnimationUtils.loadAnimation(ProgresoEntregaActivity.this,R.anim.menu_ocultar);
             cardview__menu_progreso.setAnimation(carroAnimacion);
             cardview__menu_progreso.setVisibility(View.INVISIBLE);
+            flatbutton_animation= AnimationUtils.loadAnimation(ProgresoEntregaActivity.this,R.anim.flatbutton_animation);
+            fab.startAnimation(flatbutton_animation);
             menu_estatus=false;
         }else{
             finish();
+        }
+    }
+    public void DialogoConfirmacionSalida(){
+        AlertDialog.Builder alert = new AlertDialog.Builder(this);
+//        alert.setTitle("Aceros Ocotlán");
+//        alert.setIcon(getResources().getDrawable(R.drawable.acerosocotlan));
+        alert.setMessage("Esta a punto de volver a la pantalla de ingreso, ¿Desea continuar?");
+        alert.setNegativeButton("No", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int whichButton) {
+            }
+        });
+        alert.setPositiveButton("Si", new DialogInterface.OnClickListener(){
+            public void onClick(DialogInterface dialog, int whichButton) {
+                BloquearBotones();
+                Intent i = new Intent(ProgresoEntregaActivity.this, CodigoIngreso.class);
+                startActivity(i);
+                i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                remover_variables_sharedpreference();
+            }
+        });
+        alert.show();
+    }
+    public void DialogoConfirmacionDescargarFactura(){
+        AlertDialog.Builder alert = new AlertDialog.Builder(this);
+        alert.setMessage("Esta a punto de descargar la factura de su entrega, ¿Desea continuar?");
+        alert.setNegativeButton("No", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int whichButton) {
+            }
+        });
+        alert.setPositiveButton("Si", new DialogInterface.OnClickListener(){
+            public void onClick(DialogInterface dialog, int whichButton) {
+                registerReceiver(new ValidarDescarga(), new IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE));
+                Toast.makeText(ProgresoEntregaActivity.this, "Descargando factura", Toast.LENGTH_SHORT).show();
+                downloadManager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
+                Uri uri= Uri.parse("http://www-us.apache.org/dist//commons/io/binaries/commons-io-2.6-bin.zip");
+                DownloadManager.Request request= new DownloadManager.Request(uri);
+                request.setDestinationInExternalFilesDir(ProgresoEntregaActivity.this, Environment.DIRECTORY_DOWNLOADS,
+                        MetodosSharedPreference.ObtenerCodigoEntregaPref(prs)+"-factura.zip");
+                request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
+                Long reference= downloadManager.enqueue(request);
+
+            }
+        });
+        alert.show();
+    }
+    private void AbrirMenuUsuario() {
+        if (menu_estatus==false) {
+            cardview__menu_progreso.setVisibility(View.VISIBLE);
+            cardviewAnimacion= AnimationUtils.loadAnimation(ProgresoEntregaActivity.this,R.anim.menu_mostrar);
+            cardview__menu_progreso.setAnimation(cardviewAnimacion);
+
+            flatbutton_animation= AnimationUtils.loadAnimation(ProgresoEntregaActivity.this,R.anim.flatbutton_animation_close);
+            fab.startAnimation(flatbutton_animation);
+            menu_estatus=true;
+        }else{
+            carroAnimacion = AnimationUtils.loadAnimation(ProgresoEntregaActivity.this,R.anim.menu_ocultar);
+            cardview__menu_progreso.setAnimation(carroAnimacion);
+            cardview__menu_progreso.setVisibility(View.INVISIBLE);
+            flatbutton_animation= AnimationUtils.loadAnimation(ProgresoEntregaActivity.this,R.anim.flatbutton_animation);
+            fab.startAnimation(flatbutton_animation);
+            menu_estatus=false;
         }
     }
     private void MostrarTutorial() {
@@ -180,6 +233,8 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
         text_num_pedido.setVisibility(View.INVISIBLE);
         fecha_entregado.setVisibility(View.INVISIBLE);
         layout_filtro.setVisibility(View.INVISIBLE);
+
+        fab = (FloatingActionButton) findViewById(R.id.fab);
 
         prs = getSharedPreferences("usuarioDatos", Context.MODE_PRIVATE);
         codigo_entrega = MetodosSharedPreference.ObtenerCodigoEntregaPref(prs);
@@ -279,9 +334,5 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
         btn_mostrar_detalles_entrega.setEnabled(false);
         btn_nuevo_rastreo.setEnabled(false);
         btn_ver_ofertas.setEnabled(false);
-    }
-    @Override protected void onResume() {
-        super.onResume();
-        Desbloquearbotones();
     }
 }

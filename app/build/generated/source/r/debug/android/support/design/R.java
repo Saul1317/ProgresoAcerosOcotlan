@@ -22,8 +22,8 @@ public final class R {
         public static final int design_bottom_sheet_slide_out = 0x7f01000f;
         public static final int design_snackbar_in = 0x7f010010;
         public static final int design_snackbar_out = 0x7f010011;
-        public static final int tooltip_enter = 0x7f010017;
-        public static final int tooltip_exit = 0x7f010018;
+        public static final int tooltip_enter = 0x7f010019;
+        public static final int tooltip_exit = 0x7f01001a;
     }
     public static final class animator {
         public static final int design_appbar_state_list_animator = 0x7f020000;
@@ -721,29 +721,29 @@ public final class R {
         public static final int abc_textfield_search_default_mtrl_alpha = 0x7f070057;
         public static final int abc_textfield_search_material = 0x7f070058;
         public static final int abc_vector_test = 0x7f070059;
-        public static final int avd_hide_password = 0x7f07005b;
-        public static final int avd_show_password = 0x7f07005c;
-        public static final int design_bottom_navigation_item_background = 0x7f070060;
-        public static final int design_fab_background = 0x7f070061;
-        public static final int design_ic_visibility = 0x7f070062;
-        public static final int design_ic_visibility_off = 0x7f070063;
-        public static final int design_password_eye = 0x7f070064;
-        public static final int design_snackbar_background = 0x7f070065;
-        public static final int navigation_empty_icon = 0x7f070078;
-        public static final int notification_action_background = 0x7f070079;
-        public static final int notification_bg = 0x7f07007a;
-        public static final int notification_bg_low = 0x7f07007b;
-        public static final int notification_bg_low_normal = 0x7f07007c;
-        public static final int notification_bg_low_pressed = 0x7f07007d;
-        public static final int notification_bg_normal = 0x7f07007e;
-        public static final int notification_bg_normal_pressed = 0x7f07007f;
-        public static final int notification_icon_background = 0x7f070080;
-        public static final int notification_template_icon_bg = 0x7f070081;
-        public static final int notification_template_icon_low_bg = 0x7f070082;
-        public static final int notification_tile_bg = 0x7f070083;
-        public static final int notify_panel_notification_icon_bg = 0x7f070084;
-        public static final int tooltip_frame_dark = 0x7f070094;
-        public static final int tooltip_frame_light = 0x7f070095;
+        public static final int avd_hide_password = 0x7f07005c;
+        public static final int avd_show_password = 0x7f07005d;
+        public static final int design_bottom_navigation_item_background = 0x7f070061;
+        public static final int design_fab_background = 0x7f070062;
+        public static final int design_ic_visibility = 0x7f070063;
+        public static final int design_ic_visibility_off = 0x7f070064;
+        public static final int design_password_eye = 0x7f070065;
+        public static final int design_snackbar_background = 0x7f070066;
+        public static final int navigation_empty_icon = 0x7f070076;
+        public static final int notification_action_background = 0x7f070077;
+        public static final int notification_bg = 0x7f070078;
+        public static final int notification_bg_low = 0x7f070079;
+        public static final int notification_bg_low_normal = 0x7f07007a;
+        public static final int notification_bg_low_pressed = 0x7f07007b;
+        public static final int notification_bg_normal = 0x7f07007c;
+        public static final int notification_bg_normal_pressed = 0x7f07007d;
+        public static final int notification_icon_background = 0x7f07007e;
+        public static final int notification_template_icon_bg = 0x7f07007f;
+        public static final int notification_template_icon_low_bg = 0x7f070080;
+        public static final int notification_tile_bg = 0x7f070081;
+        public static final int notify_panel_notification_icon_bg = 0x7f070082;
+        public static final int tooltip_frame_dark = 0x7f070092;
+        public static final int tooltip_frame_light = 0x7f070093;
     }
     public static final class id {
         public static final int action0 = 0x7f080006;

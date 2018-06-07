@@ -11,7 +11,7 @@ public class ValidarDescarga extends BroadcastReceiver {
     public void onReceive(Context context, Intent intent) {
         String action = intent.getAction();
         if(DownloadManager.ACTION_DOWNLOAD_COMPLETE.equals(action)){
-            Toast.makeText(context,"Descarga completada", Toast.LENGTH_LONG).show();
+            Toast.makeText(context,"Factura descargada", Toast.LENGTH_LONG).show();
         }
     }
 }

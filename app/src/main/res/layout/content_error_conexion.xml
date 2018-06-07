@@ -35,6 +35,7 @@
                 android:layout_height="wrap_content"
                 android:text="Al parecer hubo un problema al consultar la información"
                 android:textStyle="bold"
+                android:textAlignment="center"
                 android:textSize="23sp"
                 android:textColor="@color/texto_blanco"
                 android:layout_gravity="center"/>
