@@ -5,7 +5,7 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="20"
+        android:minSdkVersion="19"
         android:targetSdkVersion="26" />
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -14,6 +14,12 @@
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true" />
 
     <application
         android:allowBackup="true"
@@ -48,7 +54,8 @@
         <activity
             android:name="com.acerosocotlan.progresoacerosocotlan.Controlador.CodigoIngreso"
             android:screenOrientation="portrait"
-            android:theme="@style/pantalla_completa2" />
+            android:theme="@style/Pantalla_codigo_ingreso"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
         <activity
             android:name="com.acerosocotlan.progresoacerosocotlan.Controlador.EncuestaActivity"
             android:label="@string/title_activity_encuesta"

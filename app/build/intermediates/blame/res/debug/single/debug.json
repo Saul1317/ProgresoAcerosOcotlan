@@ -1356,6 +1356,10 @@
         "source": "C:\\Users\\Administrador\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\8103d4f4246be01abd96aa3b1778c978\\res\\drawable-xxhdpi-v4\\abc_list_pressed_holo_light.9.png"
     },
     {
+        "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\layout_content_codigo_ingreso.xml.flat",
+        "source": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\src\\main\\res\\layout\\content_codigo_ingreso.xml"
+    },
+    {
         "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_ic_star_black_48dp.png.flat",
         "source": "C:\\Users\\Administrador\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\8103d4f4246be01abd96aa3b1778c978\\res\\drawable-hdpi-v4\\abc_ic_star_black_48dp.png"
     },

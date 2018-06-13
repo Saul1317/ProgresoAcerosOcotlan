@@ -74,7 +74,7 @@
                         android:textAlignment="center"
                         android:textSize="17sp"
                         android:layout_gravity="center_horizontal"
-                        android:layout_marginVertical="15dp"
+                        android:layout_marginVertical="10dp"
                         android:textColor="@color/secondary_text"
                         android:visibility="visible"/>
                     <GridLayout
@@ -117,7 +117,6 @@
                                 android:layout_width="@dimen/tamano_img_respuesta_encuesta"
                                 android:layout_height="@dimen/tamano_img_respuesta_encuesta"
                                 android:src="@drawable/triste"/>
-
                             <ImageView
                                 android:id="@+id/img_completado_encuesta_pregunta0"
                                 android:layout_width="@dimen/tamano_img_completado_encuesta"
@@ -126,7 +125,6 @@
                                 android:visibility="gone"
                                 android:src="@drawable/comprobado"/>
                         </LinearLayout>
-
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"

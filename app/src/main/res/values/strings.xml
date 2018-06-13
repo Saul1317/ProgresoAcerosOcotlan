@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ProgresoAcerosOcotlan</string>
+    <string name="app_name">Entregas Aceros Ocotlán</string>
     <string name="action_settings">Usar nuevo codigo</string>
     <string name="title_activity_progreso_entrega">ProgresoEntregaActivity</string>
     <string name="title_activity_detalle_entrega">DetalleEntregaActivity</string>

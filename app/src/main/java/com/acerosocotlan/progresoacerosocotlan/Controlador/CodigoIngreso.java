@@ -3,6 +3,7 @@ package com.acerosocotlan.progresoacerosocotlan.Controlador;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -12,6 +13,8 @@ import android.transition.Fade;
 import android.transition.Slide;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.view.animation.DecelerateInterpolator;
@@ -41,13 +44,15 @@ public class CodigoIngreso extends AppCompatActivity {
     //SHARED PREFERENCE
     private SharedPreferences prs;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        /*Fade fadein = new Fade(Fade.IN);
-        fadein.setDuration(1000);
-        fadein.setInterpolator(new DecelerateInterpolator());*/
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT)
+        {
+            Window w = getWindow();
+            //w.addFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+            w.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
+        }
         setContentView(R.layout.activity_codigo_ingreso);
         Inicializador();
         boton_enviar_folio.setOnClickListener(new View.OnClickListener() {
@@ -75,6 +80,7 @@ public class CodigoIngreso extends AppCompatActivity {
                         @Override
                         public void onFailure(Call<List<StatuEntrega>> call, Throwable t) {
                             Log.i("CONSULTA","Error al conectar");
+                            Toast.makeText(CodigoIngreso.this, "Conexión no establecida", Toast.LENGTH_SHORT).show();
                         }
                     });
                 }else{

@@ -10,6 +10,7 @@ import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
@@ -19,8 +20,11 @@ import android.support.v4.content.FileProvider;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
+import android.util.Base64;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
@@ -29,6 +33,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.acerosocotlan.progresoacerosocotlan.Modelo.Factura_retrofit;
 import com.acerosocotlan.progresoacerosocotlan.Modelo.MetodosSharedPreference;
 import com.acerosocotlan.progresoacerosocotlan.Modelo.NetworkAdapter;
 import com.acerosocotlan.progresoacerosocotlan.Modelo.StatuEntrega;
@@ -36,6 +41,7 @@ import com.acerosocotlan.progresoacerosocotlan.Modelo.ValidarDescarga;
 import com.acerosocotlan.progresoacerosocotlan.Modelo.VerOfertas_retrofit;
 import com.acerosocotlan.progresoacerosocotlan.R;
 
+import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -51,7 +57,6 @@ import retrofit2.Response;
 import static android.Manifest.permission.CALL_PHONE;
 
 public class ProgresoEntregaActivity extends AppCompatActivity {
-
     //VIEWS
     private Animation clickdedoAnimation,cardviewAnimacion,carroAnimacion,touchAnimation, flatbutton_animation;
     private LinearLayout layout_filtro, linear_layout_menu_progreso;
@@ -59,7 +64,7 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
     private CardView cardview__menu_progreso;
     private TextView fecha_entregado,text_num_pedido, text_hora_entrega;
     private Button btn_mostrar_detalles_entrega, btn_nuevo_rastreo, btn_ver_ofertas,btn_descargar_factura;
-    FloatingActionButton fab;
+    private FloatingActionButton fab;
     //SHARED PREFERENCE
     private SharedPreferences prs;
     //VARIABLES
@@ -70,6 +75,7 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_progreso_entrega);
         Inicializador();
         fab.setOnClickListener(new View.OnClickListener() {
@@ -81,13 +87,7 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
         imagen_progress_bar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                /*if (menu_estatus==true) {
-                    carroAnimacion = AnimationUtils.loadAnimation(ProgresoEntregaActivity.this,R.anim.menu_ocultar);
-                    cardview__menu_progreso.setAnimation(carroAnimacion);
-                    cardview__menu_progreso.setVisibility(View.INVISIBLE);
-                    menu_estatus=false;
-                }else{
-                }*/
+                RecogerEstatusEntrega();
             }
         });
         btn_mostrar_detalles_entrega.setOnClickListener(new View.OnClickListener() {
@@ -138,7 +138,7 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
             finish();
         }
     }
-    public void DialogoConfirmacionSalida(){
+    private void DialogoConfirmacionSalida(){
         AlertDialog.Builder alert = new AlertDialog.Builder(this);
 //        alert.setTitle("Aceros Ocotlán");
 //        alert.setIcon(getResources().getDrawable(R.drawable.acerosocotlan));
@@ -158,7 +158,7 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
         });
         alert.show();
     }
-    public void DialogoConfirmacionDescargarFactura(){
+    private void DialogoConfirmacionDescargarFactura(){
         AlertDialog.Builder alert = new AlertDialog.Builder(this);
         alert.setMessage("Esta a punto de descargar la factura de su entrega, ¿Desea continuar?");
         alert.setNegativeButton("No", new DialogInterface.OnClickListener() {
@@ -167,20 +167,21 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
         });
         alert.setPositiveButton("Si", new DialogInterface.OnClickListener(){
             public void onClick(DialogInterface dialog, int whichButton) {
-                registerReceiver(new ValidarDescarga(), new IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE));
+                /*registerReceiver(new ValidarDescarga(), new IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE));
                 Toast.makeText(ProgresoEntregaActivity.this, "Descargando factura", Toast.LENGTH_SHORT).show();
                 downloadManager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
-                Uri uri= Uri.parse("http://www-us.apache.org/dist//commons/io/binaries/commons-io-2.6-bin.zip");
+                Uri uri= Uri.parse("http://entregas.dyndns.org/entregas/resource/Facturas/doc.pdf");
                 DownloadManager.Request request= new DownloadManager.Request(uri);
                 request.setDestinationInExternalFilesDir(ProgresoEntregaActivity.this, Environment.DIRECTORY_DOWNLOADS,
-                        MetodosSharedPreference.ObtenerCodigoEntregaPref(prs)+"-factura.zip");
+                        MetodosSharedPreference.ObtenerCodigoEntregaPref(prs)+"-factura.pdf");
                 request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
-                Long reference= downloadManager.enqueue(request);
-
+                Long reference= downloadManager.enqueue(request);*/
+                ReenviarFactura();
             }
         });
         alert.show();
     }
+
     private void AbrirMenuUsuario() {
         if (menu_estatus==false) {
             cardview__menu_progreso.setVisibility(View.VISIBLE);
@@ -257,6 +258,20 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
                 Intent intentErrorConexion = new Intent(ProgresoEntregaActivity.this, ErrorConexionActivity.class);
                 intentErrorConexion.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(intentErrorConexion);
+            }
+        });
+    }
+    private void ReenviarFactura(){
+        Call<Factura_retrofit> call = NetworkAdapter.getApiService().EnviarFactura("factura/gao","dvv01g");
+        call.enqueue(new Callback<Factura_retrofit>() {
+            @Override
+            public void onResponse(Call<Factura_retrofit> call, Response<Factura_retrofit> response) {
+                Log.i("RESPUESTA", response.body().toString());
+            }
+
+            @Override
+            public void onFailure(Call<Factura_retrofit> call, Throwable t) {
+                Log.i("RESPUESTA", t.toString());
             }
         });
     }
