@@ -8,4 +8,7 @@
     <dimen name="tamano_img_respuesta_encuesta">35dp</dimen>
     <dimen name="distancia_img_respuesta_bottom">10dp</dimen>
     <dimen name="tamano_img_completado_encuesta">30dp</dimen>
+    <dimen name="cardview_detalles_margin">1dp</dimen>
+    <dimen name="detalles_entrega_tamano_letra_principal">11sp</dimen>
+    <dimen name="detalles_entrega_tamano_letra_secundario">10sp</dimen>
 </resources>

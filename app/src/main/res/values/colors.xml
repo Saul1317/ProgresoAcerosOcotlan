@@ -7,7 +7,7 @@
     <color name="secondary_text">#757575</color>
     <color name="icons">#FFFFFF</color>
     <color name="divider">#BDBDBD</color>
-    <color name="colorFondo">#FAFAFA</color>
-    <color name="texto_blanco">#FFFFFF</color>
+    <color name="colorFondo">#FAFAFA</color>FFF
+    <color name="texto_blanco">#FFF</color>
     <color name="colorVerde">#4CAF50</color>
 </resources>

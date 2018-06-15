@@ -4,11 +4,13 @@
     android:id="@+id/cardview_detalle_entrega"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginVertical="0.5dp"
+    android:layout_marginRight="@dimen/cardview_detalles_margin"
+    android:layout_marginLeft="@dimen/cardview_detalles_margin"
     cardview:cardCornerRadius="0dp">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:baselineAligned="false"
         android:orientation="horizontal"
         android:weightSum="1">
         <LinearLayout
@@ -19,67 +21,63 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Material "
-                android:textSize="11sp"
+                android:text="@string/detalles_entrega_material"
+                android:textSize="@dimen/detalles_entrega_tamano_letra_principal"
                 android:textStyle="bold"/>
             <TextView
                 android:id="@+id/txt_descripcion_entrega"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="5dp"
-                android:textSize="10sp"/>
+                android:layout_marginEnd="5dp"
+                android:textSize="@dimen/detalles_entrega_tamano_letra_secundario"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal"
-            android:layout_weight="0.5"
-            android:weightSum="1">
+            android:layout_weight="0.5">
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_weight="0.5">
+                android:orientation="horizontal">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
-                    android:text="Cantidad "
-                    android:textSize="11sp"
+                    android:text="@string/detalles_entrega_cantidad"
+                    android:textSize="@dimen/detalles_entrega_tamano_letra_principal"
                     android:layout_marginBottom="5dp"/>
                 <TextView
                     android:id="@+id/txt_cantidad_entrega"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="10sp"
-                    android:layout_marginRight="3dp"
+                    android:textSize="@dimen/detalles_entrega_tamano_letra_secundario"
+                    android:layout_marginEnd="3dp"
                     android:layout_marginBottom="5dp"/>
                 <TextView
                     android:id="@+id/txt_unidad_entrega"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Unidad"
-                    android:textSize="10sp"
-                    android:layout_marginRight="10dp"
+                    android:textSize="@dimen/detalles_entrega_tamano_letra_secundario"
+                    android:layout_marginEnd="5dp"
                     android:layout_marginBottom="5dp"/>
             </LinearLayout>
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_weight="0.5">
+                android:orientation="horizontal">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Cantidad en kg "
-                    android:textSize="11sp"
-                    android:layout_marginRight="5dp"
+                    android:text="@string/detalles_entrega_cantidad_kg"
+                    android:textSize="@dimen/detalles_entrega_tamano_letra_principal"
+                    android:layout_marginEnd="5dp"
                     android:textStyle="bold"/>
                 <TextView
                     android:id="@+id/txt_cantidad_kg"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="10sp"/>
+                    android:textSize="@dimen/detalles_entrega_tamano_letra_secundario"/>
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

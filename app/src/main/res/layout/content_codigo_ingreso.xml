@@ -9,81 +9,64 @@
     tools:context="com.acerosocotlan.progresoacerosocotlan.Controlador.CodigoIngreso"
     tools:showIn="@layout/activity_codigo_ingreso"
     android:fitsSystemWindows="false">
-    <FrameLayout
+    <LinearLayout
+        android:id="@+id/cardview_edittext"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="140dp"
-            android:layout_gravity="center_horizontal">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Bienvenido"
-                android:textColor="@android:color/white"
-                android:textSize="60sp"
-                android:textStyle="bold"/>
-        </LinearLayout>
-        <LinearLayout
-            android:id="@+id/cardview_edittext"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="230dp"
-            android:layout_gravity="center_horizontal">
-            <android.support.v7.widget.CardView
-                xmlns:cardview="http://schemas.android.com/apk/res-auto"
-                android:id="@+id/cardview_entregas"
-                android:layout_width="270dp"
-                android:layout_height="150dp"
-                android:layout_marginVertical="5dp"
-                cardview:cardElevation="4dp"
-                cardview:cardCornerRadius="10dp">
+        android:layout_height="match_parent"
+        android:gravity="center">
+        <android.support.v7.widget.CardView
+            xmlns:cardview="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/cardview_entregas"
+            android:layout_width="270dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            cardview:cardElevation="4dp"
+            cardview:cardCornerRadius="10dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:weightSum="1">
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.6"
+                    android:padding="10dp">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ocotlan"
+                        android:layout_gravity="center"/>
+                </FrameLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:weightSum="1">
-                    <FrameLayout
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp"
+                    android:layout_weight="0.4"
+                    android:orientation="vertical">
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/edttxt_codigo_rastreo_entrega"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="0.6"
-                        android:padding="10dp">
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/ocotlan"
-                            android:layout_gravity="center"/>
-                    </FrameLayout>
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:paddingHorizontal="30dp"
-                        android:layout_weight="0.4"
-                        android:orientation="vertical">
-                        <android.support.design.widget.TextInputEditText
-                            android:id="@+id/text_id_entrega"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="Introduzca su codigo"
-                            android:inputType="text"
-                            android:textStyle="bold"
-                            android:textSize="14sp"
-                            android:textAlignment="center"
-                            android:theme="@style/edittext_enviar_formulario">
-                        </android.support.design.widget.TextInputEditText>
-                        <Button
-                            android:id="@+id/btn_enviar_formulario"
-                            android:layout_width="70dp"
-                            android:layout_height="40dp"
-                            android:text="Enviar"
-                            android:textSize="12sp"
-                            android:theme="@style/Boton_enviar_formulario"
-                            android:layout_gravity="end"
-                            />
-                    </LinearLayout>
+                        android:layout_height="wrap_content"
+                        android:hint="@string/codigo_progreso_edttxt_codigo_rastreo"
+                        android:inputType="text"
+                        android:textStyle="bold"
+                        android:textSize="14sp"
+                        android:textAlignment="center"
+                        android:theme="@style/edittext_enviar_formulario">
+                    </android.support.design.widget.TextInputEditText>
+                    <Button
+                        android:id="@+id/btn_enviar_formulario"
+                        android:layout_width="70dp"
+                        android:layout_height="40dp"
+                        android:text="Enviar"
+                        android:textSize="12sp"
+                        android:theme="@style/Boton_enviar_formulario"
+                        android:layout_gravity="end" />
                 </LinearLayout>
-            </android.support.v7.widget.CardView>
-        </LinearLayout>
-    </FrameLayout>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
 </android.support.constraint.ConstraintLayout>

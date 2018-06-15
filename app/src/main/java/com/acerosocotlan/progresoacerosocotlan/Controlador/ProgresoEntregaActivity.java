@@ -262,7 +262,8 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
         });
     }
     private void ReenviarFactura(){
-        Call<Factura_retrofit> call = NetworkAdapter.getApiService().EnviarFactura("factura/gao","dvv01g");
+        Call<Factura_retrofit> call = NetworkAdapter.getApiService().EnviarFactura("factura/gao",
+                MetodosSharedPreference.ObtenerCodigoEntregaPref(prs));
         call.enqueue(new Callback<Factura_retrofit>() {
             @Override
             public void onResponse(Call<Factura_retrofit> call, Response<Factura_retrofit> response) {
