@@ -27,8 +27,6 @@ public class Splash extends AppCompatActivity {
     FrameLayout nubesLayout, carroLayout;
     //SHARED PREFERENCE
     private SharedPreferences prs;
-    //Transition
-    private Transition transition;
     //36610
     @Override
     protected void onCreate(Bundle savedInstanceState) {

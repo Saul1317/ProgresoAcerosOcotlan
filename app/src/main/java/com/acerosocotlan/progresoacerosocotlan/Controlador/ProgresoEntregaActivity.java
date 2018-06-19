@@ -118,7 +118,7 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
         btn_descargar_factura.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                DialogoConfirmacionDescargarFactura();
+                DialogoConfirmacionEnviarFactura();
             }
         });
     }
@@ -158,9 +158,9 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
         });
         alert.show();
     }
-    private void DialogoConfirmacionDescargarFactura(){
+    private void DialogoConfirmacionEnviarFactura(){
         AlertDialog.Builder alert = new AlertDialog.Builder(this);
-        alert.setMessage("Esta a punto de descargar la factura de su entrega, ¿Desea continuar?");
+        alert.setMessage("Esta a punto de enviar la factura de su entrega a su correo, ¿Desea continuar?");
         alert.setNegativeButton("No", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int whichButton) {
             }
@@ -267,7 +267,12 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
         call.enqueue(new Callback<Factura_retrofit>() {
             @Override
             public void onResponse(Call<Factura_retrofit> call, Response<Factura_retrofit> response) {
-                Log.i("RESPUESTA", response.body().toString());
+                if(response.isSuccessful()){
+                    Factura_retrofit factura_retrofit= response.body();
+                    if(factura_retrofit.getRuta().toString().equals("sincorreo")){
+                        DialogoSolicitarLLamada();
+                    }
+                }
             }
 
             @Override
@@ -276,6 +281,36 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
             }
         });
     }
+    private void DialogoSolicitarLLamada() {
+        AlertDialog.Builder alert = new AlertDialog.Builder(this);
+        alert.setMessage("Al parecer no contamos con ningun correo suyo, ¿Desea comunicarse con nosotros?");
+        alert.setNegativeButton("No", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int whichButton) {
+            }
+        });
+        alert.setPositiveButton("Si", new DialogInterface.OnClickListener(){
+            public void onClick(DialogInterface dialog, int whichButton) {
+                RealizarLLamada("7777777777");
+            }
+        });
+        alert.show();
+    }
+
+    private void RealizarLLamada(String phoneNumber) {
+        if (Build.VERSION.SDK_INT>=Build.VERSION_CODES.M) {
+            if (ActivityCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+                ActivityCompat.requestPermissions(ProgresoEntregaActivity.this, new String[]{CALL_PHONE},100);
+            } else {
+                Intent intent = new Intent(Intent.ACTION_CALL);
+                intent.setData(Uri.parse("tel:"+phoneNumber));
+                startActivity(intent);
+            }
+        }else {
+            Intent intent = new Intent(Intent.ACTION_CALL);
+            intent.setData(Uri.parse("tel:" + phoneNumber));
+            startActivity(intent);
+        }
+    }
     private void ValidarEstatusActualEntrega(List<StatuEntrega> respuesta) {
         if(status.equals("Programado")){
             imagen_progress_bar.setImageResource(R.drawable.progressbar_aceros_ocotlan_version_5_4);
@@ -283,6 +318,7 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
             text_hora_entrega.setVisibility(View.INVISIBLE);
             text_num_pedido.setVisibility(View.INVISIBLE);
             layout_filtro.setVisibility(View.INVISIBLE);
+            btn_descargar_factura.setEnabled(false);
             MostrarTutorial();
         }
         else if(status.equals("En Ruta")){

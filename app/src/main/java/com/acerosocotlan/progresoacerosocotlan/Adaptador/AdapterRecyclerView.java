@@ -42,10 +42,10 @@ public class AdapterRecyclerView extends RecyclerView.Adapter<AdapterRecyclerVie
     @Override
     public void onBindViewHolder(AdapterRecyclerHolder holder, final int position) {
         DetalleEntrega_retrofit detalleEntrega_retrofit = arraylistDetalleEntrega.get(position);
-        holder.txt_cantidad_entrega.setText(detalleEntrega_retrofit.getPiezas()+" ");
+        holder.txt_cantidad_entrega.setText(" "+detalleEntrega_retrofit.getPiezas()+" ");
         holder.txt_unidad_entrega.setText(detalleEntrega_retrofit.getUnidad());
-        holder.txt_cantidad_kg.setText(detalleEntrega_retrofit.getCantidadkg());
-        holder.txt_descripcion_entrega.setText(detalleEntrega_retrofit.getMaterial());
+        holder.txt_cantidad_kg.setText(" "+detalleEntrega_retrofit.getCantidadkg());
+        holder.txt_descripcion_entrega.setText(" "+detalleEntrega_retrofit.getMaterial());
     }
     @Override
     public int getItemCount() {

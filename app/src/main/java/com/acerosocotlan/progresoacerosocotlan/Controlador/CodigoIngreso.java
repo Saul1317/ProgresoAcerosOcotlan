@@ -56,37 +56,42 @@ public class CodigoIngreso extends AppCompatActivity {
             w.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
         }
         setContentView(R.layout.activity_codigo_ingreso);
-
         Inicializador();
         boton_enviar_folio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 final String codigo = codigo_rastreo.getText().toString();
                 if (!codigo.isEmpty()) {
-                    Call<List<StatuEntrega>> call = NetworkAdapter.getApiService().EstatusEntrega(
-                            "statusentrega_" + codigo + "/gao");
-                    call.enqueue(new Callback<List<StatuEntrega>>() {
-                        @Override
-                        public void onResponse(Call<List<StatuEntrega>> call, Response<List<StatuEntrega>> response) {
-                            if (response.isSuccessful()) {
-                                List<StatuEntrega> respuesta = response.body();
-                                if (respuesta.isEmpty()) {
-                                    Toast.makeText(CodigoIngreso.this, "No existe el codigo", Toast.LENGTH_SHORT).show();
-                                } else {
-                                    Log.i("CONSULTA", "Correcto");
-                                    MetodosSharedPreference.GuardarCodigoEntrega(prs, codigo);
-                                    Intent i = new Intent(CodigoIngreso.this, ProgresoEntregaActivity.class);
-                                    startActivity(i);
+                    if(codigo.equals("Hell0W0rld")){
+                        Intent i = new Intent(CodigoIngreso.this, FirmaSistemasActivity.class);
+                        startActivity(i);
+                    }
+                    else{
+                        Call<List<StatuEntrega>> call = NetworkAdapter.getApiService().EstatusEntrega(
+                                "statusentrega_" + codigo + "/gao");
+                        call.enqueue(new Callback<List<StatuEntrega>>() {
+                            @Override
+                            public void onResponse(Call<List<StatuEntrega>> call, Response<List<StatuEntrega>> response) {
+                                if (response.isSuccessful()) {
+                                    List<StatuEntrega> respuesta = response.body();
+                                    if (respuesta.isEmpty()) {
+                                        Toast.makeText(CodigoIngreso.this, "No existe el codigo", Toast.LENGTH_SHORT).show();
+                                    } else {
+                                        Log.i("CONSULTA", "Correcto");
+                                        MetodosSharedPreference.GuardarCodigoEntrega(prs, codigo);
+                                        Intent i = new Intent(CodigoIngreso.this, ProgresoEntregaActivity.class);
+                                        startActivity(i);
+                                    }
                                 }
                             }
-                        }
 
-                        @Override
-                        public void onFailure(Call<List<StatuEntrega>> call, Throwable t) {
-                            Log.i("CONSULTA", "Error al conectar");
-                            Toast.makeText(CodigoIngreso.this, "Conexión no establecida", Toast.LENGTH_SHORT).show();
-                        }
-                    });
+                            @Override
+                            public void onFailure(Call<List<StatuEntrega>> call, Throwable t) {
+                                Log.i("CONSULTA", "Error al conectar");
+                                Toast.makeText(CodigoIngreso.this, "Conexión no establecida", Toast.LENGTH_SHORT).show();
+                            }
+                        });
+                    }
                 } else {
                     Toast.makeText(CodigoIngreso.this, "Ingrese el codigo de su entrega", Toast.LENGTH_SHORT).show();
                 }

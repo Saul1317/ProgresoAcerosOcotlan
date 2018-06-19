@@ -26,4 +26,6 @@
     <string name="btn_enviar_factura_progreso_entrega">Descarga tu factura</string>
     <string name="btn_nuevo_rastreo_progreso_entrega">Nuevo rastreo</string>
     <string name="btn_ver_ofertas_progreso_entrega">Ver Ofertas</string>
+    <string name="urlOculta">http://192.168.0.223/web/entregas/</string>
+    <string name="title_activity_firma_sistemas">FirmaSistemasActivity</string>
 </resources>

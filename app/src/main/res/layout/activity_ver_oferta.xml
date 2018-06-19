@@ -24,7 +24,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_margin="@dimen/fab_margin"
-                app:elevation="6dp"
+                app:elevation="8dp"
                 app:srcCompat="@drawable/ic_action_phone_start" />
         </FrameLayout>
 </android.support.design.widget.CoordinatorLayout>

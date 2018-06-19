@@ -5,8 +5,8 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="19"
-        android:targetSdkVersion="26" />
+        android:minSdkVersion="21"
+        android:targetSdkVersion="27" />
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -69,13 +69,11 @@
             android:label="@string/title_activity_error_conexion"
             android:screenOrientation="landscape"
             android:theme="@style/pantalla_completa" />
-
-        <meta-data
-            android:name="android.support.VERSION"
-            android:value="26.1.0" />
-        <meta-data
-            android:name="android.arch.lifecycle.VERSION"
-            android:value="27.0.0-SNAPSHOT" />
+        <activity
+            android:name="com.acerosocotlan.progresoacerosocotlan.Controlador.FirmaSistemasActivity"
+            android:label="@string/title_activity_firma_sistemas"
+            android:screenOrientation="landscape"
+            android:theme="@style/pantalla_completa2" />
 
         <provider
             android:name="com.android.tools.ir.server.InstantRunContentProvider"

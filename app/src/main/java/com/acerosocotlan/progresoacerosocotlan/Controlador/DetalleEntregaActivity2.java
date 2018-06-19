@@ -130,8 +130,5 @@ public class DetalleEntregaActivity2 extends AppCompatActivity {
         linear_layout_filtro_detalle.setVisibility(View.INVISIBLE);
         textViewEstatus_detalle.setVisibility(View.INVISIBLE);
         RecogerEstatusEntrega();
-
-        //Log.i("CODIGO",MetodosSharedPreference.ObtenerCodigoEntregaPref(prs));
-        //Log.i("ESTATUS",MetodosSharedPreference.ObtenerEstatusEntregaPref(prs));
     }
 }

@@ -157,27 +157,27 @@ public class VerOferta extends AppCompatActivity {
         });
         alert.setPositiveButton("Si", new DialogInterface.OnClickListener(){
             public void onClick(DialogInterface dialog, int whichButton) {
-                if (Build.VERSION.SDK_INT>=Build.VERSION_CODES.M) {
-                    if (ActivityCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
-                        ActivityCompat.requestPermissions(VerOferta.this, new String[]{CALL_PHONE},100);
-                    } else {
-                        RealizarLLamada("7777777777");
-                    }
-                    RealizarLLamada("7777777777");
-                }
+                RealizarLLamada("7777777777");
             }
         });
         alert.show();
     }
 
     private void RealizarLLamada(String phoneNumber) {
-        Intent intent = new Intent(Intent.ACTION_DIAL);
-        intent.setData(Uri.parse("tel:" + phoneNumber));
-        if (intent.resolveActivity(getPackageManager()) != null) {
+        if (Build.VERSION.SDK_INT>=Build.VERSION_CODES.M) {
+            if (ActivityCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+                ActivityCompat.requestPermissions(VerOferta.this, new String[]{CALL_PHONE},100);
+            } else {
+                Intent intent = new Intent(Intent.ACTION_CALL);
+                intent.setData(Uri.parse("tel:"+phoneNumber));
+                startActivity(intent);
+            }
+        }else {
+            Intent intent = new Intent(Intent.ACTION_CALL);
+            intent.setData(Uri.parse("tel:" + phoneNumber));
             startActivity(intent);
         }
     }
-
     private void Inicializador(){
         prs = getSharedPreferences("usuarioDatos", Context.MODE_PRIVATE);
         ofertasRecyclerView = (RecyclerView) findViewById(R.id.ofertas_aceros_ocotlan_recyclerview);

@@ -11,10 +11,54 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <ImageView
+            android:id="@+id/error_conexion_fondo_mrEstil"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="fitXY"
-            android:background="@drawable/errorconexionalternativo"/>
+            android:background="@drawable/errorconexion"/>
+        <ImageView
+            android:id="@+id/error_conexion_simba_cola"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/colasimba"
+            android:layout_marginStart="75dp"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="bottom"/>
+        <ImageView
+            android:id="@+id/error_conexion_simba"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/simba"
+            android:layout_marginStart="50dp"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="bottom"/>
+        <ImageView
+            android:id="@+id/error_conexion_simba_gracias"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/graciassimba"
+            android:visibility="invisible"
+            android:layout_marginStart="90dp"
+            android:layout_marginBottom="75dp"
+            android:layout_gravity="bottom"/>
+        <ImageView
+            android:id="@+id/error_conexion_corazon_simba"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/corazonsimba"
+            android:layout_marginStart="90dp"
+            android:layout_marginBottom="50dp"
+            android:visibility="invisible"
+            android:layout_gravity="bottom"/>
+        <ImageView
+            android:id="@+id/error_conexion_corazon_amarillo_simba"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/corazonsimba"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="60dp"
+            android:visibility="invisible"
+            android:layout_gravity="bottom"/>
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
