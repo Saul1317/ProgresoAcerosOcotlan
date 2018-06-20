@@ -32,6 +32,7 @@ import android.widget.TextView;
 import com.acerosocotlan.progresoacerosocotlan.Adaptador.AdapterRecyclerView;
 import com.acerosocotlan.progresoacerosocotlan.Adaptador.AdapterRecyclerViewOfertas;
 import com.acerosocotlan.progresoacerosocotlan.Modelo.DetalleEntrega_retrofit;
+import com.acerosocotlan.progresoacerosocotlan.Modelo.DirectorioTelefonos;
 import com.acerosocotlan.progresoacerosocotlan.Modelo.MetodosSharedPreference;
 import com.acerosocotlan.progresoacerosocotlan.Modelo.NetworkAdapter;
 import com.acerosocotlan.progresoacerosocotlan.Modelo.StatuEntrega;
@@ -157,12 +158,30 @@ public class VerOferta extends AppCompatActivity {
         });
         alert.setPositiveButton("Si", new DialogInterface.OnClickListener(){
             public void onClick(DialogInterface dialog, int whichButton) {
-                RealizarLLamada("7777777777");
+               SolicitarTelefono();
             }
         });
         alert.show();
     }
+    private void SolicitarTelefono(){
+        Call<DirectorioTelefonos> call = NetworkAdapter.getApiService().SolicitarTelefono(
+                "directorio/gao",MetodosSharedPreference.ObtenerCodigoEntregaPref(prs));
+        call.enqueue(new Callback<DirectorioTelefonos>() {
+            @Override
+            public void onResponse(Call<DirectorioTelefonos> call, Response<DirectorioTelefonos> response) {
+                if(response.isSuccessful()) {
+                    DirectorioTelefonos directorioTelefonos = response.body();
+                    RealizarLLamada(directorioTelefonos.getTelefono());
+                    Log.i("DIRECTORIO DE TELEFONOS", directorioTelefonos.getTelefono());
+                }
+            }
 
+            @Override
+            public void onFailure(Call<DirectorioTelefonos> call, Throwable t) {
+                Log.i("DIRECTORIO DE TELEFONOS", "EROR");
+            }
+        });
+    }
     private void RealizarLLamada(String phoneNumber) {
         if (Build.VERSION.SDK_INT>=Build.VERSION_CODES.M) {
             if (ActivityCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {

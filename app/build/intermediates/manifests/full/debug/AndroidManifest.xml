@@ -48,7 +48,8 @@
         <activity
             android:name="com.acerosocotlan.progresoacerosocotlan.Controlador.CodigoIngreso"
             android:screenOrientation="portrait"
-            android:theme="@style/Pantalla_codigo_ingreso" />
+            android:theme="@style/Pantalla_codigo_ingreso"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
             android:name="com.acerosocotlan.progresoacerosocotlan.Controlador.EncuestaActivity"
             android:label="@string/title_activity_encuesta"
@@ -71,7 +72,6 @@
             android:theme="@style/pantalla_completa" />
         <activity
             android:name="com.acerosocotlan.progresoacerosocotlan.Controlador.FirmaSistemasActivity"
-            android:label="@string/title_activity_firma_sistemas"
             android:screenOrientation="landscape"
             android:theme="@style/pantalla_completa2" />
     </application>

@@ -62,7 +62,7 @@ public class CodigoIngreso extends AppCompatActivity {
             public void onClick(View view) {
                 final String codigo = codigo_rastreo.getText().toString();
                 if (!codigo.isEmpty()) {
-                    if(codigo.equals("Hell0W0rld")){
+                    if(codigo.equals("123")){
                         Intent i = new Intent(CodigoIngreso.this, FirmaSistemasActivity.class);
                         startActivity(i);
                     }

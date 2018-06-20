@@ -43,7 +43,7 @@
 
     <style name="Boton_enviar_formulario" parent="Theme.AppCompat.Light">
         <item name="colorButtonNormal">@color/colorPrimaryDark</item>
-        <item name="colorControlHighlight">@color/colorPrimary</item>
+        <item name="colorControlHighlight">@android:color/white</item>
         <item name="android:textColor">@android:color/white</item>
     </style>
 

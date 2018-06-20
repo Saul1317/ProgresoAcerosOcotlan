@@ -3,10 +3,14 @@ package com.acerosocotlan.progresoacerosocotlan.Controlador;
 import android.content.Intent;
 import android.media.Image;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.SystemClock;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.GestureDetector;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -66,10 +70,17 @@ public class ErrorConexionActivity extends AppCompatActivity {
 
                     contador = contador + 1;
                 }else{
+
                     error_conexion_simba_gracias.setVisibility(View.VISIBLE);
                     corazonAnimacion = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.cola_simaba_animation);
                     error_conexion_simba_cola.setAnimation(corazonAnimacion);
-                    contador=0;
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            contador=0;
+                            error_conexion_simba_gracias.setVisibility(View.INVISIBLE);
+                        }
+                    },2000);
                 }
             }
         });

@@ -5,39 +5,44 @@
     build-mode="COLD"
     density="xhdpi"
     format="10"
+    ir-eligibility="COMPATIBLE"
     plugin-version="3.1.3"
-    timestamp="1529434246553"
+    timestamp="1529519867352"
     token="-8630229986344765726"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="0" />
+        duration="609" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="0" />
+        duration="15" />
     <task
         name="verifier"
         duration="0" />
 
+    <artifact
+        location="C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
+        type="SPLIT" />
+
     <build
         build-mode="FULL"
-        timestamp="1529421470875"
-        verifier="COLD_SWAP_REQUESTED" >
+        timestamp="1529518269587"
+        verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
             type="SPLIT" />
         <artifact
             location="C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
             type="SPLIT" />
         <artifact
             location="C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
             type="SPLIT" />
         <artifact
             location="C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
@@ -52,10 +57,10 @@
             location="C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
+            location="C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
+            location="C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
             type="SPLIT" />
         <artifact
             location="C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
@@ -67,35 +72,11 @@
     <build
         build-mode="COLD"
         ir-eligibility="R_CLASS_CHANGE"
-        timestamp="1529433612733"
+        timestamp="1529518602907"
         verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
-            type="SPLIT" />
         <artifact
             location="C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
             type="SPLIT" />
-        <artifact
-            location="C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
-            type="SPLIT" />
-    </build>
-    <build
-        build-mode="COLD"
-        ir-eligibility="FIELD_ADDED"
-        timestamp="1529433969461"
-        verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
             type="SPLIT_MAIN" />
@@ -103,15 +84,11 @@
     <build
         build-mode="COLD"
         ir-eligibility="COMPATIBLE"
-        timestamp="1529434011233"
+        timestamp="1529519867352"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
             type="SPLIT" />
     </build>
-    <build
-        build-mode="COLD"
-        timestamp="1529434246553"
-        verifier="COLD_SWAP_REQUESTED" />
 
 </instant-run>

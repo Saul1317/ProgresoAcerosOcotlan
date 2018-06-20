@@ -40,6 +40,7 @@
         <activity
             android:name=".Controlador.CodigoIngreso"
             android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan"
             android:theme="@style/Pantalla_codigo_ingreso" />
         <activity
             android:name=".Controlador.EncuestaActivity"
@@ -63,7 +64,6 @@
             android:theme="@style/pantalla_completa" />
         <activity
             android:name=".Controlador.FirmaSistemasActivity"
-            android:label="@string/title_activity_firma_sistemas"
             android:screenOrientation="landscape"
             android:theme="@style/pantalla_completa2"></activity>
     </application>

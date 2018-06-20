@@ -2,6 +2,7 @@ package com.acerosocotlan.progresoacerosocotlan.Controlador;
 
 import android.Manifest;
 import android.app.DownloadManager;
+import android.app.ProgressDialog;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -22,6 +23,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
 import android.util.Base64;
 import android.util.Log;
+import android.view.GestureDetector;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -33,6 +36,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.acerosocotlan.progresoacerosocotlan.Modelo.DirectorioTelefonos;
 import com.acerosocotlan.progresoacerosocotlan.Modelo.Factura_retrofit;
 import com.acerosocotlan.progresoacerosocotlan.Modelo.MetodosSharedPreference;
 import com.acerosocotlan.progresoacerosocotlan.Modelo.NetworkAdapter;
@@ -72,24 +76,29 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
     private String codigo_entrega;
     private String status;
     private boolean menu_estatus = false;
+
+    GestureDetector gestureDetector;
+    boolean tapped;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_progreso_entrega);
         Inicializador();
+        gestureDetector = new GestureDetector(getApplicationContext(),new GestureListener());
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 AbrirMenuUsuario();
             }
         });
-        imagen_progress_bar.setOnClickListener(new View.OnClickListener() {
+        imagen_progress_bar.setOnTouchListener(new View.OnTouchListener() {
             @Override
-            public void onClick(View view) {
-                RecogerEstatusEntrega();
+            public boolean onTouch(View v, MotionEvent event) {
+                return gestureDetector.onTouchEvent(event);
             }
         });
+
         btn_mostrar_detalles_entrega.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -135,9 +144,27 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
             fab.startAnimation(flatbutton_animation);
             menu_estatus=false;
         }else{
-            finish();
+            DialogoMandarOfertas();
         }
     }
+
+    private void DialogoMandarOfertas() {
+        AlertDialog.Builder alert = new AlertDialog.Builder(this);
+        alert.setMessage("Antes de salir ¿No le gustaria ver nuestras ofertas?");
+        alert.setNegativeButton("No", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int whichButton) {
+                finish();
+            }
+        });
+        alert.setPositiveButton("Si", new DialogInterface.OnClickListener(){
+            public void onClick(DialogInterface dialog, int whichButton) {
+                Intent i = new Intent(ProgresoEntregaActivity.this, VerOferta.class);
+                startActivity(i);
+            }
+        });
+        alert.show();
+    }
+
     private void DialogoConfirmacionSalida(){
         AlertDialog.Builder alert = new AlertDialog.Builder(this);
 //        alert.setTitle("Aceros Ocotlán");
@@ -242,11 +269,20 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
         RecogerEstatusEntrega();
     }
     private void RecogerEstatusEntrega(){
+        final ProgressDialog progressDoalog;
+        progressDoalog = new ProgressDialog(ProgresoEntregaActivity.this);
+        progressDoalog.setMax(100);
+        progressDoalog.setMessage("Obteniendo los datos");
+        progressDoalog.setTitle("Aceros Ocotlán");
+        progressDoalog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+        // show it
+        progressDoalog.show();
         Call<List<StatuEntrega>> call = NetworkAdapter.getApiService().EstatusEntrega(
                 "statusentrega_"+codigo_entrega+"/gao");
         call.enqueue(new Callback<List<StatuEntrega>>() {
             @Override
             public void onResponse(Call<List<StatuEntrega>> call, Response<List<StatuEntrega>> response) {
+                progressDoalog.dismiss();
                 List<StatuEntrega> respuesta = response.body();
                 status = respuesta.get(0).getEstatus();
                 MetodosSharedPreference.GuardarEstatusEntrega(prs,status);
@@ -255,6 +291,7 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<List<StatuEntrega>> call, Throwable t) {
+                progressDoalog.dismiss();
                 Intent intentErrorConexion = new Intent(ProgresoEntregaActivity.this, ErrorConexionActivity.class);
                 intentErrorConexion.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(intentErrorConexion);
@@ -290,12 +327,31 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
         });
         alert.setPositiveButton("Si", new DialogInterface.OnClickListener(){
             public void onClick(DialogInterface dialog, int whichButton) {
-                RealizarLLamada("7777777777");
+               SolicitarTelefono();
             }
         });
         alert.show();
     }
 
+    private void SolicitarTelefono(){
+        Call<DirectorioTelefonos> call = NetworkAdapter.getApiService().SolicitarTelefono(
+                "directorio/gao",MetodosSharedPreference.ObtenerCodigoEntregaPref(prs));
+        call.enqueue(new Callback<DirectorioTelefonos>() {
+            @Override
+            public void onResponse(Call<DirectorioTelefonos> call, Response<DirectorioTelefonos> response) {
+                if(response.isSuccessful()) {
+                    DirectorioTelefonos directorioTelefonos = response.body();
+                    RealizarLLamada(directorioTelefonos.getTelefono());
+                    Log.i("DIRECTORIO DE TELEFONOS", directorioTelefonos.getTelefono());
+                }
+            }
+
+            @Override
+            public void onFailure(Call<DirectorioTelefonos> call, Throwable t) {
+                Log.i("DIRECTORIO DE TELEFONOS", "EROR");
+            }
+        });
+    }
     private void RealizarLLamada(String phoneNumber) {
         if (Build.VERSION.SDK_INT>=Build.VERSION_CODES.M) {
             if (ActivityCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
@@ -387,4 +443,19 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
         btn_nuevo_rastreo.setEnabled(false);
         btn_ver_ofertas.setEnabled(false);
     }
+    public class GestureListener extends
+            GestureDetector.SimpleOnGestureListener {
+
+        @Override
+        public boolean onDown(MotionEvent e) {
+            return true;
+        }
+        // event when double tap occurs
+        @Override
+        public boolean onDoubleTap(MotionEvent e) {
+            RecogerEstatusEntrega();
+            return true;
+        }
+    }
+
 }
