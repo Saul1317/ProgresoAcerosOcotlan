@@ -22,9 +22,9 @@ import com.acerosocotlan.progresoacerosocotlan.R;
 
 public class Splash extends AppCompatActivity {
 
-    Animation nubesAnimacion, carroAnimacion, textoAnimacion;
-    LinearLayout textoLayout;
-    FrameLayout nubesLayout, carroLayout;
+    private Animation nubesAnimacion, carroAnimacion, textoAnimacion;
+    private LinearLayout textoLayout;
+    private FrameLayout nubesLayout, carroLayout;
     //SHARED PREFERENCE
     private SharedPreferences prs;
     //36610
@@ -49,10 +49,7 @@ public class Splash extends AppCompatActivity {
     }
     public void CargarActivity(){
         Intent intentCodigoIngreso = new Intent(Splash.this,CodigoIngreso.class);
-        Intent intentEncuesta = new Intent(Splash.this, EncuestaActivity.class);
         Intent intentProcesoEntrega = new Intent(Splash.this, ProgresoEntregaActivity.class);
-        Intent intentVerOfertaEntrega = new Intent(Splash.this, VerOferta.class);
-        Intent intentErrorConexion = new Intent(Splash.this, ErrorConexionActivity.class);
 
         if (!TextUtils.isEmpty(MetodosSharedPreference.ObtenerCodigoEntregaPref(prs))){
             startActivity(intentProcesoEntrega);

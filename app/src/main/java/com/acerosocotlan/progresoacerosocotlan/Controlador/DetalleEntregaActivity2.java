@@ -1,5 +1,6 @@
 package com.acerosocotlan.progresoacerosocotlan.Controlador;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -43,6 +44,7 @@ public class DetalleEntregaActivity2 extends AppCompatActivity {
     private LinearLayout linear_layout_filtro_detalle;
     String status;
     private SharedPreferences prs;
+    private ProgressDialog progressDoalog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,10 +54,12 @@ public class DetalleEntregaActivity2 extends AppCompatActivity {
         ObtenerDetalleEntrega();
     }
     private void ObtenerDetalleEntrega(){
+
         Call<List<DetalleEntrega_retrofit>> call = NetworkAdapter.getApiService().detalleEntrega("detalle_"+MetodosSharedPreference.ObtenerCodigoEntregaPref(prs)+"/gao");
         call.enqueue(new Callback<List<DetalleEntrega_retrofit>>() {
             @Override
             public void onResponse(Call<List<DetalleEntrega_retrofit>> call, Response<List<DetalleEntrega_retrofit>> response) {
+                progressDoalog.dismiss();
                 if (response.isSuccessful()){
                     List<DetalleEntrega_retrofit> detalleEntrega_retrofits = response.body();
                     LlenarRecyclerView(detalleEntrega_retrofits);
@@ -64,6 +68,7 @@ public class DetalleEntregaActivity2 extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<List<DetalleEntrega_retrofit>> call, Throwable t) {
+                progressDoalog.dismiss();
                 Intent i = new Intent(DetalleEntregaActivity2.this, ErrorConexionActivity.class);
                 i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(i);
@@ -78,11 +83,19 @@ public class DetalleEntregaActivity2 extends AppCompatActivity {
         detallesRecyclerview.setAdapter(arv);
     }
     public void RecogerEstatusEntrega(){
+        progressDoalog.setMax(100);
+        progressDoalog.setTitle("Aceros Ocotlán");
+        progressDoalog.setIcon(R.drawable.logo);
+        progressDoalog.setMessage("Obteniendo los datos");
+        progressDoalog.setCanceledOnTouchOutside(false);
+        progressDoalog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+        progressDoalog.show();
         Call<List<StatuEntrega>> call = NetworkAdapter.getApiService().EstatusEntrega(
                 "statusentrega_"+MetodosSharedPreference.ObtenerCodigoEntregaPref(prs)+"/gao");
         call.enqueue(new Callback<List<StatuEntrega>>() {
             @Override
             public void onResponse(Call<List<StatuEntrega>> call, Response<List<StatuEntrega>> response) {
+                progressDoalog.dismiss();
                 List<StatuEntrega> respuesta = response.body();
                 status = respuesta.get(0).getEstatus();
                 MetodosSharedPreference.GuardarEstatusEntrega(prs,status);
@@ -91,6 +104,7 @@ public class DetalleEntregaActivity2 extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<List<StatuEntrega>> call, Throwable t) {
+                progressDoalog.dismiss();
                 Intent intentErrorConexion = new Intent(DetalleEntregaActivity2.this, ErrorConexionActivity.class);
                 intentErrorConexion.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(intentErrorConexion);
@@ -122,6 +136,7 @@ public class DetalleEntregaActivity2 extends AppCompatActivity {
     }
     private void inicializador(){
         prs = getSharedPreferences("usuarioDatos", Context.MODE_PRIVATE);
+        progressDoalog = new ProgressDialog(DetalleEntregaActivity2.this);
         detallesRecyclerview = (RecyclerView) findViewById(R.id.detalles_entregas_recyclerview);
         textViewEstatus_detalle = (TextView) findViewById(R.id.estatus_detalle);
         linear_layout_filtro_detalle = (LinearLayout) findViewById(R.id.linear_layout_filtro_detalle);

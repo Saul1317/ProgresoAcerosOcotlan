@@ -76,9 +76,9 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
     private String codigo_entrega;
     private String status;
     private boolean menu_estatus = false;
-
+    private ProgressDialog progressDoalog;
     GestureDetector gestureDetector;
-    boolean tapped;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -92,6 +92,7 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
                 AbrirMenuUsuario();
             }
         });
+
         imagen_progress_bar.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
@@ -147,7 +148,6 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
             DialogoMandarOfertas();
         }
     }
-
     private void DialogoMandarOfertas() {
         AlertDialog.Builder alert = new AlertDialog.Builder(this);
         alert.setMessage("Antes de salir ¿No le gustaria ver nuestras ofertas?");
@@ -164,7 +164,6 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
         });
         alert.show();
     }
-
     private void DialogoConfirmacionSalida(){
         AlertDialog.Builder alert = new AlertDialog.Builder(this);
 //        alert.setTitle("Aceros Ocotlán");
@@ -187,7 +186,7 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
     }
     private void DialogoConfirmacionEnviarFactura(){
         AlertDialog.Builder alert = new AlertDialog.Builder(this);
-        alert.setMessage("Esta a punto de enviar la factura de su entrega a su correo, ¿Desea continuar?");
+        alert.setMessage("Esta a punto de enviar la factura de la entrega a su correo, ¿Desea continuar?");
         alert.setNegativeButton("No", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int whichButton) {
             }
@@ -204,6 +203,20 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
                 request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
                 Long reference= downloadManager.enqueue(request);*/
                 ReenviarFactura();
+            }
+        });
+        alert.show();
+    }
+    private void DialogoSolicitarLLamada() {
+        AlertDialog.Builder alert = new AlertDialog.Builder(this);
+        alert.setMessage("Al parecer no contamos con ningun correo suyo, ¿Desea comunicarse con nosotros?");
+        alert.setNegativeButton("No", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int whichButton) {
+            }
+        });
+        alert.setPositiveButton("Si", new DialogInterface.OnClickListener(){
+            public void onClick(DialogInterface dialog, int whichButton) {
+                SolicitarTelefono();
             }
         });
         alert.show();
@@ -238,44 +251,13 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
         imagen_touch_mano.setAnimation(touchAnimation);
         imagen_touch_mano.setVisibility(View.INVISIBLE);
     }
-    private void Inicializador(){
-        imagen_progress_bar = (ImageView) findViewById(R.id.imagen_progress_bar_estatus);
-        layout_filtro = (LinearLayout) findViewById(R.id.linear_layout_filtro);
-        linear_layout_menu_progreso = (LinearLayout) findViewById(R.id.linear_layout_menu_progreso);
-        fecha_entregado= (TextView) findViewById(R.id.fecha_llegada);
-
-        text_hora_entrega= (TextView) findViewById(R.id.hora_llegada);
-        text_num_pedido= (TextView) findViewById(R.id.pedido);
-
-        btn_mostrar_detalles_entrega = (Button) findViewById(R.id.btn_mostrar_detalles_entrega);
-        btn_nuevo_rastreo = (Button) findViewById(R.id.btn_nuevo_rastreo);
-        btn_ver_ofertas = (Button) findViewById(R.id.btn_ver_ofertas);
-        btn_descargar_factura = (Button) findViewById(R.id.btn_descargar_factura);
-
-        cardview__menu_progreso = (CardView) findViewById(R.id.cardview__menu_progreso);
-        imagen_mano_click = (ImageView) findViewById(R.id.imagen_mano_click);
-        imagen_touch_mano =(ImageView) findViewById(R.id.imagen_touch_mano);
-
-        cardview__menu_progreso.setVisibility(View.INVISIBLE);
-        text_hora_entrega.setVisibility(View.INVISIBLE);
-        text_num_pedido.setVisibility(View.INVISIBLE);
-        fecha_entregado.setVisibility(View.INVISIBLE);
-        layout_filtro.setVisibility(View.INVISIBLE);
-
-        fab = (FloatingActionButton) findViewById(R.id.fab);
-
-        prs = getSharedPreferences("usuarioDatos", Context.MODE_PRIVATE);
-        codigo_entrega = MetodosSharedPreference.ObtenerCodigoEntregaPref(prs);
-        RecogerEstatusEntrega();
-    }
     private void RecogerEstatusEntrega(){
-        final ProgressDialog progressDoalog;
-        progressDoalog = new ProgressDialog(ProgresoEntregaActivity.this);
         progressDoalog.setMax(100);
-        progressDoalog.setMessage("Obteniendo los datos");
         progressDoalog.setTitle("Aceros Ocotlán");
+        progressDoalog.setIcon(R.drawable.logo);
+        progressDoalog.setMessage("Obteniendo los datos");
+        progressDoalog.setCanceledOnTouchOutside(false);
         progressDoalog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
-        // show it
         progressDoalog.show();
         Call<List<StatuEntrega>> call = NetworkAdapter.getApiService().EstatusEntrega(
                 "statusentrega_"+codigo_entrega+"/gao");
@@ -318,21 +300,6 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
             }
         });
     }
-    private void DialogoSolicitarLLamada() {
-        AlertDialog.Builder alert = new AlertDialog.Builder(this);
-        alert.setMessage("Al parecer no contamos con ningun correo suyo, ¿Desea comunicarse con nosotros?");
-        alert.setNegativeButton("No", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int whichButton) {
-            }
-        });
-        alert.setPositiveButton("Si", new DialogInterface.OnClickListener(){
-            public void onClick(DialogInterface dialog, int whichButton) {
-               SolicitarTelefono();
-            }
-        });
-        alert.show();
-    }
-
     private void SolicitarTelefono(){
         Call<DirectorioTelefonos> call = NetworkAdapter.getApiService().SolicitarTelefono(
                 "directorio/gao",MetodosSharedPreference.ObtenerCodigoEntregaPref(prs));
@@ -445,7 +412,6 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
     }
     public class GestureListener extends
             GestureDetector.SimpleOnGestureListener {
-
         @Override
         public boolean onDown(MotionEvent e) {
             return true;
@@ -454,8 +420,37 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
         @Override
         public boolean onDoubleTap(MotionEvent e) {
             RecogerEstatusEntrega();
+            Toast.makeText(ProgresoEntregaActivity.this, "Progreso actualizado", Toast.LENGTH_SHORT).show();
             return true;
         }
     }
+    private void Inicializador(){
+        imagen_progress_bar = (ImageView) findViewById(R.id.imagen_progress_bar_estatus);
+        layout_filtro = (LinearLayout) findViewById(R.id.linear_layout_filtro);
+        linear_layout_menu_progreso = (LinearLayout) findViewById(R.id.linear_layout_menu_progreso);
+        fecha_entregado= (TextView) findViewById(R.id.fecha_llegada);
 
+        text_hora_entrega= (TextView) findViewById(R.id.hora_llegada);
+        text_num_pedido= (TextView) findViewById(R.id.pedido);
+
+        btn_mostrar_detalles_entrega = (Button) findViewById(R.id.btn_mostrar_detalles_entrega);
+        btn_nuevo_rastreo = (Button) findViewById(R.id.btn_nuevo_rastreo);
+        btn_ver_ofertas = (Button) findViewById(R.id.btn_ver_ofertas);
+        btn_descargar_factura = (Button) findViewById(R.id.btn_descargar_factura);
+
+        cardview__menu_progreso = (CardView) findViewById(R.id.cardview__menu_progreso);
+        imagen_mano_click = (ImageView) findViewById(R.id.imagen_mano_click);
+        imagen_touch_mano =(ImageView) findViewById(R.id.imagen_touch_mano);
+
+        cardview__menu_progreso.setVisibility(View.INVISIBLE);
+        text_hora_entrega.setVisibility(View.INVISIBLE);
+        text_num_pedido.setVisibility(View.INVISIBLE);
+        fecha_entregado.setVisibility(View.INVISIBLE);
+        layout_filtro.setVisibility(View.INVISIBLE);
+        fab = (FloatingActionButton) findViewById(R.id.fab);
+        progressDoalog = new ProgressDialog(ProgresoEntregaActivity.this);
+        prs = getSharedPreferences("usuarioDatos", Context.MODE_PRIVATE);
+        codigo_entrega = MetodosSharedPreference.ObtenerCodigoEntregaPref(prs);
+        RecogerEstatusEntrega();
+    }
 }

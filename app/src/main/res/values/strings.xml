@@ -27,4 +27,5 @@
     <string name="btn_nuevo_rastreo_progreso_entrega">Nuevo rastreo</string>
     <string name="btn_ver_ofertas_progreso_entrega">Remate de material</string>
     <string name="title_activity_firma_sistemas">FirmaSistemasActivity</string>
+    <string name="btn_dialog_txt_nombre">Entendido</string>
 </resources>

@@ -18,8 +18,8 @@
             android:gravity="center">
             <ImageView
                 android:id="@+id/imagen_producto_oferta"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
                 android:scaleType="fitXY"/>
         </LinearLayout>
         <LinearLayout

@@ -1,6 +1,7 @@
 package com.acerosocotlan.progresoacerosocotlan.Controlador;
 
 import android.Manifest;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -57,6 +58,7 @@ public class VerOferta extends AppCompatActivity {
     String status;
     LinearLayout linear_layout_filtro_ofertas;
     private SharedPreferences prs;
+    private ProgressDialog progressDoalog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,18 +83,29 @@ public class VerOferta extends AppCompatActivity {
         });
     }
     public void RecogerEstatusEntrega(){
+        progressDoalog.setMax(100);
+        progressDoalog.setTitle("Aceros Ocotlán");
+        progressDoalog.setIcon(R.drawable.logo);
+        progressDoalog.setMessage("Obteniendo los datos");
+        progressDoalog.setCanceledOnTouchOutside(false);
+        progressDoalog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+        progressDoalog.show();
         Call<List<StatuEntrega>> call = NetworkAdapter.getApiService().EstatusEntrega(
                 "statusentrega_"+MetodosSharedPreference.ObtenerCodigoEntregaPref(prs)+"/gao");
         call.enqueue(new Callback<List<StatuEntrega>>() {
             @Override
             public void onResponse(Call<List<StatuEntrega>> call, Response<List<StatuEntrega>> response) {
+                progressDoalog.dismiss();
                 List<StatuEntrega> respuesta = response.body();
                 ValidarEstatusActualEntrega(respuesta.get(0).getEstatus().toString());
             }
 
             @Override
             public void onFailure(Call<List<StatuEntrega>> call, Throwable t) {
-
+                progressDoalog.dismiss();
+                Intent intentErrorConexion = new Intent(VerOferta.this, ErrorConexionActivity.class);
+                intentErrorConexion.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(intentErrorConexion);
             }
         });
     }
@@ -128,6 +141,7 @@ public class VerOferta extends AppCompatActivity {
         call.enqueue(new Callback<List<VerOfertas_retrofit>>() {
             @Override
             public void onResponse(Call<List<VerOfertas_retrofit>> call, Response<List<VerOfertas_retrofit>> response) {
+                progressDoalog.dismiss();
                 if (response.isSuccessful()){
                     List<VerOfertas_retrofit> verOfertas_retrofits = response.body();
                     LlenarRecyclerView(verOfertas_retrofits);
@@ -136,6 +150,7 @@ public class VerOferta extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<List<VerOfertas_retrofit>> call, Throwable t) {
+                progressDoalog.dismiss();
                 Intent intentErrorConexion = new Intent(VerOferta.this, ErrorConexionActivity.class);
                 intentErrorConexion.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(intentErrorConexion);
@@ -199,6 +214,7 @@ public class VerOferta extends AppCompatActivity {
     }
     private void Inicializador(){
         prs = getSharedPreferences("usuarioDatos", Context.MODE_PRIVATE);
+        progressDoalog = new ProgressDialog(VerOferta.this);
         ofertasRecyclerView = (RecyclerView) findViewById(R.id.ofertas_aceros_ocotlan_recyclerview);
         imagen_fondo_estatus=(ImageView) findViewById(R.id.imagen_fondo_estatus);
         deslizamiento_tuto=(ImageView) findViewById(R.id.deslizamiento_tuto);

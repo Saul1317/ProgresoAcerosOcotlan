@@ -11,5 +11,5 @@ public final class BuildConfig {
   public static final int VERSION_CODE = 1;
   public static final String VERSION_NAME = "1.0";
   // Fields from build type: debug
-  public static final String SMS_Base_URL = "http://192.168.0.223/web/entregas/";
+  public static final String SMS_Base_URL = "http://131.196.249.66/web/entregas/";
 }
