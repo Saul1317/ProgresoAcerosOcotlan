@@ -22,10 +22,12 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -52,11 +54,10 @@ import static android.Manifest.permission.CALL_PHONE;
 
 public class VerOferta extends AppCompatActivity {
 
-    Animation deslizamientoManoAnimacion,touchAnimation;
-    RecyclerView ofertasRecyclerView;
-    ImageView imagen_fondo_estatus, deslizamiento_tuto, imagen_touch_mano_ver_ofertas;
-    String status;
-    LinearLayout linear_layout_filtro_ofertas;
+    private Animation deslizamientoManoAnimacion,touchAnimation;
+    private RecyclerView ofertasRecyclerView;
+    private ImageView imagen_fondo_estatus, deslizamiento_tuto, imagen_touch_mano_ver_ofertas;
+    private String status;
     private SharedPreferences prs;
     private ProgressDialog progressDoalog;
 
@@ -73,12 +74,12 @@ public class VerOferta extends AppCompatActivity {
                 imagen_touch_mano_ver_ofertas.setAnimation(touchAnimation);
                 imagen_touch_mano_ver_ofertas.setVisibility(View.INVISIBLE);
             }
-        },2000);
+        },3000);
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab_telefono_llamada);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                DialogoConfirmacionLlamada();
+                MostrarDialogCustomLLamada();
             }
         });
     }
@@ -90,7 +91,7 @@ public class VerOferta extends AppCompatActivity {
         progressDoalog.setCanceledOnTouchOutside(false);
         progressDoalog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
         progressDoalog.show();
-        Call<List<StatuEntrega>> call = NetworkAdapter.getApiService().EstatusEntrega(
+        Call<List<StatuEntrega>> call = NetworkAdapter.getApiService(MetodosSharedPreference.ObtenerPruebaEntregaPref(prs)).EstatusEntrega(
                 "statusentrega_"+MetodosSharedPreference.ObtenerCodigoEntregaPref(prs)+"/gao");
         call.enqueue(new Callback<List<StatuEntrega>>() {
             @Override
@@ -132,12 +133,9 @@ public class VerOferta extends AppCompatActivity {
         else if(status.equals("Cancelado")){
             imagen_fondo_estatus.setBackgroundResource(R.drawable.progressbar_aceros_ocotlan_version_3_revision);
         }
-        deslizamientoManoAnimacion = AnimationUtils.loadAnimation(this,R.anim.deslizamientodedo);
-        deslizamiento_tuto.setAnimation(deslizamientoManoAnimacion);
-        deslizamiento_tuto.setVisibility(View.INVISIBLE);
     }
     private void ObtenerOfertas(){
-        Call<List<VerOfertas_retrofit>> call = NetworkAdapter.getApiService().VerOfEntrega("verpromo/gao");
+        Call<List<VerOfertas_retrofit>> call = NetworkAdapter.getApiService(MetodosSharedPreference.ObtenerPruebaEntregaPref(prs)).VerOfEntrega("verpromo/gao");
         call.enqueue(new Callback<List<VerOfertas_retrofit>>() {
             @Override
             public void onResponse(Call<List<VerOfertas_retrofit>> call, Response<List<VerOfertas_retrofit>> response) {
@@ -147,7 +145,6 @@ public class VerOferta extends AppCompatActivity {
                     LlenarRecyclerView(verOfertas_retrofits);
                 }
             }
-
             @Override
             public void onFailure(Call<List<VerOfertas_retrofit>> call, Throwable t) {
                 progressDoalog.dismiss();
@@ -163,23 +160,42 @@ public class VerOferta extends AppCompatActivity {
         ofertasRecyclerView.setLayoutManager(l);
         AdapterRecyclerViewOfertas arv = new AdapterRecyclerViewOfertas(OfertasList,R.layout.cardview_ofertas, VerOferta.this, getApplicationContext());
         ofertasRecyclerView.setAdapter(arv);
+        deslizamientoManoAnimacion = AnimationUtils.loadAnimation(this,R.anim.deslizamientodedo);
+        deslizamiento_tuto.setAnimation(deslizamientoManoAnimacion);
+        deslizamiento_tuto.setVisibility(View.INVISIBLE);
     }
-    public void DialogoConfirmacionLlamada(){
-        AlertDialog.Builder alert = new AlertDialog.Builder(this);
-        alert.setMessage("¿Desea comunicarse con nosotros para más información?");
-        alert.setNegativeButton("No", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int whichButton) {
+    private void MostrarDialogCustomLLamada(){
+        final AlertDialog.Builder alert = new AlertDialog.Builder(this);
+        LayoutInflater inflater = this.getLayoutInflater();
+        View dialoglayout = inflater.inflate(R.layout.dialog_acerosocotlan, null);
+        alert.setView(dialoglayout);
+        final AlertDialog alertDialog = alert.show();
+        Button botonEntendido = (Button) dialoglayout.findViewById(R.id.btn_dialog_si_ver_ofertas);
+        Button botonCancelar = (Button) dialoglayout.findViewById(R.id.btn_dialog_no_ver_ofertas);
+        TextView txtTitutlo  = (TextView) dialoglayout.findViewById(R.id.dialog_acerosocotlan_titulo);
+        TextView txtDescripcion  = (TextView) dialoglayout.findViewById(R.id.dialog_acerosocotlan_descripcion);
+
+        txtTitutlo.setText(getResources().getString(R.string.dialog_txt_titulo_Llamada_correo));
+        txtDescripcion.setText(getResources().getString(R.string.dialog_txt_descripcion_Llamada));
+        botonEntendido.setText(getResources().getString(R.string.txt_si));
+        botonCancelar.setText(getResources().getString(R.string.txt_no));
+
+        botonEntendido.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SolicitarTelefono();
+                alertDialog.dismiss();
             }
         });
-        alert.setPositiveButton("Si", new DialogInterface.OnClickListener(){
-            public void onClick(DialogInterface dialog, int whichButton) {
-               SolicitarTelefono();
+        botonCancelar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                alertDialog.dismiss();
             }
         });
-        alert.show();
     }
     private void SolicitarTelefono(){
-        Call<DirectorioTelefonos> call = NetworkAdapter.getApiService().SolicitarTelefono(
+        Call<DirectorioTelefonos> call = NetworkAdapter.getApiService(MetodosSharedPreference.ObtenerPruebaEntregaPref(prs)).SolicitarTelefono(
                 "directorio/gao",MetodosSharedPreference.ObtenerCodigoEntregaPref(prs));
         call.enqueue(new Callback<DirectorioTelefonos>() {
             @Override
@@ -218,7 +234,6 @@ public class VerOferta extends AppCompatActivity {
         ofertasRecyclerView = (RecyclerView) findViewById(R.id.ofertas_aceros_ocotlan_recyclerview);
         imagen_fondo_estatus=(ImageView) findViewById(R.id.imagen_fondo_estatus);
         deslizamiento_tuto=(ImageView) findViewById(R.id.deslizamiento_tuto);
-        linear_layout_filtro_ofertas= (LinearLayout) findViewById(R.id.linear_layout_filtro_ofertas);
         imagen_touch_mano_ver_ofertas=(ImageView) findViewById(R.id.imagen_touch_mano_ver_ofertas);
         touchAnimation  = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.touchclick2);
         RecogerEstatusEntrega();

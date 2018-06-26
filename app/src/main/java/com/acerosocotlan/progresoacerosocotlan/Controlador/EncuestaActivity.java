@@ -24,18 +24,18 @@ import retrofit2.Response;
 
 public class EncuestaActivity extends AppCompatActivity {
 
-    ImageView btn_feliz_encuesta_pregunta0,btn_contento_encuesta_pregunta0,btn_triste_encuesta_pregunta0,
+    private ImageView btn_feliz_encuesta_pregunta0,btn_contento_encuesta_pregunta0,btn_triste_encuesta_pregunta0,
               btn_feliz_encuesta_pregunta1,btn_contento_encuesta_pregunta1,btn_triste_encuesta_pregunta1,
               btn_feliz_encuesta_pregunta2,btn_contento_encuesta_pregunta2,btn_triste_encuesta_pregunta2,
               btn_feliz_encuesta_pregunta3,btn_contento_encuesta_pregunta3,btn_triste_encuesta_pregunta3,
               img_completado_encuesta_pregunta0,img_completado_encuesta_pregunta1,
               img_completado_encuesta_pregunta2,img_completado_encuesta_pregunta3;
 
-    GridLayout gridlayout_encuesta;
-    TextView txt_finalizacion_encuesta,txt_descripcion_encuesta;
-    String vendedor, chofer, material, tiempo;
+    private GridLayout gridlayout_encuesta;
+    private TextView txt_finalizacion_encuesta,txt_descripcion_encuesta;
+    private String vendedor, chofer, material, tiempo;
     private SharedPreferences prs;
-    Vibrator v;
+    private Vibrator v;
     int contadorPreguntas=0;
 
     @Override
@@ -190,7 +190,7 @@ public class EncuestaActivity extends AppCompatActivity {
         }
     }
     private void EnviarEncuesta(){
-        Call<List<String>> call = NetworkAdapter.getApiService().EnviarRespuestas(
+        Call<List<String>> call = NetworkAdapter.getApiService(MetodosSharedPreference.ObtenerPruebaEntregaPref(prs)).EnviarRespuestas(
                 "guardarencuesta/gao", MetodosSharedPreference.ObtenerCodigoEntregaPref(prs), vendedor, chofer,material, tiempo);
         call.enqueue(new Callback<List<String>>() {
             @Override

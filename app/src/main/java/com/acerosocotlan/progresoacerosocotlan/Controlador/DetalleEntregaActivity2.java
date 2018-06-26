@@ -40,9 +40,8 @@ public class DetalleEntregaActivity2 extends AppCompatActivity {
     private RecyclerView detallesRecyclerview;
     private CollapsingToolbarLayout collapsingToolbarLayout;
     private ImageView imageViewFondoDetallesEntrega;
-    private TextView textViewEstatus_detalle;
     private LinearLayout linear_layout_filtro_detalle;
-    String status;
+    private String status;
     private SharedPreferences prs;
     private ProgressDialog progressDoalog;
 
@@ -55,7 +54,7 @@ public class DetalleEntregaActivity2 extends AppCompatActivity {
     }
     private void ObtenerDetalleEntrega(){
 
-        Call<List<DetalleEntrega_retrofit>> call = NetworkAdapter.getApiService().detalleEntrega("detalle_"+MetodosSharedPreference.ObtenerCodigoEntregaPref(prs)+"/gao");
+        Call<List<DetalleEntrega_retrofit>> call = NetworkAdapter.getApiService(MetodosSharedPreference.ObtenerPruebaEntregaPref(prs)).detalleEntrega("detalle_"+MetodosSharedPreference.ObtenerCodigoEntregaPref(prs)+"/gao");
         call.enqueue(new Callback<List<DetalleEntrega_retrofit>>() {
             @Override
             public void onResponse(Call<List<DetalleEntrega_retrofit>> call, Response<List<DetalleEntrega_retrofit>> response) {
@@ -90,7 +89,7 @@ public class DetalleEntregaActivity2 extends AppCompatActivity {
         progressDoalog.setCanceledOnTouchOutside(false);
         progressDoalog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
         progressDoalog.show();
-        Call<List<StatuEntrega>> call = NetworkAdapter.getApiService().EstatusEntrega(
+        Call<List<StatuEntrega>> call = NetworkAdapter.getApiService(MetodosSharedPreference.ObtenerPruebaEntregaPref(prs)).EstatusEntrega(
                 "statusentrega_"+MetodosSharedPreference.ObtenerCodigoEntregaPref(prs)+"/gao");
         call.enqueue(new Callback<List<StatuEntrega>>() {
             @Override
@@ -138,12 +137,9 @@ public class DetalleEntregaActivity2 extends AppCompatActivity {
         prs = getSharedPreferences("usuarioDatos", Context.MODE_PRIVATE);
         progressDoalog = new ProgressDialog(DetalleEntregaActivity2.this);
         detallesRecyclerview = (RecyclerView) findViewById(R.id.detalles_entregas_recyclerview);
-        textViewEstatus_detalle = (TextView) findViewById(R.id.estatus_detalle);
         linear_layout_filtro_detalle = (LinearLayout) findViewById(R.id.linear_layout_filtro_detalle);
         imageViewFondoDetallesEntrega = (ImageView) findViewById(R.id.imagen_fondo_detalles_estatus);
-        //collapsingToolbarLayout = (CollapsingToolbarLayout) findViewById(R.id.toolbar_layout);
         linear_layout_filtro_detalle.setVisibility(View.INVISIBLE);
-        textViewEstatus_detalle.setVisibility(View.INVISIBLE);
         RecogerEstatusEntrega();
     }
 }

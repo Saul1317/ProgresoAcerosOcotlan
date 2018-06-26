@@ -24,6 +24,7 @@ import android.support.v7.widget.CardView;
 import android.util.Base64;
 import android.util.Log;
 import android.view.GestureDetector;
+import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
@@ -62,7 +63,7 @@ import static android.Manifest.permission.CALL_PHONE;
 
 public class ProgresoEntregaActivity extends AppCompatActivity {
     //VIEWS
-    private Animation clickdedoAnimation,cardviewAnimacion,carroAnimacion,touchAnimation, flatbutton_animation;
+    private Animation clickdedoAnimation,cardviewAnimacion,carroAnimacion,touchAnimation, flatbutton_animation,estrellaAnimation;
     private LinearLayout layout_filtro, linear_layout_menu_progreso;
     private ImageView imagen_progress_bar,imagen_mano_click,imagen_touch_mano;
     private CardView cardview__menu_progreso;
@@ -77,12 +78,11 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
     private String status;
     private boolean menu_estatus = false;
     private ProgressDialog progressDoalog;
-    GestureDetector gestureDetector;
+    private GestureDetector gestureDetector;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_progreso_entrega);
         Inicializador();
         gestureDetector = new GestureDetector(getApplicationContext(),new GestureListener());
@@ -112,7 +112,7 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
         btn_nuevo_rastreo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                DialogoConfirmacionSalida();
+                MostrarDialogCustomNuevoRastreo();
             }
         });
 
@@ -128,7 +128,7 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
         btn_descargar_factura.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                DialogoConfirmacionEnviarFactura();
+                MostrarDialogCustomFactura();
             }
         });
     }
@@ -145,81 +145,128 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
             fab.startAnimation(flatbutton_animation);
             menu_estatus=false;
         }else{
-            DialogoMandarOfertas();
+            MostrarDialogCustomOfertas();
         }
     }
-    private void DialogoMandarOfertas() {
-        AlertDialog.Builder alert = new AlertDialog.Builder(this);
-        alert.setMessage("Antes de salir ¿No le gustaria ver nuestras ofertas?");
-        alert.setNegativeButton("No", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int whichButton) {
+
+    private void MostrarDialogCustomOfertas(){
+        final AlertDialog.Builder alert = new AlertDialog.Builder(this);
+        LayoutInflater inflater = this.getLayoutInflater();
+        View dialoglayout = inflater.inflate(R.layout.dialog_ver_ofertas, null);
+        alert.setView(dialoglayout);
+        final AlertDialog alertDialog = alert.show();
+        ImageView estrella = (ImageView) dialoglayout.findViewById(R.id.dialog_img_estrella_oferta);
+        Button botonEntendido = (Button) dialoglayout.findViewById(R.id.btn_dialog_si_ver_ofertas);
+        Button botonCancelar = (Button) dialoglayout.findViewById(R.id.btn_dialog_no_ver_ofertas);
+        estrellaAnimation = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.estrella_ofertas_animation);
+        estrella.setAnimation(estrellaAnimation);
+        botonEntendido.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(ProgresoEntregaActivity.this, VerOferta.class);
+                startActivity(i);
+                alertDialog.dismiss();
+            }
+        });
+        botonCancelar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
                 finish();
             }
         });
-        alert.setPositiveButton("Si", new DialogInterface.OnClickListener(){
-            public void onClick(DialogInterface dialog, int whichButton) {
-                Intent i = new Intent(ProgresoEntregaActivity.this, VerOferta.class);
-                startActivity(i);
-            }
-        });
-        alert.show();
     }
-    private void DialogoConfirmacionSalida(){
-        AlertDialog.Builder alert = new AlertDialog.Builder(this);
-//        alert.setTitle("Aceros Ocotlán");
-//        alert.setIcon(getResources().getDrawable(R.drawable.acerosocotlan));
-        alert.setMessage("Esta a punto de volver a la pantalla de ingreso, ¿Desea continuar?");
-        alert.setNegativeButton("No", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int whichButton) {
+    private void MostrarDialogCustomFactura(){
+        final AlertDialog.Builder alert = new AlertDialog.Builder(this);
+        LayoutInflater inflater = this.getLayoutInflater();
+        View dialoglayout = inflater.inflate(R.layout.dialog_acerosocotlan, null);
+        alert.setView(dialoglayout);
+        final AlertDialog alertDialog = alert.show();
+        Button botonEntendido = (Button) dialoglayout.findViewById(R.id.btn_dialog_si_ver_ofertas);
+        Button botonCancelar = (Button) dialoglayout.findViewById(R.id.btn_dialog_no_ver_ofertas);
+        TextView txtTitutlo  = (TextView) dialoglayout.findViewById(R.id.dialog_acerosocotlan_titulo);
+        TextView txtDescripcion  = (TextView) dialoglayout.findViewById(R.id.dialog_acerosocotlan_descripcion);
+        txtTitutlo.setText(getResources().getString(R.string.dialog_txt_titulo_factura));
+        txtDescripcion.setText(getResources().getString(R.string.dialog_txt_descripcion_factura));
+        botonEntendido.setText(getResources().getString(R.string.dialog_btn_entendido_factura));
+        botonCancelar.setText(getResources().getString(R.string.dialog_btn_cancelar_factura));
+
+        botonEntendido.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ReenviarFactura();
+                alertDialog.dismiss();
             }
         });
-        alert.setPositiveButton("Si", new DialogInterface.OnClickListener(){
-            public void onClick(DialogInterface dialog, int whichButton) {
+        botonCancelar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                alertDialog.dismiss();
+            }
+        });
+    }
+    private void MostrarDialogCustomLlamada(){
+        final AlertDialog.Builder alert = new AlertDialog.Builder(this);
+        LayoutInflater inflater = this.getLayoutInflater();
+        View dialoglayout = inflater.inflate(R.layout.dialog_acerosocotlan, null);
+        alert.setView(dialoglayout);
+        final AlertDialog alertDialog = alert.show();
+        Button botonEntendido = (Button) dialoglayout.findViewById(R.id.btn_dialog_si_ver_ofertas);
+        Button botonCancelar = (Button) dialoglayout.findViewById(R.id.btn_dialog_no_ver_ofertas);
+        TextView txtTitutlo  = (TextView) dialoglayout.findViewById(R.id.dialog_acerosocotlan_titulo);
+        TextView txtDescripcion  = (TextView) dialoglayout.findViewById(R.id.dialog_acerosocotlan_descripcion);
+
+        txtTitutlo.setText(getResources().getString(R.string.dialog_txt_titulo_Llamada_correo));
+        txtDescripcion.setText(getResources().getString(R.string.dialog_txt_descripcion_Llamada_correo));
+        botonEntendido.setText(getResources().getString(R.string.txt_si));
+        botonCancelar.setText(getResources().getString(R.string.txt_no));
+
+        botonEntendido.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SolicitarTelefono();
+                alertDialog.dismiss();
+            }
+        });
+        botonCancelar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                alertDialog.dismiss();
+            }
+        });
+    }
+    private void MostrarDialogCustomNuevoRastreo(){
+        final AlertDialog.Builder alert = new AlertDialog.Builder(this);
+        LayoutInflater inflater = this.getLayoutInflater();
+        View dialoglayout = inflater.inflate(R.layout.dialog_acerosocotlan, null);
+        alert.setView(dialoglayout);
+        final AlertDialog alertDialog = alert.show();
+        Button botonEntendido = (Button) dialoglayout.findViewById(R.id.btn_dialog_si_ver_ofertas);
+        Button botonCancelar = (Button) dialoglayout.findViewById(R.id.btn_dialog_no_ver_ofertas);
+        TextView txtTitutlo  = (TextView) dialoglayout.findViewById(R.id.dialog_acerosocotlan_titulo);
+        TextView txtDescripcion  = (TextView) dialoglayout.findViewById(R.id.dialog_acerosocotlan_descripcion);
+
+        txtTitutlo.setText(getResources().getString(R.string.dialog_txt_titulo_nuevo_rastreo));
+        txtDescripcion.setText(getResources().getString(R.string.dialog_txt_descripcion_nuevo_rastreo));
+        botonEntendido.setText(getResources().getString(R.string.txt_si));
+        botonCancelar.setText(getResources().getString(R.string.txt_no));
+
+        botonEntendido.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
                 BloquearBotones();
                 Intent i = new Intent(ProgresoEntregaActivity.this, CodigoIngreso.class);
-                startActivity(i);
                 i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(i);
                 remover_variables_sharedpreference();
+                alertDialog.dismiss();
             }
         });
-        alert.show();
-    }
-    private void DialogoConfirmacionEnviarFactura(){
-        AlertDialog.Builder alert = new AlertDialog.Builder(this);
-        alert.setMessage("Esta a punto de enviar la factura de la entrega a su correo, ¿Desea continuar?");
-        alert.setNegativeButton("No", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int whichButton) {
+        botonCancelar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                alertDialog.dismiss();
             }
         });
-        alert.setPositiveButton("Si", new DialogInterface.OnClickListener(){
-            public void onClick(DialogInterface dialog, int whichButton) {
-                /*registerReceiver(new ValidarDescarga(), new IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE));
-                Toast.makeText(ProgresoEntregaActivity.this, "Descargando factura", Toast.LENGTH_SHORT).show();
-                downloadManager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
-                Uri uri= Uri.parse("http://entregas.dyndns.org/entregas/resource/Facturas/doc.pdf");
-                DownloadManager.Request request= new DownloadManager.Request(uri);
-                request.setDestinationInExternalFilesDir(ProgresoEntregaActivity.this, Environment.DIRECTORY_DOWNLOADS,
-                        MetodosSharedPreference.ObtenerCodigoEntregaPref(prs)+"-factura.pdf");
-                request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
-                Long reference= downloadManager.enqueue(request);*/
-                ReenviarFactura();
-            }
-        });
-        alert.show();
-    }
-    private void DialogoSolicitarLLamada() {
-        AlertDialog.Builder alert = new AlertDialog.Builder(this);
-        alert.setMessage("Al parecer no contamos con ningun correo suyo, ¿Desea comunicarse con nosotros?");
-        alert.setNegativeButton("No", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int whichButton) {
-            }
-        });
-        alert.setPositiveButton("Si", new DialogInterface.OnClickListener(){
-            public void onClick(DialogInterface dialog, int whichButton) {
-                SolicitarTelefono();
-            }
-        });
-        alert.show();
     }
 
     private void AbrirMenuUsuario() {
@@ -259,7 +306,7 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
         progressDoalog.setCanceledOnTouchOutside(false);
         progressDoalog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
         progressDoalog.show();
-        Call<List<StatuEntrega>> call = NetworkAdapter.getApiService().EstatusEntrega(
+        Call<List<StatuEntrega>> call = NetworkAdapter.getApiService(MetodosSharedPreference.ObtenerPruebaEntregaPref(prs)).EstatusEntrega(
                 "statusentrega_"+codigo_entrega+"/gao");
         call.enqueue(new Callback<List<StatuEntrega>>() {
             @Override
@@ -281,7 +328,7 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
         });
     }
     private void ReenviarFactura(){
-        Call<Factura_retrofit> call = NetworkAdapter.getApiService().EnviarFactura("factura/gao",
+        Call<Factura_retrofit> call = NetworkAdapter.getApiService(MetodosSharedPreference.ObtenerPruebaEntregaPref(prs)).EnviarFactura("factura/gao",
                 MetodosSharedPreference.ObtenerCodigoEntregaPref(prs));
         call.enqueue(new Callback<Factura_retrofit>() {
             @Override
@@ -289,7 +336,7 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
                 if(response.isSuccessful()){
                     Factura_retrofit factura_retrofit= response.body();
                     if(factura_retrofit.getRuta().toString().equals("sincorreo")){
-                        DialogoSolicitarLLamada();
+                        MostrarDialogCustomLlamada();
                     }
                 }
             }
@@ -301,7 +348,7 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
         });
     }
     private void SolicitarTelefono(){
-        Call<DirectorioTelefonos> call = NetworkAdapter.getApiService().SolicitarTelefono(
+        Call<DirectorioTelefonos> call = NetworkAdapter.getApiService(MetodosSharedPreference.ObtenerPruebaEntregaPref(prs)).SolicitarTelefono(
                 "directorio/gao",MetodosSharedPreference.ObtenerCodigoEntregaPref(prs));
         call.enqueue(new Callback<DirectorioTelefonos>() {
             @Override
@@ -350,6 +397,7 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
             text_hora_entrega.setVisibility(View.INVISIBLE);
             text_num_pedido.setVisibility(View.INVISIBLE);
             layout_filtro.setVisibility(View.INVISIBLE);
+            btn_descargar_factura.setEnabled(true);
             MostrarTutorial();
         }
         else if(status.equals("Proximo")){
@@ -358,6 +406,7 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
             text_hora_entrega.setVisibility(View.INVISIBLE);
             text_num_pedido.setVisibility(View.INVISIBLE);
             layout_filtro.setVisibility(View.INVISIBLE);
+            btn_descargar_factura.setEnabled(true);
         }
         else if(status.equals("En sitio")){
             imagen_progress_bar.setImageResource(R.drawable.proceso3);
@@ -365,6 +414,7 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
             text_hora_entrega.setVisibility(View.INVISIBLE);
             text_num_pedido.setVisibility(View.INVISIBLE);
             layout_filtro.setVisibility(View.INVISIBLE);
+            btn_descargar_factura.setEnabled(true);
         }
         else if(status.equals("Descargando")){
             imagen_progress_bar.setImageResource(R.drawable.proceso4);
@@ -372,6 +422,7 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
             text_hora_entrega.setVisibility(View.INVISIBLE);
             text_num_pedido.setVisibility(View.INVISIBLE);
             layout_filtro.setVisibility(View.INVISIBLE);
+            btn_descargar_factura.setEnabled(true);
         }
         else if(status.equals("Entregado")){
             if (respuesta.get(0).getHizoencuesta().toString().equals("0")){
@@ -387,6 +438,7 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
                 text_num_pedido.setText("El pedido "+respuesta.get(0).getPedido().toString()+" fue entregado");
                 fecha_entregado.setText(respuesta.get(0).getfSalidaEntrega().toString()+", ");
                 text_hora_entrega.setText(respuesta.get(0).gethSalidaEntrega().toString());
+                btn_descargar_factura.setEnabled(true);
             }
         }
         else if(status.equals("Cancelado")){

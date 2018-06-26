@@ -56,13 +56,14 @@
                         android:textStyle="bold"
                         android:textSize="14sp"
                         android:textAlignment="center"
+                        android:maxLength="10"
                         android:theme="@style/edittext_enviar_formulario">
                     </android.support.design.widget.TextInputEditText>
                     <Button
                         android:id="@+id/btn_enviar_formulario"
                         android:layout_width="70dp"
                         android:layout_height="40dp"
-                        android:text="Enviar"
+                        android:text="@string/txt_enviar"
                         android:textSize="12sp"
                         android:theme="@style/Boton_enviar_formulario"
                         android:layout_gravity="end" />

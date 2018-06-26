@@ -8,12 +8,16 @@
         "source": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\src\\main\\res\\drawable-xhdpi\\marcofoto1.png"
     },
     {
-        "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
-        "source": "C:\\Users\\Administrador\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\6caec9de34be779e0e67438a1a67f8b9\\res\\drawable-mdpi-v4\\abc_ic_menu_copy_mtrl_am_alpha.png"
+        "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_estrella.png.flat",
+        "source": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\src\\main\\res\\drawable-xxxhdpi\\estrella.png"
     },
     {
         "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_verde1.png.flat",
         "source": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\src\\main\\res\\drawable-xxxhdpi\\verde1.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
+        "source": "C:\\Users\\Administrador\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\6caec9de34be779e0e67438a1a67f8b9\\res\\drawable-mdpi-v4\\abc_ic_menu_copy_mtrl_am_alpha.png"
     },
     {
         "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_verde0.png.flat",
@@ -568,6 +572,10 @@
         "source": "C:\\Users\\Administrador\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\6caec9de34be779e0e67438a1a67f8b9\\res\\color-v23\\abc_btn_colored_text_material.xml"
     },
     {
+        "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_acerosocotlanlogooficial.png.flat",
+        "source": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\src\\main\\res\\drawable-hdpi\\acerosocotlanlogooficial.png"
+    },
+    {
         "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_list_selector_disabled_holo_light.9.png.flat",
         "source": "C:\\Users\\Administrador\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\6caec9de34be779e0e67438a1a67f8b9\\res\\drawable-mdpi-v4\\abc_list_selector_disabled_holo_light.9.png"
     },
@@ -686,6 +694,10 @@
     {
         "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_ic_star_black_36dp.png.flat",
         "source": "C:\\Users\\Administrador\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\6caec9de34be779e0e67438a1a67f8b9\\res\\drawable-xhdpi-v4\\abc_ic_star_black_36dp.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_estrella.png.flat",
+        "source": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\src\\main\\res\\drawable-mdpi\\estrella.png"
     },
     {
         "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_verde0.png.flat",
@@ -932,6 +944,10 @@
         "source": "C:\\Users\\Administrador\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\6caec9de34be779e0e67438a1a67f8b9\\res\\drawable-hdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png"
     },
     {
+        "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\layout_dialog_ver_ofertas.xml.flat",
+        "source": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\src\\main\\res\\layout\\dialog_ver_ofertas.xml"
+    },
+    {
         "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\layout_dialog_no_conexion.xml.flat",
         "source": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\src\\main\\res\\layout\\dialog_no_conexion.xml"
     },
@@ -1176,6 +1192,10 @@
         "source": "C:\\Users\\Administrador\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\6caec9de34be779e0e67438a1a67f8b9\\res\\drawable-xhdpi-v4\\abc_ic_star_half_black_36dp.png"
     },
     {
+        "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\anim_estrella_ofertas_animation.xml.flat",
+        "source": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\src\\main\\res\\anim\\estrella_ofertas_animation.xml"
+    },
+    {
         "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\layout-watch-v20_abc_alert_dialog_button_bar_material.xml.flat",
         "source": "C:\\Users\\Administrador\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\6caec9de34be779e0e67438a1a67f8b9\\res\\layout-watch-v20\\abc_alert_dialog_button_bar_material.xml"
     },
@@ -1234,6 +1254,10 @@
     {
         "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_paisaje.png.flat",
         "source": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\src\\main\\res\\drawable-hdpi\\paisaje.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_estrella.png.flat",
+        "source": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\src\\main\\res\\drawable-xxhdpi\\estrella.png"
     },
     {
         "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_text_select_handle_right_mtrl_light.png.flat",
@@ -1368,12 +1392,20 @@
         "source": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\src\\main\\res\\drawable-xhdpi\\puntocoma.png"
     },
     {
+        "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_acerosocotlanlogooficial.png.flat",
+        "source": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\src\\main\\res\\drawable-xhdpi\\acerosocotlanlogooficial.png"
+    },
+    {
         "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\anim_abc_slide_out_bottom.xml.flat",
         "source": "C:\\Users\\Administrador\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\6caec9de34be779e0e67438a1a67f8b9\\res\\anim\\abc_slide_out_bottom.xml"
     },
     {
         "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_detalle_entrega2.xml.flat",
         "source": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\src\\main\\res\\layout\\activity_detalle_entrega2.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_estrella.png.flat",
+        "source": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\src\\main\\res\\drawable-xhdpi\\estrella.png"
     },
     {
         "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_azul0.png.flat",
@@ -1748,6 +1780,10 @@
         "source": "C:\\Users\\Administrador\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\6caec9de34be779e0e67438a1a67f8b9\\res\\color\\abc_hint_foreground_material_light.xml"
     },
     {
+        "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\layout_dialog_acerosocotlan.xml.flat",
+        "source": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\src\\main\\res\\layout\\dialog_acerosocotlan.xml"
+    },
+    {
         "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_proceso1.png.flat",
         "source": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\src\\main\\res\\drawable-xxhdpi\\proceso1.png"
     },
@@ -1910,6 +1946,10 @@
     {
         "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_design_ic_visibility_off.png.flat",
         "source": "C:\\Users\\Administrador\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.1.aar\\f43b26dbf7866519bd3c81466267eb44\\res\\drawable-xhdpi-v4\\design_ic_visibility_off.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_acerosocotlanlogooficial.png.flat",
+        "source": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\src\\main\\res\\drawable-xxhdpi\\acerosocotlanlogooficial.png"
     },
     {
         "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_feliz.png.flat",
@@ -2332,8 +2372,16 @@
         "source": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\src\\main\\res\\drawable-xxxhdpi\\proceso5alternativo.png"
     },
     {
+        "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_acerosocotlanlogooficial.png.flat",
+        "source": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\src\\main\\res\\drawable-xxxhdpi\\acerosocotlanlogooficial.png"
+    },
+    {
         "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_scrubber_primary_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\Administrador\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\6caec9de34be779e0e67438a1a67f8b9\\res\\drawable-xhdpi-v4\\abc_scrubber_primary_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_acerosocotlanlogooficial.png.flat",
+        "source": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\src\\main\\res\\drawable-mdpi\\acerosocotlanlogooficial.png"
     },
     {
         "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_corazonsimba.png.flat",
@@ -2702,6 +2750,10 @@
     {
         "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_cloud_off.png.flat",
         "source": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\src\\main\\res\\drawable-hdpi\\ic_cloud_off.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_estrella.png.flat",
+        "source": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\src\\main\\res\\drawable-hdpi\\estrella.png"
     },
     {
         "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_progressbar_aceros_ocotlan_version_5_4.png.flat",

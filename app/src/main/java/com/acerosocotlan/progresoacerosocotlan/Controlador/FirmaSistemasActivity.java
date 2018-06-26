@@ -27,9 +27,9 @@ public class FirmaSistemasActivity extends AppCompatActivity {
             firma_verde1_simba, firma_verde0_simba,
             firma_amarillo1_simba,firma_amarillo0_simba;
 
-    Animation numero1Animacion, numero0Animacion, cola_simbaAnimacion, creditosAnimacion;
-    LinearLayout firma_linearlayout_creditos;
-    FrameLayout firma_layoout_filtro_credito;
+    private Animation numero1Animacion, numero0Animacion, cola_simbaAnimacion, creditosAnimacion;
+    private LinearLayout firma_linearlayout_creditos;
+    private FrameLayout firma_layoout_filtro_credito;
     private int contador=0;
     private FloatingActionButton btn_fab_creditos;
 

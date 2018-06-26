@@ -1,9 +1,4 @@
 apply plugin: 'com.android.application'
-def SMS_Base_URL = '"' + WEBServiceBaseSMSURL + '"' ?: '"Define SMS BASE URL"';
-
-android.buildTypes.each { type ->
-    type.buildConfigField 'String', 'SMS_Base_URL', WEBServiceBaseSMSURL
-}
 android {
     compileSdkVersion 27
     buildToolsVersion '27.0.3'

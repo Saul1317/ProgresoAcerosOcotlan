@@ -15,4 +15,5 @@
     <dimen name="firma_tamano_txt_nombre">17sp</dimen>
     <dimen name="firma_tamano_margen_bottom">22dp</dimen>
     <dimen name="firma_tamano_margen_bottom_puesto">1dp</dimen>
+    <dimen name="cardview_tamano_txt">12sp</dimen>
 </resources>

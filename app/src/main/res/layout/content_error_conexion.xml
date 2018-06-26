@@ -67,7 +67,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Error de Conexión!"
+                android:text="@string/error_conexion_txt_titulo"
                 android:textStyle="bold"
                 android:textSize="40sp"
                 android:textColor="@color/texto_blanco"
@@ -76,7 +76,7 @@
                 android:id="@+id/txt_error_conexion"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Al parecer hubo un problema al consultar la información"
+                android:text="@string/error_conexion_txt_descripcion"
                 android:textStyle="bold"
                 android:textAlignment="center"
                 android:textSize="23sp"
@@ -85,7 +85,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="presiona el boton para recargar"
+                android:text="@string/error_conexion_txt_instruccion"
                 android:textStyle="bold"
                 android:textSize="23sp"
                 android:textColor="@color/texto_blanco"

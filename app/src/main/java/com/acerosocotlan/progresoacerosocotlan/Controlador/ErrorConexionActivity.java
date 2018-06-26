@@ -23,8 +23,8 @@ import com.acerosocotlan.progresoacerosocotlan.R;
 
 public class ErrorConexionActivity extends AppCompatActivity {
     private TextView txt_error_conexion;
-    private ImageView error_conexion_simba_gracias,error_conexion_simba_cola, error_conexion_fondo_mrEstil, error_conexion_simba, error_conexion_corazon_simba,error_conexion_corazon_amarillo_simba;
-    Animation corazonAnimacion;
+    private ImageView error_conexion_simba_gracias,error_conexion_simba_cola, error_conexion_simba, error_conexion_corazon_simba,error_conexion_corazon_amarillo_simba;
+    private Animation corazonAnimacion;
     private int contador = 0;
 
     @Override
@@ -85,11 +85,9 @@ public class ErrorConexionActivity extends AppCompatActivity {
             }
         });
     }
-
     private void IniciadorView() {
         txt_error_conexion= (TextView) findViewById(R.id.txt_error_conexion);
         error_conexion_corazon_simba = (ImageView) findViewById(R.id.error_conexion_corazon_simba);
-        error_conexion_fondo_mrEstil = (ImageView) findViewById(R.id.error_conexion_fondo_mrEstil);
         error_conexion_simba = (ImageView) findViewById(R.id.error_conexion_simba);
         error_conexion_simba_cola = (ImageView) findViewById(R.id.error_conexion_simba_cola);
         error_conexion_corazon_amarillo_simba = (ImageView) findViewById(R.id.error_conexion_corazon_amarillo_simba);
