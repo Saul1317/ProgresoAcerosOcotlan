@@ -1,5 +1,6 @@
 package com.acerosocotlan.progresoacerosocotlan.Controlador;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -37,6 +38,7 @@ public class EncuestaActivity extends AppCompatActivity {
     private SharedPreferences prs;
     private Vibrator v;
     int contadorPreguntas=0;
+    private ProgressDialog progressDoalog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -190,11 +192,19 @@ public class EncuestaActivity extends AppCompatActivity {
         }
     }
     private void EnviarEncuesta(){
+        progressDoalog.setMax(100);
+        progressDoalog.setTitle("Aceros Ocotlán");
+        progressDoalog.setIcon(R.drawable.logo);
+        progressDoalog.setMessage("Obteniendo los datos");
+        progressDoalog.setCancelable(false);
+        progressDoalog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+        progressDoalog.show();
         Call<List<String>> call = NetworkAdapter.getApiService(MetodosSharedPreference.ObtenerPruebaEntregaPref(prs)).EnviarRespuestas(
                 "guardarencuesta/gao", MetodosSharedPreference.ObtenerCodigoEntregaPref(prs), vendedor, chofer,material, tiempo);
         call.enqueue(new Callback<List<String>>() {
             @Override
             public void onResponse(Call<List<String>> call, Response<List<String>> response) {
+                progressDoalog.dismiss();
                 Log.i("INSERTAR RESPUESTAS", "Insertando");
                 if(response.isSuccessful()) {
                     List<String> respuesta = response.body();
@@ -209,11 +219,16 @@ public class EncuestaActivity extends AppCompatActivity {
                             e.printStackTrace();
                         }
                     }
+                }else{
+                    Intent intentErrorConexion = new Intent(EncuestaActivity.this, ErrorConexionActivity.class);
+                    intentErrorConexion.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                    startActivity(intentErrorConexion);
                 }
             }
 
             @Override
             public void onFailure(Call<List<String>> call, Throwable t) {
+                progressDoalog.dismiss();
                 Log.i("ERROR ENCUESTA", t.getMessage());
                 Intent intentErrorConexion = new Intent(EncuestaActivity.this, ErrorConexionActivity.class);
                 startActivity(intentErrorConexion);

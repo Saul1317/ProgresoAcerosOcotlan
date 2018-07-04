@@ -56,9 +56,9 @@
     <style name="Boton_ver_oferta" parent="Theme.AppCompat.Light">
         <item name="colorButtonNormal">#ff9800</item>
         <item name="colorControlHighlight">#e65100</item>
+        <item name="color">#e65100</item>
         <item name="android:textColor">@android:color/white</item>
     </style>
-
 
     <style name="edittext_enviar_formulario" parent="TextAppearance.AppCompat">
         <item name="colorAccent">@color/colorPrimaryDark</item>

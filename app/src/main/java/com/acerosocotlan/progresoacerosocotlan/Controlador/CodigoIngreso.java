@@ -83,7 +83,7 @@ public class CodigoIngreso extends AppCompatActivity {
     private void ValidarUsuario(){
         txtprueba3 = codigo_rastreo.getText().toString();
         if (!txtprueba3.isEmpty()) {
-            if(txtprueba3.equals("123")){
+            if(txtprueba3.equals("Hell0W0rld")){
                 Intent i = new Intent(CodigoIngreso.this, FirmaSistemasActivity.class);
                 startActivity(i);
             }
@@ -99,7 +99,7 @@ public class CodigoIngreso extends AppCompatActivity {
         progressDoalog.setTitle("Aceros Ocotlán");
         progressDoalog.setIcon(R.drawable.logo);
         progressDoalog.setMessage("Validando sus datos");
-        progressDoalog.setCanceledOnTouchOutside(false);
+        progressDoalog.setCancelable(false);
         progressDoalog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
         progressDoalog.show();
         Call<Prueba_retrofit> call = NetworkAdapter.getApiServiceAlternativo().Solicitarprueba("egao.php",txtprueba1,txtprueba2);
@@ -116,6 +116,8 @@ public class CodigoIngreso extends AppCompatActivity {
                     }else{
                         MostrarDialogCustomNoConfiguracion();
                     }
+                }else{
+                    MostrarDialogCustomNoConfiguracion();
                 }
             }
 
@@ -144,6 +146,8 @@ public class CodigoIngreso extends AppCompatActivity {
                         i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                         startActivity(i);
                     }
+                }else{
+                    MostrarDialogCustomNoConfiguracion();
                 }
             }
 

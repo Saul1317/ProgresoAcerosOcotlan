@@ -48,19 +48,7 @@ public class FirmaSistemasActivity extends AppCompatActivity {
         btn_fab_creditos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                btn_fab_creditos.setEnabled(false);
-                firma_layoout_filtro_credito.setVisibility(View.VISIBLE);
-                firma_linearlayout_creditos.setVisibility(View.VISIBLE);
-                creditosAnimacion = AnimationUtils.loadAnimation(FirmaSistemasActivity.this, R.anim.creditos_animacion);
-                firma_linearlayout_creditos.setAnimation(creditosAnimacion);
-                firma_linearlayout_creditos.setVisibility(View.INVISIBLE);
-                new Handler().postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        firma_layoout_filtro_credito.setVisibility(View.INVISIBLE);
-                        btn_fab_creditos.setEnabled(true);
-                    }
-                },11000);
+               AnimacionCreditos();
             }
         });
     }
@@ -130,10 +118,19 @@ public class FirmaSistemasActivity extends AppCompatActivity {
         }
     }
     private void AnimacionCreditos() {
+        btn_fab_creditos.setEnabled(false);
+        firma_layoout_filtro_credito.setVisibility(View.VISIBLE);
         firma_linearlayout_creditos.setVisibility(View.VISIBLE);
         creditosAnimacion = AnimationUtils.loadAnimation(FirmaSistemasActivity.this, R.anim.creditos_animacion);
         firma_linearlayout_creditos.setAnimation(creditosAnimacion);
         firma_linearlayout_creditos.setVisibility(View.INVISIBLE);
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                firma_layoout_filtro_credito.setVisibility(View.INVISIBLE);
+                btn_fab_creditos.setEnabled(true);
+            }
+        },11000);
 
     }
     private void IniciadorView() {

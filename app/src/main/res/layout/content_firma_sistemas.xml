@@ -7,26 +7,21 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".Controlador.FirmaSistemasActivity"
     tools:showIn="@layout/activity_firma_sistemas">
-
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
         <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="fitXY"
         android:background="@drawable/errorconexion"/>
         <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="70dp"
-            android:layout_marginBottom="70dp"
-            android:layout_marginLeft="130dp"
-            android:layout_marginRight="130dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:scaleType="fitXY"
-            android:layout_gravity="center"
-            android:background="@drawable/marcofoto1"/>
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/firmasistemas"/>
         <ImageView
             android:id="@+id/firma_simba_cola"
             android:layout_width="wrap_content"

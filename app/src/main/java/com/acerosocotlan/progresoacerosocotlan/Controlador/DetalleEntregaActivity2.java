@@ -62,6 +62,10 @@ public class DetalleEntregaActivity2 extends AppCompatActivity {
                 if (response.isSuccessful()){
                     List<DetalleEntrega_retrofit> detalleEntrega_retrofits = response.body();
                     LlenarRecyclerView(detalleEntrega_retrofits);
+                }else{
+                    Intent intentErrorConexion = new Intent(DetalleEntregaActivity2.this, ErrorConexionActivity.class);
+                    intentErrorConexion.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                    startActivity(intentErrorConexion);
                 }
             }
 
@@ -86,7 +90,7 @@ public class DetalleEntregaActivity2 extends AppCompatActivity {
         progressDoalog.setTitle("Aceros Ocotlán");
         progressDoalog.setIcon(R.drawable.logo);
         progressDoalog.setMessage("Obteniendo los datos");
-        progressDoalog.setCanceledOnTouchOutside(false);
+        progressDoalog.setCancelable(false);
         progressDoalog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
         progressDoalog.show();
         Call<List<StatuEntrega>> call = NetworkAdapter.getApiService(MetodosSharedPreference.ObtenerPruebaEntregaPref(prs)).EstatusEntrega(
@@ -95,10 +99,16 @@ public class DetalleEntregaActivity2 extends AppCompatActivity {
             @Override
             public void onResponse(Call<List<StatuEntrega>> call, Response<List<StatuEntrega>> response) {
                 progressDoalog.dismiss();
-                List<StatuEntrega> respuesta = response.body();
-                status = respuesta.get(0).getEstatus();
-                MetodosSharedPreference.GuardarEstatusEntrega(prs,status);
-                ValidarEstatusActualEntrega(respuesta);
+                if (response.isSuccessful()) {
+                    List<StatuEntrega> respuesta = response.body();
+                    status = respuesta.get(0).getEstatus();
+                    MetodosSharedPreference.GuardarEstatusEntrega(prs, status);
+                    ValidarEstatusActualEntrega(respuesta);
+                }else{
+                    Intent intentErrorConexion = new Intent(DetalleEntregaActivity2.this, ErrorConexionActivity.class);
+                    intentErrorConexion.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                    startActivity(intentErrorConexion);
+                }
             }
 
             @Override
@@ -129,7 +139,7 @@ public class DetalleEntregaActivity2 extends AppCompatActivity {
         else if(status.equals("Entregado")){
             imageViewFondoDetallesEntrega.setImageResource(R.drawable.proceso5);
         }
-        else if(status.equals("Cancelado")){
+        else if(status.equals("Posponer")){
             imageViewFondoDetallesEntrega.setImageResource(R.drawable.progressbar_aceros_ocotlan_version_3_revision);
         }
     }

@@ -67,14 +67,6 @@ public class VerOferta extends AppCompatActivity {
         setContentView(R.layout.activity_ver_oferta);
         Inicializador();
         ObtenerOfertas();
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                imagen_touch_mano_ver_ofertas.setVisibility(View.VISIBLE);
-                imagen_touch_mano_ver_ofertas.setAnimation(touchAnimation);
-                imagen_touch_mano_ver_ofertas.setVisibility(View.INVISIBLE);
-            }
-        },3000);
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab_telefono_llamada);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -83,12 +75,12 @@ public class VerOferta extends AppCompatActivity {
             }
         });
     }
-    public void RecogerEstatusEntrega(){
+    private void RecogerEstatusEntrega(){
         progressDoalog.setMax(100);
         progressDoalog.setTitle("Aceros Ocotlán");
         progressDoalog.setIcon(R.drawable.logo);
         progressDoalog.setMessage("Obteniendo los datos");
-        progressDoalog.setCanceledOnTouchOutside(false);
+        progressDoalog.setCancelable(false);
         progressDoalog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
         progressDoalog.show();
         Call<List<StatuEntrega>> call = NetworkAdapter.getApiService(MetodosSharedPreference.ObtenerPruebaEntregaPref(prs)).EstatusEntrega(
@@ -97,8 +89,10 @@ public class VerOferta extends AppCompatActivity {
             @Override
             public void onResponse(Call<List<StatuEntrega>> call, Response<List<StatuEntrega>> response) {
                 progressDoalog.dismiss();
-                List<StatuEntrega> respuesta = response.body();
-                ValidarEstatusActualEntrega(respuesta.get(0).getEstatus().toString());
+                if (response.isSuccessful()) {
+                    List<StatuEntrega> respuesta = response.body();
+                    ValidarEstatusActualEntrega(respuesta.get(0).getEstatus().toString());
+                }
             }
 
             @Override
@@ -130,7 +124,7 @@ public class VerOferta extends AppCompatActivity {
         else if(status.equals("Entregado")){
             imagen_fondo_estatus.setBackgroundResource(R.drawable.proceso5);
         }
-        else if(status.equals("Cancelado")){
+        else if(status.equals("Posponer")){
             imagen_fondo_estatus.setBackgroundResource(R.drawable.progressbar_aceros_ocotlan_version_3_revision);
         }
     }
@@ -142,7 +136,11 @@ public class VerOferta extends AppCompatActivity {
                 progressDoalog.dismiss();
                 if (response.isSuccessful()){
                     List<VerOfertas_retrofit> verOfertas_retrofits = response.body();
-                    LlenarRecyclerView(verOfertas_retrofits);
+                    if(verOfertas_retrofits.isEmpty()){
+                        MostrarDialogCustomSinOfertas();
+                    }else {
+                        LlenarRecyclerView(verOfertas_retrofits);
+                    }
                 }
             }
             @Override
@@ -194,6 +192,32 @@ public class VerOferta extends AppCompatActivity {
             }
         });
     }
+    private void MostrarDialogCustomSinOfertas(){
+        final AlertDialog.Builder alert = new AlertDialog.Builder(this);
+        LayoutInflater inflater = this.getLayoutInflater();
+        View dialoglayout = inflater.inflate(R.layout.dialog_no_conexion, null);
+        alert.setCancelable(false);
+        alert.setView(dialoglayout);
+        final AlertDialog alertDialog = alert.show();
+
+        Button botonEntendido = (Button) dialoglayout.findViewById(R.id.btn_dialog_no_internet);
+        TextView txtTitutlo  = (TextView) dialoglayout.findViewById(R.id.dialog_conexion_titulo);
+        TextView txtDescripcion  = (TextView) dialoglayout.findViewById(R.id.dialog_conexion_descripcion);
+
+        txtTitutlo.setText(getResources().getString(R.string.dialog_txt_titulo_sin_ofertas));
+        txtDescripcion.setText(getResources().getString(R.string.dialog_txt_descripcion_sin_ofertas));
+        botonEntendido.setText(getResources().getString(R.string.txt_entendido));
+
+        botonEntendido.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                alertDialog.dismiss();
+                Intent intentProgreso = new Intent(VerOferta.this, ProgresoEntregaActivity.class);
+                intentProgreso.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(intentProgreso);
+            }
+        });
+    }
     private void SolicitarTelefono(){
         Call<DirectorioTelefonos> call = NetworkAdapter.getApiService(MetodosSharedPreference.ObtenerPruebaEntregaPref(prs)).SolicitarTelefono(
                 "directorio/gao",MetodosSharedPreference.ObtenerCodigoEntregaPref(prs));
@@ -236,6 +260,14 @@ public class VerOferta extends AppCompatActivity {
         deslizamiento_tuto=(ImageView) findViewById(R.id.deslizamiento_tuto);
         imagen_touch_mano_ver_ofertas=(ImageView) findViewById(R.id.imagen_touch_mano_ver_ofertas);
         touchAnimation  = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.touchclick2);
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                imagen_touch_mano_ver_ofertas.setVisibility(View.VISIBLE);
+                imagen_touch_mano_ver_ofertas.setAnimation(touchAnimation);
+                imagen_touch_mano_ver_ofertas.setVisibility(View.INVISIBLE);
+            }
+        },3000);
         RecogerEstatusEntrega();
     }
 }

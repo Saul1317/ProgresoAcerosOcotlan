@@ -3,32 +3,24 @@ package com.acerosocotlan.progresoacerosocotlan.Controlador;
 import android.Manifest;
 import android.app.DownloadManager;
 import android.app.ProgressDialog;
-import android.content.ActivityNotFoundException;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.net.Uri;
-import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Environment;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.FileProvider;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
-import android.util.Base64;
 import android.util.Log;
 import android.view.GestureDetector;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
@@ -42,19 +34,11 @@ import com.acerosocotlan.progresoacerosocotlan.Modelo.Factura_retrofit;
 import com.acerosocotlan.progresoacerosocotlan.Modelo.MetodosSharedPreference;
 import com.acerosocotlan.progresoacerosocotlan.Modelo.NetworkAdapter;
 import com.acerosocotlan.progresoacerosocotlan.Modelo.StatuEntrega;
-import com.acerosocotlan.progresoacerosocotlan.Modelo.ValidarDescarga;
 import com.acerosocotlan.progresoacerosocotlan.Modelo.VerOfertas_retrofit;
 import com.acerosocotlan.progresoacerosocotlan.R;
 
-import java.io.ByteArrayInputStream;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
 import java.util.List;
 
-import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -77,6 +61,7 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
     private String codigo_entrega;
     private String status;
     private boolean menu_estatus = false;
+    private boolean ofertas = false;
     private ProgressDialog progressDoalog;
     private GestureDetector gestureDetector;
 
@@ -112,6 +97,7 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
         btn_nuevo_rastreo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                btn_nuevo_rastreo.setEnabled(false);
                 MostrarDialogCustomNuevoRastreo();
             }
         });
@@ -128,6 +114,7 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
         btn_descargar_factura.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                btn_descargar_factura.setEnabled(false);
                 MostrarDialogCustomFactura();
             }
         });
@@ -137,16 +124,20 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
         Desbloquearbotones();
     }
     @Override public void onBackPressed() {
-        if (menu_estatus==true) {
-            carroAnimacion = AnimationUtils.loadAnimation(ProgresoEntregaActivity.this,R.anim.menu_ocultar);
-            cardview__menu_progreso.setAnimation(carroAnimacion);
-            cardview__menu_progreso.setVisibility(View.INVISIBLE);
-            flatbutton_animation= AnimationUtils.loadAnimation(ProgresoEntregaActivity.this,R.anim.flatbutton_animation);
-            fab.startAnimation(flatbutton_animation);
-            menu_estatus=false;
-        }else{
-            MostrarDialogCustomOfertas();
-        }
+            if (menu_estatus == true) {
+                carroAnimacion = AnimationUtils.loadAnimation(ProgresoEntregaActivity.this, R.anim.menu_ocultar);
+                cardview__menu_progreso.setAnimation(carroAnimacion);
+                cardview__menu_progreso.setVisibility(View.INVISIBLE);
+                flatbutton_animation = AnimationUtils.loadAnimation(ProgresoEntregaActivity.this, R.anim.flatbutton_animation);
+                fab.startAnimation(flatbutton_animation);
+                menu_estatus = false;
+            } else {
+                if (ofertas==true) {
+                    MostrarDialogCustomOfertas();
+                }else{
+                    finish();
+                }
+            }
     }
 
     private void MostrarDialogCustomOfertas(){
@@ -194,12 +185,14 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 ReenviarFactura();
+                btn_descargar_factura.setEnabled(true);
                 alertDialog.dismiss();
             }
         });
         botonCancelar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                btn_descargar_factura.setEnabled(true);
                 alertDialog.dismiss();
             }
         });
@@ -258,12 +251,14 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
                 i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(i);
                 remover_variables_sharedpreference();
+                btn_nuevo_rastreo.setEnabled(true);
                 alertDialog.dismiss();
             }
         });
         botonCancelar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                btn_nuevo_rastreo.setEnabled(true);
                 alertDialog.dismiss();
             }
         });
@@ -303,7 +298,7 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
         progressDoalog.setTitle("Aceros Ocotlán");
         progressDoalog.setIcon(R.drawable.logo);
         progressDoalog.setMessage("Obteniendo los datos");
-        progressDoalog.setCanceledOnTouchOutside(false);
+        progressDoalog.setCancelable(false);
         progressDoalog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
         progressDoalog.show();
         Call<List<StatuEntrega>> call = NetworkAdapter.getApiService(MetodosSharedPreference.ObtenerPruebaEntregaPref(prs)).EstatusEntrega(
@@ -312,10 +307,16 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<List<StatuEntrega>> call, Response<List<StatuEntrega>> response) {
                 progressDoalog.dismiss();
-                List<StatuEntrega> respuesta = response.body();
-                status = respuesta.get(0).getEstatus();
-                MetodosSharedPreference.GuardarEstatusEntrega(prs,status);
-                ValidarEstatusActualEntrega(respuesta);
+                if(response.isSuccessful()) {
+                    List<StatuEntrega> respuesta = response.body();
+                    status = respuesta.get(0).getEstatus();
+                    MetodosSharedPreference.GuardarEstatusEntrega(prs, status);
+                    ValidarEstatusActualEntrega(respuesta);
+                }else{
+                    Intent intentErrorConexion = new Intent(ProgresoEntregaActivity.this, ErrorConexionActivity.class);
+                    intentErrorConexion.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                    startActivity(intentErrorConexion);
+                }
             }
 
             @Override
@@ -335,8 +336,19 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
             public void onResponse(Call<Factura_retrofit> call, Response<Factura_retrofit> response) {
                 if(response.isSuccessful()){
                     Factura_retrofit factura_retrofit= response.body();
-                    if(factura_retrofit.getRuta().toString().equals("sincorreo")){
+                    Log.i("RESPUESTA FACTURA",response.body().toString());
+                    // aun notienefactura
+                    if(factura_retrofit.getRuta().equals("sincorreo")){
                         MostrarDialogCustomLlamada();
+                    }
+                    if(factura_retrofit.getRuta().equals("Aun no tiene Factura")){
+                        Toast.makeText(ProgresoEntregaActivity.this, factura_retrofit.getRuta(), Toast.LENGTH_SHORT).show();
+                    }
+                    else if(factura_retrofit.getRuta().equals("Error al enviar el Correo")){
+                        Toast.makeText(ProgresoEntregaActivity.this, factura_retrofit.getRuta(), Toast.LENGTH_SHORT).show();
+                    }
+                    else{
+                        Toast.makeText(ProgresoEntregaActivity.this, factura_retrofit.getRuta(), Toast.LENGTH_SHORT).show();
                     }
                 }
             }
@@ -388,7 +400,6 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
             text_hora_entrega.setVisibility(View.INVISIBLE);
             text_num_pedido.setVisibility(View.INVISIBLE);
             layout_filtro.setVisibility(View.INVISIBLE);
-            btn_descargar_factura.setEnabled(false);
             MostrarTutorial();
         }
         else if(status.equals("En Ruta")){
@@ -441,7 +452,7 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
                 btn_descargar_factura.setEnabled(true);
             }
         }
-        else if(status.equals("Cancelado")){
+        else if(status.equals("Posponer")){
             imagen_progress_bar.setImageResource(R.drawable.progressbar_aceros_ocotlan_version_3_revision);
             fecha_entregado.setVisibility(View.INVISIBLE);
             text_hora_entrega.setVisibility(View.INVISIBLE);
@@ -452,14 +463,39 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
     private void remover_variables_sharedpreference(){
         prs.edit().clear().apply();
     }
+    private void ValidarVerOfertas() {
+        Call<List<VerOfertas_retrofit>> call = NetworkAdapter.getApiService(MetodosSharedPreference.ObtenerPruebaEntregaPref(prs)).VerOfEntrega("verpromo/gao");
+        call.enqueue(new Callback<List<VerOfertas_retrofit>>() {
+            @Override
+            public void onResponse(Call<List<VerOfertas_retrofit>> call, Response<List<VerOfertas_retrofit>> response) {
+                if (response.isSuccessful()){
+                    List<VerOfertas_retrofit> verOfertas_retrofits = response.body();
+                    if(verOfertas_retrofits.isEmpty()) {
+                        btn_ver_ofertas.setEnabled(false);
+                        btn_ver_ofertas.setVisibility(View.GONE);
+                        ofertas = false;
+                    }else{
+                        btn_ver_ofertas.setEnabled(true);
+                        btn_ver_ofertas.setVisibility(View.VISIBLE);
+                        ofertas = true;
+                    }
+                }
+            }
+            @Override
+            public void onFailure(Call<List<VerOfertas_retrofit>> call, Throwable t) {
+            }
+        });
+    }
     private void Desbloquearbotones(){
         btn_mostrar_detalles_entrega.setEnabled(true);
-        btn_nuevo_rastreo.setEnabled(true);
-        btn_ver_ofertas.setEnabled(true);
+        if(ofertas==true) {
+            btn_ver_ofertas.setEnabled(true);
+        }else{
+            btn_ver_ofertas.setEnabled(false);
+        }
     }
     private void BloquearBotones(){
         btn_mostrar_detalles_entrega.setEnabled(false);
-        btn_nuevo_rastreo.setEnabled(false);
         btn_ver_ofertas.setEnabled(false);
     }
     public class GestureListener extends
@@ -471,8 +507,10 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
         // event when double tap occurs
         @Override
         public boolean onDoubleTap(MotionEvent e) {
-            RecogerEstatusEntrega();
-            Toast.makeText(ProgresoEntregaActivity.this, "Progreso actualizado", Toast.LENGTH_SHORT).show();
+            if(menu_estatus==false) {
+                RecogerEstatusEntrega();
+                ValidarVerOfertas();
+            }
             return true;
         }
     }
@@ -503,6 +541,7 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
         progressDoalog = new ProgressDialog(ProgresoEntregaActivity.this);
         prs = getSharedPreferences("usuarioDatos", Context.MODE_PRIVATE);
         codigo_entrega = MetodosSharedPreference.ObtenerCodigoEntregaPref(prs);
+        ValidarVerOfertas();
         RecogerEstatusEntrega();
     }
 }

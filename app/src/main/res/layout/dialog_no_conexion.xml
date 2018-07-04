@@ -15,6 +15,7 @@
             android:scaleType="center"
             android:contentDescription="@string/app_name"/>
         <TextView
+            android:id="@+id/dialog_conexion_titulo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="18sp"
@@ -30,6 +31,7 @@
         android:orientation="vertical"
         android:gravity="center">
         <TextView
+            android:id="@+id/dialog_conexion_descripcion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="16dp"

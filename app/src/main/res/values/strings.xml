@@ -22,7 +22,7 @@
     <string name="detalles_entrega_cantidad">Cantidad </string>
     <string name="detalles_entrega_cantidad_kg">Cantidad en kg </string>
     <string name="codigo_progreso_edttxt_codigo_rastreo">Introduzca su código</string>
-    <string name="btn_ver_detalle_progreso_entrega">Detalles del pedido</string>
+    <string name="btn_ver_detalle_progreso_entrega">Detalles de la Entrega</string>
     <string name="btn_enviar_factura_progreso_entrega">Envía tu factura</string>
     <string name="btn_nuevo_rastreo_progreso_entrega">Nuevo rastreo</string>
     <string name="btn_ver_ofertas_progreso_entrega">Ofertas y remates</string>
@@ -32,6 +32,10 @@
     <string name="dialog_txt_titulo">Ofertas y Remates</string>
     <string name="txt_no">No</string>
     <string name="txt_si">Si</string>
+    <string name="txt_ofertas">Ofertas</string>
+    <string name="txt_entendido">Entendido</string>
+    <string name="txt_cancelar">Cancelar</string>
+    <string name="txt_salir">Salir</string>
     <string name="dialog_txt_titulo_factura">Enviar Factura</string>
     <string name="dialog_txt_descripcion_factura">Está a punto de enviar la factura de esta entrega a su correo registrado</string>
     <string name="dialog_btn_entendido_factura">Entendido</string>
@@ -59,7 +63,9 @@
     <string name="firma_sistemas_puesto_5">Analista ERP</string>
     <string name="firma_sistemas_txt_nombre5">Javier Gutiérrez</string>
     <string name="splash_txt_bienvenidos">Bienvenido</string>
-    <string name="cardview_ofertas">Valido hasta </string>
+    <string name="cardview_ofertas">Valido hasta:</string>
     <string name="dialog_error_conexion_txt_titulo">¡Error de conexión!</string>
     <string name="dialog_error_conexion_txt_descripcion">Al parecer no se estableció la conexión correctamente, ¿Desea intentar de nuevo?</string>
+    <string name="dialog_txt_titulo_sin_ofertas">No hay ofertas</string>
+    <string name="dialog_txt_descripcion_sin_ofertas">Al parecer no hay ninguna oferta disponible en tu sucursal</string>
 </resources>
