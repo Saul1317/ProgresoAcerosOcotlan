@@ -16,6 +16,8 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.GestureDetector;
 import android.view.LayoutInflater;
@@ -29,6 +31,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.acerosocotlan.progresoacerosocotlan.Adaptador.AdapterRecyclerView;
 import com.acerosocotlan.progresoacerosocotlan.Modelo.DirectorioTelefonos;
 import com.acerosocotlan.progresoacerosocotlan.Modelo.Factura_retrofit;
 import com.acerosocotlan.progresoacerosocotlan.Modelo.MetodosSharedPreference;
@@ -37,6 +40,7 @@ import com.acerosocotlan.progresoacerosocotlan.Modelo.StatuEntrega;
 import com.acerosocotlan.progresoacerosocotlan.Modelo.VerOfertas_retrofit;
 import com.acerosocotlan.progresoacerosocotlan.R;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import retrofit2.Call;
@@ -50,10 +54,11 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
     private Animation clickdedoAnimation,cardviewAnimacion,carroAnimacion,touchAnimation, flatbutton_animation,estrellaAnimation;
     private LinearLayout layout_filtro, linear_layout_menu_progreso;
     private ImageView imagen_progress_bar,imagen_mano_click,imagen_touch_mano;
-    private CardView cardview__menu_progreso;
+    private CardView cardview__menu_progreso,cardview__historico_proceso;
     private TextView fecha_entregado,text_num_pedido, text_hora_entrega;
     private Button btn_mostrar_detalles_entrega, btn_nuevo_rastreo, btn_ver_ofertas,btn_descargar_factura;
-    private FloatingActionButton fab;
+    private FloatingActionButton fab, fab_mostrar_historico;
+    private RecyclerView recyclerview_historico_envio_entrega;
     //SHARED PREFERENCE
     private SharedPreferences prs;
     //VARIABLES
@@ -61,6 +66,7 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
     private String codigo_entrega;
     private String status;
     private boolean menu_estatus = false;
+    private boolean historico_estatus=false;
     private boolean ofertas = false;
     private ProgressDialog progressDoalog;
     private GestureDetector gestureDetector;
@@ -75,6 +81,12 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 AbrirMenuUsuario();
+            }
+        });
+        fab_mostrar_historico.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AbrirHistoricoProcesoEntrega();
             }
         });
 
@@ -266,22 +278,61 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
 
     private void AbrirMenuUsuario() {
         if (menu_estatus==false) {
-            cardview__menu_progreso.setVisibility(View.VISIBLE);
-            cardviewAnimacion= AnimationUtils.loadAnimation(ProgresoEntregaActivity.this,R.anim.menu_mostrar);
-            cardview__menu_progreso.setAnimation(cardviewAnimacion);
-
-            flatbutton_animation= AnimationUtils.loadAnimation(ProgresoEntregaActivity.this,R.anim.flatbutton_animation_close);
-            fab.startAnimation(flatbutton_animation);
-            menu_estatus=true;
+            if(historico_estatus==true){
+                OcultarHistorico();
+            }
+            MostrarMenu();
         }else{
-            carroAnimacion = AnimationUtils.loadAnimation(ProgresoEntregaActivity.this,R.anim.menu_ocultar);
-            cardview__menu_progreso.setAnimation(carroAnimacion);
-            cardview__menu_progreso.setVisibility(View.INVISIBLE);
-            flatbutton_animation= AnimationUtils.loadAnimation(ProgresoEntregaActivity.this,R.anim.flatbutton_animation);
-            fab.startAnimation(flatbutton_animation);
-            menu_estatus=false;
+            OcultarMenu();
         }
     }
+    private void OcultarMenu(){
+        carroAnimacion = AnimationUtils.loadAnimation(ProgresoEntregaActivity.this,R.anim.menu_ocultar);
+        cardview__menu_progreso.setAnimation(carroAnimacion);
+        cardview__menu_progreso.setVisibility(View.INVISIBLE);
+        flatbutton_animation= AnimationUtils.loadAnimation(ProgresoEntregaActivity.this,R.anim.flatbutton_animation);
+        fab.startAnimation(flatbutton_animation);
+        menu_estatus=false;
+    }
+    private void MostrarMenu(){
+        cardview__menu_progreso.setVisibility(View.VISIBLE);
+        cardviewAnimacion= AnimationUtils.loadAnimation(ProgresoEntregaActivity.this,R.anim.menu_mostrar);
+        cardview__menu_progreso.setAnimation(cardviewAnimacion);
+
+        flatbutton_animation= AnimationUtils.loadAnimation(ProgresoEntregaActivity.this,R.anim.flatbutton_animation_close);
+        fab.startAnimation(flatbutton_animation);
+        menu_estatus=true;
+    }
+
+    private void AbrirHistoricoProcesoEntrega() {
+        if (historico_estatus==false) {
+            if(menu_estatus==true){
+                OcultarMenu();
+            }
+            MostrarHistorico();
+        }else{
+            OcultarHistorico();
+        }
+    }
+    private void OcultarHistorico(){
+        carroAnimacion = AnimationUtils.loadAnimation(ProgresoEntregaActivity.this,R.anim.ocultarhistorico_animation);
+        cardview__historico_proceso.setAnimation(carroAnimacion);
+        cardview__historico_proceso.setVisibility(View.INVISIBLE);
+
+        flatbutton_animation= AnimationUtils.loadAnimation(ProgresoEntregaActivity.this,R.anim.flatbutton_animation);
+        fab_mostrar_historico.startAnimation(flatbutton_animation);
+        historico_estatus=false;
+    }
+    private void MostrarHistorico(){
+        cardviewAnimacion= AnimationUtils.loadAnimation(ProgresoEntregaActivity.this,R.anim.mostrarhistorico_animation);
+        cardview__historico_proceso.setVisibility(View.VISIBLE);
+        cardview__historico_proceso.setAnimation(cardviewAnimacion);
+
+        flatbutton_animation= AnimationUtils.loadAnimation(ProgresoEntregaActivity.this,R.anim.flatbutton_animation_close);
+        fab_mostrar_historico.startAnimation(flatbutton_animation);
+        historico_estatus=true;
+    }
+
     private void MostrarTutorial() {
         imagen_mano_click.setVisibility(View.VISIBLE);
         imagen_touch_mano.setVisibility(View.VISIBLE);
@@ -436,7 +487,17 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
             btn_descargar_factura.setEnabled(true);
         }
         else if(status.equals("Entregado")){
-            if (respuesta.get(0).getHizoencuesta().toString().equals("0")){
+            if (respuesta.get(0).getHizoencuesta().equals("0")){
+                imagen_progress_bar.setImageResource(R.drawable.proceso5);
+                fecha_entregado.setVisibility(View.VISIBLE);
+                text_hora_entrega.setVisibility(View.VISIBLE);
+                text_num_pedido.setVisibility(View.VISIBLE);
+                layout_filtro.setVisibility(View.VISIBLE);
+
+                text_num_pedido.setText("El pedido "+respuesta.get(0).getPedido()+" fue entregado");
+                fecha_entregado.setText(respuesta.get(0).getfSalidaEntrega()+", ");
+                text_hora_entrega.setText(respuesta.get(0).gethSalidaEntrega());
+                btn_descargar_factura.setEnabled(true);
                 Intent i = new Intent(ProgresoEntregaActivity.this, EncuestaActivity.class);
                 startActivity(i);
             }else {
@@ -446,9 +507,9 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
                 text_num_pedido.setVisibility(View.VISIBLE);
                 layout_filtro.setVisibility(View.VISIBLE);
 
-                text_num_pedido.setText("El pedido "+respuesta.get(0).getPedido().toString()+" fue entregado");
-                fecha_entregado.setText(respuesta.get(0).getfSalidaEntrega().toString()+", ");
-                text_hora_entrega.setText(respuesta.get(0).gethSalidaEntrega().toString());
+                text_num_pedido.setText("El pedido "+respuesta.get(0).getPedido()+" fue entregado");
+                fecha_entregado.setText(respuesta.get(0).getfSalidaEntrega()+", ");
+                text_hora_entrega.setText(respuesta.get(0).gethSalidaEntrega());
                 btn_descargar_factura.setEnabled(true);
             }
         }
@@ -529,18 +590,25 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
         btn_descargar_factura = (Button) findViewById(R.id.btn_descargar_factura);
 
         cardview__menu_progreso = (CardView) findViewById(R.id.cardview__menu_progreso);
+        cardview__historico_proceso = (CardView) findViewById(R.id.cardview__historico_proceso);
+
         imagen_mano_click = (ImageView) findViewById(R.id.imagen_mano_click);
         imagen_touch_mano =(ImageView) findViewById(R.id.imagen_touch_mano);
 
         cardview__menu_progreso.setVisibility(View.INVISIBLE);
+        cardview__historico_proceso.setVisibility(View.INVISIBLE);
         text_hora_entrega.setVisibility(View.INVISIBLE);
         text_num_pedido.setVisibility(View.INVISIBLE);
         fecha_entregado.setVisibility(View.INVISIBLE);
         layout_filtro.setVisibility(View.INVISIBLE);
+
         fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab_mostrar_historico = (FloatingActionButton) findViewById(R.id.fab_mostrar_historico);
         progressDoalog = new ProgressDialog(ProgresoEntregaActivity.this);
+
         prs = getSharedPreferences("usuarioDatos", Context.MODE_PRIVATE);
         codigo_entrega = MetodosSharedPreference.ObtenerCodigoEntregaPref(prs);
+        MostrarHistorico();
         ValidarVerOfertas();
         RecogerEstatusEntrega();
     }

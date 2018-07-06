@@ -5,7 +5,7 @@
     <dimen name="distancia_txt_nombre">40dp</dimen>
     <dimen name="distancia_img_respuesta">25dp</dimen>
     <dimen name="tamano_txt_nombre">15sp</dimen>
-    <dimen name="tamano_img_respuesta_encuesta">35dp</dimen>
+    <dimen name="tamano_img_respuesta_encuesta">30dp</dimen>
     <dimen name="distancia_img_respuesta_bottom">10dp</dimen>
     <dimen name="tamano_img_completado_encuesta">30dp</dimen>
     <dimen name="cardview_detalles_margin">1dp</dimen>

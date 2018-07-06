@@ -56,7 +56,7 @@ public class VerOferta extends AppCompatActivity {
 
     private Animation deslizamientoManoAnimacion,touchAnimation;
     private RecyclerView ofertasRecyclerView;
-    private ImageView imagen_fondo_estatus, deslizamiento_tuto, imagen_touch_mano_ver_ofertas;
+    private ImageView imagen_fondo_estatus, deslizamiento_tuto, imagen_touch_mano_ver_ofertas_azul,imagen_touch_mano_ver_ofertas_verde;
     private String status;
     private SharedPreferences prs;
     private ProgressDialog progressDoalog;
@@ -92,6 +92,7 @@ public class VerOferta extends AppCompatActivity {
                 if (response.isSuccessful()) {
                     List<StatuEntrega> respuesta = response.body();
                     ValidarEstatusActualEntrega(respuesta.get(0).getEstatus().toString());
+
                 }
             }
 
@@ -108,24 +109,80 @@ public class VerOferta extends AppCompatActivity {
         status = respuesta;
         if(status.equals("Programado")){
             imagen_fondo_estatus.setBackgroundResource(R.drawable.progressbar_aceros_ocotlan_version_5_4);
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    imagen_touch_mano_ver_ofertas_verde.setVisibility(View.VISIBLE);
+                    imagen_touch_mano_ver_ofertas_verde.setAnimation(touchAnimation);
+                    imagen_touch_mano_ver_ofertas_verde.setVisibility(View.INVISIBLE);
+                }
+            },3000);
         }
         else if(status.equals("En Ruta")){
             imagen_fondo_estatus.setBackgroundResource(R.drawable.proceso1);
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    imagen_touch_mano_ver_ofertas_verde.setVisibility(View.VISIBLE);
+                    imagen_touch_mano_ver_ofertas_verde.setAnimation(touchAnimation);
+                    imagen_touch_mano_ver_ofertas_verde.setVisibility(View.INVISIBLE);
+                }
+            },3000);
         }
         else if(status.equals("Proximo")){
             imagen_fondo_estatus.setBackgroundResource(R.drawable.proceso2);
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    imagen_touch_mano_ver_ofertas_verde.setVisibility(View.VISIBLE);
+                    imagen_touch_mano_ver_ofertas_verde.setAnimation(touchAnimation);
+                    imagen_touch_mano_ver_ofertas_verde.setVisibility(View.INVISIBLE);
+                }
+            },3000);
         }
         else if(status.equals("En sitio")){
             imagen_fondo_estatus.setBackgroundResource(R.drawable.proceso3);
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    imagen_touch_mano_ver_ofertas_verde.setVisibility(View.VISIBLE);
+                    imagen_touch_mano_ver_ofertas_verde.setAnimation(touchAnimation);
+                    imagen_touch_mano_ver_ofertas_verde.setVisibility(View.INVISIBLE);
+                }
+            },3000);
         }
         else if(status.equals("Descargando")){
             imagen_fondo_estatus.setBackgroundResource(R.drawable.proceso4);
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    imagen_touch_mano_ver_ofertas_verde.setVisibility(View.VISIBLE);
+                    imagen_touch_mano_ver_ofertas_verde.setAnimation(touchAnimation);
+                    imagen_touch_mano_ver_ofertas_verde.setVisibility(View.INVISIBLE);
+                }
+            },3000);
         }
         else if(status.equals("Entregado")){
             imagen_fondo_estatus.setBackgroundResource(R.drawable.proceso5);
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    imagen_touch_mano_ver_ofertas_azul.setVisibility(View.VISIBLE);
+                    imagen_touch_mano_ver_ofertas_azul.setAnimation(touchAnimation);
+                    imagen_touch_mano_ver_ofertas_azul.setVisibility(View.INVISIBLE);
+                }
+            },3000);
         }
         else if(status.equals("Posponer")){
             imagen_fondo_estatus.setBackgroundResource(R.drawable.progressbar_aceros_ocotlan_version_3_revision);
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    imagen_touch_mano_ver_ofertas_azul.setVisibility(View.VISIBLE);
+                    imagen_touch_mano_ver_ofertas_azul.setAnimation(touchAnimation);
+                    imagen_touch_mano_ver_ofertas_azul.setVisibility(View.INVISIBLE);
+                }
+            },3000);
         }
     }
     private void ObtenerOfertas(){
@@ -258,16 +315,9 @@ public class VerOferta extends AppCompatActivity {
         ofertasRecyclerView = (RecyclerView) findViewById(R.id.ofertas_aceros_ocotlan_recyclerview);
         imagen_fondo_estatus=(ImageView) findViewById(R.id.imagen_fondo_estatus);
         deslizamiento_tuto=(ImageView) findViewById(R.id.deslizamiento_tuto);
-        imagen_touch_mano_ver_ofertas=(ImageView) findViewById(R.id.imagen_touch_mano_ver_ofertas);
+        imagen_touch_mano_ver_ofertas_azul=(ImageView) findViewById(R.id.imagen_touch_mano_ver_ofertas_azul);
+        imagen_touch_mano_ver_ofertas_verde=(ImageView) findViewById(R.id.imagen_touch_mano_ver_ofertas_verde);
         touchAnimation  = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.touchclick2);
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                imagen_touch_mano_ver_ofertas.setVisibility(View.VISIBLE);
-                imagen_touch_mano_ver_ofertas.setAnimation(touchAnimation);
-                imagen_touch_mano_ver_ofertas.setVisibility(View.INVISIBLE);
-            }
-        },3000);
         RecogerEstatusEntrega();
     }
 }
