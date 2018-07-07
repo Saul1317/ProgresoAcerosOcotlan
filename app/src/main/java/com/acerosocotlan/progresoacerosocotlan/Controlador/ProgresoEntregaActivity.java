@@ -32,8 +32,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.acerosocotlan.progresoacerosocotlan.Adaptador.AdapterRecyclerView;
+import com.acerosocotlan.progresoacerosocotlan.Adaptador.AdapterRecylerViewHistoricoEnvio;
 import com.acerosocotlan.progresoacerosocotlan.Modelo.DirectorioTelefonos;
 import com.acerosocotlan.progresoacerosocotlan.Modelo.Factura_retrofit;
+import com.acerosocotlan.progresoacerosocotlan.Modelo.Historico_retrofit;
 import com.acerosocotlan.progresoacerosocotlan.Modelo.MetodosSharedPreference;
 import com.acerosocotlan.progresoacerosocotlan.Modelo.NetworkAdapter;
 import com.acerosocotlan.progresoacerosocotlan.Modelo.StatuEntrega;
@@ -137,12 +139,9 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
     }
     @Override public void onBackPressed() {
             if (menu_estatus == true) {
-                carroAnimacion = AnimationUtils.loadAnimation(ProgresoEntregaActivity.this, R.anim.menu_ocultar);
-                cardview__menu_progreso.setAnimation(carroAnimacion);
-                cardview__menu_progreso.setVisibility(View.INVISIBLE);
-                flatbutton_animation = AnimationUtils.loadAnimation(ProgresoEntregaActivity.this, R.anim.flatbutton_animation);
-                fab.startAnimation(flatbutton_animation);
-                menu_estatus = false;
+                OcultarMenu();
+            }else if(historico_estatus == true){
+                OcultarHistorico();
             } else {
                 if (ofertas==true) {
                     MostrarDialogCustomOfertas();
@@ -319,7 +318,7 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
         cardview__historico_proceso.setAnimation(carroAnimacion);
         cardview__historico_proceso.setVisibility(View.INVISIBLE);
 
-        flatbutton_animation= AnimationUtils.loadAnimation(ProgresoEntregaActivity.this,R.anim.flatbutton_animation);
+        flatbutton_animation= AnimationUtils.loadAnimation(ProgresoEntregaActivity.this,R.anim.flatbutton_animation_close);
         fab_mostrar_historico.startAnimation(flatbutton_animation);
         historico_estatus=false;
     }
@@ -328,7 +327,7 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
         cardview__historico_proceso.setVisibility(View.VISIBLE);
         cardview__historico_proceso.setAnimation(cardviewAnimacion);
 
-        flatbutton_animation= AnimationUtils.loadAnimation(ProgresoEntregaActivity.this,R.anim.flatbutton_animation_close);
+        flatbutton_animation= AnimationUtils.loadAnimation(ProgresoEntregaActivity.this,R.anim.flatbutton_animation);
         fab_mostrar_historico.startAnimation(flatbutton_animation);
         historico_estatus=true;
     }
@@ -575,6 +574,37 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
             return true;
         }
     }
+
+    private void CargarHistoricoProgresoEntrega(){
+        List<Historico_retrofit> list_historico_retrofits  = new ArrayList<Historico_retrofit>();
+        ArrayList<String> procesos = new ArrayList<String>();
+        procesos.add(0,"10:10 No me");
+        procesos.add(1,"11:10 quiero");
+        procesos.add(2,"12:10 iiiiiiiir");
+        procesos.add(3,"13:10 Señor Star D':");
+
+        ArrayList<String> procesos2 = new ArrayList<String>();
+        procesos2.add(0,"10:10 Hola cliente");
+
+        Log.i("ARRAY",String.valueOf(procesos.size()));
+        Historico_retrofit historico_retrofit= new Historico_retrofit("7 de julio", procesos);
+        Historico_retrofit historico_retrofit1= new Historico_retrofit("8 de julio", procesos2);
+        Historico_retrofit historico_retrofit2= new Historico_retrofit("9 de julio", procesos);
+        Historico_retrofit historico_retrofit3= new Historico_retrofit("10 de julio", procesos2);
+
+        list_historico_retrofits.add(historico_retrofit);
+        list_historico_retrofits.add(historico_retrofit1);
+        list_historico_retrofits.add(historico_retrofit2);
+        list_historico_retrofits.add(historico_retrofit3);
+        list_historico_retrofits.add(historico_retrofit);
+
+        LinearLayoutManager l = new LinearLayoutManager(getApplicationContext());
+        l.setOrientation(LinearLayoutManager.VERTICAL);
+        recyclerview_historico_envio_entrega.setLayoutManager(l);
+        AdapterRecylerViewHistoricoEnvio arv = new AdapterRecylerViewHistoricoEnvio(list_historico_retrofits,R.layout.cardview_historial_envio, ProgresoEntregaActivity.this, getApplicationContext());
+        recyclerview_historico_envio_entrega.setAdapter(arv);
+    }
+
     private void Inicializador(){
         imagen_progress_bar = (ImageView) findViewById(R.id.imagen_progress_bar_estatus);
         layout_filtro = (LinearLayout) findViewById(R.id.linear_layout_filtro);
@@ -605,9 +635,11 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
         fab = (FloatingActionButton) findViewById(R.id.fab);
         fab_mostrar_historico = (FloatingActionButton) findViewById(R.id.fab_mostrar_historico);
         progressDoalog = new ProgressDialog(ProgresoEntregaActivity.this);
+        recyclerview_historico_envio_entrega = (RecyclerView) findViewById(R.id.RecyclerView_historico_proceso);
 
         prs = getSharedPreferences("usuarioDatos", Context.MODE_PRIVATE);
         codigo_entrega = MetodosSharedPreference.ObtenerCodigoEntregaPref(prs);
+        CargarHistoricoProgresoEntrega();
         MostrarHistorico();
         ValidarVerOfertas();
         RecogerEstatusEntrega();

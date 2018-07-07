@@ -4,28 +4,33 @@ import android.app.Activity;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.acerosocotlan.progresoacerosocotlan.Modelo.Historico_retrofit;
 import com.acerosocotlan.progresoacerosocotlan.Modelo.VerOfertas_retrofit;
 import com.acerosocotlan.progresoacerosocotlan.R;
 import com.squareup.picasso.Picasso;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class AdapterRecylerViewHistoricoEnvio extends RecyclerView.Adapter<AdapterRecylerViewHistoricoEnvio.AdapterRecyclerHolder>{
 
-    private List<VerOfertas_retrofit> arraylistVerOfertas;
+    private List<Historico_retrofit> arraylistHistorico;
     private int resource;
     private Activity activity;
     private Context context;
 
-    public AdapterRecylerViewHistoricoEnvio(List<VerOfertas_retrofit> arraylistVerOfertas, int resource, Activity activity, Context context) {
-        this.arraylistVerOfertas = arraylistVerOfertas;
+    public AdapterRecylerViewHistoricoEnvio(List<Historico_retrofit> arraylistHistorico, int resource, Activity activity, Context context) {
+        this.arraylistHistorico = arraylistHistorico;
         this.resource = resource;
         this.activity = activity;
         this.context = context;
@@ -38,22 +43,24 @@ public class AdapterRecylerViewHistoricoEnvio extends RecyclerView.Adapter<Adapt
     }
     @Override
     public void onBindViewHolder(AdapterRecyclerHolder holder, int position) {
-        VerOfertas_retrofit verOfertas_retrofit = arraylistVerOfertas.get(position);
-        holder.txt_fecha_historico.setText("5 de Julio");
-        //holder.lista_procesos_historico.setAdapter();
+        Historico_retrofit historico_retrofit = arraylistHistorico.get(position);
+        holder.txt_fecha_historico.setText(historico_retrofit.getFecha_proceso());
+        for(int i=0 ; i< historico_retrofit.getProceso_entrega().size() ; i++) {
+            holder.lista_procesos_historico.append(historico_retrofit.getProceso_entrega().get(i)+"\n");
+        }
     }
 
     @Override
     public int getItemCount() {
-        return arraylistVerOfertas.size();
+        return arraylistHistorico.size();
     }
     public class AdapterRecyclerHolder extends RecyclerView.ViewHolder{
         private TextView txt_fecha_historico;
-        private ListView lista_procesos_historico;
+        private TextView lista_procesos_historico;
         public AdapterRecyclerHolder(View itemView) {
             super(itemView);
             txt_fecha_historico= (TextView) itemView.findViewById(R.id.cardiview_historico_fecha);
-            lista_procesos_historico= (ListView) itemView.findViewById(R.id.list_historial_proceso);
+            lista_procesos_historico= (TextView) itemView.findViewById(R.id.txt_proceso);
         }
     }
 }
