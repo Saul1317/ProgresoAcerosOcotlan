@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/colorPrimary"
+    android:layout_marginBottom="20dp"
     cardview:cardCornerRadius="0dp"
     cardview:cardElevation="0dp">
     <LinearLayout
@@ -17,12 +18,13 @@
             android:layout_height="wrap_content"
             android:textStyle="bold"
             android:textColor="@color/texto_blanco"
-            android:textSize="15sp"
+            android:textSize="16sp"
             android:layout_marginBottom="5dp"/>
         <TextView
             android:id="@+id/txt_proceso"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="14sp"
             android:layout_marginStart="10dp"
             android:textColor="@color/texto_blanco"/>
     </LinearLayout>

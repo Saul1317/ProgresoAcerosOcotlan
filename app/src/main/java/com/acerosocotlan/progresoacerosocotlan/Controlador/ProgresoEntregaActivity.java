@@ -11,7 +11,10 @@ import android.graphics.Color;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Vibrator;
+import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -33,8 +36,10 @@ import android.widget.Toast;
 
 import com.acerosocotlan.progresoacerosocotlan.Adaptador.AdapterRecyclerView;
 import com.acerosocotlan.progresoacerosocotlan.Adaptador.AdapterRecylerViewHistoricoEnvio;
+import com.acerosocotlan.progresoacerosocotlan.Modelo.DetalleEntrega_retrofit;
 import com.acerosocotlan.progresoacerosocotlan.Modelo.DirectorioTelefonos;
 import com.acerosocotlan.progresoacerosocotlan.Modelo.Factura_retrofit;
+import com.acerosocotlan.progresoacerosocotlan.Modelo.Historial_retrofit;
 import com.acerosocotlan.progresoacerosocotlan.Modelo.Historico_retrofit;
 import com.acerosocotlan.progresoacerosocotlan.Modelo.MetodosSharedPreference;
 import com.acerosocotlan.progresoacerosocotlan.Modelo.NetworkAdapter;
@@ -52,15 +57,17 @@ import retrofit2.Response;
 import static android.Manifest.permission.CALL_PHONE;
 
 public class ProgresoEntregaActivity extends AppCompatActivity {
+    private static final long VIBRACION_TIEMPO = 50;
     //VIEWS
     private Animation clickdedoAnimation,cardviewAnimacion,carroAnimacion,touchAnimation, flatbutton_animation,estrellaAnimation;
-    private LinearLayout layout_filtro, linear_layout_menu_progreso;
-    private ImageView imagen_progress_bar,imagen_mano_click,imagen_touch_mano;
+    private LinearLayout layout_filtro;
+    private ImageView imagen_progress_bar,imagen_touch_mano, imagen_mano_click2, imagen_touch_mano2;
     private CardView cardview__menu_progreso,cardview__historico_proceso;
     private TextView fecha_entregado,text_num_pedido, text_hora_entrega;
     private Button btn_mostrar_detalles_entrega, btn_nuevo_rastreo, btn_ver_ofertas,btn_descargar_factura;
     private FloatingActionButton fab, fab_mostrar_historico;
     private RecyclerView recyclerview_historico_envio_entrega;
+    private CoordinatorLayout coordinator_progreso;
     //SHARED PREFERENCE
     private SharedPreferences prs;
     //VARIABLES
@@ -72,6 +79,7 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
     private boolean ofertas = false;
     private ProgressDialog progressDoalog;
     private GestureDetector gestureDetector;
+    private Vibrator vibrador;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -165,6 +173,7 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
         botonEntendido.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                vibrador.vibrate(VIBRACION_TIEMPO);
                 Intent i = new Intent(ProgresoEntregaActivity.this, VerOferta.class);
                 startActivity(i);
                 alertDialog.dismiss();
@@ -173,6 +182,7 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
         botonCancelar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                vibrador.vibrate(VIBRACION_TIEMPO);
                 finish();
             }
         });
@@ -195,6 +205,7 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
         botonEntendido.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                vibrador.vibrate(VIBRACION_TIEMPO);
                 ReenviarFactura();
                 btn_descargar_factura.setEnabled(true);
                 alertDialog.dismiss();
@@ -203,6 +214,7 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
         botonCancelar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                vibrador.vibrate(VIBRACION_TIEMPO);
                 btn_descargar_factura.setEnabled(true);
                 alertDialog.dismiss();
             }
@@ -227,6 +239,7 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
         botonEntendido.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                vibrador.vibrate(VIBRACION_TIEMPO);
                 SolicitarTelefono();
                 alertDialog.dismiss();
             }
@@ -234,6 +247,8 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
         botonCancelar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                vibrador.vibrate(VIBRACION_TIEMPO);
                 alertDialog.dismiss();
             }
         });
@@ -257,6 +272,7 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
         botonEntendido.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                vibrador.vibrate(VIBRACION_TIEMPO);
                 BloquearBotones();
                 Intent i = new Intent(ProgresoEntregaActivity.this, CodigoIngreso.class);
                 i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
@@ -269,6 +285,7 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
         botonCancelar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                vibrador.vibrate(VIBRACION_TIEMPO);
                 btn_nuevo_rastreo.setEnabled(true);
                 alertDialog.dismiss();
             }
@@ -331,17 +348,38 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
         fab_mostrar_historico.startAnimation(flatbutton_animation);
         historico_estatus=true;
     }
-
     private void MostrarTutorial() {
-        imagen_mano_click.setVisibility(View.VISIBLE);
-        imagen_touch_mano.setVisibility(View.VISIBLE);
+        imagen_mano_click2.setVisibility(View.VISIBLE);
+        imagen_touch_mano2.setVisibility(View.VISIBLE);
         clickdedoAnimation = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.clickdedo);
-        imagen_mano_click.setAnimation(clickdedoAnimation);
-        imagen_mano_click.setVisibility(View.INVISIBLE);
+        imagen_mano_click2.setAnimation(clickdedoAnimation);
+        imagen_mano_click2.setVisibility(View.INVISIBLE);
 
         touchAnimation = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.touchclick);
-        imagen_touch_mano.setAnimation(touchAnimation);
-        imagen_touch_mano.setVisibility(View.INVISIBLE);
+        touchAnimation.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                imagen_touch_mano.setVisibility(View.VISIBLE);
+                touchAnimation = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.touchclick);
+                imagen_touch_mano.setAnimation(touchAnimation);
+                clickdedoAnimation = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.clickdedoalternativo_animation);
+                imagen_mano_click2.setAnimation(clickdedoAnimation);
+                imagen_touch_mano.setVisibility(View.INVISIBLE);
+                imagen_mano_click2.setVisibility(View.INVISIBLE);
+                imagen_touch_mano2.setVisibility(View.INVISIBLE);
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+
+            }
+        });
+        imagen_touch_mano2.setAnimation(touchAnimation);
     }
     private void RecogerEstatusEntrega(){
         progressDoalog.setMax(100);
@@ -362,6 +400,7 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
                     status = respuesta.get(0).getEstatus();
                     MetodosSharedPreference.GuardarEstatusEntrega(prs, status);
                     ValidarEstatusActualEntrega(respuesta);
+                    RecogerHistorialEntrega();
                 }else{
                     Intent intentErrorConexion = new Intent(ProgresoEntregaActivity.this, ErrorConexionActivity.class);
                     intentErrorConexion.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
@@ -377,6 +416,33 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
                 startActivity(intentErrorConexion);
             }
         });
+    }
+    private void RecogerHistorialEntrega(){
+        Call<List<Historial_retrofit>> call = NetworkAdapter.getApiService(MetodosSharedPreference.ObtenerPruebaEntregaPref(prs)).HistorialEntrega(
+                "historial/gao", MetodosSharedPreference.ObtenerCodigoEntregaPref(prs));
+        call.enqueue(new Callback<List<Historial_retrofit>>() {
+            @Override
+            public void onResponse(Call<List<Historial_retrofit>> call, Response<List<Historial_retrofit>> response) {
+                if(response.isSuccessful()){
+                    List<Historial_retrofit> historial_retrofits = response.body();
+                    LlenarRecyclerView(historial_retrofits);
+                }else{
+
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<Historial_retrofit>> call, Throwable t) {
+
+            }
+        });
+    }
+    private void LlenarRecyclerView(List<Historial_retrofit> historial_retrofits){
+        LinearLayoutManager l = new LinearLayoutManager(getApplicationContext());
+        l.setOrientation(LinearLayoutManager.VERTICAL);
+        recyclerview_historico_envio_entrega.setLayoutManager(l);
+        AdapterRecylerViewHistoricoEnvio arv = new AdapterRecylerViewHistoricoEnvio(historial_retrofits,R.layout.cardview_historial_envio, ProgresoEntregaActivity.this, getApplicationContext());
+        recyclerview_historico_envio_entrega.setAdapter(arv);
     }
     private void ReenviarFactura(){
         Call<Factura_retrofit> call = NetworkAdapter.getApiService(MetodosSharedPreference.ObtenerPruebaEntregaPref(prs)).EnviarFactura("factura/gao",
@@ -402,7 +468,6 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
                     }
                 }
             }
-
             @Override
             public void onFailure(Call<Factura_retrofit> call, Throwable t) {
                 Log.i("RESPUESTA", t.toString());
@@ -567,48 +632,16 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
         // event when double tap occurs
         @Override
         public boolean onDoubleTap(MotionEvent e) {
-            if(menu_estatus==false) {
+            if(menu_estatus==false && historico_estatus==false) {
                 RecogerEstatusEntrega();
                 ValidarVerOfertas();
             }
             return true;
         }
     }
-
-    private void CargarHistoricoProgresoEntrega(){
-        List<Historico_retrofit> list_historico_retrofits  = new ArrayList<Historico_retrofit>();
-        ArrayList<String> procesos = new ArrayList<String>();
-        procesos.add(0,"10:10 No me");
-        procesos.add(1,"11:10 quiero");
-        procesos.add(2,"12:10 iiiiiiiir");
-        procesos.add(3,"13:10 Señor Star D':");
-
-        ArrayList<String> procesos2 = new ArrayList<String>();
-        procesos2.add(0,"10:10 Hola cliente");
-
-        Log.i("ARRAY",String.valueOf(procesos.size()));
-        Historico_retrofit historico_retrofit= new Historico_retrofit("7 de julio", procesos);
-        Historico_retrofit historico_retrofit1= new Historico_retrofit("8 de julio", procesos2);
-        Historico_retrofit historico_retrofit2= new Historico_retrofit("9 de julio", procesos);
-        Historico_retrofit historico_retrofit3= new Historico_retrofit("10 de julio", procesos2);
-
-        list_historico_retrofits.add(historico_retrofit);
-        list_historico_retrofits.add(historico_retrofit1);
-        list_historico_retrofits.add(historico_retrofit2);
-        list_historico_retrofits.add(historico_retrofit3);
-        list_historico_retrofits.add(historico_retrofit);
-
-        LinearLayoutManager l = new LinearLayoutManager(getApplicationContext());
-        l.setOrientation(LinearLayoutManager.VERTICAL);
-        recyclerview_historico_envio_entrega.setLayoutManager(l);
-        AdapterRecylerViewHistoricoEnvio arv = new AdapterRecylerViewHistoricoEnvio(list_historico_retrofits,R.layout.cardview_historial_envio, ProgresoEntregaActivity.this, getApplicationContext());
-        recyclerview_historico_envio_entrega.setAdapter(arv);
-    }
-
     private void Inicializador(){
         imagen_progress_bar = (ImageView) findViewById(R.id.imagen_progress_bar_estatus);
         layout_filtro = (LinearLayout) findViewById(R.id.linear_layout_filtro);
-        linear_layout_menu_progreso = (LinearLayout) findViewById(R.id.linear_layout_menu_progreso);
         fecha_entregado= (TextView) findViewById(R.id.fecha_llegada);
 
         text_hora_entrega= (TextView) findViewById(R.id.hora_llegada);
@@ -622,8 +655,9 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
         cardview__menu_progreso = (CardView) findViewById(R.id.cardview__menu_progreso);
         cardview__historico_proceso = (CardView) findViewById(R.id.cardview__historico_proceso);
 
-        imagen_mano_click = (ImageView) findViewById(R.id.imagen_mano_click);
+        imagen_mano_click2 = (ImageView) findViewById(R.id.imagen_mano_click2);
         imagen_touch_mano =(ImageView) findViewById(R.id.imagen_touch_mano);
+        imagen_touch_mano2 =(ImageView) findViewById(R.id.imagen_touch_mano2);
 
         cardview__menu_progreso.setVisibility(View.INVISIBLE);
         cardview__historico_proceso.setVisibility(View.INVISIBLE);
@@ -636,11 +670,11 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
         fab_mostrar_historico = (FloatingActionButton) findViewById(R.id.fab_mostrar_historico);
         progressDoalog = new ProgressDialog(ProgresoEntregaActivity.this);
         recyclerview_historico_envio_entrega = (RecyclerView) findViewById(R.id.RecyclerView_historico_proceso);
+        coordinator_progreso = (CoordinatorLayout) findViewById(R.id.coordinator_progreso);
+        vibrador = (Vibrator) getSystemService(getApplicationContext().VIBRATOR_SERVICE);
 
         prs = getSharedPreferences("usuarioDatos", Context.MODE_PRIVATE);
         codigo_entrega = MetodosSharedPreference.ObtenerCodigoEntregaPref(prs);
-        CargarHistoricoProgresoEntrega();
-        MostrarHistorico();
         ValidarVerOfertas();
         RecogerEstatusEntrega();
     }

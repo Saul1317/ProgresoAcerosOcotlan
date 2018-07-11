@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.acerosocotlan.progresoacerosocotlan"
     android:versionCode="1"
-    android:versionName="1.0" >
+    android:versionName="1" >
 
     <uses-sdk
         android:minSdkVersion="21"
@@ -74,6 +74,16 @@
             android:name="com.acerosocotlan.progresoacerosocotlan.Controlador.FirmaSistemasActivity"
             android:screenOrientation="landscape"
             android:theme="@style/pantalla_completa2" />
+
+        <receiver android:name="com.acerosocotlan.progresoacerosocotlan.Controlador.EntregasAcerosOcotlanWidget" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/entregas_aceros_ocotlan_widget_info" />
+        </receiver>
     </application>
 
 </manifest>

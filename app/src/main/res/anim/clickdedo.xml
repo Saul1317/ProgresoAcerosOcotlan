@@ -8,8 +8,7 @@
         <alpha
             android:duration="2000"
             android:fromAlpha="0.4"
-            android:toAlpha="1"
-            android:repeatCount="1"/>
+            android:toAlpha="1"/>
          <scale
             android:duration="2000"
             android:fromXScale="1"
@@ -17,6 +16,5 @@
             android:pivotX="50%"
             android:pivotY="100%"
             android:toXScale="1.0"
-            android:toYScale="1.0"
-            android:repeatCount="1"/>
+            android:toYScale="1.0"/>
     </set>

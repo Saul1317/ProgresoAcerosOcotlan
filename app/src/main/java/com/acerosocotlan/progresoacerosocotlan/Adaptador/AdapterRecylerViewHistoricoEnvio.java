@@ -14,6 +14,7 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.acerosocotlan.progresoacerosocotlan.Modelo.Historial_retrofit;
 import com.acerosocotlan.progresoacerosocotlan.Modelo.Historico_retrofit;
 import com.acerosocotlan.progresoacerosocotlan.Modelo.VerOfertas_retrofit;
 import com.acerosocotlan.progresoacerosocotlan.R;
@@ -24,12 +25,12 @@ import java.util.List;
 
 public class AdapterRecylerViewHistoricoEnvio extends RecyclerView.Adapter<AdapterRecylerViewHistoricoEnvio.AdapterRecyclerHolder>{
 
-    private List<Historico_retrofit> arraylistHistorico;
+    private List<Historial_retrofit> arraylistHistorico;
     private int resource;
     private Activity activity;
     private Context context;
 
-    public AdapterRecylerViewHistoricoEnvio(List<Historico_retrofit> arraylistHistorico, int resource, Activity activity, Context context) {
+    public AdapterRecylerViewHistoricoEnvio(List<Historial_retrofit> arraylistHistorico, int resource, Activity activity, Context context) {
         this.arraylistHistorico = arraylistHistorico;
         this.resource = resource;
         this.activity = activity;
@@ -43,11 +44,9 @@ public class AdapterRecylerViewHistoricoEnvio extends RecyclerView.Adapter<Adapt
     }
     @Override
     public void onBindViewHolder(AdapterRecyclerHolder holder, int position) {
-        Historico_retrofit historico_retrofit = arraylistHistorico.get(position);
-        holder.txt_fecha_historico.setText(historico_retrofit.getFecha_proceso());
-        for(int i=0 ; i< historico_retrofit.getProceso_entrega().size() ; i++) {
-            holder.lista_procesos_historico.append(historico_retrofit.getProceso_entrega().get(i)+"\n");
-        }
+        Historial_retrofit historico_retrofit = arraylistHistorico.get(position);
+        holder.txt_fecha_historico.setText(historico_retrofit.getFecha());
+        holder.lista_procesos_historico.setText(historico_retrofit.getDescripcion());
     }
 
     @Override

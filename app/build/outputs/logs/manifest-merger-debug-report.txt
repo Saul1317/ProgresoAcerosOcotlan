@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:2:1-71:12
-INJECTED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:2:1-71:12
-INJECTED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:2:1-71:12
-INJECTED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:2:1-71:12
+ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:2:1-81:12
+INJECTED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:2:1-81:12
+INJECTED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:2:1-81:12
+INJECTED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:2:1-81:12
 MERGED from [com.android.support:design:27.1.1] C:\Users\Administrador\.gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\f43b26dbf7866519bd3c81466267eb44\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\Administrador\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\6caec9de34be779e0e67438a1a67f8b9\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support.constraint:constraint-layout:1.1.2] C:\Users\Administrador\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.2.aar\bb65586eb9ff63ea9a340ed3b6aca6f7\AndroidManifest.xml:2:1-11:12
@@ -22,20 +22,20 @@ MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\Administrador\
 MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\Administrador\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\3baf9b309024b4c561e3d02492586033\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\Administrador\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\6dc9eb23c025277b6baa36906d619dce\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.core:runtime:1.1.0] C:\Users\Administrador\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\b0ecb13cad176b72ef974f1c7504653b\AndroidManifest.xml:17:1-22:12
-INJECTED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:2:1-71:12
-INJECTED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:2:1-71:12
-INJECTED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:2:1-71:12
+INJECTED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:2:1-81:12
+INJECTED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:2:1-81:12
+INJECTED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:2:1-81:12
 	package
 		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:3:5-54
 		INJECTED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:2:1-71:12
+		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:2:1-81:12
 		INJECTED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:2:1-71:12
+		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:2:1-81:12
 		INJECTED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:2:11-69
@@ -64,7 +64,7 @@ ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\And
 	android:name
 		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:10:22-72
 application
-ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:12:5-69:19
+ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:12:5-79:19
 MERGED from [com.android.support.constraint:constraint-layout:1.1.2] C:\Users\Administrador\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.2.aar\bb65586eb9ff63ea9a340ed3b6aca6f7\AndroidManifest.xml:9:5-20
 MERGED from [com.android.support.constraint:constraint-layout:1.1.2] C:\Users\Administrador\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.2.aar\bb65586eb9ff63ea9a340ed3b6aca6f7\AndroidManifest.xml:9:5-20
 	android:supportsRtl
@@ -177,6 +177,22 @@ ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\And
 		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:68:13-54
 	android:name
 		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:66:13-62
+receiver#com.acerosocotlan.progresoacerosocotlan.Controlador.EntregasAcerosOcotlanWidget
+ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:70:9-78:20
+	android:name
+		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:70:19-74
+intent-filter#action:name:android.appwidget.action.APPWIDGET_UPDATE
+ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:71:13-73:29
+action#android.appwidget.action.APPWIDGET_UPDATE
+ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:72:17-84
+	android:name
+		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:72:25-81
+meta-data#android.appwidget.provider
+ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:75:13-77:79
+	android:resource
+		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:77:17-76
+	android:name
+		ADDED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml:76:17-58
 uses-sdk
 INJECTED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\Administrador\Desktop\ProgresoAcerosOcotlan\app\src\main\AndroidManifest.xml
