@@ -21,10 +21,10 @@
     <string name="detalles_entrega_material">Material </string>
     <string name="detalles_entrega_cantidad">Cantidad </string>
     <string name="detalles_entrega_cantidad_kg">Cantidad en kg </string>
-    <string name="codigo_progreso_edttxt_codigo_rastreo">Introduzca su código</string>
+    <string name="codigo_progreso_edttxt_codigo_rastreo">Ingrese su código</string>
     <string name="btn_ver_detalle_progreso_entrega">Detalles de la Entrega</string>
     <string name="btn_enviar_factura_progreso_entrega">Envía tu factura</string>
-    <string name="btn_nuevo_rastreo_progreso_entrega">Nuevo rastreo</string>
+    <string name="btn_nuevo_rastreo_progreso_entrega">Acuse de recibo</string>
     <string name="btn_ver_ofertas_progreso_entrega">Ofertas y remates</string>
     <string name="title_activity_firma_sistemas">FirmaSistemasActivity</string>
     <string name="btn_dialog_txt_nombre">Entendido</string>
@@ -70,4 +70,5 @@
     <string name="dialog_txt_descripcion_sin_ofertas">Al parecer no hay ninguna oferta disponible en tu sucursal</string>
     <string name="appwidget_text">Entregas Aceros Ocotlán</string>
     <string name="add_widget">Add widget</string>
+    <string name="txt_encabezado_menu">Opciones</string>
 </resources>

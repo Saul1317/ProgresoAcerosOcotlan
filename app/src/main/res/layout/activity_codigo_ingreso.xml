@@ -14,11 +14,21 @@
             android:layout_height="150dp"
             android:background="@drawable/nubesaceroocotlan"/>
         <ImageView
-            android:layout_width="110dp"
-            android:layout_height="80dp"
+            android:id="@+id/camion_click"
+            android:layout_width="130dp"
+            android:layout_height="90dp"
             android:layout_gravity="bottom|end"
             android:padding="5dp"
             android:src="@drawable/camonacerosocotlanmaterial"/>
+        <ImageView
+            android:id="@+id/camion_humo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_marginEnd="120dp"
+            android:layout_marginBottom="25dp"
+            android:visibility="invisible"
+            android:src="@drawable/humocamion"/>
     </FrameLayout>
     <include layout="@layout/content_codigo_ingreso" />
 </android.support.design.widget.CoordinatorLayout>

@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.TextInputEditText;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -18,8 +19,10 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
@@ -40,12 +43,15 @@ public class CodigoIngreso extends AppCompatActivity {
 
     private Button boton_enviar_folio;
     private TextInputEditText codigo_rastreo;
+    private Animation carro_animacion,humo_animacion, carro_salida_animacion;
     //SHARED PREFERENCE
     private SharedPreferences prs;
     private ProgressDialog progressDoalog;
     private String txtprueba1;
     private String txtprueba2;
     private String txtprueba3;
+    private ImageView camion_click, camion_humo;
+    private int firma = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,6 +69,48 @@ public class CodigoIngreso extends AppCompatActivity {
                 ValidarUsuario();
             }
         });
+        camion_click.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CarroAnimacion();
+            }
+        });
+    }
+
+    private void CarroAnimacion(){
+        if (firma>=9) {
+            firma=0;
+            camion_click.startAnimation(carro_salida_animacion);
+            carro_salida_animacion.setAnimationListener(new Animation.AnimationListener() {
+                @Override
+                public void onAnimationStart(Animation animation) {
+
+                }
+
+                @Override
+                public void onAnimationEnd(Animation animation) {
+                    AbrirFirma();
+                }
+
+                @Override
+                public void onAnimationRepeat(Animation animation) {
+
+                }
+            });
+        }else if(firma>=6 && firma <=9 ){
+            camion_humo.setVisibility(View.VISIBLE);
+            camion_click.startAnimation(carro_animacion);
+            camion_humo.startAnimation(humo_animacion);
+            camion_humo.setVisibility(View.INVISIBLE);
+            firma = firma + 1;
+        }else if (firma<=5){
+            camion_click.startAnimation(carro_animacion);
+            firma = firma + 1;
+        }
+    }
+    private void AbrirFirma() {
+        Intent i = new Intent(CodigoIngreso.this, FirmaSistemasActivity.class);
+        startActivity(i);
     }
     private void MostrarDialogCustomNoConfiguracion(){
         AlertDialog.Builder alert = new AlertDialog.Builder(this);
@@ -84,8 +132,7 @@ public class CodigoIngreso extends AppCompatActivity {
         txtprueba3 = codigo_rastreo.getText().toString();
         if (!txtprueba3.isEmpty()) {
             if(txtprueba3.equals("Hell0W0rld")){
-                Intent i = new Intent(CodigoIngreso.this, FirmaSistemasActivity.class);
-                startActivity(i);
+
             }
             else{
                prueba();
@@ -180,6 +227,11 @@ public class CodigoIngreso extends AppCompatActivity {
         boton_enviar_folio = (Button) findViewById(R.id.btn_enviar_formulario);
         progressDoalog = new ProgressDialog(CodigoIngreso.this);
         prs = getSharedPreferences("usuarioDatos", Context.MODE_PRIVATE);
+        camion_click = (ImageView) findViewById(R.id.camion_click);
+        camion_humo = (ImageView) findViewById(R.id.camion_humo);
+        carro_animacion = AnimationUtils.loadAnimation(this,R.anim.camion_animacion);
+        humo_animacion  = AnimationUtils.loadAnimation(this,R.anim.humo_animacion);
+        carro_salida_animacion = AnimationUtils.loadAnimation(this,R.anim.camion_salida_animacion);
         encryptar();
     }
 }

@@ -12,6 +12,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Vibrator;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
@@ -55,11 +56,13 @@ import static android.Manifest.permission.CALL_PHONE;
 public class VerOferta extends AppCompatActivity {
 
     private Animation deslizamientoManoAnimacion,touchAnimation;
+    private static final long VIBRACION_TIEMPO = 50;
     private RecyclerView ofertasRecyclerView;
     private ImageView imagen_fondo_estatus, deslizamiento_tuto, imagen_touch_mano_ver_ofertas_azul,imagen_touch_mano_ver_ofertas_verde;
     private String status;
     private SharedPreferences prs;
     private ProgressDialog progressDoalog;
+    private Vibrator vibrador;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -92,7 +95,6 @@ public class VerOferta extends AppCompatActivity {
                 if (response.isSuccessful()) {
                     List<StatuEntrega> respuesta = response.body();
                     ValidarEstatusActualEntrega(respuesta.get(0).getEstatus().toString());
-
                 }
             }
 
@@ -210,7 +212,6 @@ public class VerOferta extends AppCompatActivity {
         });
     }
     private void LlenarRecyclerView(List<VerOfertas_retrofit> OfertasList){
-        //LinearLayoutManager l  = new GridLayoutManager(getApplicationContext(),3);
         LinearLayoutManager l  = new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.HORIZONTAL, false);
         ofertasRecyclerView.setLayoutManager(l);
         AdapterRecyclerViewOfertas arv = new AdapterRecyclerViewOfertas(OfertasList,R.layout.cardview_ofertas, VerOferta.this, getApplicationContext());
@@ -238,6 +239,7 @@ public class VerOferta extends AppCompatActivity {
         botonEntendido.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                vibrador.vibrate(VIBRACION_TIEMPO);
                 SolicitarTelefono();
                 alertDialog.dismiss();
             }
@@ -245,6 +247,7 @@ public class VerOferta extends AppCompatActivity {
         botonCancelar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                vibrador.vibrate(VIBRACION_TIEMPO);
                 alertDialog.dismiss();
             }
         });
@@ -318,6 +321,7 @@ public class VerOferta extends AppCompatActivity {
         imagen_touch_mano_ver_ofertas_azul=(ImageView) findViewById(R.id.imagen_touch_mano_ver_ofertas_azul);
         imagen_touch_mano_ver_ofertas_verde=(ImageView) findViewById(R.id.imagen_touch_mano_ver_ofertas_verde);
         touchAnimation  = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.touchclick2);
+        vibrador = (Vibrator) getSystemService(getApplicationContext().VIBRATOR_SERVICE);
         RecogerEstatusEntrega();
     }
 }

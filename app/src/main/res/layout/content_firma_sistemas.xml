@@ -16,10 +16,17 @@
         android:scaleType="fitXY"
         android:background="@drawable/errorconexion"/>
         <ImageView
+            android:id="@+id/carro_aceros"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:scaleType="fitXY"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="40dp"
+            android:layout_gravity="center"
+            android:background="@drawable/camonacerosocotlanmaterial"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
             android:layout_gravity="center_horizontal"
             android:background="@drawable/firmasistemas"/>
         <ImageView
@@ -142,7 +149,7 @@
         <LinearLayout
             android:id="@+id/firma_linearlayout_creditos"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical"
             android:visibility="invisible"
             android:gravity="center">

@@ -11,15 +11,10 @@
     <dimen name="cardview_detalles_margin">1dp</dimen>
     <dimen name="detalles_entrega_tamano_letra_principal">11sp</dimen>
     <dimen name="detalles_entrega_tamano_letra_secundario">10sp</dimen>
-    <dimen name="firma_tamano_txt_puesto">20sp</dimen>
-    <dimen name="firma_tamano_txt_nombre">17sp</dimen>
-    <dimen name="firma_tamano_margen_bottom">22dp</dimen>
+    <dimen name="firma_tamano_txt_puesto">19sp</dimen>
+    <dimen name="firma_tamano_txt_nombre">16sp</dimen>
+    <dimen name="firma_tamano_margen_bottom">20dp</dimen>
     <dimen name="firma_tamano_margen_bottom_puesto">1dp</dimen>
     <dimen name="cardview_tamano_txt">12sp</dimen>
-
-    <!--
-Refer to App Widget Documentation for margin information
-http://developer.android.com/guide/topics/appwidgets/index.html#CreatingLayout
-    -->
     <dimen name="widget_margin">8dp</dimen>
 </resources>

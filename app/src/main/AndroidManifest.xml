@@ -10,7 +10,7 @@
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
     <application
-        android:allowBackup="true"
+        android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
@@ -67,15 +67,6 @@
             android:screenOrientation="landscape"
             android:theme="@style/pantalla_completa2" />
 
-        <receiver android:name=".Controlador.EntregasAcerosOcotlanWidget">
-            <intent-filter>
-                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-            </intent-filter>
-
-            <meta-data
-                android:name="android.appwidget.provider"
-                android:resource="@xml/entregas_aceros_ocotlan_widget_info" />
-        </receiver>
     </application>
 
 </manifest>

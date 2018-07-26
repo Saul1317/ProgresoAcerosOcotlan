@@ -25,9 +25,9 @@ public class FirmaSistemasActivity extends AppCompatActivity {
             firma_azul0_simba,firma_azul1_simba,
             firma_rojo1_simba, firma_rojo0_simba,
             firma_verde1_simba, firma_verde0_simba,
-            firma_amarillo1_simba,firma_amarillo0_simba;
+            firma_amarillo1_simba,firma_amarillo0_simba, carro_aceros;
 
-    private Animation numero1Animacion, numero0Animacion, cola_simbaAnimacion, creditosAnimacion;
+    private Animation numero1Animacion, numero0Animacion, cola_simbaAnimacion, creditosAnimacion, carro_animacion;
     private LinearLayout firma_linearlayout_creditos;
     private FrameLayout firma_layoout_filtro_credito;
     private int contador=0;
@@ -150,5 +150,8 @@ public class FirmaSistemasActivity extends AppCompatActivity {
         firma_amarillo0_simba  = (ImageView) findViewById(R.id.firma_amarillo0_simba);
         firma_linearlayout_creditos = (LinearLayout)findViewById(R.id.firma_linearlayout_creditos);
         firma_layoout_filtro_credito  = (FrameLayout) findViewById(R.id.firma_layoout_filtro_credito);
+        carro_animacion = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.carro_splash);
+        carro_aceros = (ImageView) findViewById(R.id.carro_aceros);
+        carro_aceros.startAnimation(carro_animacion);
     }
 }

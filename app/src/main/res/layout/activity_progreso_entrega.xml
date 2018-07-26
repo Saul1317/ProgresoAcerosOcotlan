@@ -55,6 +55,16 @@
                     app:elevation="6dp"
                     app:srcCompat="@drawable/ic_local_shipping" />
             </FrameLayout>
+            <Button
+                android:id="@+id/boton_salir"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_margin="@dimen/fab_margin"
+                android:background="@drawable/boton_redondo_salir"
+                android:text="Salir"
+                android:textStyle="bold"
+                android:theme="@style/boton_salir"
+                android:elevation="6dp"/>
         </LinearLayout>
         <ImageView
             android:id="@+id/imagen_mano_click2"
@@ -65,5 +75,4 @@
             android:elevation="10dp"
             android:src="@drawable/aprovechar"/>
     </FrameLayout>
-
 </android.support.design.widget.CoordinatorLayout>

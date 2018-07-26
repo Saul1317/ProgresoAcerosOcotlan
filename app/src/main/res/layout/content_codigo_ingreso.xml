@@ -14,12 +14,13 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center_horizontal"
-        android:layout_marginTop="150dp">
+        android:layout_marginTop="150dp"
+        android:orientation="vertical">
         <android.support.v7.widget.CardView
             xmlns:cardview="http://schemas.android.com/apk/res-auto"
             android:id="@+id/cardview_entregas"
             android:layout_width="270dp"
-            android:layout_height="150dp"
+            android:layout_height="160dp"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
             cardview:cardElevation="4dp"
@@ -32,8 +33,8 @@
                 <FrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="0.6"
-                    android:padding="10dp">
+                    android:padding="10dp"
+                    android:layout_weight="0.6">
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -43,8 +44,6 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:paddingLeft="30dp"
-                    android:paddingRight="30dp"
                     android:layout_weight="0.4"
                     android:orientation="vertical">
                     <android.support.design.widget.TextInputEditText
@@ -54,15 +53,19 @@
                         android:hint="@string/codigo_progreso_edttxt_codigo_rastreo"
                         android:inputType="text"
                         android:textStyle="bold"
-                        android:textSize="14sp"
+                        android:textSize="17sp"
                         android:textAlignment="center"
                         android:maxLength="10"
+                        android:layout_marginRight="50dp"
+                        android:layout_marginLeft="50dp"
                         android:theme="@style/edittext_enviar_formulario">
                     </android.support.design.widget.TextInputEditText>
                     <Button
                         android:id="@+id/btn_enviar_formulario"
-                        android:layout_width="70dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="40dp"
+                        android:layout_marginRight="30dp"
+                        android:layout_marginLeft="30dp"
                         android:text="@string/txt_enviar"
                         android:textSize="12sp"
                         android:theme="@style/Boton_enviar_formulario"
