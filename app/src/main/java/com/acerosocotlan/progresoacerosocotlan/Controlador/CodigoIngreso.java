@@ -197,7 +197,6 @@ public class CodigoIngreso extends AppCompatActivity {
                     MostrarDialogCustomNoConfiguracion();
                 }
             }
-
             @Override
             public void onFailure(Call<List<StatuEntrega>> call, Throwable t) {
                 progressDoalog.dismiss();

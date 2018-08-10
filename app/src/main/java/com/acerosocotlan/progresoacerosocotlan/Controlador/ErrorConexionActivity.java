@@ -1,6 +1,8 @@
 package com.acerosocotlan.progresoacerosocotlan.Controlador;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.media.Image;
 import android.os.Bundle;
 import android.os.Handler;
@@ -9,6 +11,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
@@ -18,14 +21,24 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.acerosocotlan.progresoacerosocotlan.Modelo.MetodosSharedPreference;
+import com.acerosocotlan.progresoacerosocotlan.Modelo.NetworkAdapter;
+import com.acerosocotlan.progresoacerosocotlan.Modelo.StatuEntrega;
 import com.acerosocotlan.progresoacerosocotlan.Modelo.ValidacionConexion;
 import com.acerosocotlan.progresoacerosocotlan.R;
+
+import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class ErrorConexionActivity extends AppCompatActivity {
     private TextView txt_error_conexion;
     private ImageView error_conexion_simba_gracias,error_conexion_simba_cola, error_conexion_simba, error_conexion_corazon_simba,error_conexion_corazon_amarillo_simba;
     private Animation corazonAnimacion;
     private int contador = 0;
+    private SharedPreferences prs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +53,7 @@ public class ErrorConexionActivity extends AppCompatActivity {
                 if(ValidacionConexion.isConnectedWifi(getApplicationContext())||ValidacionConexion.isConnectedMobile(getApplicationContext())){
                     if(ValidacionConexion.isOnline(getApplicationContext())){
                         Intent i = new Intent(ErrorConexionActivity.this, ProgresoEntregaActivity.class);
-                        i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                        i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                         startActivity(i);
                     }else{
                         Toast.makeText(ErrorConexionActivity.this, "No tienes acceso a internet", Toast.LENGTH_SHORT).show();
@@ -92,5 +105,6 @@ public class ErrorConexionActivity extends AppCompatActivity {
         error_conexion_simba_cola = (ImageView) findViewById(R.id.error_conexion_simba_cola);
         error_conexion_corazon_amarillo_simba = (ImageView) findViewById(R.id.error_conexion_corazon_amarillo_simba);
         error_conexion_simba_gracias  = (ImageView) findViewById(R.id.error_conexion_simba_gracias);
+        prs = getSharedPreferences("usuarioDatos", Context.MODE_PRIVATE);
     }
 }

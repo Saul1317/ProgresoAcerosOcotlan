@@ -51,13 +51,13 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/codigo_progreso_edttxt_codigo_rastreo"
-                        android:inputType="text"
+                        android:inputType="number"
                         android:textStyle="bold"
-                        android:textSize="17sp"
+                        android:textSize="15sp"
                         android:textAlignment="center"
                         android:maxLength="10"
-                        android:layout_marginRight="50dp"
-                        android:layout_marginLeft="50dp"
+                        android:layout_marginRight="40dp"
+                        android:layout_marginLeft="40dp"
                         android:theme="@style/edittext_enviar_formulario">
                     </android.support.design.widget.TextInputEditText>
                     <Button

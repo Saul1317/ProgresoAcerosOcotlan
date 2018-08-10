@@ -41,7 +41,7 @@
     <string name="dialog_btn_entendido_factura">Entendido</string>
     <string name="dialog_btn_cancelar_factura">Cancelar</string>
     <string name="dialog_txt_titulo_Llamada_correo">Solicitar Llamada</string>
-    <string name="dialog_txt_descripcion_Llamada_correo">Al parecer no contamos con ningún correo suyo, ¿Desea comunicarse con nosotros?</string>
+    <string name="dialog_txt_descripcion_Llamada_correo">Al parecer no contamos con ningún correo suyo</string>
     <string name="dialog_txt_titulo_nuevo_rastreo">Nuevo Rastreo</string>
     <string name="dialog_txt_descripcion_nuevo_rastreo">Está a punto de volver a la pantalla de ingreso, ¿Desea continuar?</string>
     <string name="dialog_txt_descripcion_Llamada">¿Desea comunicarse con nosotros para más información?</string>
@@ -71,4 +71,8 @@
     <string name="appwidget_text">Entregas Aceros Ocotlán</string>
     <string name="add_widget">Add widget</string>
     <string name="txt_encabezado_menu">Opciones</string>
+    <string name="title_activity_acuse_recibo">Acuse Recibo</string>
+    <string name="dialog_txt_titulo_acuse_recibo">Acuse Recibo</string>
+    <string name="dialog_txt_descripcion_acuse_recibo">¿Desea mandar el acuse de recibo a su correo?</string>
+
 </resources>

@@ -26,7 +26,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/splash_txt_bienvenidos"
                 android:textColor="@android:color/white"
-                android:textSize="60sp"
+                android:textSize="50sp"
                 android:textStyle="bold"/>
         </LinearLayout>
         <FrameLayout

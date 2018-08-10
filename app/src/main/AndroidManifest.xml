@@ -6,8 +6,6 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
     <application
         android:allowBackup="false"
@@ -20,7 +18,7 @@
             android:name=".Controlador.Splash"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
-            android:theme="@style/pantalla_completa">
+            android:theme="@style/pantalla_completa2">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -36,7 +34,7 @@
             android:name=".Controlador.DetalleEntregaActivity2"
             android:label="Detalles de su entrega"
             android:screenOrientation="landscape"
-            android:theme="@style/pantalla_completa" />
+            android:theme="@style/pantalla_completa2" />
         <activity
             android:name=".Controlador.CodigoIngreso"
             android:screenOrientation="portrait"
@@ -56,17 +54,20 @@
             android:name=".Controlador.VerOferta"
             android:label="@string/title_activity_ver_oferta"
             android:screenOrientation="landscape"
-            android:theme="@style/pantalla_completa" />
+            android:theme="@style/pantalla_completa2" />
         <activity
             android:name=".Controlador.ErrorConexionActivity"
             android:label="@string/title_activity_error_conexion"
             android:screenOrientation="landscape"
-            android:theme="@style/pantalla_completa" />
+            android:theme="@style/pantalla_completa2" />
         <activity
             android:name=".Controlador.FirmaSistemasActivity"
             android:screenOrientation="landscape"
             android:theme="@style/pantalla_completa2" />
-
+        <activity
+            android:name=".Controlador.AcuseRecibo"
+            android:label="@string/title_activity_acuse_recibo"
+            android:theme="@style/pantalla_completa2"></activity>
     </application>
 
 </manifest>

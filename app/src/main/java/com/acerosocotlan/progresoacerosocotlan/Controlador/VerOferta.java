@@ -79,12 +79,6 @@ public class VerOferta extends AppCompatActivity {
         });
     }
     private void RecogerEstatusEntrega(){
-        progressDoalog.setMax(100);
-        progressDoalog.setTitle("Aceros Ocotlán");
-        progressDoalog.setIcon(R.drawable.logo);
-        progressDoalog.setMessage("Obteniendo los datos");
-        progressDoalog.setCancelable(false);
-        progressDoalog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
         progressDoalog.show();
         Call<List<StatuEntrega>> call = NetworkAdapter.getApiService(MetodosSharedPreference.ObtenerPruebaEntregaPref(prs)).EstatusEntrega(
                 "statusentrega_"+MetodosSharedPreference.ObtenerCodigoEntregaPref(prs)+"/gao");
@@ -188,7 +182,9 @@ public class VerOferta extends AppCompatActivity {
         }
     }
     private void ObtenerOfertas(){
-        Call<List<VerOfertas_retrofit>> call = NetworkAdapter.getApiService(MetodosSharedPreference.ObtenerPruebaEntregaPref(prs)).VerOfEntrega("verpromo/gao");
+        Call<List<VerOfertas_retrofit>> call = NetworkAdapter.getApiService(MetodosSharedPreference.ObtenerPruebaEntregaPref(prs)).VerOfEntrega(
+                "verpromo/gao",
+                MetodosSharedPreference.ObtenerCodigoEntregaPref(prs));
         call.enqueue(new Callback<List<VerOfertas_retrofit>>() {
             @Override
             public void onResponse(Call<List<VerOfertas_retrofit>> call, Response<List<VerOfertas_retrofit>> response) {
@@ -322,6 +318,12 @@ public class VerOferta extends AppCompatActivity {
         imagen_touch_mano_ver_ofertas_verde=(ImageView) findViewById(R.id.imagen_touch_mano_ver_ofertas_verde);
         touchAnimation  = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.touchclick2);
         vibrador = (Vibrator) getSystemService(getApplicationContext().VIBRATOR_SERVICE);
+        progressDoalog.setMax(100);
+        progressDoalog.setTitle("Aceros Ocotlán");
+        progressDoalog.setIcon(R.drawable.logo);
+        progressDoalog.setMessage("Obteniendo los datos");
+        progressDoalog.setCancelable(false);
+        progressDoalog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
         RecogerEstatusEntrega();
     }
 }

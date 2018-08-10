@@ -4,6 +4,8 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.ActivityInfo;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CollapsingToolbarLayout;
@@ -86,12 +88,6 @@ public class DetalleEntregaActivity2 extends AppCompatActivity {
         detallesRecyclerview.setAdapter(arv);
     }
     public void RecogerEstatusEntrega(){
-        progressDoalog.setMax(100);
-        progressDoalog.setTitle("Aceros Ocotlán");
-        progressDoalog.setIcon(R.drawable.logo);
-        progressDoalog.setMessage("Obteniendo los datos");
-        progressDoalog.setCancelable(false);
-        progressDoalog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
         progressDoalog.show();
         Call<List<StatuEntrega>> call = NetworkAdapter.getApiService(MetodosSharedPreference.ObtenerPruebaEntregaPref(prs)).EstatusEntrega(
                 "statusentrega_"+MetodosSharedPreference.ObtenerCodigoEntregaPref(prs)+"/gao");
@@ -150,6 +146,12 @@ public class DetalleEntregaActivity2 extends AppCompatActivity {
         linear_layout_filtro_detalle = (LinearLayout) findViewById(R.id.linear_layout_filtro_detalle);
         imageViewFondoDetallesEntrega = (ImageView) findViewById(R.id.imagen_fondo_detalles_estatus);
         linear_layout_filtro_detalle.setVisibility(View.INVISIBLE);
+        progressDoalog.setMax(100);
+        progressDoalog.setTitle("Aceros Ocotlán");
+        progressDoalog.setIcon(R.drawable.logo);
+        progressDoalog.setMessage("Obteniendo los datos");
+        progressDoalog.setCancelable(false);
+        progressDoalog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
         RecogerEstatusEntrega();
     }
 }

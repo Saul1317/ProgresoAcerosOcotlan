@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".Controlador.AcuseRecibo"
+    tools:showIn="@layout/activity_acuse_recibo">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/img_acuserecibo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"/>
+        <TextView
+            android:id="@+id/txt_mensaje_acuse_recibo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Aún no se genera el acuse de recibo"
+            android:textColor="@color/texto_blanco"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:layout_gravity="center"
+            android:padding="16dp"
+            android:visibility="invisible"/>
+    </FrameLayout>
+</android.support.constraint.ConstraintLayout>

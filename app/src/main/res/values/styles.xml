@@ -59,6 +59,7 @@
         <item name="color">#e65100</item>
         <item name="android:textColor">@android:color/white</item>
     </style>
+
     <style name="boton_salir" parent="Theme.AppCompat.Light">
         <item name="colorButtonNormal">@color/colorAccent</item>
         <item name="color">@color/colorAccent</item>

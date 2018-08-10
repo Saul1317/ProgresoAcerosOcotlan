@@ -85,6 +85,7 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_progreso_entrega);
         Inicializador();
+
         gestureDetector = new GestureDetector(getApplicationContext(),new GestureListener());
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -98,14 +99,12 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
                 AbrirHistoricoProcesoEntrega();
             }
         });
-
         imagen_progress_bar.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
                 return gestureDetector.onTouchEvent(event);
             }
         });
-
         btn_mostrar_detalles_entrega.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -114,14 +113,13 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
-
         btn_nuevo_rastreo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ReenviarAcuseRecibo();
+                NuevaVentanaAcuseRecibo();
+                //ReenviarAcuseRecibo();
             }
         });
-
         btn_ver_ofertas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -130,7 +128,6 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
-
         btn_descargar_factura.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -138,7 +135,6 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
                 MostrarDialogCustomFactura();
             }
         });
-
         boton_salir.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -164,8 +160,6 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
                finish();
             }
     }
-
-
     private void MostrarDialogCustomOfertas(){
         final AlertDialog.Builder alert = new AlertDialog.Builder(this);
         LayoutInflater inflater = this.getLayoutInflater();
@@ -190,6 +184,7 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 vibrador.vibrate(VIBRACION_TIEMPO);
+                alertDialog.dismiss();
                 remover_variables_sharedpreference();
                 finish();
             }
@@ -228,39 +223,6 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
             }
         });
     }
-    private void MostrarDialogCustomLlamada(){
-        final AlertDialog.Builder alert = new AlertDialog.Builder(this);
-        LayoutInflater inflater = this.getLayoutInflater();
-        View dialoglayout = inflater.inflate(R.layout.dialog_acerosocotlan, null);
-        alert.setView(dialoglayout);
-        final AlertDialog alertDialog = alert.show();
-        Button botonEntendido = (Button) dialoglayout.findViewById(R.id.btn_dialog_si_ver_ofertas);
-        Button botonCancelar = (Button) dialoglayout.findViewById(R.id.btn_dialog_no_ver_ofertas);
-        TextView txtTitutlo  = (TextView) dialoglayout.findViewById(R.id.dialog_acerosocotlan_titulo);
-        TextView txtDescripcion  = (TextView) dialoglayout.findViewById(R.id.dialog_acerosocotlan_descripcion);
-
-        txtTitutlo.setText(getResources().getString(R.string.dialog_txt_titulo_Llamada_correo));
-        txtDescripcion.setText(getResources().getString(R.string.dialog_txt_descripcion_Llamada_correo));
-        botonEntendido.setText(getResources().getString(R.string.txt_si));
-        botonCancelar.setText(getResources().getString(R.string.txt_no));
-
-        botonEntendido.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                vibrador.vibrate(VIBRACION_TIEMPO);
-                SolicitarTelefono();
-                alertDialog.dismiss();
-            }
-        });
-        botonCancelar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                vibrador.vibrate(VIBRACION_TIEMPO);
-                alertDialog.dismiss();
-            }
-        });
-    }
-
     private void AbrirMenuUsuario() {
         if (menu_estatus==false) {
             if(historico_estatus==true){
@@ -288,7 +250,6 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
         fab.startAnimation(flatbutton_animation);
         menu_estatus=true;
     }
-
     private void AbrirHistoricoProcesoEntrega() {
         if (historico_estatus==false) {
             if(menu_estatus==true){
@@ -360,23 +321,30 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
                 progressDoalog.dismiss();
                 if(response.isSuccessful()) {
                     List<StatuEntrega> respuesta = response.body();
-                    status = respuesta.get(0).getEstatus();
-                    MetodosSharedPreference.GuardarEstatusEntrega(prs, status);
-                    nombre_chofer_entrega.setText(respuesta.get(0).getChofer());
-                    placas_camion.setText(respuesta.get(0).getPlacas());
-                    Picasso.with(ProgresoEntregaActivity.this).load(respuesta.get(0).getFotocamion()).error(R.drawable.errorcamion).into(foto_camion_entrega);
-                    ValidarEstatusActualEntrega(respuesta);
-                    RecogerHistorialEntrega();
+                    if (respuesta.isEmpty()) {
+                        Toast.makeText(ProgresoEntregaActivity.this, "Código invalido", Toast.LENGTH_SHORT).show();
+                        remover_variables_sharedpreference();
+                        Intent i = new Intent(ProgresoEntregaActivity.this, CodigoIngreso.class);
+                        i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                        startActivity(i);
+                    } else {
+                        status = respuesta.get(0).getEstatus();
+                        MetodosSharedPreference.GuardarEstatusEntrega(prs, status);
+                        nombre_chofer_entrega.setText(respuesta.get(0).getChofer());
+                        placas_camion.setText(respuesta.get(0).getPlacas());
+                        Picasso.with(ProgresoEntregaActivity.this).load(respuesta.get(0).getFotocamion()).error(R.drawable.errorcamion).into(foto_camion_entrega);
+                        ValidarEstatusActualEntrega(respuesta);
+                        RecogerHistorialEntrega();
+                    }
                 }else{
-                    Intent intentErrorConexion = new Intent(ProgresoEntregaActivity.this, ErrorConexionActivity.class);
-                    intentErrorConexion.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                    startActivity(intentErrorConexion);
+                    Log.i("ESTATUS_ERROR","No respuesta");
                 }
             }
 
             @Override
             public void onFailure(Call<List<StatuEntrega>> call, Throwable t) {
                 progressDoalog.dismiss();
+                Log.i("ESTATUS_ERROR",t.toString());
                 Intent intentErrorConexion = new Intent(ProgresoEntregaActivity.this, ErrorConexionActivity.class);
                 intentErrorConexion.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(intentErrorConexion);
@@ -390,6 +358,7 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<List<Historial_retrofit>> call, Response<List<Historial_retrofit>> response) {
                 if(response.isSuccessful()){
+                    Log.i("CODIGO",MetodosSharedPreference.ObtenerCodigoEntregaPref(prs));
                     List<Historial_retrofit> historial_retrofits = response.body();
                     LlenarRecyclerView(historial_retrofits);
                 }else{
@@ -422,7 +391,7 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
                     Log.i("RESPUESTA FACTURA",response.body().toString());
                     // aun notienefactura
                     if(factura_retrofit.getRuta().equals("sincorreo")){
-                        MostrarDialogCustomLlamada();
+                        Toast.makeText(ProgresoEntregaActivity.this, "No se proporcionó un correo al registrar el pedido", Toast.LENGTH_SHORT).show();
                     }else{
                         Toast.makeText(ProgresoEntregaActivity.this, factura_retrofit.getRuta(), Toast.LENGTH_SHORT).show();
                     }
@@ -435,61 +404,9 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
             }
         });
     }
-    private void ReenviarAcuseRecibo(){
-        Call<AcuseRecibo_retrofit> call = NetworkAdapter.getApiService(MetodosSharedPreference.ObtenerPruebaEntregaPref(prs)).AcuseReciboEntrega(
-                "recibo/gao",MetodosSharedPreference.ObtenerCodigoEntregaPref(prs)
-        );
-        call.enqueue(new Callback<AcuseRecibo_retrofit>() {
-            @Override
-            public void onResponse(Call<AcuseRecibo_retrofit> call, Response<AcuseRecibo_retrofit> response) {
-                if(response.isSuccessful()){
-                    AcuseRecibo_retrofit acuseRecibo_retrofit= response.body();
-                    Log.i("RESPUESTA FACTURA",acuseRecibo_retrofit.getResp());
-                    Toast.makeText(ProgresoEntregaActivity.this, acuseRecibo_retrofit.getResp(), Toast.LENGTH_SHORT).show();
-                }else{
-
-                }
-            }
-
-            @Override
-            public void onFailure(Call<AcuseRecibo_retrofit> call, Throwable t) {
-
-            }
-        });
-    }
-    private void SolicitarTelefono(){
-        Call<DirectorioTelefonos> call = NetworkAdapter.getApiService(MetodosSharedPreference.ObtenerPruebaEntregaPref(prs)).SolicitarTelefono(
-                "directorio/gao",MetodosSharedPreference.ObtenerCodigoEntregaPref(prs));
-        call.enqueue(new Callback<DirectorioTelefonos>() {
-            @Override
-            public void onResponse(Call<DirectorioTelefonos> call, Response<DirectorioTelefonos> response) {
-                if(response.isSuccessful()) {
-                    DirectorioTelefonos directorioTelefonos = response.body();
-                    RealizarLLamada(directorioTelefonos.getTelefono());
-                    Log.i("DIRECTORIO DE TELEFONOS", directorioTelefonos.getTelefono());
-                }
-            }
-
-            @Override
-            public void onFailure(Call<DirectorioTelefonos> call, Throwable t) {
-                Log.i("DIRECTORIO DE TELEFONOS", "EROR");
-            }
-        });
-    }
-    private void RealizarLLamada(String phoneNumber) {
-        if (Build.VERSION.SDK_INT>=Build.VERSION_CODES.M) {
-            if (ActivityCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
-                ActivityCompat.requestPermissions(ProgresoEntregaActivity.this, new String[]{CALL_PHONE},100);
-            } else {
-                Intent intent = new Intent(Intent.ACTION_CALL);
-                intent.setData(Uri.parse("tel:"+phoneNumber));
-                startActivity(intent);
-            }
-        }else {
-            Intent intent = new Intent(Intent.ACTION_CALL);
-            intent.setData(Uri.parse("tel:" + phoneNumber));
-            startActivity(intent);
-        }
+    private void NuevaVentanaAcuseRecibo() {
+        Intent i = new Intent(ProgresoEntregaActivity.this, AcuseRecibo.class);
+        startActivity(i);
     }
     private void ValidarEstatusActualEntrega(List<StatuEntrega> respuesta) {
         if(status.equals("Programado")){
@@ -572,7 +489,7 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
         prs.edit().clear().apply();
     }
     private void ValidarVerOfertas() {
-        Call<List<VerOfertas_retrofit>> call = NetworkAdapter.getApiService(MetodosSharedPreference.ObtenerPruebaEntregaPref(prs)).VerOfEntrega("verpromo/gao");
+        Call<List<VerOfertas_retrofit>> call = NetworkAdapter.getApiService(MetodosSharedPreference.ObtenerPruebaEntregaPref(prs)).VerOfEntrega("verpromo/gao", MetodosSharedPreference.ObtenerCodigoEntregaPref(prs));
         call.enqueue(new Callback<List<VerOfertas_retrofit>>() {
             @Override
             public void onResponse(Call<List<VerOfertas_retrofit>> call, Response<List<VerOfertas_retrofit>> response) {
