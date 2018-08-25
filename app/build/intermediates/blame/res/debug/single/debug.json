@@ -24,16 +24,16 @@
         "source": "C:\\Users\\Administrador\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\6caec9de34be779e0e67438a1a67f8b9\\res\\drawable-xhdpi-v4\\abc_textfield_activated_mtrl_alpha.9.png"
     },
     {
-        "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\anim_abc_shrink_fade_out_from_bottom.xml.flat",
-        "source": "C:\\Users\\Administrador\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\6caec9de34be779e0e67438a1a67f8b9\\res\\anim\\abc_shrink_fade_out_from_bottom.xml"
+        "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_graciassimba.png.flat",
+        "source": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\src\\main\\res\\drawable-xxxhdpi\\graciassimba.png"
     },
     {
         "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\color-v23_design_tint_password_toggle.xml.flat",
         "source": "C:\\Users\\Administrador\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.1.aar\\f43b26dbf7866519bd3c81466267eb44\\res\\color-v23\\design_tint_password_toggle.xml"
     },
     {
-        "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_graciassimba.png.flat",
-        "source": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\src\\main\\res\\drawable-xxxhdpi\\graciassimba.png"
+        "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\anim_abc_shrink_fade_out_from_bottom.xml.flat",
+        "source": "C:\\Users\\Administrador\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\6caec9de34be779e0e67438a1a67f8b9\\res\\anim\\abc_shrink_fade_out_from_bottom.xml"
     },
     {
         "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_viga.png.flat",
@@ -92,12 +92,12 @@
         "source": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\src\\main\\res\\drawable-xhdpi\\ic_cloud_off.png"
     },
     {
-        "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\layout_design_layout_tab_text.xml.flat",
-        "source": "C:\\Users\\Administrador\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.1.aar\\f43b26dbf7866519bd3c81466267eb44\\res\\layout\\design_layout_tab_text.xml"
-    },
-    {
         "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_btn_radio_to_on_mtrl_015.png.flat",
         "source": "C:\\Users\\Administrador\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\6caec9de34be779e0e67438a1a67f8b9\\res\\drawable-xhdpi-v4\\abc_btn_radio_to_on_mtrl_015.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\layout_design_layout_tab_text.xml.flat",
+        "source": "C:\\Users\\Administrador\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.1.aar\\f43b26dbf7866519bd3c81466267eb44\\res\\layout\\design_layout_tab_text.xml"
     },
     {
         "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_firmasistemas.png.flat",
@@ -180,20 +180,20 @@
         "source": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\src\\main\\res\\drawable-mdpi\\deslizaizquierda.png"
     },
     {
-        "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_btn_radio_to_on_mtrl_000.png.flat",
-        "source": "C:\\Users\\Administrador\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\6caec9de34be779e0e67438a1a67f8b9\\res\\drawable-xxxhdpi-v4\\abc_btn_radio_to_on_mtrl_000.png"
-    },
-    {
         "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_nubesaceroocotlan.png.flat",
         "source": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\src\\main\\res\\drawable-mdpi\\nubesaceroocotlan.png"
     },
     {
-        "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_progressbar_aceros_ocotlan_version_5_4.png.flat",
-        "source": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\src\\main\\res\\drawable-mdpi\\progressbar_aceros_ocotlan_version_5_4.png"
+        "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_btn_radio_to_on_mtrl_000.png.flat",
+        "source": "C:\\Users\\Administrador\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\6caec9de34be779e0e67438a1a67f8b9\\res\\drawable-xxxhdpi-v4\\abc_btn_radio_to_on_mtrl_000.png"
     },
     {
         "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_proceso1.png.flat",
         "source": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\src\\main\\res\\drawable-xxxhdpi\\proceso1.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_progressbar_aceros_ocotlan_version_5_4.png.flat",
+        "source": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\src\\main\\res\\drawable-mdpi\\progressbar_aceros_ocotlan_version_5_4.png"
     },
     {
         "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_text_select_handle_middle_mtrl_dark.png.flat",
@@ -216,16 +216,16 @@
         "source": "C:\\Users\\Administrador\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\6caec9de34be779e0e67438a1a67f8b9\\res\\anim\\abc_slide_out_top.xml"
     },
     {
-        "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\layout_design_bottom_sheet_dialog.xml.flat",
-        "source": "C:\\Users\\Administrador\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.1.aar\\f43b26dbf7866519bd3c81466267eb44\\res\\layout\\design_bottom_sheet_dialog.xml"
+        "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\drawable_notification_icon_background.xml.flat",
+        "source": "C:\\Users\\Administrador\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\a37d22cac98d85a19e5a39f426c5ea89\\res\\drawable\\notification_icon_background.xml"
     },
     {
         "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_replay.png.flat",
         "source": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\src\\main\\res\\drawable-xhdpi\\ic_replay.png"
     },
     {
-        "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\drawable_notification_icon_background.xml.flat",
-        "source": "C:\\Users\\Administrador\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\a37d22cac98d85a19e5a39f426c5ea89\\res\\drawable\\notification_icon_background.xml"
+        "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\layout_design_bottom_sheet_dialog.xml.flat",
+        "source": "C:\\Users\\Administrador\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.1.aar\\f43b26dbf7866519bd3c81466267eb44\\res\\layout\\design_bottom_sheet_dialog.xml"
     },
     {
         "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_ab_share_pack_mtrl_alpha.9.png.flat",
@@ -308,12 +308,12 @@
         "source": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\src\\main\\res\\drawable-xhdpi\\laptop.png"
     },
     {
-        "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_btn_check_to_on_mtrl_000.png.flat",
-        "source": "C:\\Users\\Administrador\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\6caec9de34be779e0e67438a1a67f8b9\\res\\drawable-xxxhdpi-v4\\abc_btn_check_to_on_mtrl_000.png"
-    },
-    {
         "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\drawable_design_snackbar_background.xml.flat",
         "source": "C:\\Users\\Administrador\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.1.aar\\f43b26dbf7866519bd3c81466267eb44\\res\\drawable\\design_snackbar_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_btn_check_to_on_mtrl_000.png.flat",
+        "source": "C:\\Users\\Administrador\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\6caec9de34be779e0e67438a1a67f8b9\\res\\drawable-xxxhdpi-v4\\abc_btn_check_to_on_mtrl_000.png"
     },
     {
         "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_acerosocotlanlogooficial.png.flat",
@@ -452,12 +452,12 @@
         "source": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\src\\main\\res\\drawable-mdpi\\logo.png"
     },
     {
-        "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_spinner_mtrl_am_alpha.9.png.flat",
-        "source": "C:\\Users\\Administrador\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\6caec9de34be779e0e67438a1a67f8b9\\res\\drawable-xxhdpi-v4\\abc_spinner_mtrl_am_alpha.9.png"
-    },
-    {
         "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_scrubber_track_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\Administrador\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\6caec9de34be779e0e67438a1a67f8b9\\res\\drawable-hdpi-v4\\abc_scrubber_track_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_spinner_mtrl_am_alpha.9.png.flat",
+        "source": "C:\\Users\\Administrador\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\6caec9de34be779e0e67438a1a67f8b9\\res\\drawable-xxhdpi-v4\\abc_spinner_mtrl_am_alpha.9.png"
     },
     {
         "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_design_ic_visibility.png.flat",
@@ -556,12 +556,12 @@
         "source": "C:\\Users\\Administrador\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\6caec9de34be779e0e67438a1a67f8b9\\res\\drawable-xxhdpi-v4\\abc_scrubber_primary_mtrl_alpha.9.png"
     },
     {
-        "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_ic_star_black_48dp.png.flat",
-        "source": "C:\\Users\\Administrador\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\6caec9de34be779e0e67438a1a67f8b9\\res\\drawable-xxhdpi-v4\\abc_ic_star_black_48dp.png"
-    },
-    {
         "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\anim-v21_design_bottom_sheet_slide_in.xml.flat",
         "source": "C:\\Users\\Administrador\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.1.aar\\f43b26dbf7866519bd3c81466267eb44\\res\\anim-v21\\design_bottom_sheet_slide_in.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_ic_star_black_48dp.png.flat",
+        "source": "C:\\Users\\Administrador\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\6caec9de34be779e0e67438a1a67f8b9\\res\\drawable-xxhdpi-v4\\abc_ic_star_black_48dp.png"
     },
     {
         "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_errorconexion.png.flat",
@@ -624,12 +624,12 @@
         "source": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\src\\main\\res\\drawable-xxxhdpi\\azul1.png"
     },
     {
-        "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\anim_touchclick2.xml.flat",
-        "source": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\src\\main\\res\\anim\\touchclick2.xml"
-    },
-    {
         "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_send.png.flat",
         "source": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\src\\main\\res\\drawable-hdpi\\ic_send.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\anim_touchclick2.xml.flat",
+        "source": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\src\\main\\res\\anim\\touchclick2.xml"
     },
     {
         "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_ic_star_black_48dp.png.flat",
@@ -932,12 +932,12 @@
         "source": "C:\\Users\\Administrador\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\6caec9de34be779e0e67438a1a67f8b9\\res\\drawable-xxxhdpi-v4\\abc_ic_star_half_black_48dp.png"
     },
     {
-        "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_replay.png.flat",
-        "source": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\src\\main\\res\\drawable-mdpi\\ic_replay.png"
-    },
-    {
         "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_amarillo0.png.flat",
         "source": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\src\\main\\res\\drawable-xxhdpi\\amarillo0.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_replay.png.flat",
+        "source": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\src\\main\\res\\drawable-mdpi\\ic_replay.png"
     },
     {
         "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_simba.png.flat",
@@ -960,16 +960,16 @@
         "source": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\src\\main\\res\\drawable-xhdpi\\rojo1.png"
     },
     {
-        "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_menu_hardkey_panel_mtrl_mult.9.png.flat",
-        "source": "C:\\Users\\Administrador\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\6caec9de34be779e0e67438a1a67f8b9\\res\\drawable-mdpi-v4\\abc_menu_hardkey_panel_mtrl_mult.9.png"
+        "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\color-v23_abc_tint_default.xml.flat",
+        "source": "C:\\Users\\Administrador\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\6caec9de34be779e0e67438a1a67f8b9\\res\\color-v23\\abc_tint_default.xml"
     },
     {
         "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_popup_menu_item_layout.xml.flat",
         "source": "C:\\Users\\Administrador\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\6caec9de34be779e0e67438a1a67f8b9\\res\\layout\\abc_popup_menu_item_layout.xml"
     },
     {
-        "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\color-v23_abc_tint_default.xml.flat",
-        "source": "C:\\Users\\Administrador\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\6caec9de34be779e0e67438a1a67f8b9\\res\\color-v23\\abc_tint_default.xml"
+        "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_menu_hardkey_panel_mtrl_mult.9.png.flat",
+        "source": "C:\\Users\\Administrador\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\6caec9de34be779e0e67438a1a67f8b9\\res\\drawable-mdpi-v4\\abc_menu_hardkey_panel_mtrl_mult.9.png"
     },
     {
         "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_btn_radio_material.xml.flat",
@@ -1016,12 +1016,12 @@
         "source": "C:\\Users\\Administrador\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\a37d22cac98d85a19e5a39f426c5ea89\\res\\layout-v21\\notification_template_custom_big.xml"
     },
     {
-        "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_touch3.png.flat",
-        "source": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\src\\main\\res\\drawable-mdpi\\touch3.png"
-    },
-    {
         "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\transition_transition.xml.flat",
         "source": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\src\\main\\res\\transition\\transition.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_touch3.png.flat",
+        "source": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\src\\main\\res\\drawable-mdpi\\touch3.png"
     },
     {
         "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_touch3.png.flat",
@@ -1296,12 +1296,12 @@
         "source": "C:\\Users\\Administrador\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\6caec9de34be779e0e67438a1a67f8b9\\res\\drawable-hdpi-v4\\abc_btn_check_to_on_mtrl_000.png"
     },
     {
-        "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_secondary_text_material_light.xml.flat",
-        "source": "C:\\Users\\Administrador\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\6caec9de34be779e0e67438a1a67f8b9\\res\\color\\abc_secondary_text_material_light.xml"
-    },
-    {
         "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_scrubber_track_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\Administrador\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\6caec9de34be779e0e67438a1a67f8b9\\res\\drawable-mdpi-v4\\abc_scrubber_track_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_secondary_text_material_light.xml.flat",
+        "source": "C:\\Users\\Administrador\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\6caec9de34be779e0e67438a1a67f8b9\\res\\color\\abc_secondary_text_material_light.xml"
     },
     {
         "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_play_arrow.png.flat",
@@ -1372,24 +1372,24 @@
         "source": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\src\\main\\res\\drawable-xhdpi\\camonacerosocotlanmaterial.png"
     },
     {
-        "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_vector_test.xml.flat",
-        "source": "C:\\Users\\Administrador\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\6caec9de34be779e0e67438a1a67f8b9\\res\\drawable\\abc_vector_test.xml"
-    },
-    {
         "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_ic_search_api_material.xml.flat",
         "source": "C:\\Users\\Administrador\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\6caec9de34be779e0e67438a1a67f8b9\\res\\drawable\\abc_ic_search_api_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_vector_test.xml.flat",
+        "source": "C:\\Users\\Administrador\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\6caec9de34be779e0e67438a1a67f8b9\\res\\drawable\\abc_vector_test.xml"
     },
     {
         "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_search_view.xml.flat",
         "source": "C:\\Users\\Administrador\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\6caec9de34be779e0e67438a1a67f8b9\\res\\layout\\abc_search_view.xml"
     },
     {
-        "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_colasimba.png.flat",
-        "source": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\src\\main\\res\\drawable-xxhdpi\\colasimba.png"
-    },
-    {
         "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_scrubber_control_to_pressed_mtrl_005.png.flat",
         "source": "C:\\Users\\Administrador\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\6caec9de34be779e0e67438a1a67f8b9\\res\\drawable-hdpi-v4\\abc_scrubber_control_to_pressed_mtrl_005.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_colasimba.png.flat",
+        "source": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\src\\main\\res\\drawable-xxhdpi\\colasimba.png"
     },
     {
         "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_aprovechar.png.flat",
@@ -1500,16 +1500,16 @@
         "source": "C:\\Users\\Administrador\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\a37d22cac98d85a19e5a39f426c5ea89\\res\\layout\\notification_template_part_time.xml"
     },
     {
-        "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_errorconexion.png.flat",
-        "source": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\src\\main\\res\\drawable-xxxhdpi\\errorconexion.png"
+        "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_scrubber_track_mtrl_alpha.9.png.flat",
+        "source": "C:\\Users\\Administrador\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\6caec9de34be779e0e67438a1a67f8b9\\res\\drawable-xhdpi-v4\\abc_scrubber_track_mtrl_alpha.9.png"
     },
     {
         "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_simba.png.flat",
         "source": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\src\\main\\res\\drawable-xxhdpi\\simba.png"
     },
     {
-        "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_scrubber_track_mtrl_alpha.9.png.flat",
-        "source": "C:\\Users\\Administrador\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\6caec9de34be779e0e67438a1a67f8b9\\res\\drawable-xhdpi-v4\\abc_scrubber_track_mtrl_alpha.9.png"
+        "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_errorconexion.png.flat",
+        "source": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\src\\main\\res\\drawable-xxxhdpi\\errorconexion.png"
     },
     {
         "merged": "C:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_btn_switch_to_on_mtrl_00012.9.png.flat",

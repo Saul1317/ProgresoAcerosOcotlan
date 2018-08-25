@@ -53,7 +53,7 @@ public class AcuseRecibo extends AppCompatActivity {
     }
     private void IniciadorViews() {
         img_acuse_recibo = (ImageView) findViewById(R.id.img_acuserecibo);
-        Picasso.with(this).load("https://cdn.pagina24.com.mx/content/images/2017/10/18/zacatecas/05.jpg").placeholder(R.drawable.errorconexionvertical).into(img_acuse_recibo);
+        Picasso.with(this).load("https://cdn.pagina24.com.mx/content/images/2017/10/18/zacatecas/05.jpg").error(R.drawable.errorconexionvertical).into(img_acuse_recibo);
         prs = getSharedPreferences("usuarioDatos", Context.MODE_PRIVATE);
         vibrador = (Vibrator) getSystemService(getApplicationContext().VIBRATOR_SERVICE);
         txt_mensaje_acuse_recibo = (TextView) findViewById(R.id.txt_mensaje_acuse_recibo);
