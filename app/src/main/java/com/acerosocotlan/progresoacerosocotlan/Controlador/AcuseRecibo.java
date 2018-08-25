@@ -48,6 +48,7 @@ public class AcuseRecibo extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 DialogoConfimacionEnviarAcuse();
+                Log.i("Prueba","borrar este mensaje");
             }
         });
     }
