@@ -3,6 +3,9 @@ package com.acerosocotlan.progresoacerosocotlan.Controlador;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Bitmap;
+import android.graphics.Matrix;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.os.Vibrator;
 import android.support.design.widget.FloatingActionButton;
@@ -13,6 +16,8 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
+import android.view.animation.RotateAnimation;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -24,18 +29,23 @@ import com.acerosocotlan.progresoacerosocotlan.Modelo.NetworkAdapter;
 import com.acerosocotlan.progresoacerosocotlan.R;
 import com.squareup.picasso.Picasso;
 
+import it.sephiroth.android.library.imagezoom.ImageViewTouch;
+import it.sephiroth.android.library.imagezoom.ImageViewTouchBase;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
 public class AcuseRecibo extends AppCompatActivity {
 
-    private ImageView img_acuse_recibo;
+    private ImageViewTouch img_acuse_recibo;
+    private ImageView img_rotateright_img, btn_back;
     private SharedPreferences prs;
     private Vibrator vibrador;
     private static final long VIBRACION_TIEMPO = 50;
     private TextView txt_mensaje_acuse_recibo;
     private FloatingActionButton fab;
+    Bitmap bitmapImageView;
+    int rotacion=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,14 +57,46 @@ public class AcuseRecibo extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                vibrador.vibrate(VIBRACION_TIEMPO);
                 DialogoConfimacionEnviarAcuse();
                 Log.i("Prueba","borrar este mensaje");
             }
         });
+
+        btn_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                vibrador.vibrate(VIBRACION_TIEMPO);
+                Intent intentProgreso = new Intent(AcuseRecibo.this, ProgresoEntregaActivity.class);
+                intentProgreso.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(intentProgreso);
+            }
+        });
+
+        img_rotateright_img.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                img_acuse_recibo.setRotation(rotacion + 90);
+                if(rotacion>=360){
+                    rotacion=0;
+                }else{
+                    rotacion= rotacion+90;
+                }
+                Log.i("ROTACION", String.valueOf(rotacion));
+            }
+        });
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+    }
+
     private void IniciadorViews() {
-        img_acuse_recibo = (ImageView) findViewById(R.id.img_acuserecibo);
-        Picasso.with(this).load("https://cdn.pagina24.com.mx/content/images/2017/10/18/zacatecas/05.jpg").error(R.drawable.errorconexionvertical).into(img_acuse_recibo);
+        img_acuse_recibo = (ImageViewTouch) findViewById(R.id.img_acuserecibo);
+        img_acuse_recibo.setDisplayType(ImageViewTouchBase.DisplayType.FIT_IF_BIGGER);
+        img_rotateright_img = (ImageView) findViewById(R.id.img_rotateright_img);
+        btn_back = (ImageView) findViewById(R.id.btn_back);
         prs = getSharedPreferences("usuarioDatos", Context.MODE_PRIVATE);
         vibrador = (Vibrator) getSystemService(getApplicationContext().VIBRATOR_SERVICE);
         txt_mensaje_acuse_recibo = (TextView) findViewById(R.id.txt_mensaje_acuse_recibo);
@@ -103,8 +145,9 @@ public class AcuseRecibo extends AppCompatActivity {
                 if(response.isSuccessful()){
                     AcuseRecibo_retrofit acuseRecibo_retrofit= response.body();
                     Log.i("IMG Recibo",acuseRecibo_retrofit.getResp());
-                    Picasso.with(AcuseRecibo.this).load(acuseRecibo_retrofit.getResp()).placeholder(R.drawable.errorconexionvertical).error(R.drawable.errorconexionvertical).into(img_acuse_recibo);
+                    Picasso.with(AcuseRecibo.this).load(acuseRecibo_retrofit.getResp()).error(R.drawable.errorconexionvertical).into(img_acuse_recibo);
                     if(acuseRecibo_retrofit.getResp().equals("Aun no cuenta con recibo")){
+                        Bitmap bitmapImageView=((BitmapDrawable)img_acuse_recibo.getDrawable()).getBitmap();
                         txt_mensaje_acuse_recibo.setVisibility(View.VISIBLE);
                         fab.setVisibility(View.GONE);
                     }else{

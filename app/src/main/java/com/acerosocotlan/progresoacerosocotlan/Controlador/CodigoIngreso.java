@@ -1,14 +1,11 @@
 package com.acerosocotlan.progresoacerosocotlan.Controlador;
 
-import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.TextInputEditText;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -21,9 +18,7 @@ import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
-import android.widget.FrameLayout;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.acerosocotlan.progresoacerosocotlan.Modelo.MetodosSharedPreference;
@@ -63,6 +58,7 @@ public class CodigoIngreso extends AppCompatActivity {
         }
         setContentView(R.layout.activity_codigo_ingreso);
         Inicializador();
+
         boton_enviar_folio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -84,7 +80,6 @@ public class CodigoIngreso extends AppCompatActivity {
             carro_salida_animacion.setAnimationListener(new Animation.AnimationListener() {
                 @Override
                 public void onAnimationStart(Animation animation) {
-
                 }
 
                 @Override
@@ -124,6 +119,22 @@ public class CodigoIngreso extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 ValidarUsuario();
+                alertDialog.dismiss();
+            }
+        });
+    }
+    private void MostrarDialogCustomNoConexionServidor(){
+        AlertDialog.Builder alert = new AlertDialog.Builder(this);
+        LayoutInflater inflater = this.getLayoutInflater();
+        View dialoglayout = inflater.inflate(R.layout.dialog_no_conexion, null);
+        //alert.setCancelable(false);
+        alert.setView(dialoglayout);
+        final AlertDialog alertDialog = alert.show();
+        Button botonEntendido = (Button) dialoglayout.findViewById(R.id.btn_dialog_no_internet);
+        botonEntendido.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                encryptar();
                 alertDialog.dismiss();
             }
         });
@@ -170,8 +181,45 @@ public class CodigoIngreso extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<Prueba_retrofit> call, Throwable t) {
-                MostrarDialogCustomNoConfiguracion();
+                //MostrarDialogCustomNoConfiguracion();
+                Log.i("ERROR SERVER","Primer link fallo");
+                prueba2();
                 progressDoalog.dismiss();
+            }
+        });
+    }
+    private void prueba2(){
+        progressDoalog.setMax(100);
+        progressDoalog.setTitle("Aceros Ocotlán");
+        progressDoalog.setIcon(R.drawable.logo);
+        progressDoalog.setMessage("Validando sus datos");
+        progressDoalog.setCancelable(false);
+        progressDoalog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+        progressDoalog.show();
+        Call<Prueba_retrofit> call = NetworkAdapter.getApiServiceAlternativo2().Solicitarprueba("egao.php",txtprueba1,txtprueba2);
+        call.enqueue(new Callback<Prueba_retrofit>() {
+            @Override
+            public void onResponse(Call<Prueba_retrofit> call, Response<Prueba_retrofit> response) {
+                progressDoalog.dismiss();
+                if(response.isSuccessful()) {
+                    Prueba_retrofit  prueba_retrofit= response.body();
+                    if (!prueba_retrofit.getResp().isEmpty()) {
+                        MetodosSharedPreference.GuardarPruebaEntrega(prs, prueba_retrofit.getResp());
+                        Log.i("URL", MetodosSharedPreference.ObtenerPruebaEntregaPref(prs));
+                        ConsultarCodigo();
+                    }else{
+                        MostrarDialogCustomNoConexionServidor();
+                    }
+                }else{
+                        MostrarDialogCustomNoConexionServidor();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Prueba_retrofit> call, Throwable t) {
+                progressDoalog.dismiss();
+                Log.i("ERROR SERVER","Segundo link fallo");
+                MostrarDialogCustomNoConexionServidor();
             }
         });
     }

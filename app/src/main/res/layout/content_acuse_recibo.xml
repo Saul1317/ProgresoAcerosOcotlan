@@ -11,23 +11,41 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@android:color/black">
-        <ImageView
+
+        <it.sephiroth.android.library.imagezoom.ImageViewTouch
             android:id="@+id/img_acuserecibo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:scaleType="fitXY"/>
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter" />
+
         <TextView
             android:id="@+id/txt_mensaje_acuse_recibo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="16dp"
             android:text="Aún no se genera el acuse de recibo"
+            android:textAlignment="center"
             android:textColor="@color/texto_blanco"
             android:textSize="30sp"
             android:textStyle="bold"
-            android:textAlignment="center"
-            android:layout_gravity="center"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/img_rotateright_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
             android:padding="16dp"
-            android:visibility="invisible"/>
+            android:src="@drawable/ic_rotate_right" />
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:padding="16dp"
+            android:src="@drawable/ic_arrow_back" />
     </FrameLayout>
+
 </android.support.constraint.ConstraintLayout>

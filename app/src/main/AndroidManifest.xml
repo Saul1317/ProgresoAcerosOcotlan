@@ -67,7 +67,7 @@
         <activity
             android:name=".Controlador.AcuseRecibo"
             android:label="@string/title_activity_acuse_recibo"
+            android:screenOrientation="portrait"
             android:theme="@style/pantalla_completa2"></activity>
     </application>
-
 </manifest>

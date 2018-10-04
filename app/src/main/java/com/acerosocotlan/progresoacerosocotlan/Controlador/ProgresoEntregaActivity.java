@@ -6,15 +6,9 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.pm.PackageManager;
-import android.media.Image;
-import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.Vibrator;
-import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.FloatingActionButton;
-import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
@@ -34,8 +28,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.acerosocotlan.progresoacerosocotlan.Adaptador.AdapterRecylerViewHistoricoEnvio;
-import com.acerosocotlan.progresoacerosocotlan.Modelo.AcuseRecibo_retrofit;
-import com.acerosocotlan.progresoacerosocotlan.Modelo.DirectorioTelefonos;
 import com.acerosocotlan.progresoacerosocotlan.Modelo.Factura_retrofit;
 import com.acerosocotlan.progresoacerosocotlan.Modelo.Historial_retrofit;
 import com.acerosocotlan.progresoacerosocotlan.Modelo.MetodosSharedPreference;
@@ -45,8 +37,6 @@ import com.acerosocotlan.progresoacerosocotlan.Modelo.VerOfertas_retrofit;
 import com.acerosocotlan.progresoacerosocotlan.R;
 import com.squareup.picasso.Picasso;
 
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -87,15 +77,18 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
         Inicializador();
 
         gestureDetector = new GestureDetector(getApplicationContext(),new GestureListener());
+
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                vibrador.vibrate(VIBRACION_TIEMPO);
                 AbrirMenuUsuario();
             }
         });
         fab_mostrar_historico.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                vibrador.vibrate(VIBRACION_TIEMPO);
                 AbrirHistoricoProcesoEntrega();
             }
         });
@@ -108,6 +101,7 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
         btn_mostrar_detalles_entrega.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                vibrador.vibrate(VIBRACION_TIEMPO);
                 BloquearBotones();
                 Intent i = new Intent(ProgresoEntregaActivity.this, DetalleEntregaActivity2.class);
                 startActivity(i);
@@ -116,6 +110,7 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
         btn_nuevo_rastreo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                vibrador.vibrate(VIBRACION_TIEMPO);
                 NuevaVentanaAcuseRecibo();
                 //ReenviarAcuseRecibo();
             }
@@ -123,6 +118,7 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
         btn_ver_ofertas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                vibrador.vibrate(VIBRACION_TIEMPO);
                 BloquearBotones();
                 Intent i = new Intent(ProgresoEntregaActivity.this, VerOferta.class);
                 startActivity(i);
@@ -131,13 +127,14 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
         btn_descargar_factura.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                btn_descargar_factura.setEnabled(false);
+                vibrador.vibrate(VIBRACION_TIEMPO);
                 MostrarDialogCustomFactura();
             }
         });
         boton_salir.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                vibrador.vibrate(VIBRACION_TIEMPO);
                 if (ofertas==true) {
                     MostrarDialogCustomOfertas();
                 }else{

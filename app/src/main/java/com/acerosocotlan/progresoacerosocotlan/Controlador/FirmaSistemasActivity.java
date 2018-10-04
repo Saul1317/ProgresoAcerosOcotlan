@@ -52,7 +52,6 @@ public class FirmaSistemasActivity extends AppCompatActivity {
             }
         });
     }
-
     private void AnimacionSimba() {
         if(contador<5) {
             //AZUL

@@ -55,7 +55,6 @@ public class DetalleEntregaActivity2 extends AppCompatActivity {
         ObtenerDetalleEntrega();
     }
     private void ObtenerDetalleEntrega(){
-
         Call<List<DetalleEntrega_retrofit>> call = NetworkAdapter.getApiService(MetodosSharedPreference.ObtenerPruebaEntregaPref(prs)).detalleEntrega("detalle_"+MetodosSharedPreference.ObtenerCodigoEntregaPref(prs)+"/gao");
         call.enqueue(new Callback<List<DetalleEntrega_retrofit>>() {
             @Override
