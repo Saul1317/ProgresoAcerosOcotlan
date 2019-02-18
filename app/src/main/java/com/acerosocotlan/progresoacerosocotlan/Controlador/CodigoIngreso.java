@@ -123,6 +123,7 @@ public class CodigoIngreso extends AppCompatActivity {
             }
         });
     }
+
     private void MostrarDialogCustomNoConexionServidor(){
         AlertDialog.Builder alert = new AlertDialog.Builder(this);
         LayoutInflater inflater = this.getLayoutInflater();
@@ -182,7 +183,7 @@ public class CodigoIngreso extends AppCompatActivity {
             @Override
             public void onFailure(Call<Prueba_retrofit> call, Throwable t) {
                 //MostrarDialogCustomNoConfiguracion();
-                Log.i("ERROR SERVER","Primer link fallo");
+                Log.e("ERROR SERVER","Primer link fallo " + t.getMessage());
                 prueba2();
                 progressDoalog.dismiss();
             }

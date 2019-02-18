@@ -51,8 +51,15 @@ public class StatuEntrega {
     @SerializedName("chofer")
     @Expose
     private String chofer;
+    @SerializedName("sociedad")
+    @Expose
+    private String sociedad;
+    @SerializedName("sucursal")
+    @Expose
+    private String sucursal;
 
-    public StatuEntrega(String fInicioRuta, String hInicioRuta, String fInicioEntrega, String hInicioEntrega, String fLlegadaEntrega, String hLlegadaEntrega, String fSalidaEntrega, String hSalidaEntrega, String pedido, String estatus, String hizoencuesta, String placas, String fotocamion, String chofer) {
+
+    public StatuEntrega(String fInicioRuta, String hInicioRuta, String fInicioEntrega, String hInicioEntrega, String fLlegadaEntrega, String hLlegadaEntrega, String fSalidaEntrega, String hSalidaEntrega, String pedido, String estatus, String hizoencuesta, String placas, String fotocamion, String chofer, String sociedad, String sucursal) {
         this.fInicioRuta = fInicioRuta;
         this.hInicioRuta = hInicioRuta;
         this.fInicioEntrega = fInicioEntrega;
@@ -67,6 +74,8 @@ public class StatuEntrega {
         this.placas = placas;
         this.fotocamion = fotocamion;
         this.chofer = chofer;
+        this.sociedad = sociedad;
+        this.sucursal = sucursal;
     }
 
     public String getfInicioRuta() {
@@ -181,6 +190,22 @@ public class StatuEntrega {
         this.chofer = chofer;
     }
 
+    public String getSociedad() {
+        return sociedad;
+    }
+
+    public void setSociedad(String sociedad) {
+        this.sociedad = sociedad;
+    }
+
+    public String getSucursal() {
+        return sucursal;
+    }
+
+    public void setSucursal(String sucursal) {
+        this.sucursal = sucursal;
+    }
+
     @Override
     public String toString() {
         return "StatuEntrega{" +
@@ -198,6 +223,8 @@ public class StatuEntrega {
                 ", placas='" + placas + '\'' +
                 ", fotocamion='" + fotocamion + '\'' +
                 ", chofer='" + chofer + '\'' +
+                ", sociedad='" + sociedad + '\'' +
+                ", sucursal='" + sucursal + '\'' +
                 '}';
     }
 }

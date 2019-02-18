@@ -74,5 +74,6 @@
     <string name="title_activity_acuse_recibo">Acuse Recibo</string>
     <string name="dialog_txt_titulo_acuse_recibo">Acuse Recibo</string>
     <string name="dialog_txt_descripcion_acuse_recibo">¿Desea mandar el acuse de recibo a su correo?</string>
+    <string name="encuesta_activity_txt_pregunta4">Califica esta aplicación</string>
 
 </resources>

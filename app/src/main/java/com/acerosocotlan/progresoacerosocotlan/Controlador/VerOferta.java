@@ -59,7 +59,7 @@ public class VerOferta extends AppCompatActivity {
     private static final long VIBRACION_TIEMPO = 50;
     private RecyclerView ofertasRecyclerView;
     private ImageView imagen_fondo_estatus, deslizamiento_tuto, imagen_touch_mano_ver_ofertas_azul,imagen_touch_mano_ver_ofertas_verde;
-    private String status;
+    private String status, sociedad;
     private SharedPreferences prs;
     private ProgressDialog progressDoalog;
     private Vibrator vibrador;
@@ -88,7 +88,7 @@ public class VerOferta extends AppCompatActivity {
                 progressDoalog.dismiss();
                 if (response.isSuccessful()) {
                     List<StatuEntrega> respuesta = response.body();
-                    ValidarEstatusActualEntrega(respuesta.get(0).getEstatus().toString());
+                    ValidarEstatusActualEntrega(respuesta);
                 }
             }
 
@@ -101,8 +101,10 @@ public class VerOferta extends AppCompatActivity {
             }
         });
     }
-    private void ValidarEstatusActualEntrega(String respuesta) {
-        status = respuesta;
+    private void ValidarEstatusActualEntrega(List<StatuEntrega> respuesta) {
+        status = respuesta.get(0).getEstatus();
+        sociedad = respuesta.get(0).getSociedad();
+
         if(status.equals("Programado")){
             imagen_fondo_estatus.setBackgroundResource(R.drawable.progressbar_aceros_ocotlan_version_5_4);
             new Handler().postDelayed(new Runnable() {
@@ -115,7 +117,11 @@ public class VerOferta extends AppCompatActivity {
             },3000);
         }
         else if(status.equals("En Ruta")){
-            imagen_fondo_estatus.setBackgroundResource(R.drawable.proceso1);
+            if(respuesta.get(0).getSociedad().equals("ZULA")){
+                imagen_fondo_estatus.setImageResource(R.drawable.progreso_zula_ya_vamos);
+            }else{
+                imagen_fondo_estatus.setImageResource(R.drawable.proceso1);
+            }
             new Handler().postDelayed(new Runnable() {
                 @Override
                 public void run() {
@@ -126,7 +132,11 @@ public class VerOferta extends AppCompatActivity {
             },3000);
         }
         else if(status.equals("Proximo")){
-            imagen_fondo_estatus.setBackgroundResource(R.drawable.proceso2);
+            if(respuesta.get(0).getSociedad().equals("ZULA")){
+                imagen_fondo_estatus.setImageResource(R.drawable.progreso_zula_ya_vamos);
+            }else{
+                imagen_fondo_estatus.setImageResource(R.drawable.proceso2);
+            }
             new Handler().postDelayed(new Runnable() {
                 @Override
                 public void run() {
@@ -137,7 +147,11 @@ public class VerOferta extends AppCompatActivity {
             },3000);
         }
         else if(status.equals("En sitio")){
-            imagen_fondo_estatus.setBackgroundResource(R.drawable.proceso3);
+            if(respuesta.get(0).getSociedad().equals("ZULA")){
+                imagen_fondo_estatus.setImageResource(R.drawable.progreso_zula_en_sitio);
+            }else{
+                imagen_fondo_estatus.setImageResource(R.drawable.proceso3);
+            }
             new Handler().postDelayed(new Runnable() {
                 @Override
                 public void run() {
@@ -148,7 +162,11 @@ public class VerOferta extends AppCompatActivity {
             },3000);
         }
         else if(status.equals("Descargando")){
-            imagen_fondo_estatus.setBackgroundResource(R.drawable.proceso4);
+            if(respuesta.get(0).getSociedad().equals("ZULA")){
+                imagen_fondo_estatus.setImageResource(R.drawable.progreso_zula_descargando);
+            }else{
+                imagen_fondo_estatus.setImageResource(R.drawable.proceso4);
+            }
             new Handler().postDelayed(new Runnable() {
                 @Override
                 public void run() {
@@ -159,7 +177,11 @@ public class VerOferta extends AppCompatActivity {
             },3000);
         }
         else if(status.equals("Entregado")){
-            imagen_fondo_estatus.setBackgroundResource(R.drawable.proceso5);
+            if(respuesta.get(0).getSociedad().equals("ZULA")){
+                imagen_fondo_estatus.setImageResource(R.drawable.progreso_zula_listo);
+            }else{
+                imagen_fondo_estatus.setBackgroundResource(R.drawable.proceso5);
+            }
             new Handler().postDelayed(new Runnable() {
                 @Override
                 public void run() {

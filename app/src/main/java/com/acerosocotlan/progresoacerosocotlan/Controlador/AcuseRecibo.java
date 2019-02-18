@@ -1,5 +1,6 @@
 package com.acerosocotlan.progresoacerosocotlan.Controlador;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -43,8 +44,7 @@ public class AcuseRecibo extends AppCompatActivity {
     private Vibrator vibrador;
     private static final long VIBRACION_TIEMPO = 50;
     private TextView txt_mensaje_acuse_recibo;
-    private FloatingActionButton fab;
-    Bitmap bitmapImageView;
+    private FloatingActionButton fab_mandar_correo;
     int rotacion=0;
 
     @Override
@@ -53,8 +53,8 @@ public class AcuseRecibo extends AppCompatActivity {
         setContentView(R.layout.activity_acuse_recibo);
         IniciadorViews();
 
-        fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
+
+        fab_mandar_correo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 vibrador.vibrate(VIBRACION_TIEMPO);
@@ -91,7 +91,6 @@ public class AcuseRecibo extends AppCompatActivity {
     public void onBackPressed() {
         super.onBackPressed();
     }
-
     private void IniciadorViews() {
         img_acuse_recibo = (ImageViewTouch) findViewById(R.id.img_acuserecibo);
         img_acuse_recibo.setDisplayType(ImageViewTouchBase.DisplayType.FIT_IF_BIGGER);
@@ -100,6 +99,7 @@ public class AcuseRecibo extends AppCompatActivity {
         prs = getSharedPreferences("usuarioDatos", Context.MODE_PRIVATE);
         vibrador = (Vibrator) getSystemService(getApplicationContext().VIBRATOR_SERVICE);
         txt_mensaje_acuse_recibo = (TextView) findViewById(R.id.txt_mensaje_acuse_recibo);
+        fab_mandar_correo = (FloatingActionButton) findViewById(R.id.fab_acuse_recibo);
         VerAcuseRecibo();
     }
     private void DialogoConfimacionEnviarAcuse(){
@@ -137,24 +137,25 @@ public class AcuseRecibo extends AppCompatActivity {
     }
     private void VerAcuseRecibo(){
         Call<AcuseRecibo_retrofit> call = NetworkAdapter.getApiService(MetodosSharedPreference.ObtenerPruebaEntregaPref(prs)).VerAcuseRecibo(
-                "verrecibo/gao",MetodosSharedPreference.ObtenerCodigoEntregaPref(prs)
-        );
+                "verrecibo/gao",MetodosSharedPreference.ObtenerCodigoEntregaPref(prs));
         call.enqueue(new Callback<AcuseRecibo_retrofit>() {
+            @SuppressLint("RestrictedApi")
             @Override
             public void onResponse(Call<AcuseRecibo_retrofit> call, Response<AcuseRecibo_retrofit> response) {
                 if(response.isSuccessful()){
                     AcuseRecibo_retrofit acuseRecibo_retrofit= response.body();
                     Log.i("IMG Recibo",acuseRecibo_retrofit.getResp());
-                    Picasso.with(AcuseRecibo.this).load(acuseRecibo_retrofit.getResp()).error(R.drawable.errorconexionvertical).into(img_acuse_recibo);
                     if(acuseRecibo_retrofit.getResp().equals("Aun no cuenta con recibo")){
-                        Bitmap bitmapImageView=((BitmapDrawable)img_acuse_recibo.getDrawable()).getBitmap();
                         txt_mensaje_acuse_recibo.setVisibility(View.VISIBLE);
-                        fab.setVisibility(View.GONE);
+
                     }else{
+                        Picasso.with(AcuseRecibo.this).load(acuseRecibo_retrofit.getResp()).error(R.drawable.errorconexionvertical).into(img_acuse_recibo);
                         txt_mensaje_acuse_recibo.setVisibility(View.INVISIBLE);
-                        fab.setVisibility(View.VISIBLE);
+                        fab_mandar_correo.setVisibility(View.VISIBLE);
+                        img_rotateright_img.setVisibility(View.VISIBLE);
                     }
                 }else{
+                    Toast.makeText(AcuseRecibo.this, "Ocurrió un problema, intente de nuevo", Toast.LENGTH_SHORT).show();
                 }
             }
 
@@ -192,7 +193,7 @@ public class AcuseRecibo extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<AcuseRecibo_retrofit> call, Throwable t) {
-                Log.i("ESTATUS_ERROR",t.toString());
+                Log.i("ESTATUS_ERROR",t.getMessage());
                 Intent intentErrorConexion = new Intent(AcuseRecibo.this, ErrorConexionActivity.class);
                 intentErrorConexion.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(intentErrorConexion);

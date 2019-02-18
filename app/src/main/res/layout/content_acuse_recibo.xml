@@ -37,6 +37,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="end"
             android:padding="16dp"
+            android:visibility="gone"
             android:src="@drawable/ic_rotate_right" />
 
         <ImageView

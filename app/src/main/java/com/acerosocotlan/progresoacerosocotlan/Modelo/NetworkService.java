@@ -40,7 +40,9 @@ public interface NetworkService {
                                      @Field("vendedor") String vendedorRespuesta,
                                      @Field("chofer") String choferRespuesta,
                                      @Field("material") String materialRespuesta,
-                                     @Field("tiempo") String tiempoRespuesta);
+                                     @Field("tiempo") String tiempoRespuesta,
+                                     @Field("aplicacion") String aplicacionRespuesta,
+                                     @Field("movil") String tipo_movil);
     @FormUrlEncoded
     @POST
     Call<Factura_retrofit> EnviarFactura(@Url String fileUrl, @Field("rastreo") String codigoRastreo);

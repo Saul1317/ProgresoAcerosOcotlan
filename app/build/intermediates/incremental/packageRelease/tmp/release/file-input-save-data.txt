@@ -1,7 +1,7 @@
 #Internal package file, do not edit.
-#Fri Sep 28 17:49:00 CDT 2018
+#Thu Feb 14 10:11:46 CST 2019
 0.baseType=DIRECTORY
-0.base=C\:\\Users\\Administrador\\Desktop\\ProgresoAcerosOcotlan\\app\\build\\intermediates\\transforms\\dexMerger\\release\\0
+0.base=/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/transforms/dexMerger/release/0
 0.path=classes.dex
 0.set=DEX
 count=1

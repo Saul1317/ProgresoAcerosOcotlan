@@ -116,26 +116,67 @@ public class DetalleEntregaActivity2 extends AppCompatActivity {
         });
     }
     private void ValidarEstatusActualEntrega(List<StatuEntrega> respuesta) {
-        if(status.equals("Programado")){
-            imageViewFondoDetallesEntrega.setImageResource(R.drawable.progressbar_aceros_ocotlan_version_5_4);
-        }
-        else if(status.equals("En Ruta")){
-            imageViewFondoDetallesEntrega.setImageResource(R.drawable.proceso1);
-        }
-        else if(status.equals("Proximo")){
-            imageViewFondoDetallesEntrega.setImageResource(R.drawable.proceso2);
-        }
-        else if(status.equals("En sitio")){
-            imageViewFondoDetallesEntrega.setBackgroundResource(R.drawable.proceso3);
-        }
-        else if(status.equals("Descargando")){
-            imageViewFondoDetallesEntrega.setImageResource(R.drawable.proceso4);
-        }
-        else if(status.equals("Entregado")){
-            imageViewFondoDetallesEntrega.setImageResource(R.drawable.proceso5);
-        }
-        else if(status.equals("Posponer")){
-            imageViewFondoDetallesEntrega.setImageResource(R.drawable.progressbar_aceros_ocotlan_version_3_revision);
+        switch (respuesta.get(0).getEstatus()){
+            case "Programado":
+                imageViewFondoDetallesEntrega.setImageResource(R.drawable.progressbar_aceros_ocotlan_version_5_4);
+                break;
+
+            case "En Ruta":
+                if(respuesta.get(0).getSociedad().equals("ZULA")){
+                    imageViewFondoDetallesEntrega.setImageResource(R.drawable.progreso_zula_ya_vamos);
+                }else{
+                    imageViewFondoDetallesEntrega.setImageResource(R.drawable.proceso1);
+                }
+                break;
+
+            case "Proximo":
+                if(respuesta.get(0).getSociedad().equals("ZULA")){
+                    imageViewFondoDetallesEntrega.setImageResource(R.drawable.progreso_zula_ya_vamos);
+                }else{
+                    imageViewFondoDetallesEntrega.setImageResource(R.drawable.proceso2);
+                }
+                break;
+
+            case "En sitio":
+                if(respuesta.get(0).getSociedad().equals("ZULA")){
+                    imageViewFondoDetallesEntrega.setImageResource(R.drawable.progreso_zula_en_sitio);
+                }else{
+                    imageViewFondoDetallesEntrega.setImageResource(R.drawable.proceso3);
+                }
+                break;
+
+            case "Descargando":
+                if(respuesta.get(0).getSociedad().equals("ZULA")){
+                    imageViewFondoDetallesEntrega.setImageResource(R.drawable.progreso_zula_descargando);
+                }else{
+                    imageViewFondoDetallesEntrega.setImageResource(R.drawable.proceso4);
+                }
+                break;
+
+            case "Entregado":
+
+                if (respuesta.get(0).getHizoencuesta().equals("0")){
+                    if(respuesta.get(0).getSociedad().equals("ZULA")){
+                        imageViewFondoDetallesEntrega.setImageResource(R.drawable.progreso_zula_listo);
+                    }else{
+                        imageViewFondoDetallesEntrega.setImageResource(R.drawable.proceso5);
+                    }
+                }else {
+                    if(respuesta.get(0).getSociedad().equals("ZULA")){
+                        imageViewFondoDetallesEntrega.setImageResource(R.drawable.progreso_zula_listo);
+                    }else{
+                        imageViewFondoDetallesEntrega.setImageResource(R.drawable.proceso5);
+                    }
+                }
+                break;
+
+            case "Posponer":
+                imageViewFondoDetallesEntrega.setImageResource(R.drawable.progressbar_aceros_ocotlan_version_3_revision);
+                break;
+
+            default:
+                Toast.makeText(this, "Ocurrió un problema, intente de nuevo", Toast.LENGTH_SHORT).show();
+                break;
         }
     }
     private void inicializador(){

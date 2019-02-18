@@ -52,7 +52,7 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
     private ImageView imagen_progress_bar,imagen_touch_mano, imagen_mano_click2, imagen_touch_mano2;
     private CardView cardview__menu_progreso,cardview__historico_proceso;
     private TextView fecha_entregado,text_num_pedido, text_hora_entrega,nombre_chofer_entrega,placas_camion;
-    private Button btn_mostrar_detalles_entrega, btn_nuevo_rastreo, btn_ver_ofertas,btn_descargar_factura,boton_salir;
+    private Button btn_mostrar_detalles_entrega, btn_acuse_recibo, btn_ver_ofertas,btn_descargar_factura,boton_salir;
     private FloatingActionButton fab, fab_mostrar_historico;
     private RecyclerView recyclerview_historico_envio_entrega;
     private ImageView foto_camion_entrega;
@@ -60,7 +60,7 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
     //SHARED PREFERENCE
     private SharedPreferences prs;
     //VARIABLES
-    private DownloadManager downloadManager;
+    //private DownloadManager downloadManager;
     private String codigo_entrega;
     private String status;
     private boolean menu_estatus = false;
@@ -107,7 +107,7 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
-        btn_nuevo_rastreo.setOnClickListener(new View.OnClickListener() {
+        btn_acuse_recibo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 vibrador.vibrate(VIBRACION_TIEMPO);
@@ -318,6 +318,7 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
                 progressDoalog.dismiss();
                 if(response.isSuccessful()) {
                     List<StatuEntrega> respuesta = response.body();
+                    Log.e("RESPUESTA", respuesta.toString());
                     if (respuesta.isEmpty()) {
                         Toast.makeText(ProgresoEntregaActivity.this, "Código invalido", Toast.LENGTH_SHORT).show();
                         remover_variables_sharedpreference();
@@ -341,7 +342,6 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
             @Override
             public void onFailure(Call<List<StatuEntrega>> call, Throwable t) {
                 progressDoalog.dismiss();
-                Log.i("ESTATUS_ERROR",t.toString());
                 Intent intentErrorConexion = new Intent(ProgresoEntregaActivity.this, ErrorConexionActivity.class);
                 intentErrorConexion.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(intentErrorConexion);
@@ -355,7 +355,6 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<List<Historial_retrofit>> call, Response<List<Historial_retrofit>> response) {
                 if(response.isSuccessful()){
-                    Log.i("CODIGO",MetodosSharedPreference.ObtenerCodigoEntregaPref(prs));
                     List<Historial_retrofit> historial_retrofits = response.body();
                     LlenarRecyclerView(historial_retrofits);
                 }else{
@@ -385,7 +384,6 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
             public void onResponse(Call<Factura_retrofit> call, Response<Factura_retrofit> response) {
                 if(response.isSuccessful()){
                     Factura_retrofit factura_retrofit= response.body();
-                    Log.i("RESPUESTA FACTURA",response.body().toString());
                     // aun notienefactura
                     if(factura_retrofit.getRuta().equals("sincorreo")){
                         Toast.makeText(ProgresoEntregaActivity.this, "No se proporcionó un correo al registrar el pedido", Toast.LENGTH_SHORT).show();
@@ -406,8 +404,129 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
         startActivity(i);
     }
     private void ValidarEstatusActualEntrega(List<StatuEntrega> respuesta) {
+        switch (respuesta.get(0).getEstatus()){
+            case "Programado":
+                imagen_progress_bar.setImageResource(R.drawable.progressbar_aceros_ocotlan_version_5_4);
+                fecha_entregado.setVisibility(View.INVISIBLE);
+                text_hora_entrega.setVisibility(View.INVISIBLE);
+                text_num_pedido.setVisibility(View.INVISIBLE);
+                layout_filtro.setVisibility(View.INVISIBLE);
+                MostrarTutorial();
+
+                break;
+
+            case "En Ruta":
+                if(respuesta.get(0).getSociedad().equals("ZULA")){
+                    imagen_progress_bar.setImageResource(R.drawable.progreso_zula_ya_vamos);
+                }else{
+                    imagen_progress_bar.setImageResource(R.drawable.proceso1);
+                }
+                fecha_entregado.setVisibility(View.INVISIBLE);
+                text_hora_entrega.setVisibility(View.INVISIBLE);
+                text_num_pedido.setVisibility(View.INVISIBLE);
+                layout_filtro.setVisibility(View.INVISIBLE);
+                btn_descargar_factura.setEnabled(true);
+                MostrarTutorial();
+
+                break;
+
+            case "Proximo":
+                if(respuesta.get(0).getSociedad().equals("ZULA")){
+                    imagen_progress_bar.setImageResource(R.drawable.progreso_zula_ya_vamos);
+                }else{
+                    imagen_progress_bar.setImageResource(R.drawable.proceso2);
+                }
+                fecha_entregado.setVisibility(View.INVISIBLE);
+                text_hora_entrega.setVisibility(View.INVISIBLE);
+                text_num_pedido.setVisibility(View.INVISIBLE);
+                layout_filtro.setVisibility(View.INVISIBLE);
+                btn_descargar_factura.setEnabled(true);
+
+                break;
+
+            case "En sitio":
+                if(respuesta.get(0).getSociedad().equals("ZULA")){
+                    imagen_progress_bar.setImageResource(R.drawable.progreso_zula_en_sitio);
+                }else{
+                    imagen_progress_bar.setImageResource(R.drawable.proceso3);
+                }
+                imagen_progress_bar.setImageResource(R.drawable.proceso3);
+                fecha_entregado.setVisibility(View.INVISIBLE);
+                text_hora_entrega.setVisibility(View.INVISIBLE);
+                text_num_pedido.setVisibility(View.INVISIBLE);
+                layout_filtro.setVisibility(View.INVISIBLE);
+                btn_descargar_factura.setEnabled(true);
+                break;
+
+            case "Descargando":
+                if(respuesta.get(0).getSociedad().equals("ZULA")){
+                    imagen_progress_bar.setImageResource(R.drawable.progreso_zula_descargando);
+                }else{
+                    imagen_progress_bar.setImageResource(R.drawable.proceso4);
+                }
+                fecha_entregado.setVisibility(View.INVISIBLE);
+                text_hora_entrega.setVisibility(View.INVISIBLE);
+                text_num_pedido.setVisibility(View.INVISIBLE);
+                layout_filtro.setVisibility(View.INVISIBLE);
+                btn_descargar_factura.setEnabled(true);
+                break;
+
+            case "Entregado":
+
+                if (respuesta.get(0).getHizoencuesta().equals("0")){
+                    if(respuesta.get(0).getSociedad().equals("ZULA")){
+                        imagen_progress_bar.setImageResource(R.drawable.progreso_zula_listo);
+                    }else{
+                        imagen_progress_bar.setImageResource(R.drawable.proceso5);
+                    }
+                    fecha_entregado.setVisibility(View.VISIBLE);
+                    text_hora_entrega.setVisibility(View.VISIBLE);
+                    text_num_pedido.setVisibility(View.VISIBLE);
+                    layout_filtro.setVisibility(View.VISIBLE);
+                    btn_acuse_recibo.setEnabled(true);
+
+                    text_num_pedido.setText("El pedido "+respuesta.get(0).getPedido()+" fue entregado");
+                    fecha_entregado.setText(respuesta.get(0).getfSalidaEntrega()+", ");
+                    text_hora_entrega.setText(respuesta.get(0).gethSalidaEntrega());
+                    btn_descargar_factura.setEnabled(true);
+                    Intent i = new Intent(ProgresoEntregaActivity.this, EncuestaActivity.class);
+                    startActivity(i);
+                }else {
+                    if(respuesta.get(0).getSociedad().equals("ZULA")){
+                        imagen_progress_bar.setImageResource(R.drawable.progreso_zula_listo);
+                    }else{
+                        imagen_progress_bar.setImageResource(R.drawable.proceso5);
+                    }
+                    fecha_entregado.setVisibility(View.VISIBLE);
+                    text_hora_entrega.setVisibility(View.VISIBLE);
+                    text_num_pedido.setVisibility(View.VISIBLE);
+                    layout_filtro.setVisibility(View.VISIBLE);
+
+                    text_num_pedido.setText("El pedido "+respuesta.get(0).getPedido()+" fue entregado");
+                    fecha_entregado.setText(respuesta.get(0).getfSalidaEntrega()+", ");
+                    text_hora_entrega.setText(respuesta.get(0).gethSalidaEntrega());
+                    btn_descargar_factura.setEnabled(true);
+
+                }
+                break;
+
+            case "Posponer":
+
+                imagen_progress_bar.setImageResource(R.drawable.progressbar_aceros_ocotlan_version_3_revision);
+                fecha_entregado.setVisibility(View.INVISIBLE);
+                text_hora_entrega.setVisibility(View.INVISIBLE);
+                text_num_pedido.setVisibility(View.INVISIBLE);
+                layout_filtro.setVisibility(View.INVISIBLE);
+                break;
+
+            default:
+                Toast.makeText(this, "Ocurrió un problema, intente de nuevo", Toast.LENGTH_SHORT).show();
+                break;
+        }
+    }
+
+    private void AgregarProgreso(List<StatuEntrega> respuesta) {
         if(status.equals("Programado")){
-            imagen_progress_bar.setImageResource(R.drawable.progressbar_aceros_ocotlan_version_5_4);
             fecha_entregado.setVisibility(View.INVISIBLE);
             text_hora_entrega.setVisibility(View.INVISIBLE);
             text_num_pedido.setVisibility(View.INVISIBLE);
@@ -454,6 +573,7 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
                 text_hora_entrega.setVisibility(View.VISIBLE);
                 text_num_pedido.setVisibility(View.VISIBLE);
                 layout_filtro.setVisibility(View.VISIBLE);
+                btn_acuse_recibo.setEnabled(true);
 
                 text_num_pedido.setText("El pedido "+respuesta.get(0).getPedido()+" fue entregado");
                 fecha_entregado.setText(respuesta.get(0).getfSalidaEntrega()+", ");
@@ -472,6 +592,7 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
                 fecha_entregado.setText(respuesta.get(0).getfSalidaEntrega()+", ");
                 text_hora_entrega.setText(respuesta.get(0).gethSalidaEntrega());
                 btn_descargar_factura.setEnabled(true);
+
             }
         }
         else if(status.equals("Posponer")){
@@ -481,10 +602,13 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
             text_num_pedido.setVisibility(View.INVISIBLE);
             layout_filtro.setVisibility(View.INVISIBLE);
         }
+        MostrarTutorial();
     }
+
     private void remover_variables_sharedpreference(){
         prs.edit().clear().apply();
     }
+
     private void ValidarVerOfertas() {
         Call<List<VerOfertas_retrofit>> call = NetworkAdapter.getApiService(MetodosSharedPreference.ObtenerPruebaEntregaPref(prs)).VerOfEntrega("verpromo/gao", MetodosSharedPreference.ObtenerCodigoEntregaPref(prs));
         call.enqueue(new Callback<List<VerOfertas_retrofit>>() {
@@ -545,7 +669,7 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
         text_num_pedido= (TextView) findViewById(R.id.pedido);
 
         btn_mostrar_detalles_entrega = (Button) findViewById(R.id.btn_mostrar_detalles_entrega);
-        btn_nuevo_rastreo = (Button) findViewById(R.id.btn_nuevo_rastreo);
+        btn_acuse_recibo = (Button) findViewById(R.id.btn_acuse_recibo);
         btn_ver_ofertas = (Button) findViewById(R.id.btn_ver_ofertas);
         btn_descargar_factura = (Button) findViewById(R.id.btn_descargar_factura);
         boton_salir = (Button) findViewById(R.id.boton_salir);
@@ -563,6 +687,7 @@ public class ProgresoEntregaActivity extends AppCompatActivity {
         text_num_pedido.setVisibility(View.INVISIBLE);
         fecha_entregado.setVisibility(View.INVISIBLE);
         layout_filtro.setVisibility(View.INVISIBLE);
+        //btn_acuse_recibo.setEnabled(false);
 
         fab = (FloatingActionButton) findViewById(R.id.fab);
         fab_mostrar_historico = (FloatingActionButton) findViewById(R.id.fab_mostrar_historico);
