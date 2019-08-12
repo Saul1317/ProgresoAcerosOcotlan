@@ -47,11 +47,17 @@ public class ErrorConexionActivity extends AppCompatActivity {
         IniciadorView();
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab_recargar_app);
+        /*
+        * ESTE BOTON SIRVE PARA REINTENTAR DE NUEVO ESTABLECER CONEXION CON EL SERVICIO
+        */
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //AL DAR CLICK SE VALIDA QUE QUE EL DISPOSITIVO TENGA CONEXION YA SEA WIFI O POR DATOS MOVILES
                 if(ValidacionConexion.isConnectedWifi(getApplicationContext())||ValidacionConexion.isConnectedMobile(getApplicationContext())){
+                    //SE VALIDA QUE SI SEA POSIBLE NAVEGAR
                     if(ValidacionConexion.isOnline(getApplicationContext())){
+                        //SI SE CUMPLE LA CONDICION ENTONCES SE ABRIRA DE NUEVO LA VENTANA DE PRGRESO ENTREGA
                         Intent i = new Intent(ErrorConexionActivity.this, ProgresoEntregaActivity.class);
                         i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                         startActivity(i);
@@ -64,6 +70,7 @@ public class ErrorConexionActivity extends AppCompatActivity {
             }
         });
 
+        /*ANIMACION PERRO*/
         error_conexion_simba.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -98,6 +105,8 @@ public class ErrorConexionActivity extends AppCompatActivity {
             }
         });
     }
+
+    /*INICIALIZA TODOS LOS VIEWS DE LA VISTA*/
     private void IniciadorView() {
         txt_error_conexion= (TextView) findViewById(R.id.txt_error_conexion);
         error_conexion_corazon_simba = (ImageView) findViewById(R.id.error_conexion_corazon_simba);

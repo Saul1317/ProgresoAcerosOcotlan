@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Wed Jan 30 16:38:35 CST 2019
+#Tue Jul 16 17:25:31 CDT 2019
 1.base=/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/dex/debug/mergeProjectDexDebug/out
 0.baseType=DIRECTORY
 1.baseType=DIRECTORY

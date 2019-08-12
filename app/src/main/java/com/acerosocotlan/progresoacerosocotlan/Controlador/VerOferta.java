@@ -78,6 +78,26 @@ public class VerOferta extends AppCompatActivity {
             }
         });
     }
+
+    private void Inicializador(){
+        prs = getSharedPreferences("usuarioDatos", Context.MODE_PRIVATE);
+        progressDoalog = new ProgressDialog(VerOferta.this);
+        ofertasRecyclerView = (RecyclerView) findViewById(R.id.ofertas_aceros_ocotlan_recyclerview);
+        imagen_fondo_estatus=(ImageView) findViewById(R.id.imagen_fondo_estatus);
+        deslizamiento_tuto=(ImageView) findViewById(R.id.deslizamiento_tuto);
+        imagen_touch_mano_ver_ofertas_azul=(ImageView) findViewById(R.id.imagen_touch_mano_ver_ofertas_azul);
+        imagen_touch_mano_ver_ofertas_verde=(ImageView) findViewById(R.id.imagen_touch_mano_ver_ofertas_verde);
+        touchAnimation  = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.touchclick2);
+        vibrador = (Vibrator) getSystemService(getApplicationContext().VIBRATOR_SERVICE);
+        progressDoalog.setMax(100);
+        progressDoalog.setTitle("Aceros Ocotlán");
+        progressDoalog.setIcon(R.drawable.logo);
+        progressDoalog.setMessage("Obteniendo los datos");
+        progressDoalog.setCancelable(false);
+        progressDoalog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+        RecogerEstatusEntrega();
+    }
+
     private void RecogerEstatusEntrega(){
         progressDoalog.show();
         Call<List<StatuEntrega>> call = NetworkAdapter.getApiService(MetodosSharedPreference.ObtenerPruebaEntregaPref(prs)).EstatusEntrega(
@@ -101,6 +121,7 @@ public class VerOferta extends AppCompatActivity {
             }
         });
     }
+
     private void ValidarEstatusActualEntrega(List<StatuEntrega> respuesta) {
         status = respuesta.get(0).getEstatus();
         sociedad = respuesta.get(0).getSociedad();
@@ -203,6 +224,10 @@ public class VerOferta extends AppCompatActivity {
             },3000);
         }
     }
+
+    /*
+    * CONSULTA PARA SACAR LAS OFERTAS DISPONIBLES EN LA SUCURSAL
+    */
     private void ObtenerOfertas(){
         Call<List<VerOfertas_retrofit>> call = NetworkAdapter.getApiService(MetodosSharedPreference.ObtenerPruebaEntregaPref(prs)).VerOfEntrega(
                 "verpromo/gao",
@@ -212,10 +237,14 @@ public class VerOferta extends AppCompatActivity {
             public void onResponse(Call<List<VerOfertas_retrofit>> call, Response<List<VerOfertas_retrofit>> response) {
                 progressDoalog.dismiss();
                 if (response.isSuccessful()){
+                    //SE ALMACENAN LAS OFERTAS EN UNA LISTA DE TIPO VEROFERTAS
                     List<VerOfertas_retrofit> verOfertas_retrofits = response.body();
+                    //SE VALIDA QUE NO ESTE VACIA LA LISTA
                     if(verOfertas_retrofits.isEmpty()){
+                        //MANDA UN DIALOG EN CASO DE QUE ESTE VACIA
                         MostrarDialogCustomSinOfertas();
                     }else {
+                        //SI CONTIENE DATOS LA LISTA ENTONCES MANDAMOS LLAMAR ESTE METODO PARA LLENARA EL RECYCLER VIEW
                         LlenarRecyclerView(verOfertas_retrofits);
                     }
                 }
@@ -229,15 +258,24 @@ public class VerOferta extends AppCompatActivity {
             }
         });
     }
+
+    /*
+    * SE LLENA EL RECYCLER VIEW PARA QUE SE MUESTREN LAS OFERTAS DISPONIBLES
+    */
     private void LlenarRecyclerView(List<VerOfertas_retrofit> OfertasList){
         LinearLayoutManager l  = new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.HORIZONTAL, false);
         ofertasRecyclerView.setLayoutManager(l);
         AdapterRecyclerViewOfertas arv = new AdapterRecyclerViewOfertas(OfertasList,R.layout.cardview_ofertas, VerOferta.this, getApplicationContext());
         ofertasRecyclerView.setAdapter(arv);
+        //ANIMACION DE LA MANO DESLIZANDOSE
         deslizamientoManoAnimacion = AnimationUtils.loadAnimation(this,R.anim.deslizamientodedo);
         deslizamiento_tuto.setAnimation(deslizamientoManoAnimacion);
         deslizamiento_tuto.setVisibility(View.INVISIBLE);
     }
+
+    /*
+    * DIALOG DE CONFIRMACION PARA REALIZAR UNA LLAMADA
+    */
     private void MostrarDialogCustomLLamada(){
         final AlertDialog.Builder alert = new AlertDialog.Builder(this);
         LayoutInflater inflater = this.getLayoutInflater();
@@ -270,6 +308,8 @@ public class VerOferta extends AppCompatActivity {
             }
         });
     }
+
+    //EN CASO DE QUE NO SE ENCUENTREN OFERTAS APARECERA ESTE MENSAJE
     private void MostrarDialogCustomSinOfertas(){
         final AlertDialog.Builder alert = new AlertDialog.Builder(this);
         LayoutInflater inflater = this.getLayoutInflater();
@@ -296,14 +336,21 @@ public class VerOferta extends AppCompatActivity {
             }
         });
     }
+
+    /*
+    * HACE UNA PETICION AL WEB SERVICE PARA SABER CUAL ES TELEFONO DE LA SUCURSAR EN BASE AL CODIGO DE RASTREO
+    */
     private void SolicitarTelefono(){
         Call<DirectorioTelefonos> call = NetworkAdapter.getApiService(MetodosSharedPreference.ObtenerPruebaEntregaPref(prs)).SolicitarTelefono(
                 "directorio/gao",MetodosSharedPreference.ObtenerCodigoEntregaPref(prs));
         call.enqueue(new Callback<DirectorioTelefonos>() {
             @Override
             public void onResponse(Call<DirectorioTelefonos> call, Response<DirectorioTelefonos> response) {
+                //SE VALIDA LA RESPUESTA
                 if(response.isSuccessful()) {
+                    //SE RECOGE LA RESPUESTA Y SE ALMACENA EN UN OBJETO
                     DirectorioTelefonos directorioTelefonos = response.body();
+                    //SE MANDA POR PARAMETRO EL TELEFONO PARA HACER LA LLAMADA
                     RealizarLLamada(directorioTelefonos.getTelefono());
                     Log.i("DIRECTORIO DE TELEFONOS", directorioTelefonos.getTelefono());
                 }
@@ -315,11 +362,19 @@ public class VerOferta extends AppCompatActivity {
             }
         });
     }
+
+    /*
+    * METODO PARA REALIZAR LA LLAMADA
+    */
     private void RealizarLLamada(String phoneNumber) {
+        //SE VALIDA LA VERSION DE ANDROID
         if (Build.VERSION.SDK_INT>=Build.VERSION_CODES.M) {
+            //SE VALIDA QUE SE TENGAN LOS PERMISOS PARA HACER LLAMADAS
             if (ActivityCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+                //SI NO HAY PERMISOS ENTONCES SE SOLICITAN AL USUARIO
                 ActivityCompat.requestPermissions(VerOferta.this, new String[]{CALL_PHONE},100);
             } else {
+                //SI YA TIENE LOS PERMISOS ENTONCES SE REALIZA LA LLAMADA
                 Intent intent = new Intent(Intent.ACTION_CALL);
                 intent.setData(Uri.parse("tel:"+phoneNumber));
                 startActivity(intent);
@@ -330,22 +385,5 @@ public class VerOferta extends AppCompatActivity {
             startActivity(intent);
         }
     }
-    private void Inicializador(){
-        prs = getSharedPreferences("usuarioDatos", Context.MODE_PRIVATE);
-        progressDoalog = new ProgressDialog(VerOferta.this);
-        ofertasRecyclerView = (RecyclerView) findViewById(R.id.ofertas_aceros_ocotlan_recyclerview);
-        imagen_fondo_estatus=(ImageView) findViewById(R.id.imagen_fondo_estatus);
-        deslizamiento_tuto=(ImageView) findViewById(R.id.deslizamiento_tuto);
-        imagen_touch_mano_ver_ofertas_azul=(ImageView) findViewById(R.id.imagen_touch_mano_ver_ofertas_azul);
-        imagen_touch_mano_ver_ofertas_verde=(ImageView) findViewById(R.id.imagen_touch_mano_ver_ofertas_verde);
-        touchAnimation  = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.touchclick2);
-        vibrador = (Vibrator) getSystemService(getApplicationContext().VIBRATOR_SERVICE);
-        progressDoalog.setMax(100);
-        progressDoalog.setTitle("Aceros Ocotlán");
-        progressDoalog.setIcon(R.drawable.logo);
-        progressDoalog.setMessage("Obteniendo los datos");
-        progressDoalog.setCancelable(false);
-        progressDoalog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
-        RecogerEstatusEntrega();
-    }
+
 }

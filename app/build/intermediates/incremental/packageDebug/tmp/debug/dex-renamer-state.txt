@@ -1,7 +1,7 @@
-#Mon Feb 18 13:30:26 CST 2019
-base.0=/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/dex/debug/mergeProjectDexDebug/out
+#Tue Jul 30 12:53:59 CDT 2019
+base.0=/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/dex/debug/mergeExtDexDebug/out
 path.1=classes.dex
 renamed.1=classes2.dex
 path.0=classes.dex
 renamed.0=classes.dex
-base.1=/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/dex/debug/mergeExtDexDebug/out
+base.1=/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/dex/debug/mergeProjectDexDebug/out

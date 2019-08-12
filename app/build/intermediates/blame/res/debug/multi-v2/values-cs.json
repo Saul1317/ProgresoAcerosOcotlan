@@ -4,7 +4,7 @@
             "outputFile": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-cs/values-cs.xml",
             "map": [
                 {
-                    "source": "/Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/e5a4874823b311267bc32bfad59a699b/res/values-cs/values-cs.xml",
+                    "source": "/Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/faa82436e3dc208f31b3a8f571d3b438/res/values-cs/values-cs.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "/Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/9829d01a47f9e11a057e92564bbcf061/res/values-cs/values-cs.xml",
+                    "source": "/Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/e557c99f4073d73d138a75f32346f102/res/values-cs/values-cs.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",

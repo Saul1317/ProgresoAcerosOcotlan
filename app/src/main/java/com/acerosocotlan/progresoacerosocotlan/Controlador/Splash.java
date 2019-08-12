@@ -23,43 +23,50 @@ import com.acerosocotlan.progresoacerosocotlan.R;
 
 public class Splash extends AppCompatActivity {
 
+
     private Animation nubesAnimacion, carroAnimacion, textoAnimacion;
     private LinearLayout textoLayout;
     private FrameLayout nubesLayout, carroLayout;
     //SHARED PREFERENCE
-    private SharedPreferences prs;
+    //private SharedPreferences prs;
     //36610
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
+        //SE HACE LA REFERENCIA DE LOS COMPONENTES E INICIA LA ANIMACIÓN
         Inicializador();
+
+        //METODO QUE SE EJECUTARÁ DESPUES DE 3 SEGUNDOS(3000 MILISEGUNDOS)
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
+                //SE ABRE LA SIGUIENTE VENTANA
                 CargarActivity();
             }
-        },4000);
+        },3000);
     }
     public void Inicializador(){
-        prs = getSharedPreferences("usuarioDatos", Context.MODE_PRIVATE);
+        //prs = getSharedPreferences("usuarioDatos", Context.MODE_PRIVATE);
+        //REFERENCIA DE LOS VIEWS
         nubesLayout= (FrameLayout) findViewById(R.id.nubes_splash);
         carroLayout= (FrameLayout) findViewById(R.id.carro_splash);
         textoLayout= (LinearLayout) findViewById(R.id.texto_splash);
+        //EJECUTA LA ANIMACION INICIAL
         AnimacionAcerosOcotlan();
     }
     public void CargarActivity(){
-        Intent intentCodigoIngreso = new Intent(Splash.this,CodigoIngreso.class);
-        Intent intentProcesoEntrega = new Intent(Splash.this, ProgresoEntregaActivity.class);
-
-        if (!TextUtils.isEmpty(MetodosSharedPreference.ObtenerCodigoEntregaPref(prs))){
-            startActivity(intentProcesoEntrega);
-        }else{
-            startActivity(intentCodigoIngreso);
-            overridePendingTransition(R.anim.activity_transition_in,R.anim.activity_transition_in);
-        }
-        finish();
+        //SE HACE REFERENCIA A LA SIGUIENTE CLASE MENUOPCIONES.CLASS
+        Intent intent = new Intent(Splash.this,MenuOpciones.class);
+        //ESTA LINEA DE CODIGO SIRVE PARA QUE EL USUARIO AL MOMENTO DE PRESIONAR EL BOTON DE REGRESAR NO PUEDA REGRESARSE A ESTA CLASE
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        //SE INICIA LA SIGUIENTE ACTIVIDAD
+        startActivity(intent);
     }
+
+    /*
+    * METODO QUE ASIGNA LA ANIMACION A LOS COMPONENTES
+    */
     private void AnimacionAcerosOcotlan(){
         nubesAnimacion = AnimationUtils.loadAnimation(this,R.anim.nubes_splash);
         nubesLayout.setAnimation(nubesAnimacion);

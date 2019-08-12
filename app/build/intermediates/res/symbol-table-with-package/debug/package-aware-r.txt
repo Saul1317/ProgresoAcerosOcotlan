@@ -1059,6 +1059,7 @@ drawable abc_textfield_search_activated_mtrl_alpha
 drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
+drawable aceros
 drawable acerosocotlan
 drawable acerosocotlanlogooficial
 drawable amarillo0
@@ -1089,12 +1090,14 @@ drawable feliz
 drawable firmasistemas
 drawable flechaderecha
 drawable flechaizquierda
+drawable fondoinicio
 drawable graciassimba
 drawable humocamion
 drawable ic_action_like
 drawable ic_action_phone_start
 drawable ic_add
 drawable ic_arrow_back
+drawable ic_close
 drawable ic_cloud_off
 drawable ic_comment
 drawable ic_crop_rotate
@@ -1128,8 +1131,10 @@ drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable nubesaceroocotlan
 drawable ocotlan
+drawable ocotlan_blank
 drawable ocotlan_copia
 drawable paisaje
+drawable portal_cliente
 drawable proceso1
 drawable proceso2
 drawable proceso3
@@ -1143,9 +1148,11 @@ drawable progreso_zula_ya_vamos
 drawable progressbar_aceros_ocotlan_version_3_revision
 drawable progressbar_aceros_ocotlan_version_5_4
 drawable puntocoma
+drawable rastreo_img
 drawable rojo0
 drawable rojo1
 drawable scroll_custom
+drawable sign_out_option
 drawable simba
 drawable simbalentes
 drawable sonriente
@@ -1216,6 +1223,7 @@ id btn_feliz_encuesta_pregunta2
 id btn_feliz_encuesta_pregunta3
 id btn_feliz_encuesta_pregunta4
 id btn_mostrar_detalles_entrega
+id btn_portal_cliente
 id btn_triste_encuesta_pregunta0
 id btn_triste_encuesta_pregunta1
 id btn_triste_encuesta_pregunta2
@@ -1223,6 +1231,7 @@ id btn_triste_encuesta_pregunta3
 id btn_triste_encuesta_pregunta4
 id btn_ver_ofertas
 id buttonPanel
+id button_rastreo
 id camion_click
 id camion_humo
 id cardiview_historico_fecha
@@ -1232,6 +1241,8 @@ id cardview_detalle_entrega
 id cardview_edittext
 id cardview_entregas
 id cardview_ofertas_aceros_ocotlan
+id cardview_portal_cliente
+id cardview_rastreo_pedido
 id carro_aceros
 id carro_splash
 id center
@@ -1326,6 +1337,7 @@ id icon
 id icon_group
 id ifRoom
 id image
+id imageView
 id imagen_fondo_detalles_encuesta
 id imagen_fondo_detalles_estatus
 id imagen_fondo_estatus
@@ -1443,8 +1455,8 @@ id text2
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
+id textView
 id text_encuesta_finalizada
-id text_id_entrega
 id text_input_password_toggle
 id textinput_counter
 id textinput_error
@@ -1480,6 +1492,9 @@ id useLogo
 id vertical
 id view_offset_helper
 id visible
+id webview_back
+id webview_portal_cliente
+id webview_sigout
 id withText
 id wrap
 id wrap_content
@@ -1534,9 +1549,11 @@ layout activity_acuse_recibo
 layout activity_codigo_ingreso
 layout activity_detalle_entrega2
 layout activity_encuesta
-layout activity_encuesta_comentario
 layout activity_error_conexion
 layout activity_firma_sistemas
+layout activity_menu_opciones
+layout activity_menu_opciones2
+layout activity_portal_cliente
 layout activity_progreso_entrega
 layout activity_splash
 layout activity_ver_oferta
@@ -1546,7 +1563,6 @@ layout cardview_ofertas
 layout content_acuse_recibo
 layout content_codigo_ingreso
 layout content_encuesta
-layout content_encuesta_comentario
 layout content_error_conexion
 layout content_firma_sistemas
 layout content_progreso_entrega

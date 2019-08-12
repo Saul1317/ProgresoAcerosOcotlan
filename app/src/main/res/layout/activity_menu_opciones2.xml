@@ -1,0 +1,52 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondoinicio">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/imageView"
+        android:background="@drawable/aceros"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="36dp"
+        android:layout_alignStart="@+id/button_rastreo"
+        android:layout_alignEnd="@+id/button_rastreo" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rastreo de pedidos "
+        android:id="@+id/button_rastreo"
+        android:background="#053781"
+        android:textColor="#fff"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/btn_portal_cliente"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Portal de clientes"
+        android:id="@+id/btn_portal_cliente"
+        android:background="#053781"
+        android:textColor="#fff"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="200dp"
+        android:layout_alignStart="@+id/button_rastreo"
+        android:layout_alignEnd="@+id/button_rastreo"/>
+
+    <TextView android:text="www.acerosocotlan.mx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:textColor="#fff"
+        android:id="@+id/textView" />
+
+</RelativeLayout>
+
