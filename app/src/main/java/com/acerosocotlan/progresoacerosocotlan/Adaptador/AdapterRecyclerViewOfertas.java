@@ -33,11 +33,13 @@ public class AdapterRecyclerViewOfertas extends RecyclerView.Adapter<AdapterRecy
         this.activity = activity;
         this.context = context;
     }
+
     @Override
     public AdapterRecyclerHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(resource, parent,false);
         return new AdapterRecyclerViewOfertas.AdapterRecyclerHolder(view);
     }
+
     @Override
     public void onBindViewHolder(AdapterRecyclerHolder holder, int position) {
         VerOfertas_retrofit verOfertas_retrofit = arraylistVerOfertas.get(position);
@@ -46,6 +48,7 @@ public class AdapterRecyclerViewOfertas extends RecyclerView.Adapter<AdapterRecy
         holder.txt_precio_producto_oferta.setText("$"+verOfertas_retrofit.getPrecio()+" ");
         Picasso.with(context).load(verOfertas_retrofit.getFoto().toString()).placeholder(R.drawable.vigaejemplo).into(holder.img_producto_oferta);
     }
+
     @Override
     public int getItemCount() {
         return arraylistVerOfertas.size();

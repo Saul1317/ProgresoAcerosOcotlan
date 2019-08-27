@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ao__fondomesa_de_trabajo_5"
+    tools:context=".Controlador.Catalogo.CorrugadosTrefilados">
+
+    <ImageView
+        android:id="@+id/img_corrugados_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/ao__fondomesa_de_trabajo_5"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="16dp"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btn_producto_varilla"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:text="VARILLA CORRUGADA"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@color/colorPrimary" />
+
+        <Button
+            android:id="@+id/btn_producto_alambre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:text="ALAMBRE"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@color/colorPrimary"/>
+
+        <Button
+            android:id="@+id/btn_producto_castillos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:text="CASTILLOS"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@color/colorPrimary"/>
+
+        <Button
+            android:id="@+id/btn_producto_malla"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:text="MALLA"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@color/colorPrimary"/>
+
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

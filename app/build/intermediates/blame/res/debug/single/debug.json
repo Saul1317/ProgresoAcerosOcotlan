@@ -16,16 +16,16 @@
         "source": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/res/drawable-xxhdpi/puntocoma.png"
     },
     {
-        "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_ic_menu_share_mtrl_alpha.png.flat",
-        "source": "/Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/e557c99f4073d73d138a75f32346f102/res/drawable-hdpi-v4/abc_ic_menu_share_mtrl_alpha.png"
+        "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/layout_abc_screen_content_include.xml.flat",
+        "source": "/Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/e557c99f4073d73d138a75f32346f102/res/layout/abc_screen_content_include.xml"
     },
     {
         "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_text_select_handle_middle_mtrl_dark.png.flat",
         "source": "/Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/e557c99f4073d73d138a75f32346f102/res/drawable-mdpi-v4/abc_text_select_handle_middle_mtrl_dark.png"
     },
     {
-        "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/layout_abc_screen_content_include.xml.flat",
-        "source": "/Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/e557c99f4073d73d138a75f32346f102/res/layout/abc_screen_content_include.xml"
+        "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_ic_menu_share_mtrl_alpha.png.flat",
+        "source": "/Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/e557c99f4073d73d138a75f32346f102/res/drawable-hdpi-v4/abc_ic_menu_share_mtrl_alpha.png"
     },
     {
         "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/drawable-xxhdpi_fondoinicio.png.flat",
@@ -68,8 +68,16 @@
         "source": "/Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/03a0e5355c9cae753a3fb23e5494a452/res/drawable/navigation_empty_icon.xml"
     },
     {
+        "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/drawable-hdpi_ao__fondomesa_de_trabajo_5.png.flat",
+        "source": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/res/drawable-hdpi/ao__fondomesa_de_trabajo_5.png"
+    },
+    {
         "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/drawable_abc_cab_background_internal_bg.xml.flat",
         "source": "/Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/e557c99f4073d73d138a75f32346f102/res/drawable/abc_cab_background_internal_bg.xml"
+    },
+    {
+        "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/drawable-mdpi_ao__bot_n_3mesa_de_trabajo_1.png.flat",
+        "source": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/res/drawable-mdpi/ao__bot_n_3mesa_de_trabajo_1.png"
     },
     {
         "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/drawable-mdpi_flechaizquierda.png.flat",
@@ -108,12 +116,16 @@
         "source": "/Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/e557c99f4073d73d138a75f32346f102/res/drawable/abc_seekbar_thumb_material.xml"
     },
     {
-        "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ocotlan_blank.png.flat",
-        "source": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/res/drawable-xxhdpi/ocotlan_blank.png"
+        "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ao__fondomesa_de_trabajo_5.png.flat",
+        "source": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/res/drawable-xxhdpi/ao__fondomesa_de_trabajo_5.png"
     },
     {
         "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/anim_flatbutton_animation_close.xml.flat",
         "source": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/res/anim/flatbutton_animation_close.xml"
+    },
+    {
+        "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ocotlan_blank.png.flat",
+        "source": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/res/drawable-xxhdpi/ocotlan_blank.png"
     },
     {
         "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/layout_select_dialog_singlechoice_material.xml.flat",
@@ -196,8 +208,20 @@
         "source": "/Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/e557c99f4073d73d138a75f32346f102/res/color/abc_tint_btn_checkable.xml"
     },
     {
+        "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/drawable-hdpi_ao__bot_n_3mesa_de_trabajo_1.png.flat",
+        "source": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/res/drawable-hdpi/ao__bot_n_3mesa_de_trabajo_1.png"
+    },
+    {
+        "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_ao__logomesa_de_trabajo_1.png.flat",
+        "source": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/res/drawable-xxxhdpi/ao__logomesa_de_trabajo_1.png"
+    },
+    {
         "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_touch3.png.flat",
         "source": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/res/drawable-xxxhdpi/touch3.png"
+    },
+    {
+        "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/layout_activity_comerciales.xml.flat",
+        "source": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/res/layout/activity_comerciales.xml"
     },
     {
         "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_ic_replay.png.flat",
@@ -248,6 +272,10 @@
         "source": "/Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/03a0e5355c9cae753a3fb23e5494a452/res/color/mtrl_bottom_nav_item_tint.xml"
     },
     {
+        "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/drawable-xhdpi_ao__logomesa_de_trabajo_1.png.flat",
+        "source": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/res/drawable-xhdpi/ao__logomesa_de_trabajo_1.png"
+    },
+    {
         "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/drawable-mdpi_fondoinicio.png.flat",
         "source": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/res/drawable-mdpi/fondoinicio.png"
     },
@@ -278,6 +306,10 @@
     {
         "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_scrubber_track_mtrl_alpha.9.png.flat",
         "source": "/Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/e557c99f4073d73d138a75f32346f102/res/drawable-mdpi-v4/abc_scrubber_track_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ao__bot_n_1mesa_de_trabajo_1.png.flat",
+        "source": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/res/drawable-xxhdpi/ao__bot_n_1mesa_de_trabajo_1.png"
     },
     {
         "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/drawable-mdpi_amarillo1.png.flat",
@@ -360,12 +392,12 @@
         "source": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
     },
     {
-        "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/drawable-ldrtl-xxhdpi-v17_abc_spinner_mtrl_am_alpha.9.png.flat",
-        "source": "/Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/e557c99f4073d73d138a75f32346f102/res/drawable-ldrtl-xxhdpi-v17/abc_spinner_mtrl_am_alpha.9.png"
-    },
-    {
         "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_list_selector_disabled_holo_light.9.png.flat",
         "source": "/Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/e557c99f4073d73d138a75f32346f102/res/drawable-xxhdpi-v4/abc_list_selector_disabled_holo_light.9.png"
+    },
+    {
+        "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/drawable-ldrtl-xxhdpi-v17_abc_spinner_mtrl_am_alpha.9.png.flat",
+        "source": "/Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/e557c99f4073d73d138a75f32346f102/res/drawable-ldrtl-xxhdpi-v17/abc_spinner_mtrl_am_alpha.9.png"
     },
     {
         "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ocotlan_copia.png.flat",
@@ -428,6 +460,10 @@
         "source": "/Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/e557c99f4073d73d138a75f32346f102/res/drawable-mdpi-v4/abc_ab_share_pack_mtrl_alpha.9.png"
     },
     {
+        "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/layout_activity_catalogo_productos.xml.flat",
+        "source": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/res/layout/activity_catalogo_productos.xml"
+    },
+    {
         "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_text_select_handle_left_mtrl_light.png.flat",
         "source": "/Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/e557c99f4073d73d138a75f32346f102/res/drawable-xxxhdpi-v4/abc_text_select_handle_left_mtrl_light.png"
     },
@@ -438,6 +474,10 @@
     {
         "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/drawable-xhdpi_flechaderecha.png.flat",
         "source": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/res/drawable-xhdpi/flechaderecha.png"
+    },
+    {
+        "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/drawable-mdpi_ao__fondomesa_de_trabajo_5.png.flat",
+        "source": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/res/drawable-mdpi/ao__fondomesa_de_trabajo_5.png"
     },
     {
         "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/color_abc_secondary_text_material_light.xml.flat",
@@ -454,6 +494,10 @@
     {
         "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_ic_star_black_48dp.png.flat",
         "source": "/Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/e557c99f4073d73d138a75f32346f102/res/drawable-xhdpi-v4/abc_ic_star_black_48dp.png"
+    },
+    {
+        "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/drawable-xhdpi_ao__bot_n_3mesa_de_trabajo_1.png.flat",
+        "source": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/res/drawable-xhdpi/ao__bot_n_3mesa_de_trabajo_1.png"
     },
     {
         "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/drawable-hdpi_feliz.png.flat",
@@ -494,6 +538,10 @@
     {
         "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/anim_ocultarhistorico_animation.xml.flat",
         "source": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/res/anim/ocultarhistorico_animation.xml"
+    },
+    {
+        "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_ao__bot_n_3mesa_de_trabajo_1.png.flat",
+        "source": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/res/drawable-xxxhdpi/ao__bot_n_3mesa_de_trabajo_1.png"
     },
     {
         "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/layout_design_navigation_item.xml.flat",
@@ -644,12 +692,12 @@
         "source": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/res/drawable-xhdpi/verde1.png"
     },
     {
-        "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/drawable_abc_ic_arrow_drop_right_black_24dp.xml.flat",
-        "source": "/Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/e557c99f4073d73d138a75f32346f102/res/drawable/abc_ic_arrow_drop_right_black_24dp.xml"
-    },
-    {
         "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_text_select_handle_right_mtrl_dark.png.flat",
         "source": "/Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/e557c99f4073d73d138a75f32346f102/res/drawable-xxhdpi-v4/abc_text_select_handle_right_mtrl_dark.png"
+    },
+    {
+        "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/drawable_abc_ic_arrow_drop_right_black_24dp.xml.flat",
+        "source": "/Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/e557c99f4073d73d138a75f32346f102/res/drawable/abc_ic_arrow_drop_right_black_24dp.xml"
     },
     {
         "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/menu_menu_splash.xml.flat",
@@ -734,6 +782,10 @@
     {
         "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/drawable_abc_ic_ab_back_material.xml.flat",
         "source": "/Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/e557c99f4073d73d138a75f32346f102/res/drawable/abc_ic_ab_back_material.xml"
+    },
+    {
+        "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/drawable-xhdpi_ao__bot_n_2mesa_de_trabajo_1.png.flat",
+        "source": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/res/drawable-xhdpi/ao__bot_n_2mesa_de_trabajo_1.png"
     },
     {
         "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/drawable-xhdpi_graciassimba.png.flat",
@@ -920,6 +972,10 @@
         "source": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/res/layout/content_encuesta.xml"
     },
     {
+        "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ao__bot_n_2mesa_de_trabajo_1.png.flat",
+        "source": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/res/drawable-xxhdpi/ao__bot_n_2mesa_de_trabajo_1.png"
+    },
+    {
         "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_rojo0.png.flat",
         "source": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/res/drawable-xxxhdpi/rojo0.png"
     },
@@ -938,6 +994,10 @@
     {
         "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_btn_switch_to_on_mtrl_00001.9.png.flat",
         "source": "/Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/e557c99f4073d73d138a75f32346f102/res/drawable-xxxhdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png"
+    },
+    {
+        "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/drawable-hdpi_ao__logomesa_de_trabajo_1.png.flat",
+        "source": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/res/drawable-hdpi/ao__logomesa_de_trabajo_1.png"
     },
     {
         "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
@@ -1044,6 +1104,10 @@
         "source": "/Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/e557c99f4073d73d138a75f32346f102/res/drawable-mdpi-v4/abc_ic_menu_paste_mtrl_am_alpha.png"
     },
     {
+        "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/drawable-hdpi_ao__bot_n_2mesa_de_trabajo_1.png.flat",
+        "source": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/res/drawable-hdpi/ao__bot_n_2mesa_de_trabajo_1.png"
+    },
+    {
         "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_menu_hardkey_panel_mtrl_mult.9.png.flat",
         "source": "/Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/e557c99f4073d73d138a75f32346f102/res/drawable-xxhdpi-v4/abc_menu_hardkey_panel_mtrl_mult.9.png"
     },
@@ -1058,6 +1122,10 @@
     {
         "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/drawable-xhdpi_vigaejemplo.png.flat",
         "source": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/res/drawable-xhdpi/vigaejemplo.png"
+    },
+    {
+        "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/drawable-xhdpi_ao__bot_n_1mesa_de_trabajo_1.png.flat",
+        "source": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/res/drawable-xhdpi/ao__bot_n_1mesa_de_trabajo_1.png"
     },
     {
         "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_list_focused_holo.9.png.flat",
@@ -1200,12 +1268,12 @@
         "source": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/res/drawable-xxhdpi/comprobado.png"
     },
     {
-        "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_list_divider_mtrl_alpha.9.png.flat",
-        "source": "/Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/e557c99f4073d73d138a75f32346f102/res/drawable-xxhdpi-v4/abc_list_divider_mtrl_alpha.9.png"
-    },
-    {
         "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/color_mtrl_tabs_icon_color_selector_colored.xml.flat",
         "source": "/Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/03a0e5355c9cae753a3fb23e5494a452/res/color/mtrl_tabs_icon_color_selector_colored.xml"
+    },
+    {
+        "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_list_divider_mtrl_alpha.9.png.flat",
+        "source": "/Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/e557c99f4073d73d138a75f32346f102/res/drawable-xxhdpi-v4/abc_list_divider_mtrl_alpha.9.png"
     },
     {
         "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/anim_nubes_splash.xml.flat",
@@ -1228,24 +1296,28 @@
         "source": "/Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/e557c99f4073d73d138a75f32346f102/res/layout/abc_list_menu_item_radio.xml"
     },
     {
-        "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/drawable-xhdpi_proceso3.png.flat",
-        "source": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/res/drawable-xhdpi/proceso3.png"
+        "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/drawable-mdpi_ao__logomesa_de_trabajo_1.png.flat",
+        "source": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/res/drawable-mdpi/ao__logomesa_de_trabajo_1.png"
     },
     {
         "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_ic_menu_paste_mtrl_am_alpha.png.flat",
         "source": "/Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/e557c99f4073d73d138a75f32346f102/res/drawable-hdpi-v4/abc_ic_menu_paste_mtrl_am_alpha.png"
     },
     {
+        "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/drawable-xhdpi_proceso3.png.flat",
+        "source": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/res/drawable-xhdpi/proceso3.png"
+    },
+    {
         "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher_foreground.png.flat",
         "source": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/res/mipmap-hdpi/ic_launcher_foreground.png"
     },
     {
-        "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_ic_menu.png.flat",
-        "source": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/res/drawable-xxxhdpi/ic_menu.png"
-    },
-    {
         "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/drawable-hdpi_progreso_zula_en_sitio.png.flat",
         "source": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/res/drawable-hdpi/progreso_zula_en_sitio.png"
+    },
+    {
+        "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_ic_menu.png.flat",
+        "source": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/res/drawable-xxxhdpi/ic_menu.png"
     },
     {
         "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/layout_abc_popup_menu_item_layout.xml.flat",
@@ -1386,6 +1458,10 @@
     {
         "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_cloud_off.png.flat",
         "source": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/res/drawable-xhdpi/ic_cloud_off.png"
+    },
+    {
+        "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/layout_activity_estructurales.xml.flat",
+        "source": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/res/layout/activity_estructurales.xml"
     },
     {
         "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_spinner_mtrl_am_alpha.9.png.flat",
@@ -1708,6 +1784,10 @@
         "source": "/Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/faa82436e3dc208f31b3a8f571d3b438/res/drawable-mdpi-v4/notify_panel_notification_icon_bg.png"
     },
     {
+        "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/layout_activity_catalogo_pdf.xml.flat",
+        "source": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/res/layout/activity_catalogo_pdf.xml"
+    },
+    {
         "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/color_abc_primary_text_disable_only_material_light.xml.flat",
         "source": "/Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/e557c99f4073d73d138a75f32346f102/res/color/abc_primary_text_disable_only_material_light.xml"
     },
@@ -1774,6 +1854,10 @@
     {
         "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/layout_abc_action_mode_bar.xml.flat",
         "source": "/Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/e557c99f4073d73d138a75f32346f102/res/layout/abc_action_mode_bar.xml"
+    },
+    {
+        "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_ao__bot_n_1mesa_de_trabajo_1.png.flat",
+        "source": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/res/drawable-xxxhdpi/ao__bot_n_1mesa_de_trabajo_1.png"
     },
     {
         "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_ocotlan.png.flat",
@@ -2012,6 +2096,10 @@
         "source": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/res/drawable-mdpi/proceso1.png"
     },
     {
+        "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ao__bot_n_3mesa_de_trabajo_1.png.flat",
+        "source": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/res/drawable-xxhdpi/ao__bot_n_3mesa_de_trabajo_1.png"
+    },
+    {
         "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/interpolator-v21_mtrl_linear_out_slow_in.xml.flat",
         "source": "/Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/03a0e5355c9cae753a3fb23e5494a452/res/interpolator-v21/mtrl_linear_out_slow_in.xml"
     },
@@ -2066,6 +2154,10 @@
     {
         "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/drawable_design_snackbar_background.xml.flat",
         "source": "/Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/03a0e5355c9cae753a3fb23e5494a452/res/drawable/design_snackbar_background.xml"
+    },
+    {
+        "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/drawable-hdpi_ao__bot_n_1mesa_de_trabajo_1.png.flat",
+        "source": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/res/drawable-hdpi/ao__bot_n_1mesa_de_trabajo_1.png"
     },
     {
         "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/drawable-ldrtl-hdpi-v17_abc_ic_menu_cut_mtrl_alpha.png.flat",
@@ -2210,6 +2302,10 @@
     {
         "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/drawable-xxhdpi_aceros.png.flat",
         "source": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/res/drawable-xxhdpi/aceros.png"
+    },
+    {
+        "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/layout_activity_perfiles_tubulares.xml.flat",
+        "source": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/res/layout/activity_perfiles_tubulares.xml"
     },
     {
         "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/color-v23_design_tint_password_toggle.xml.flat",
@@ -2520,6 +2616,10 @@
         "source": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/res/drawable-xxhdpi/corazonsimba.png"
     },
     {
+        "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_ao__bot_n_2mesa_de_trabajo_1.png.flat",
+        "source": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/res/drawable-xxxhdpi/ao__bot_n_2mesa_de_trabajo_1.png"
+    },
+    {
         "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_scrubber_track_mtrl_alpha.9.png.flat",
         "source": "/Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/e557c99f4073d73d138a75f32346f102/res/drawable-xhdpi-v4/abc_scrubber_track_mtrl_alpha.9.png"
     },
@@ -2596,12 +2696,20 @@
         "source": "/Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/e557c99f4073d73d138a75f32346f102/res/drawable-xhdpi-v4/abc_ic_menu_cut_mtrl_alpha.png"
     },
     {
+        "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/layout_activity_galvanizados.xml.flat",
+        "source": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/res/layout/activity_galvanizados.xml"
+    },
+    {
         "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_play_arrow.png.flat",
         "source": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/res/drawable-hdpi/ic_play_arrow.png"
     },
     {
         "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/drawable-xxhdpi_aprovechar.png.flat",
         "source": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/res/drawable-xxhdpi/aprovechar.png"
+    },
+    {
+        "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ao__logomesa_de_trabajo_1.png.flat",
+        "source": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/res/drawable-xxhdpi/ao__logomesa_de_trabajo_1.png"
     },
     {
         "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/drawable_abc_ratingbar_material.xml.flat",
@@ -3080,6 +3188,10 @@
         "source": "/Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/e557c99f4073d73d138a75f32346f102/res/drawable-xhdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png"
     },
     {
+        "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_ao__fondomesa_de_trabajo_5.png.flat",
+        "source": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/res/drawable-xxxhdpi/ao__fondomesa_de_trabajo_5.png"
+    },
+    {
         "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/drawable-xhdpi_progreso_zula_listo.png.flat",
         "source": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/res/drawable-xhdpi/progreso_zula_listo.png"
     },
@@ -3200,6 +3312,10 @@
         "source": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/res/drawable-xxhdpi/firmasistemas.png"
     },
     {
+        "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/drawable-mdpi_ao__bot_n_1mesa_de_trabajo_1.png.flat",
+        "source": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/res/drawable-mdpi/ao__bot_n_1mesa_de_trabajo_1.png"
+    },
+    {
         "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_list_pressed_holo_dark.9.png.flat",
         "source": "/Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/e557c99f4073d73d138a75f32346f102/res/drawable-xxhdpi-v4/abc_list_pressed_holo_dark.9.png"
     },
@@ -3292,6 +3408,10 @@
         "source": "/Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/e557c99f4073d73d138a75f32346f102/res/layout/support_simple_spinner_dropdown_item.xml"
     },
     {
+        "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/drawable-mdpi_ao__bot_n_2mesa_de_trabajo_1.png.flat",
+        "source": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/res/drawable-mdpi/ao__bot_n_2mesa_de_trabajo_1.png"
+    },
+    {
         "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/drawable-hdpi_progressbar_aceros_ocotlan_version_5_4.png.flat",
         "source": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/res/drawable-hdpi/progressbar_aceros_ocotlan_version_5_4.png"
     },
@@ -3332,6 +3452,10 @@
         "source": "/Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/e557c99f4073d73d138a75f32346f102/res/drawable-xxhdpi-v4/abc_ic_star_black_48dp.png"
     },
     {
+        "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/layout_activity_corrugados_trefilados.xml.flat",
+        "source": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/res/layout/activity_corrugados_trefilados.xml"
+    },
+    {
         "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/anim_design_snackbar_in.xml.flat",
         "source": "/Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/03a0e5355c9cae753a3fb23e5494a452/res/anim/design_snackbar_in.xml"
     },
@@ -3366,6 +3490,10 @@
     {
         "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_textfield_search_activated_mtrl_alpha.9.png.flat",
         "source": "/Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/e557c99f4073d73d138a75f32346f102/res/drawable-xhdpi-v4/abc_textfield_search_activated_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/drawable-xhdpi_ao__fondomesa_de_trabajo_5.png.flat",
+        "source": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/res/drawable-xhdpi/ao__fondomesa_de_trabajo_5.png"
     },
     {
         "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/drawable-hdpi_laptop.png.flat",
@@ -3406,6 +3534,10 @@
     {
         "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/anim_menu_mostrar.xml.flat",
         "source": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/res/anim/menu_mostrar.xml"
+    },
+    {
+        "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/layout_activity_planos.xml.flat",
+        "source": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/res/layout/activity_planos.xml"
     },
     {
         "merged": "/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/build/intermediates/res/merged/debug/drawable-xhdpi_logo.png.flat",

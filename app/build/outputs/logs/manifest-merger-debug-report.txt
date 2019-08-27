@@ -1,56 +1,56 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:2:1-74:12
-INJECTED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:2:1-74:12
-INJECTED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:2:1-74:12
-INJECTED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:2:1-74:12
-MERGED from [com.android.support:design:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/257ba362f444a7ac3b849308896b6430/AndroidManifest.xml:17:1-24:12
-MERGED from [com.android.support:appcompat-v7:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/9829d01a47f9e11a057e92564bbcf061/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/3c01629e6c9b5bc67be68bf741c579a4/AndroidManifest.xml:2:1-11:12
-MERGED from [com.android.support:cardview-v7:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/cardview-v7-28.0.0.aar/e9434271f83d42e5319d3418a3750c94/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:gridlayout-v7:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/gridlayout-v7-28.0.0.aar/694fca16e2e6496dc4abc3c331985f8b/AndroidManifest.xml:17:1-22:12
-MERGED from [it.sephiroth.android.library.imagezoom:imagezoom:2.2.5] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/imagezoom-2.2.5.aar/0e5310a62f2559d95db2c267d2162d2c/AndroidManifest.xml:2:1-13:12
-MERGED from [com.android.support:support-fragment:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/8ea212a53bbddd0df6f6adf3045b6642/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:animated-vector-drawable:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/565139ab51de108ec3531d455953b27b/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:recyclerview-v7:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-28.0.0.aar/fe843617f3b6846b7d0135b09ffe85df/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-ui:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/2007e6121195ffd34fd5586076c6d06d/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-utils:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/1d6ccd411dedfc0c924558953e581a9c/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-vector-drawable:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/66f408369c9ff1c70bd68a18ddc9f126/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:transition:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/transition-28.0.0.aar/48d8f8fc36b7a4892ee4c60a62beae26/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:loader:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/5421f10f4b04b55cf00208c08006bc56/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:viewpager:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0.aar/44d94aa10fe2d6b45097dfb326be3ef0/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:coordinatorlayout:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0.aar/c2440b4d354df4f359b21d5825eeac85/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:drawerlayout:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/drawerlayout-28.0.0.aar/719daa0048a33ce4383c932e8c3c75e6/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:slidingpanelayout:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-28.0.0.aar/47220a1bc33456546467ef2445aa42b0/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:customview:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/customview-28.0.0.aar/571e743e1bcdce809eeba4fd11eaa10d/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:swiperefreshlayout:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0.aar/022ddddf48d14a303c00a55f54643c9c/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:asynclayoutinflater:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0.aar/4078c5c162da5cc9d3e2c382b05eb7e5/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-compat:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/e5a4874823b311267bc32bfad59a699b/AndroidManifest.xml:17:1-24:12
-MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/8a43b49def709d1305e92f62f7d2d50b/AndroidManifest.xml:17:1-25:12
-MERGED from [com.android.support:cursoradapter:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/44bcac90a3d22f1629475a1233d62890/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:runtime:1.1.1] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/a97af202b9d0e90af18af411c6a40eff/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:documentfile:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/ece1f8fd98e55e15bff5c39cf9d21281/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:localbroadcastmanager:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0.aar/e45bab0700bf855572f62411b8014027/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:print:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/print-28.0.0.aar/f6b978c69f43abed8a6190a8b5a21735/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/b3a34df3cf53c4df43836b9652993aa7/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:interpolator:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/881b60841f7cb3695e9f7a34111148ec/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:livedata:1.1.1] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/ce1d53f6206c8cd277d402534fb96fb7/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/6707032a11acb7ccd59c60aa1716f7d3/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.core:runtime:1.1.1] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/212b87592adc8ee310d879d3deab121f/AndroidManifest.xml:17:1-22:12
-INJECTED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:2:1-74:12
-INJECTED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:2:1-74:12
-INJECTED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:2:1-74:12
+ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:2:1-110:12
+INJECTED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:2:1-110:12
+INJECTED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:2:1-110:12
+INJECTED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:2:1-110:12
+MERGED from [com.android.support:design:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/03a0e5355c9cae753a3fb23e5494a452/AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:appcompat-v7:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/e557c99f4073d73d138a75f32346f102/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/da9bc46b50a8562c747592e1784d3df0/AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:cardview-v7:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/c451374d112b6d53e36ffed4f72945b8/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:gridlayout-v7:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/02b8ddfcc22efd860f4cda1fd44f6570/AndroidManifest.xml:17:1-22:12
+MERGED from [it.sephiroth.android.library.imagezoom:imagezoom:2.2.5] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/91cd41382cbc3abd849b66a51b026dab/AndroidManifest.xml:2:1-13:12
+MERGED from [com.android.support:support-fragment:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/d42e406fd8d52ffe7c87d8dae7b5c918/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/6c8e508156003d1761ad8c0ae75134dc/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:recyclerview-v7:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/de05847187d40a1cc3bd7b2b15056ff6/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/9c77fe4d7f3f63e7136bdd323ae10ad7/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/28e1f71d57d99abfa7a4b50c1592493b/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/27e57d2b0f96d65f07db2b6a1ab04c5e/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:transition:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/40ce9ea91cf8f2dba17afaf973a1b67b/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:loader:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/f2a115432ab45559e57228c8a7c555ff/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:viewpager:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/f73d606c33a06d26d2bacd58e9fa634a/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/155bf5440f19b05f0768ae1b59db0449/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:drawerlayout:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/e0f839d7099a69fa92d1662682127b0c/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/4a6eb85c80dc487e3e58b8000b5cd4cd/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:customview:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/984b13202a9f9397d4ebb28327d1f288/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/25cc1dcc81ee2c7a94202dd96eb1ad6b/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/b7c0c0bed35f55a19b5987e104c0f997/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/faa82436e3dc208f31b3a8f571d3b438/AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/72ac66080c319762b3c1b9321bdeb288/AndroidManifest.xml:17:1-25:12
+MERGED from [com.android.support:cursoradapter:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/c7638e880078fad2bef0b08d01b1a2a4/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/57a8f74942591cd73869cca5210f58f3/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:documentfile:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/32bdbe0aa631f02047286381813b6fa8/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/9b59a303019b65d68b9a7c0cacaaf750/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:print:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/7f0b941153440770263a4fbf2c92fa1f/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/67219170a1cb9a3ca7e6160401922877/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:interpolator:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/c2018e5aace62d91d864f298a4c6baa4/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/d1872404bf943fbc90fdce4108a632d9/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/fff51bb0195942e2d1b6415512c31c21/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.1] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/4050a77912fc76bd4c0e537b2a1da68d/AndroidManifest.xml:17:1-22:12
+INJECTED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:2:1-110:12
+INJECTED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:2:1-110:12
+INJECTED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:2:1-110:12
 	package
 		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:3:5-54
 		INJECTED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml
-		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:2:1-74:12
+		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:2:1-110:12
 		INJECTED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml
-		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:2:1-74:12
+		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:2:1-110:12
 		INJECTED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:2:11-69
@@ -58,224 +58,304 @@ uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:5:5-79
 	android:name
 		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:5:22-76
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:6:5-81
+	android:name
+		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:6:22-78
 uses-permission#android.permission.INTERNET
-ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:6:5-67
+ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:7:5-67
 	android:name
-		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:6:22-64
+		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:7:22-64
 uses-permission#android.permission.VIBRATE
-ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:7:5-66
+ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:8:5-66
 	android:name
-		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:7:22-63
+		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:8:22-63
 uses-permission#android.permission.CALL_PHONE
-ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:8:5-69
+ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:9:5-69
 	android:name
-		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:8:22-66
+		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:9:22-66
 application
-ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:10:5-73:19
-MERGED from [com.android.support:design:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/257ba362f444a7ac3b849308896b6430/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:design:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/257ba362f444a7ac3b849308896b6430/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/3c01629e6c9b5bc67be68bf741c579a4/AndroidManifest.xml:9:5-20
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/3c01629e6c9b5bc67be68bf741c579a4/AndroidManifest.xml:9:5-20
-MERGED from [it.sephiroth.android.library.imagezoom:imagezoom:2.2.5] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/imagezoom-2.2.5.aar/0e5310a62f2559d95db2c267d2162d2c/AndroidManifest.xml:11:5-20
-MERGED from [it.sephiroth.android.library.imagezoom:imagezoom:2.2.5] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/imagezoom-2.2.5.aar/0e5310a62f2559d95db2c267d2162d2c/AndroidManifest.xml:11:5-20
-MERGED from [com.android.support:support-compat:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/e5a4874823b311267bc32bfad59a699b/AndroidManifest.xml:22:5-94
-MERGED from [com.android.support:support-compat:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/e5a4874823b311267bc32bfad59a699b/AndroidManifest.xml:22:5-94
-MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/8a43b49def709d1305e92f62f7d2d50b/AndroidManifest.xml:22:5-23:19
-MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/8a43b49def709d1305e92f62f7d2d50b/AndroidManifest.xml:22:5-23:19
+ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:11:5-108:19
+MERGED from [com.android.support:design:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/03a0e5355c9cae753a3fb23e5494a452/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:design:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/03a0e5355c9cae753a3fb23e5494a452/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/da9bc46b50a8562c747592e1784d3df0/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/da9bc46b50a8562c747592e1784d3df0/AndroidManifest.xml:9:5-20
+MERGED from [it.sephiroth.android.library.imagezoom:imagezoom:2.2.5] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/91cd41382cbc3abd849b66a51b026dab/AndroidManifest.xml:11:5-20
+MERGED from [it.sephiroth.android.library.imagezoom:imagezoom:2.2.5] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/91cd41382cbc3abd849b66a51b026dab/AndroidManifest.xml:11:5-20
+MERGED from [com.android.support:support-compat:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/faa82436e3dc208f31b3a8f571d3b438/AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:support-compat:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/faa82436e3dc208f31b3a8f571d3b438/AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/72ac66080c319762b3c1b9321bdeb288/AndroidManifest.xml:22:5-23:19
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/72ac66080c319762b3c1b9321bdeb288/AndroidManifest.xml:22:5-23:19
 	android:appComponentFactory
-		ADDED from [com.android.support:support-compat:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/e5a4874823b311267bc32bfad59a699b/AndroidManifest.xml:22:18-91
+		ADDED from [com.android.support:support-compat:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/faa82436e3dc208f31b3a8f571d3b438/AndroidManifest.xml:22:18-91
 	android:supportsRtl
 		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:16:9-35
 	android:label
-		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:13:9-41
+		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:14:9-41
 	android:roundIcon
 		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:15:9-54
 	android:icon
-		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:12:9-43
+		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:13:9-43
 	android:allowBackup
-		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:11:9-36
+		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:12:9-36
 	android:theme
 		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:17:9-40
 	android:usesCleartextTraffic
-		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:14:9-44
-activity#com.acerosocotlan.progresoacerosocotlan.Controlador.Splash
-ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:18:9-28:20
+		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:18:9-44
+activity#com.acerosocotlan.progresoacerosocotlan.Controlador.Catalogo.CatalogoPDF
+ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:19:9-21:72
 	android:screenOrientation
-		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:21:13-49
-	android:label
-		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:20:13-45
+		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:20:13-49
 	android:theme
-		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:22:13-54
+		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:21:13-60
 	android:name
-		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:19:13-47
+		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:19:19-67
+activity#com.acerosocotlan.progresoacerosocotlan.Controlador.Catalogo.Galvanizados
+ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:22:9-24:62
+	android:screenOrientation
+		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:23:13-49
+	android:theme
+		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:24:13-60
+	android:name
+		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:22:19-68
+activity#com.acerosocotlan.progresoacerosocotlan.Controlador.Catalogo.CorrugadosTrefilados
+ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:25:9-27:62
+	android:screenOrientation
+		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:26:13-49
+	android:theme
+		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:27:13-60
+	android:name
+		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:25:19-76
+activity#com.acerosocotlan.progresoacerosocotlan.Controlador.Catalogo.Planos
+ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:28:9-30:62
+	android:screenOrientation
+		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:29:13-49
+	android:theme
+		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:30:13-60
+	android:name
+		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:28:19-62
+activity#com.acerosocotlan.progresoacerosocotlan.Controlador.Catalogo.Estructurales
+ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:31:9-34:59
+	android:label
+		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:33:13-65
+	android:theme
+		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:34:13-56
+	android:name
+		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:32:13-63
+activity#com.acerosocotlan.progresoacerosocotlan.Controlador.Catalogo.PerfilesTubulares
+ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:35:9-37:62
+	android:screenOrientation
+		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:36:13-49
+	android:theme
+		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:37:13-60
+	android:name
+		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:35:19-73
+activity#com.acerosocotlan.progresoacerosocotlan.Controlador.Catalogo.Comerciales
+ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:38:9-40:62
+	android:screenOrientation
+		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:39:13-49
+	android:theme
+		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:40:13-60
+	android:name
+		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:38:19-67
+activity#com.acerosocotlan.progresoacerosocotlan.Controlador.Catalogo.CatalogoProductos
+ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:41:9-43:62
+	android:screenOrientation
+		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:42:13-49
+	android:theme
+		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:43:13-60
+	android:name
+		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:41:19-73
+activity#com.acerosocotlan.progresoacerosocotlan.Controlador.MenuOpciones2
+ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:44:9-53:20
+	android:screenOrientation
+		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:46:13-49
+	android:theme
+		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:47:13-63
+	android:name
+		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:45:13-54
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:23:13-27:29
+ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:48:13-52:29
 action#android.intent.action.MAIN
-ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:24:17-69
+ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:49:17-69
 	android:name
-		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:24:25-66
+		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:49:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:26:17-77
+ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:51:17-77
 	android:name
-		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:26:27-74
-activity#com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity
-ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:29:9-33:57
+		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:51:27-74
+activity#com.acerosocotlan.progresoacerosocotlan.Controlador.PortalCliente
+ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:54:9-56:57
+	android:theme
+		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:56:13-54
+	android:name
+		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:55:13-54
+activity#com.acerosocotlan.progresoacerosocotlan.Controlador.MenuOpciones
+ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:57:9-62:20
 	android:screenOrientation
-		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:32:13-50
+		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:59:13-49
+	android:theme
+		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:60:13-56
+	android:name
+		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:58:13-53
+activity#com.acerosocotlan.progresoacerosocotlan.Controlador.Splash
+ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:63:9-68:20
+	android:screenOrientation
+		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:66:13-49
 	android:label
-		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:31:13-68
-	android:theme
-		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:33:13-54
-	android:name
-		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:30:13-64
-activity#com.acerosocotlan.progresoacerosocotlan.Controlador.DetalleEntregaActivity2
-ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:34:9-38:57
-	android:screenOrientation
-		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:37:13-50
-	android:label
-		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:36:13-51
-	android:theme
-		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:38:13-54
-	android:name
-		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:35:13-64
-activity#com.acerosocotlan.progresoacerosocotlan.Controlador.CodigoIngreso
-ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:39:9-43:67
-	android:screenOrientation
-		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:41:13-49
-	android:windowSoftInputMode
-		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:43:13-64
-	android:theme
-		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:42:13-59
-	android:name
-		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:40:13-54
-activity#com.acerosocotlan.progresoacerosocotlan.Controlador.EncuestaActivity
-ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:44:9-48:57
-	android:screenOrientation
-		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:47:13-50
-	android:label
-		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:46:13-60
-	android:theme
-		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:48:13-54
-	android:name
-		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:45:13-57
-activity#com.acerosocotlan.progresoacerosocotlan.Controlador.EncuestaComentario
-ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:49:9-53:56
-	android:screenOrientation
-		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:52:13-50
-	android:label
-		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:51:13-71
-	android:theme
-		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:53:13-53
-	android:name
-		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:50:13-59
-activity#com.acerosocotlan.progresoacerosocotlan.Controlador.VerOferta
-ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:54:9-58:57
-	android:screenOrientation
-		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:57:13-50
-	android:label
-		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:56:13-62
-	android:theme
-		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:58:13-54
-	android:name
-		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:55:13-50
-activity#com.acerosocotlan.progresoacerosocotlan.Controlador.ErrorConexionActivity
-ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:59:9-63:57
-	android:screenOrientation
-		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:62:13-50
-	android:label
-		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:61:13-66
-	android:theme
-		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:63:13-54
-	android:name
-		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:60:13-62
-activity#com.acerosocotlan.progresoacerosocotlan.Controlador.FirmaSistemasActivity
-ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:64:9-67:57
-	android:screenOrientation
-		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:66:13-50
+		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:65:13-45
 	android:theme
 		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:67:13-54
 	android:name
-		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:65:13-62
-activity#com.acerosocotlan.progresoacerosocotlan.Controlador.AcuseRecibo
-ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:68:9-72:66
+		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:64:13-47
+activity#com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity
+ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:69:9-73:57
 	android:screenOrientation
-		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:71:13-49
+		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:72:13-50
 	android:label
-		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:70:13-64
+		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:71:13-68
 	android:theme
-		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:72:13-54
+		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:73:13-54
 	android:name
-		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:69:13-52
+		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:70:13-64
+activity#com.acerosocotlan.progresoacerosocotlan.Controlador.DetalleEntregaActivity2
+ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:74:9-78:57
+	android:screenOrientation
+		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:77:13-50
+	android:label
+		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:76:13-51
+	android:theme
+		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:78:13-54
+	android:name
+		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:75:13-64
+activity#com.acerosocotlan.progresoacerosocotlan.Controlador.CodigoIngreso
+ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:79:9-83:67
+	android:screenOrientation
+		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:81:13-49
+	android:windowSoftInputMode
+		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:83:13-64
+	android:theme
+		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:82:13-59
+	android:name
+		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:80:13-54
+activity#com.acerosocotlan.progresoacerosocotlan.Controlador.EncuestaActivity
+ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:84:9-88:57
+	android:screenOrientation
+		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:87:13-50
+	android:label
+		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:86:13-60
+	android:theme
+		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:88:13-54
+	android:name
+		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:85:13-57
+activity#com.acerosocotlan.progresoacerosocotlan.Controlador.VerOferta
+ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:89:9-93:57
+	android:screenOrientation
+		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:92:13-50
+	android:label
+		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:91:13-62
+	android:theme
+		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:93:13-54
+	android:name
+		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:90:13-50
+activity#com.acerosocotlan.progresoacerosocotlan.Controlador.ErrorConexionActivity
+ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:94:9-98:57
+	android:screenOrientation
+		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:97:13-50
+	android:label
+		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:96:13-66
+	android:theme
+		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:98:13-54
+	android:name
+		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:95:13-62
+activity#com.acerosocotlan.progresoacerosocotlan.Controlador.FirmaSistemasActivity
+ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:99:9-102:57
+	android:screenOrientation
+		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:101:13-50
+	android:theme
+		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:102:13-54
+	android:name
+		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:100:13-62
+activity#com.acerosocotlan.progresoacerosocotlan.Controlador.AcuseRecibo
+ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:103:9-107:57
+	android:screenOrientation
+		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:106:13-49
+	android:label
+		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:105:13-64
+	android:theme
+		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:107:13-54
+	android:name
+		ADDED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:104:13-52
 uses-sdk
 INJECTED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml
 INJECTED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml
-MERGED from [com.android.support:design:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/257ba362f444a7ac3b849308896b6430/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:design:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/257ba362f444a7ac3b849308896b6430/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:appcompat-v7:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/9829d01a47f9e11a057e92564bbcf061/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:appcompat-v7:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/9829d01a47f9e11a057e92564bbcf061/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/3c01629e6c9b5bc67be68bf741c579a4/AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/3c01629e6c9b5bc67be68bf741c579a4/AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support:cardview-v7:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/cardview-v7-28.0.0.aar/e9434271f83d42e5319d3418a3750c94/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cardview-v7:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/cardview-v7-28.0.0.aar/e9434271f83d42e5319d3418a3750c94/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:gridlayout-v7:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/gridlayout-v7-28.0.0.aar/694fca16e2e6496dc4abc3c331985f8b/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:gridlayout-v7:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/gridlayout-v7-28.0.0.aar/694fca16e2e6496dc4abc3c331985f8b/AndroidManifest.xml:20:5-44
-MERGED from [it.sephiroth.android.library.imagezoom:imagezoom:2.2.5] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/imagezoom-2.2.5.aar/0e5310a62f2559d95db2c267d2162d2c/AndroidManifest.xml:7:5-9:41
-MERGED from [it.sephiroth.android.library.imagezoom:imagezoom:2.2.5] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/imagezoom-2.2.5.aar/0e5310a62f2559d95db2c267d2162d2c/AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.support:support-fragment:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/8ea212a53bbddd0df6f6adf3045b6642/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/8ea212a53bbddd0df6f6adf3045b6642/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/565139ab51de108ec3531d455953b27b/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/565139ab51de108ec3531d455953b27b/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-28.0.0.aar/fe843617f3b6846b7d0135b09ffe85df/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-28.0.0.aar/fe843617f3b6846b7d0135b09ffe85df/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/2007e6121195ffd34fd5586076c6d06d/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/2007e6121195ffd34fd5586076c6d06d/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/1d6ccd411dedfc0c924558953e581a9c/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/1d6ccd411dedfc0c924558953e581a9c/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/66f408369c9ff1c70bd68a18ddc9f126/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/66f408369c9ff1c70bd68a18ddc9f126/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/transition-28.0.0.aar/48d8f8fc36b7a4892ee4c60a62beae26/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/transition-28.0.0.aar/48d8f8fc36b7a4892ee4c60a62beae26/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:loader:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/5421f10f4b04b55cf00208c08006bc56/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:loader:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/5421f10f4b04b55cf00208c08006bc56/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:viewpager:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0.aar/44d94aa10fe2d6b45097dfb326be3ef0/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:viewpager:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0.aar/44d94aa10fe2d6b45097dfb326be3ef0/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:coordinatorlayout:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0.aar/c2440b4d354df4f359b21d5825eeac85/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:coordinatorlayout:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0.aar/c2440b4d354df4f359b21d5825eeac85/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:drawerlayout:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/drawerlayout-28.0.0.aar/719daa0048a33ce4383c932e8c3c75e6/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:drawerlayout:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/drawerlayout-28.0.0.aar/719daa0048a33ce4383c932e8c3c75e6/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:slidingpanelayout:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-28.0.0.aar/47220a1bc33456546467ef2445aa42b0/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:slidingpanelayout:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-28.0.0.aar/47220a1bc33456546467ef2445aa42b0/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:customview:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/customview-28.0.0.aar/571e743e1bcdce809eeba4fd11eaa10d/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:customview:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/customview-28.0.0.aar/571e743e1bcdce809eeba4fd11eaa10d/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:swiperefreshlayout:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0.aar/022ddddf48d14a303c00a55f54643c9c/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:swiperefreshlayout:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0.aar/022ddddf48d14a303c00a55f54643c9c/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:asynclayoutinflater:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0.aar/4078c5c162da5cc9d3e2c382b05eb7e5/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:asynclayoutinflater:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0.aar/4078c5c162da5cc9d3e2c382b05eb7e5/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/e5a4874823b311267bc32bfad59a699b/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/e5a4874823b311267bc32bfad59a699b/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/8a43b49def709d1305e92f62f7d2d50b/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/8a43b49def709d1305e92f62f7d2d50b/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cursoradapter:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/44bcac90a3d22f1629475a1233d62890/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cursoradapter:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/44bcac90a3d22f1629475a1233d62890/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.1] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/a97af202b9d0e90af18af411c6a40eff/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.1] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/a97af202b9d0e90af18af411c6a40eff/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:documentfile:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/ece1f8fd98e55e15bff5c39cf9d21281/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:documentfile:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/ece1f8fd98e55e15bff5c39cf9d21281/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:localbroadcastmanager:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0.aar/e45bab0700bf855572f62411b8014027/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:localbroadcastmanager:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0.aar/e45bab0700bf855572f62411b8014027/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:print:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/print-28.0.0.aar/f6b978c69f43abed8a6190a8b5a21735/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:print:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/print-28.0.0.aar/f6b978c69f43abed8a6190a8b5a21735/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/b3a34df3cf53c4df43836b9652993aa7/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/b3a34df3cf53c4df43836b9652993aa7/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:interpolator:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/881b60841f7cb3695e9f7a34111148ec/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:interpolator:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/881b60841f7cb3695e9f7a34111148ec/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata:1.1.1] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/ce1d53f6206c8cd277d402534fb96fb7/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata:1.1.1] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/ce1d53f6206c8cd277d402534fb96fb7/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/6707032a11acb7ccd59c60aa1716f7d3/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/6707032a11acb7ccd59c60aa1716f7d3/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.1] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/212b87592adc8ee310d879d3deab121f/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.1] /Users/sauldelgado/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/212b87592adc8ee310d879d3deab121f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/03a0e5355c9cae753a3fb23e5494a452/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/03a0e5355c9cae753a3fb23e5494a452/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/e557c99f4073d73d138a75f32346f102/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/e557c99f4073d73d138a75f32346f102/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/da9bc46b50a8562c747592e1784d3df0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/da9bc46b50a8562c747592e1784d3df0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:cardview-v7:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/c451374d112b6d53e36ffed4f72945b8/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/c451374d112b6d53e36ffed4f72945b8/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:gridlayout-v7:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/02b8ddfcc22efd860f4cda1fd44f6570/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:gridlayout-v7:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/02b8ddfcc22efd860f4cda1fd44f6570/AndroidManifest.xml:20:5-44
+MERGED from [it.sephiroth.android.library.imagezoom:imagezoom:2.2.5] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/91cd41382cbc3abd849b66a51b026dab/AndroidManifest.xml:7:5-9:41
+MERGED from [it.sephiroth.android.library.imagezoom:imagezoom:2.2.5] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/91cd41382cbc3abd849b66a51b026dab/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:support-fragment:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/d42e406fd8d52ffe7c87d8dae7b5c918/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/d42e406fd8d52ffe7c87d8dae7b5c918/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/6c8e508156003d1761ad8c0ae75134dc/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/6c8e508156003d1761ad8c0ae75134dc/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/de05847187d40a1cc3bd7b2b15056ff6/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/de05847187d40a1cc3bd7b2b15056ff6/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/9c77fe4d7f3f63e7136bdd323ae10ad7/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/9c77fe4d7f3f63e7136bdd323ae10ad7/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/28e1f71d57d99abfa7a4b50c1592493b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/28e1f71d57d99abfa7a4b50c1592493b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/27e57d2b0f96d65f07db2b6a1ab04c5e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/27e57d2b0f96d65f07db2b6a1ab04c5e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/40ce9ea91cf8f2dba17afaf973a1b67b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/40ce9ea91cf8f2dba17afaf973a1b67b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/f2a115432ab45559e57228c8a7c555ff/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/f2a115432ab45559e57228c8a7c555ff/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/f73d606c33a06d26d2bacd58e9fa634a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/f73d606c33a06d26d2bacd58e9fa634a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/155bf5440f19b05f0768ae1b59db0449/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/155bf5440f19b05f0768ae1b59db0449/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/e0f839d7099a69fa92d1662682127b0c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/e0f839d7099a69fa92d1662682127b0c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/4a6eb85c80dc487e3e58b8000b5cd4cd/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/4a6eb85c80dc487e3e58b8000b5cd4cd/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/984b13202a9f9397d4ebb28327d1f288/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/984b13202a9f9397d4ebb28327d1f288/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/25cc1dcc81ee2c7a94202dd96eb1ad6b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/25cc1dcc81ee2c7a94202dd96eb1ad6b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/b7c0c0bed35f55a19b5987e104c0f997/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/b7c0c0bed35f55a19b5987e104c0f997/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/faa82436e3dc208f31b3a8f571d3b438/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/faa82436e3dc208f31b3a8f571d3b438/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/72ac66080c319762b3c1b9321bdeb288/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/72ac66080c319762b3c1b9321bdeb288/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/c7638e880078fad2bef0b08d01b1a2a4/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/c7638e880078fad2bef0b08d01b1a2a4/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/57a8f74942591cd73869cca5210f58f3/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/57a8f74942591cd73869cca5210f58f3/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/32bdbe0aa631f02047286381813b6fa8/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/32bdbe0aa631f02047286381813b6fa8/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/9b59a303019b65d68b9a7c0cacaaf750/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/9b59a303019b65d68b9a7c0cacaaf750/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/7f0b941153440770263a4fbf2c92fa1f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/7f0b941153440770263a4fbf2c92fa1f/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/67219170a1cb9a3ca7e6160401922877/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/67219170a1cb9a3ca7e6160401922877/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/c2018e5aace62d91d864f298a4c6baa4/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/c2018e5aace62d91d864f298a4c6baa4/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/d1872404bf943fbc90fdce4108a632d9/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/d1872404bf943fbc90fdce4108a632d9/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/fff51bb0195942e2d1b6415512c31c21/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/fff51bb0195942e2d1b6415512c31c21/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/4050a77912fc76bd4c0e537b2a1da68d/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] /Users/sauldelgado/.gradle/caches/transforms-2/files-2.1/4050a77912fc76bd4c0e537b2a1da68d/AndroidManifest.xml:20:5-44
 INJECTED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml
 INJECTED from /Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml
 	android:targetSdkVersion

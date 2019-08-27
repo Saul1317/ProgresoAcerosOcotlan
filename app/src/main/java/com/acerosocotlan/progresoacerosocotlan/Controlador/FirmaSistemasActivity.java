@@ -149,8 +149,8 @@ public class FirmaSistemasActivity extends AppCompatActivity {
         firma_amarillo0_simba  = (ImageView) findViewById(R.id.firma_amarillo0_simba);
         firma_linearlayout_creditos = (LinearLayout)findViewById(R.id.firma_linearlayout_creditos);
         firma_layoout_filtro_credito  = (FrameLayout) findViewById(R.id.firma_layoout_filtro_credito);
-        carro_animacion = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.carro_splash);
-        carro_aceros = (ImageView) findViewById(R.id.carro_aceros);
-        carro_aceros.startAnimation(carro_animacion);
+        //carro_animacion = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.carro_splash);
+        //carro_aceros = (ImageView) findViewById(R.id.carro_aceros);
+        //carro_aceros.startAnimation(carro_animacion);
     }
 }

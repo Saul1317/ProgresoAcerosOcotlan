@@ -61,7 +61,6 @@
             android:layout_marginStart="90dp"
             android:layout_marginBottom="75dp"
             android:layout_gravity="bottom"/>
-
         <ImageView
             android:id="@+id/firma_azul0_simba"
             android:layout_width="wrap_content"
@@ -80,7 +79,6 @@
             android:layout_marginBottom="60dp"
             android:visibility="invisible"
             android:layout_gravity="bottom"/>
-
         <ImageView
             android:id="@+id/firma_rojo1_simba"
             android:layout_width="wrap_content"
@@ -99,7 +97,6 @@
             android:layout_marginBottom="40dp"
             android:visibility="invisible"
             android:layout_gravity="bottom"/>
-
         <ImageView
             android:id="@+id/firma_verde1_simba"
             android:layout_width="wrap_content"
@@ -118,7 +115,6 @@
             android:layout_marginBottom="80dp"
             android:visibility="invisible"
             android:layout_gravity="bottom"/>
-
         <ImageView
             android:id="@+id/firma_amarillo0_simba"
             android:layout_width="wrap_content"

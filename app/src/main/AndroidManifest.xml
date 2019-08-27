@@ -3,6 +3,7 @@
     package="com.acerosocotlan.progresoacerosocotlan">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
@@ -15,26 +16,55 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Controlador.MenuOpciones2"
+        <activity android:name=".Controlador.Catalogo.CatalogoPDF"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
-        <activity
-            android:name=".Controlador.PortalCliente"
-            android:theme="@style/pantalla_completa2"></activity>
-        <activity
-            android:name=".Controlador.MenuOpciones"
+            android:theme="@style/Theme.Design.NoActionBar"></activity>
+        <activity android:name=".Controlador.Catalogo.Galvanizados"
             android:screenOrientation="portrait"
+            android:theme="@style/Theme.Design.NoActionBar"/>
+        <activity android:name=".Controlador.Catalogo.CorrugadosTrefilados"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Design.NoActionBar"/>
+        <activity android:name=".Controlador.Catalogo.Planos"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Design.NoActionBar"/>
+        <activity
+            android:name=".Controlador.Catalogo.Estructurales"
+            android:label="@string/title_activity_estructurales"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".Controlador.Splash"
-            android:label="@string/app_name"
+        <activity android:name=".Controlador.Catalogo.PerfilesTubulares"
             android:screenOrientation="portrait"
-            android:theme="@style/pantalla_completa2">
+            android:theme="@style/Theme.Design.NoActionBar"/>
+        <activity android:name=".Controlador.Catalogo.Comerciales"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Design.NoActionBar"/>
+        <activity android:name=".Controlador.Catalogo.CatalogoProductos"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Design.NoActionBar"/>
+        <activity
+            android:name=".Controlador.MenuOpciones2"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".Controlador.PortalCliente"
+            android:theme="@style/pantalla_completa2" />
+        <activity
+            android:name=".Controlador.MenuOpciones"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" >
+
+        </activity>
+        <activity
+            android:name=".Controlador.Splash"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/pantalla_completa2">
         </activity>
         <activity
             android:name=".Controlador.ProgresoEntregaActivity"
@@ -56,7 +86,6 @@
             android:label="@string/title_activity_encuesta"
             android:screenOrientation="landscape"
             android:theme="@style/pantalla_completa2" />
-
         <activity
             android:name=".Controlador.VerOferta"
             android:label="@string/title_activity_ver_oferta"

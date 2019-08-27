@@ -1,0 +1,56 @@
+package com.acerosocotlan.progresoacerosocotlan.Controlador.Catalogo;
+
+import android.content.Intent;
+import android.media.Image;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
+
+import com.acerosocotlan.progresoacerosocotlan.R;
+import com.squareup.picasso.Picasso;
+
+public class Comerciales extends AppCompatActivity implements View.OnClickListener {
+
+    Button btn_producto_perfiles_comerciales, btn_producto_solera, btn_producto_monten;
+    ImageView img_comerciales_background;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_comerciales);
+
+        btn_producto_perfiles_comerciales = (Button) findViewById(R.id.btn_producto_perfiles_comerciales);
+        btn_producto_perfiles_comerciales.setOnClickListener(this);
+        btn_producto_solera = (Button) findViewById(R.id.btn_producto_solera);
+        btn_producto_solera.setOnClickListener(this);
+        btn_producto_monten = (Button) findViewById(R.id.btn_producto_monten);
+        btn_producto_monten.setOnClickListener(this);
+        img_comerciales_background = (ImageView) findViewById(R.id.img_comerciales_background);
+        Picasso.with(this).load("https://acerosocotlan.mx/app/AO_Fondo_APP.png").placeholder(R.drawable.ao__fondomesa_de_trabajo_5).into(img_comerciales_background);
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.btn_producto_perfiles_comerciales:
+                nextActivity("comerciales/perfiles_comerciales_solidos.pdf");
+                break;
+            case R.id.btn_producto_solera:
+                nextActivity("comerciales/solera.pdf");
+                break;
+            case R.id.btn_producto_monten:
+                nextActivity("comerciales/solera.pdf");
+                break;
+            default:
+                break;
+        }
+    }
+
+    public void nextActivity(String nombre_pdf){
+        Intent intent = new Intent(this, CatalogoPDF.class);
+        intent.putExtra("url_pdf", nombre_pdf);
+        startActivity(intent);
+    }
+}

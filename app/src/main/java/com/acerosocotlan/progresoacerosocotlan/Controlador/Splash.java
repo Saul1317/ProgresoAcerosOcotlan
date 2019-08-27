@@ -36,7 +36,6 @@ public class Splash extends AppCompatActivity {
         setContentView(R.layout.activity_splash);
         //SE HACE LA REFERENCIA DE LOS COMPONENTES E INICIA LA ANIMACIÓN
         Inicializador();
-
         //METODO QUE SE EJECUTARÁ DESPUES DE 3 SEGUNDOS(3000 MILISEGUNDOS)
         new Handler().postDelayed(new Runnable() {
             @Override
@@ -44,7 +43,7 @@ public class Splash extends AppCompatActivity {
                 //SE ABRE LA SIGUIENTE VENTANA
                 CargarActivity();
             }
-        },3000);
+        },2000);
     }
     public void Inicializador(){
         //prs = getSharedPreferences("usuarioDatos", Context.MODE_PRIVATE);
@@ -57,7 +56,7 @@ public class Splash extends AppCompatActivity {
     }
     public void CargarActivity(){
         //SE HACE REFERENCIA A LA SIGUIENTE CLASE MENUOPCIONES.CLASS
-        Intent intent = new Intent(Splash.this,MenuOpciones.class);
+        Intent intent = new Intent(Splash.this,MenuOpciones2.class);
         //ESTA LINEA DE CODIGO SIRVE PARA QUE EL USUARIO AL MOMENTO DE PRESIONAR EL BOTON DE REGRESAR NO PUEDA REGRESARSE A ESTA CLASE
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         //SE INICIA LA SIGUIENTE ACTIVIDAD
