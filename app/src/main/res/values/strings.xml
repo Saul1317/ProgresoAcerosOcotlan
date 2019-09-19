@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Grupo Aceros Ocotlán</string>
+    <string name="app_name">Aceros Ocotlán</string>
     <string name="action_settings">Usar nuevo codigo</string>
     <string name="title_activity_progreso_entrega">ProgresoEntregaActivity</string>
     <string name="title_activity_detalle_entrega">DetalleEntregaActivity</string>
@@ -76,5 +76,176 @@
     <string name="dialog_txt_descripcion_acuse_recibo">¿Desea mandar el acuse de recibo a su correo?</string>
     <string name="encuesta_activity_txt_pregunta4">Califica esta aplicación</string>
     <string name="title_activity_estructurales">Estructurales</string>
+
+    <!-- caLCULADORA-->
+    <!-- UNIDADES DE MEDIDA -->
+    <string name="lbp">lb/p</string>
+    <string name="kgmetro">kg/m</string>
+    <string name="lb">lb</string>
+    <string name="kg">kg</string>
+    <string name="gr">gr</string>
+    <string name="tonelada">tonelada</string>
+    <string name="oz">oz</string>
+    <string name="in">in</string>
+    <string name="m">m</string>
+
+
+    /*PESO*/
+    <string name="cm">cm</string>
+    <string name="mm">mm</string>
+    <string name="km">km</string>
+    <string name="ft">ft</string>
+    <string name="milla">milla</string>
+    <string name="yd">yd</string>
+    <string name="cm2">cm2</string>
+
+    /*LONGITUD*/
+
+    <string name="m2">m2</string>
+    <string name="km2">km2</string>
+    <string name="ha">ha</string>
+    <string name="in2">in2</string>
+    <string name="ft2">ft2</string>
+    <string name="yd2">yd2</string>
+    <string name="milla2">milla2</string>
+    <string name="acre2">acre2</string>
+
+    /*AREA*/
+
+    <string name="mm2">mm2</string>
+    <string name="F">°F</string>
+    <string name="C">°C</string>
+    <string name="m3">m3</string>
+    <string name="lt">lt</string>
+    <string name="in3">in3</string>
+    <string name="ft3">ft3</string>
+    <string name="yd3">yd3</string>
+    <string name="gal">gal</string>
+    <string name="cm3">cm3</string>
+
+    /*TEMPERATURA*/
+
+    <string name="Joule">Joule</string>
+    <string name="kcal">kcal</string>
+
+    /*VOLUMEN*/
+
+    <string name="kgm">kg-m</string>
+    <string name="kwhr">kw-hr</string>
+    <string name="cal">cal</string>
+    <string name="hphr">hp-hr</string>
+    <string name="kw">kw</string>
+    <string name="hp">hp</string>
+    <string name="btuhr">btu/hr</string>
+
+
+    /*CALOR*/
+
+    <string name="watts">watts</string>
+    <string name="kgcm2">kg/cm2</string>
+    <string name="kgfmm2">kgf/mm2</string>
+    <string name="mmHG">mm HG</string>
+    <string name="Mpa">Mpa</string>
+    <string name="Nmm2">N/mm2</string>
+
+    /*POTENCIA*/
+
+    <string name="psi">psi</string>
+    <string name="Atm">Atm</string>
+    <string name="icon">Spinner</string>
+    <string name="none">none</string>
+
+    /*PRESION*/
+
+    <string name="peso">Peso</string>
+    <string name="longitud">Longitud</string>
+    <string name="area">Área</string>
+    <string name="temperatura">Temperatura</string>
+    <string name="presion">Presión</string>
+    <string name="caloryenergia">Calor y temperatura</string>
+    <string name="potencia">Potencia</string>
+
+
+    <!-- ICONOS UNIDADES DE MEDIDA -->
+    <string name="volumen">Volumen</string>
+    <string name="title_activity_main_activity__m__categorias">MainActivity_M_Categorias</string>
+    <string name="title_activity_main__m__productos">MainActivity_M_Productos</string>
+    <string-array name="unidadesMedida">
+        <item>Peso</item>
+        <item>Longitud</item>
+        <item>Area</item>
+        <item>Temperatura</item>
+        <item>Presión</item>
+        <item>Volumen</item>
+        <item>Calor y energía</item>
+        <item>Potencia</item>
+    </string-array>
+    <string-array name="unidadesPeso">
+        <item>kg/m</item>
+        <item>lb/p</item>
+        <item>lb</item>
+        <item>kg</item>
+        <item>gr</item>
+        <item>tonelada</item>
+        <item>oz</item>
+    </string-array>
+    <string-array name="unidadesLongitud">
+        <item>in</item>
+        <item>m</item>
+        <item>cm</item>
+        <item>mm</item>
+        <item>km</item>
+        <item>ft</item>
+        <item>milla</item>
+        <item>yd</item>
+    </string-array>
+    <string-array name="unidadesArea">
+        <item>cm2</item>
+        <item>m2</item>
+        <item>km2</item>
+        <item>ha</item>
+        <item>in2</item>
+        <item>ft2</item>
+        <item>yd2</item>
+        <item>milla2</item>
+        <item>acre2</item>
+        <item>mm2</item>
+    </string-array>
+    <string-array name="unidadesTemperatura">
+        <item>°F</item>
+        <item>°C</item>
+    </string-array>
+    <string-array name="unidadesVolumen">
+        <item>m3</item>
+        <item>lt</item>
+        <item>in3</item>
+        <item>ft3</item>
+        <item>yd3</item>
+        <item>gal</item>
+        <item>cm3</item>
+    </string-array>
+    <string-array name="unidadesCalor">
+        <item>Joule</item>
+        <item>kcal</item>
+        <item>kg-m</item>
+        <item>kw-hr</item>
+        <item>cal</item>
+        <item>hp-hr</item>
+    </string-array>
+    <string-array name="unidadesPotencia">
+        <item>kw</item>
+        <item>hp</item>
+        <item>btu/hr</item>
+        <item>watts</item>
+    </string-array>
+    <string-array name="unidadesPresion">
+        <item>kg/cm2</item>
+        <item>kgf/mm2</item>
+        <item>mm HG</item>
+        <item>Mpa</item>
+        <item>N/mm2</item>
+        <item>psi</item>
+        <item>Atm</item>
+    </string-array>
 
 </resources>

@@ -28,7 +28,7 @@ public class Comerciales extends AppCompatActivity implements View.OnClickListen
         btn_producto_monten = (Button) findViewById(R.id.btn_producto_monten);
         btn_producto_monten.setOnClickListener(this);
         img_comerciales_background = (ImageView) findViewById(R.id.img_comerciales_background);
-        Picasso.with(this).load("https://acerosocotlan.mx/app/AO_Fondo_APP.png").placeholder(R.drawable.ao__fondomesa_de_trabajo_5).into(img_comerciales_background);
+        //Picasso.with(this).load("https://acerosocotlan.mx/app/AO_Fondo_APP.png").placeholder(R.drawable.ao__fondomesa_de_trabajo_5).into(img_comerciales_background);
     }
 
     @Override

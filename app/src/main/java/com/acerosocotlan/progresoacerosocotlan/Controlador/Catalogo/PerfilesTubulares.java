@@ -41,7 +41,7 @@ public class PerfilesTubulares extends AppCompatActivity implements View.OnClick
         btn_producto_tubular_pintado.setOnClickListener(this);
 
         img_perfiles_background = (ImageView) findViewById(R.id.img_perfiles_background);
-        Picasso.with(this).load("https://acerosocotlan.mx/app/AO_Fondo_APP.png").placeholder(R.drawable.ao__fondomesa_de_trabajo_5).into(img_perfiles_background);
+        //Picasso.with(this).load("https://acerosocotlan.mx/app/AO_Fondo_APP.png").placeholder(R.drawable.ao__fondomesa_de_trabajo_5).into(img_perfiles_background);
     }
 
     @Override

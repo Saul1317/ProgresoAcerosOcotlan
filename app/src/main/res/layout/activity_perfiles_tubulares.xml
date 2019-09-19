@@ -12,69 +12,78 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="fitXY"
-        android:src="@drawable/ao__fondomesa_de_trabajo_5"/>
+        android:src="@drawable/ao_portada_fondo1"/>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_gravity="center"
-        android:padding="16dp"
-        android:orientation="vertical"
-        android:gravity="center">
+        android:layout_height="match_parent"
+        android:weightSum="10"
+        android:orientation="vertical">
 
-        <Button
-            android:id="@+id/btn_producto_tubo_cedula"
+        <ImageView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="20dp"
-            android:text="TUBO CEDULA 30-40"
-            android:textColor="@android:color/white"
-            android:backgroundTint="@color/colorPrimary" />
+            android:layout_height="match_parent"
+            android:layout_weight="7"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ao_logo_"/>
 
-        <Button
-            android:id="@+id/btn_producto_lamina_galvanizada"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="20dp"
-            android:text="LAMINA GALVANIZADA"
-            android:textColor="@android:color/white"
-            android:backgroundTint="@color/colorPrimary"/>
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:padding="16dp"
+            android:orientation="vertical">
 
-        <Button
-            android:id="@+id/btn_producto_tubo_estructural"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="20dp"
-            android:text="TUBO ESTRUCTURAL"
-            android:textColor="@android:color/white"
-            android:backgroundTint="@color/colorPrimary"/>
+            <Button
+                android:id="@+id/btn_producto_tubo_cedula"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/btn_height_size"
+                android:text="TUBO CEDULA 30-40"
+                android:textColor="@android:color/white"
+                android:backgroundTint="@color/colorPrimary" />
 
-        <Button
-            android:id="@+id/btn_producto_tuberia_conduccio_fluidos"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="20dp"
-            android:text="TUBERÍA PARA CONDUCCIÓN DE FLUIDOS"
-            android:textColor="@android:color/white"
-            android:backgroundTint="@color/colorPrimary"/>
+            <Button
+                android:id="@+id/btn_producto_lamina_galvanizada"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/btn_height_size"
+                android:text="LAMINA GALVANIZADA"
+                android:textColor="@android:color/white"
+                android:backgroundTint="@color/colorPrimary"/>
 
-        <Button
-            android:id="@+id/btn_producto_ptr"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="20dp"
-            android:text="PTR"
-            android:textColor="@android:color/white"
-            android:backgroundTint="@color/colorPrimary"/>
+            <Button
+                android:id="@+id/btn_producto_tubo_estructural"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/btn_height_size"
+                android:text="TUBO ESTRUCTURAL"
+                android:textColor="@android:color/white"
+                android:backgroundTint="@color/colorPrimary"/>
 
-        <Button
-            android:id="@+id/btn_producto_tubular_pintado"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="20dp"
-            android:text="TUBULAR PINTADO"
-            android:textColor="@android:color/white"
-            android:backgroundTint="@color/colorPrimary"/>
+            <Button
+                android:id="@+id/btn_producto_tuberia_conduccio_fluidos"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/btn_height_size"
+                android:text="CONDUCCIÓN DE FLUIDOS"
+                android:textColor="@android:color/white"
+                android:backgroundTint="@color/colorPrimary"/>
+
+            <Button
+                android:id="@+id/btn_producto_ptr"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/btn_height_size"
+                android:text="PTR"
+                android:textColor="@android:color/white"
+                android:backgroundTint="@color/colorPrimary"/>
+
+            <Button
+                android:id="@+id/btn_producto_tubular_pintado"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/btn_height_size"
+                android:text="TUBULAR PINTADO"
+                android:textColor="@android:color/white"
+                android:backgroundTint="@color/colorPrimary"/>
+
+        </LinearLayout>
+
     </LinearLayout>
+
 </android.support.design.widget.CoordinatorLayout>

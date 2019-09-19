@@ -23,8 +23,12 @@ import retrofit2.http.Url;
  */
 
 public interface NetworkService {
+    /*
+    * TODAS LAS PETICIONES QUE SE HACEN AL WEB SERVICE SE CONFIGURAN AQUÍ
+    */
     @POST
     Call<List<StatuEntrega>> EstatusEntrega(@Url String url);
+
     @POST
     Call<List<DetalleEntrega_retrofit>> detalleEntrega(@Url String url);
 

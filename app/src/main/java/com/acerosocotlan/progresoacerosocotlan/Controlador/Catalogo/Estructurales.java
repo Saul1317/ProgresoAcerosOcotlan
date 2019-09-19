@@ -35,7 +35,7 @@ public class Estructurales extends AppCompatActivity implements View.OnClickList
         btn_producto_placa_acero = (Button) findViewById(R.id.btn_producto_placa_acero);
         btn_producto_placa_acero.setOnClickListener(this);
         img_estructurales_background = (ImageView) findViewById(R.id.img_estructurales_background);
-        Picasso.with(this).load("https://acerosocotlan.mx/app/AO_Fondo_APP.png").placeholder(R.drawable.ao__fondomesa_de_trabajo_5).into(img_estructurales_background);
+        //Picasso.with(this).load("https://acerosocotlan.mx/app/AO_Fondo_APP.png").placeholder(R.drawable.ao__fondomesa_de_trabajo_5).into(img_estructurales_background);
     }
 
     @Override

@@ -23,7 +23,7 @@ public class Galvanizados extends AppCompatActivity implements View.OnClickListe
         btn_producto_galvanizados = (Button) findViewById(R.id.btn_producto_galvanizados);
         btn_producto_galvanizados.setOnClickListener(this);
         img_galvanizados_background = (ImageView) findViewById(R.id.img_galvanizados_background);
-        Picasso.with(this).load("https://acerosocotlan.mx/app/AO_Fondo_APP.png").placeholder(R.drawable.ao__fondomesa_de_trabajo_5).into(img_galvanizados_background);
+        //Picasso.with(this).load("https://acerosocotlan.mx/app/AO_Fondo_APP.png").placeholder(R.drawable.ao__fondomesa_de_trabajo_5).into(img_galvanizados_background);
     }
 
     @Override

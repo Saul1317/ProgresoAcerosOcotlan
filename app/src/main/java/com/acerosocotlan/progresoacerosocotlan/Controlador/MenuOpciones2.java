@@ -3,24 +3,25 @@ package com.acerosocotlan.progresoacerosocotlan.Controlador;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
-import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.Toast;
 
 import com.acerosocotlan.progresoacerosocotlan.Controlador.Catalogo.CatalogoProductos;
+import com.acerosocotlan.progresoacerosocotlan.Controlador.Contacto.Contacto;
+import com.acerosocotlan.progresoacerosocotlan.Controlador.Otros.MenuOtrosApartados;
+import com.acerosocotlan.progresoacerosocotlan.Controlador.Sucuarsales.MenuSucursales;
 import com.acerosocotlan.progresoacerosocotlan.Modelo.MetodosSharedPreference;
 import com.acerosocotlan.progresoacerosocotlan.R;
 import com.squareup.picasso.Picasso;
 
 public class MenuOpciones2 extends AppCompatActivity implements View.OnClickListener {
 
-    ImageView button_rastreo, btn_portal_cliente, button_producto;
+    ImageView button_rastreo, btn_portal_cliente, button_producto, button_ubicacion_sucursales, button_contacto, button_otros;
     FrameLayout Framelayout_background_menu;
     private SharedPreferences prs;
     ImageView imagen_fondo_menu;
@@ -30,17 +31,33 @@ public class MenuOpciones2 extends AppCompatActivity implements View.OnClickList
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_opciones2);
+
         Framelayout_background_menu = (FrameLayout) findViewById(R.id.Framelayout_background_menu);
         Framelayout_background_menu.setOnClickListener(this);
+
         imagen_fondo_menu = (ImageView) findViewById(R.id.imagen_fondo_menu);
         prs = getSharedPreferences("usuarioDatos", Context.MODE_PRIVATE);
+
         button_rastreo = (ImageView) findViewById(R.id.button_rastreo);
         button_rastreo.setOnClickListener(this);
+
         btn_portal_cliente = (ImageView) findViewById(R.id.btn_portal_cliente);
         btn_portal_cliente.setOnClickListener(this);
+
         button_producto = (ImageView) findViewById(R.id.button_producto);
         button_producto.setOnClickListener(this);
-        Picasso.with(this).load("https://acerosocotlan.mx/app/AO_Fondo_APP.png").placeholder(R.drawable.ao__fondomesa_de_trabajo_5).into(imagen_fondo_menu);
+
+        button_ubicacion_sucursales = (ImageView) findViewById(R.id.button_ubicacion_sucursales);
+        button_ubicacion_sucursales.setOnClickListener(this);
+
+        button_contacto = (ImageView) findViewById(R.id.button_contacto);
+        button_contacto.setOnClickListener(this);
+
+        button_otros = (ImageView) findViewById(R.id.button_otros);
+        button_otros.setOnClickListener(this);
+
+        //Picasso.with(this).load("https://acerosocotlan.mx/app/AO_Fondo_APP.png").placeholder(R.drawable.ao__fondomesa_de_trabajo_5).into(imagen_fondo_menu);
+
     }
 
     @Override
@@ -61,9 +78,37 @@ public class MenuOpciones2 extends AppCompatActivity implements View.OnClickList
             case R.id.Framelayout_background_menu:
                 validarPantallaSecreta();
                 break;
+
+            case R.id.button_ubicacion_sucursales:
+                abrirUbicaciones();
+                break;
+
+            case R.id.button_contacto:
+                abrirContacto();
+                break;
+
+            case R.id.button_otros:
+                abrirOtrosApartados();
+                break;
+
             default:
                 break;
         }
+    }
+
+    private void abrirOtrosApartados() {
+        Intent intent = new Intent(MenuOpciones2.this, MenuOtrosApartados.class);
+        startActivity(intent);
+    }
+
+    private void abrirContacto() {
+        Intent intent = new Intent(MenuOpciones2.this, Contacto.class);
+        startActivity(intent);
+    }
+
+    private void abrirUbicaciones() {
+        Intent intent = new Intent(MenuOpciones2.this, MenuSucursales.class);
+        startActivity(intent);
     }
 
     private void validarPantallaSecreta() {

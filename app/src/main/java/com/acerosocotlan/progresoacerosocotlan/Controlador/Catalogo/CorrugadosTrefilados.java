@@ -28,7 +28,7 @@ public class CorrugadosTrefilados extends AppCompatActivity implements View.OnCl
         btn_producto_malla = (Button) findViewById(R.id.btn_producto_malla);
         btn_producto_malla.setOnClickListener(this);
         img_corrugados_background = (ImageView) findViewById(R.id.img_corrugados_background);
-        Picasso.with(this).load("https://acerosocotlan.mx/app/AO_Fondo_APP.png").placeholder(R.drawable.ao__fondomesa_de_trabajo_5).into(img_corrugados_background);
+        //Picasso.with(this).load("https://acerosocotlan.mx/app/AO_Fondo_APP.png").placeholder(R.drawable.ao__fondomesa_de_trabajo_5).into(img_corrugados_background);
     }
 
     @Override

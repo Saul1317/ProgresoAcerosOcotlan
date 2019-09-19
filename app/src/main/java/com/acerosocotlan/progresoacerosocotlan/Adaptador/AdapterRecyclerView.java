@@ -34,11 +34,13 @@ public class AdapterRecyclerView extends RecyclerView.Adapter<AdapterRecyclerVie
         this.activity = activity;
         this.context = context;
     }
+
     @Override
     public AdapterRecyclerHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(resource, parent,false);
         return new AdapterRecyclerHolder(view);
     }
+
     @Override
     public void onBindViewHolder(AdapterRecyclerHolder holder, final int position) {
         DetalleEntrega_retrofit detalleEntrega_retrofit = arraylistDetalleEntrega.get(position);
@@ -47,10 +49,12 @@ public class AdapterRecyclerView extends RecyclerView.Adapter<AdapterRecyclerVie
         holder.txt_cantidad_kg.setText(" "+detalleEntrega_retrofit.getCantidadkg());
         holder.txt_descripcion_entrega.setText(" "+detalleEntrega_retrofit.getMaterial());
     }
+
     @Override
     public int getItemCount() {
         return arraylistDetalleEntrega.size();
     }
+
     public class AdapterRecyclerHolder extends RecyclerView.ViewHolder{
         private TextView txt_cantidad_entrega, txt_unidad_entrega,txt_cantidad_kg,txt_descripcion_entrega ;
         public AdapterRecyclerHolder(View itemView) {

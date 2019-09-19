@@ -39,7 +39,7 @@ public class CatalogoProductos extends AppCompatActivity implements View.OnClick
         btn_catalogo_corrugados.setOnClickListener(this);
 
         img_catalago_background = (ImageView) findViewById(R.id.img_catalago_background);
-        Picasso.with(this).load("https://acerosocotlan.mx/app/AO_Fondo_APP.png").placeholder(R.drawable.ao__fondomesa_de_trabajo_5).into(img_catalago_background);
+        //Picasso.with(this).load("https://acerosocotlan.mx/app/AO_Fondo_APP.png").placeholder(R.drawable.ao__fondomesa_de_trabajo_5).into(img_catalago_background);
     }
 
     @Override

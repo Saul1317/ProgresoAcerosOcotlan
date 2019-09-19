@@ -43,7 +43,7 @@ public class AdapterRecyclerViewOfertas extends RecyclerView.Adapter<AdapterRecy
     @Override
     public void onBindViewHolder(AdapterRecyclerHolder holder, int position) {
         VerOfertas_retrofit verOfertas_retrofit = arraylistVerOfertas.get(position);
-        holder.txt_nombre_producto_oferta.setText(verOfertas_retrofit.getProducto()+" ");
+        holder.txt_nombre_producto_oferta.setText("Sucursal: " + verOfertas_retrofit.getProducto()+", ");
         holder.txt_fecha_vigencia_producto_oferta.setText(" "+verOfertas_retrofit.getVigencia());
         holder.txt_precio_producto_oferta.setText("$"+verOfertas_retrofit.getPrecio()+" ");
         Picasso.with(context).load(verOfertas_retrofit.getFoto().toString()).placeholder(R.drawable.vigaejemplo).into(holder.img_producto_oferta);
@@ -53,6 +53,7 @@ public class AdapterRecyclerViewOfertas extends RecyclerView.Adapter<AdapterRecy
     public int getItemCount() {
         return arraylistVerOfertas.size();
     }
+
     public class AdapterRecyclerHolder extends RecyclerView.ViewHolder{
         private TextView txt_nombre_producto_oferta, txt_fecha_vigencia_producto_oferta, txt_precio_producto_oferta;
         private ImageView img_producto_oferta;

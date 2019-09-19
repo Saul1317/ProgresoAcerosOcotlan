@@ -17,4 +17,5 @@
     <dimen name="firma_tamano_margen_bottom_puesto">1dp</dimen>
     <dimen name="cardview_tamano_txt">12sp</dimen>
     <dimen name="widget_margin">8dp</dimen>
+    <dimen name="btn_height_size">50dp</dimen>
 </resources>

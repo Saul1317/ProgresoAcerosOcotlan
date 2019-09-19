@@ -35,7 +35,7 @@ public class Splash extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
         //SE HACE LA REFERENCIA DE LOS COMPONENTES E INICIA LA ANIMACIÓN
-        Inicializador();
+
         //METODO QUE SE EJECUTARÁ DESPUES DE 3 SEGUNDOS(3000 MILISEGUNDOS)
         new Handler().postDelayed(new Runnable() {
             @Override
@@ -48,9 +48,9 @@ public class Splash extends AppCompatActivity {
     public void Inicializador(){
         //prs = getSharedPreferences("usuarioDatos", Context.MODE_PRIVATE);
         //REFERENCIA DE LOS VIEWS
-        nubesLayout= (FrameLayout) findViewById(R.id.nubes_splash);
+        /*nubesLayout= (FrameLayout) findViewById(R.id.nubes_splash);
         carroLayout= (FrameLayout) findViewById(R.id.carro_splash);
-        textoLayout= (LinearLayout) findViewById(R.id.texto_splash);
+        textoLayout= (LinearLayout) findViewById(R.id.texto_splash);*/
         //EJECUTA LA ANIMACION INICIAL
         AnimacionAcerosOcotlan();
     }

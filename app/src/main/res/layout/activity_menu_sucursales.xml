@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Controlador.Sucuarsales.MenuSucursales">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/ao_portada_fondo1"
+        android:scaleType="fitXY"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="10"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="7"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ao_logo_"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="3">
+
+
+            <android.support.v7.widget.GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:padding="16dp"
+                app:columnCount="1"
+                app:useDefaultMargins="true">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/btn_localizar_sucursal"
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:layout_marginBottom="8dp"
+                    app:cardBackgroundColor="@color/colorPrimary"
+                    app:cardElevation="8dp"
+                    app:cardCornerRadius="25dp"
+                    app:layout_columnSpan="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="16dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Sucursales cercanas"
+                            android:textColor="@android:color/white"
+                            android:textStyle="bold"
+                            android:textSize="20sp"
+                            android:layout_marginBottom="8dp"
+                            android:layout_gravity="center_horizontal"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Localiza las sucursales en tu zona"
+                            android:textColor="@android:color/white"
+                            android:textSize="14sp"
+                            android:textAlignment="center"
+                            android:layout_gravity="center_horizontal"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginStart="50dp"
+                            android:layout_marginEnd="50dp"
+                            android:background="@android:color/white"
+                            app:layout_columnSpan="2"/>
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/btn_sucursales_disponibles"
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:layout_marginBottom="8dp"
+                    app:cardBackgroundColor="@color/colorPrimary"
+                    app:cardElevation="8dp"
+                    app:cardCornerRadius="25dp"
+                    app:layout_columnSpan="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:padding="16dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Todas nuestras sucursales"
+                            android:textColor="@android:color/white"
+                            android:textStyle="bold"
+                            android:textSize="20sp"
+                            android:layout_marginBottom="8dp"
+                            android:layout_gravity="center_horizontal"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Localiza nuestros puntos de venta de todo el pais"
+                            android:textColor="@android:color/white"
+                            android:textSize="14sp"
+                            android:textAlignment="center"
+                            android:layout_gravity="center_horizontal"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginStart="50dp"
+                            android:layout_marginEnd="50dp"
+                            android:background="@android:color/white"
+                            app:layout_columnSpan="2"/>
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </android.support.v7.widget.GridLayout>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

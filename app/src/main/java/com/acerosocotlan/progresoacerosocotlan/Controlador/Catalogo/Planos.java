@@ -30,7 +30,7 @@ public class Planos extends AppCompatActivity implements View.OnClickListener {
         btn_producto_galvanizados2.setOnClickListener(this);
 
         img_planos_background = (ImageView) findViewById(R.id.img_planos_background);
-        Picasso.with(this).load("https://acerosocotlan.mx/app/AO_Fondo_APP.png").placeholder(R.drawable.ao__fondomesa_de_trabajo_5).into(img_planos_background);
+        //Picasso.with(this).load("https://acerosocotlan.mx/app/AO_Fondo_APP.png").placeholder(R.drawable.ao__fondomesa_de_trabajo_5).into(img_planos_background);
 
     }
 

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Controlador.Otros.Convertidor.Convertidor">
+
+    <ImageView
+        android:id="@+id/imagen_fondo_convertidor"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/ao_portada_fondo1"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="10"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="7"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ao_logo_"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            android:padding="16dp"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.AppCompatSpinner
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:id="@+id/spinner_tipo"
+                android:padding="8dp"
+                android:background= "@drawable/border_convertidor"
+                android:layout_gravity="bottom"
+                android:scrollbarStyle="outsideOverlay"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:weightSum="10"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:background="@drawable/border_convertidor"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:layout_weight="5"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="15dp">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/cantidad"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:gravity="center"
+                            android:hint="0.00"
+                            android:inputType="number|numberDecimal" />
+
+                        <android.support.v7.widget.AppCompatSpinner
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:id="@+id/spinner_de"
+                            android:gravity="bottom|center"
+                            android:textAlignment="center"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:background="@drawable/border_convertidor"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:layout_weight="5"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginLeft="15dp">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:id="@+id/resultado"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:hint="0.00"
+                            android:inputType="number"
+                            android:enabled="false"
+                            android:translationZ="1000dp"/>
+
+                        <android.support.v7.widget.AppCompatSpinner
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:id="@+id/spinner_a"
+                            android:layout_gravity="left"
+                            android:gravity="center_vertical|center"
+                            android:textAlignment="center"
+                            android:translationZ="1000dp"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</android.support.design.widget.CoordinatorLayout>

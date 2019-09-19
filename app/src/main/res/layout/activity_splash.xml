@@ -5,7 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.acerosocotlan.progresoacerosocotlan.Controlador.Splash">
-    <FrameLayout
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ao_logo_"/>
+    <!--<FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/paisaje">
@@ -41,5 +47,5 @@
                 android:padding="5dp"
                 android:src="@drawable/camonacerosocotlanmaterial"/>
         </FrameLayout>
-    </FrameLayout>
+    </FrameLayout>-->
 </android.support.design.widget.CoordinatorLayout>

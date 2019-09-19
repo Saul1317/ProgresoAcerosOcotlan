@@ -15,7 +15,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.http.Url;
 
 /**
- * Created by Administrador on 19/04/2018.
+ * Created by Saúl Alejandro Delgado Mayorga on 19/04/2018.
+ * Configuración de retrofit
  */
 
 public class NetworkAdapter {

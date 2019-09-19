@@ -12,42 +12,53 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="fitXY"
-        android:src="@drawable/ao__fondomesa_de_trabajo_5"/>
+        android:src="@drawable/ao_portada_fondo1"/>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:padding="16dp"
-        android:orientation="vertical"
-        android:gravity="center">
+        android:layout_height="match_parent"
+        android:weightSum="10"
+        android:orientation="vertical">
 
-        <Button
-            android:id="@+id/btn_producto_perfiles_comerciales"
+        <ImageView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="20dp"
-            android:text="PERFILES COMERCIALES SÓLIDOS"
-            android:textColor="@android:color/white"
-            android:backgroundTint="@color/colorPrimary" />
+            android:layout_height="match_parent"
+            android:layout_weight="7"
+            android:src="@drawable/ao_logo_"
+            android:scaleType="centerCrop" />
 
-        <Button
-            android:id="@+id/btn_producto_solera"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="20dp"
-            android:text="SOLERA"
-            android:textColor="@android:color/white"
-            android:backgroundTint="@color/colorPrimary"/>
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:padding="16dp"
+            android:orientation="vertical">
 
-        <Button
-            android:id="@+id/btn_producto_monten"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="20dp"
-            android:text="MONTEN"
-            android:textColor="@android:color/white"
-            android:backgroundTint="@color/colorPrimary"/>
+            <Button
+                android:id="@+id/btn_producto_perfiles_comerciales"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/btn_height_size"
+                android:text="PERFILES COMERCIALES SÓLIDOS"
+                android:textColor="@android:color/white"
+                android:backgroundTint="@color/colorPrimary" />
+
+            <Button
+                android:id="@+id/btn_producto_solera"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/btn_height_size"
+                android:text="SOLERA"
+                android:textColor="@android:color/white"
+                android:backgroundTint="@color/colorPrimary"/>
+
+            <Button
+                android:id="@+id/btn_producto_monten"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/btn_height_size"
+                android:text="MONTEN"
+                android:textColor="@android:color/white"
+                android:backgroundTint="@color/colorPrimary"/>
+
+        </LinearLayout>
 
     </LinearLayout>
 
