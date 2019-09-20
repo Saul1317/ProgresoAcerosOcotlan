@@ -1,4 +1,4 @@
-package com.acerosocotlan.progresoacerosocotlan.Controlador.Sucuarsales;
+package com.acerosocotlan.progresoacerosocotlan.Adaptador;
 
 import android.app.Activity;
 import android.content.Context;
@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.acerosocotlan.progresoacerosocotlan.Controlador.Sucuarsales.Sucursales;
 import com.acerosocotlan.progresoacerosocotlan.R;
 
 import java.util.List;

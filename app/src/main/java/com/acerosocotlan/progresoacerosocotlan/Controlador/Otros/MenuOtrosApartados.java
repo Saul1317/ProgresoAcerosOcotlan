@@ -7,12 +7,10 @@ import android.support.v7.widget.CardView;
 import android.view.View;
 import android.widget.ImageView;
 
-import com.acerosocotlan.progresoacerosocotlan.Controlador.MenuOpciones2;
 import com.acerosocotlan.progresoacerosocotlan.Controlador.Otros.AvisoPrivacidad.AvisoPrivacidad;
 import com.acerosocotlan.progresoacerosocotlan.Controlador.Otros.Convertidor.MenuConvertidor;
 import com.acerosocotlan.progresoacerosocotlan.Controlador.Otros.PortalTransaparencia.PortalTransparencia;
 import com.acerosocotlan.progresoacerosocotlan.R;
-import com.squareup.picasso.Picasso;
 
 public class MenuOtrosApartados extends AppCompatActivity implements View.OnClickListener {
 

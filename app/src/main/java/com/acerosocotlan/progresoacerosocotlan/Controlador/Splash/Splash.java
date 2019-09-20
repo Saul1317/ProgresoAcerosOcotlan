@@ -1,24 +1,15 @@
-package com.acerosocotlan.progresoacerosocotlan.Controlador;
+package com.acerosocotlan.progresoacerosocotlan.Controlador.Splash;
 
-import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.content.pm.ActivityInfo;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.text.TextUtils;
-import android.transition.Explode;
-import android.transition.Slide;
-import android.transition.Transition;
-import android.view.Gravity;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
-import com.acerosocotlan.progresoacerosocotlan.Modelo.MetodosSharedPreference;
+
+import com.acerosocotlan.progresoacerosocotlan.Controlador.MenuPrincipal.MenuOpciones2;
 import com.acerosocotlan.progresoacerosocotlan.R;
 
 public class Splash extends AppCompatActivity {
@@ -56,7 +47,7 @@ public class Splash extends AppCompatActivity {
     }
     public void CargarActivity(){
         //SE HACE REFERENCIA A LA SIGUIENTE CLASE MENUOPCIONES.CLASS
-        Intent intent = new Intent(Splash.this,MenuOpciones2.class);
+        Intent intent = new Intent(Splash.this, MenuOpciones2.class);
         //ESTA LINEA DE CODIGO SIRVE PARA QUE EL USUARIO AL MOMENTO DE PRESIONAR EL BOTON DE REGRESAR NO PUEDA REGRESARSE A ESTA CLASE
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         //SE INICIA LA SIGUIENTE ACTIVIDAD

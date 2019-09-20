@@ -5,7 +5,7 @@
     android:id="@+id/coordinator_progreso"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity">
+    tools:context="com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ProgresoEntregaActivity">
     <include layout="@layout/content_progreso_entrega" />
     <FrameLayout
         android:layout_width="wrap_content"

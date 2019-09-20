@@ -1,11 +1,10 @@
-package com.acerosocotlan.progresoacerosocotlan.Controlador;
+package com.acerosocotlan.progresoacerosocotlan.Controlador.MenuPrincipal;
 
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.net.Uri;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -14,6 +13,9 @@ import android.text.TextUtils;
 import android.view.MotionEvent;
 import android.view.View;
 
+import com.acerosocotlan.progresoacerosocotlan.Controlador.PortalClientes.PortalCliente;
+import com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.CodigoIngreso;
+import com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ProgresoEntregaActivity;
 import com.acerosocotlan.progresoacerosocotlan.Modelo.MetodosSharedPreference;
 import com.acerosocotlan.progresoacerosocotlan.R;
 
@@ -172,7 +174,7 @@ public class MenuOpciones extends AppCompatActivity implements View.OnTouchListe
      * EN CASO DE QUE SI ENTONCES SE BRINCA LA VENTANA DONDE SE SOLICITA EL CODIGO DE RASTREO
      */
     private void abrirRastreoPedido() {
-        Intent intentCodigoIngreso = new Intent(MenuOpciones.this,CodigoIngreso.class);
+        Intent intentCodigoIngreso = new Intent(MenuOpciones.this, CodigoIngreso.class);
         Intent intentProcesoEntrega = new Intent(MenuOpciones.this, ProgresoEntregaActivity.class);
 
         if (!TextUtils.isEmpty(MetodosSharedPreference.ObtenerCodigoEntregaPref(prs))){
@@ -190,7 +192,7 @@ public class MenuOpciones extends AppCompatActivity implements View.OnTouchListe
         /*Uri uri = Uri.parse("https://portalcliente.acerosocotlan.mx/");
         Intent intent = new Intent(Intent.ACTION_VIEW, uri);
         startActivity(intent);*/
-        Intent intentCodigoIngreso = new Intent(MenuOpciones.this,PortalCliente.class);
+        Intent intentCodigoIngreso = new Intent(MenuOpciones.this, PortalCliente.class);
         startActivity(intentCodigoIngreso);
     }
 }

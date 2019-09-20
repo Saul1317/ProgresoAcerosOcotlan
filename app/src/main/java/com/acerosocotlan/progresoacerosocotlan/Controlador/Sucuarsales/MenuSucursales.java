@@ -7,18 +7,22 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
 import android.view.View;
-import android.widget.ImageView;
 
 import com.acerosocotlan.progresoacerosocotlan.R;
 
 public class MenuSucursales extends AppCompatActivity implements View.OnClickListener {
 
     CardView btn_localizar_sucursal, btn_sucursales_disponibles;
+    String URL = "http://maps.google.com/maps?q=Aceros+ocotlan";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_sucursales);
+        iniciador();
+    }
+
+    private void iniciador() {
         btn_localizar_sucursal = (CardView) findViewById(R.id.btn_localizar_sucursal);
         btn_localizar_sucursal.setOnClickListener(this);
         btn_sucursales_disponibles = (CardView) findViewById(R.id.btn_sucursales_disponibles);
@@ -29,8 +33,7 @@ public class MenuSucursales extends AppCompatActivity implements View.OnClickLis
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.btn_localizar_sucursal:
-                String map = "http://maps.google.com/maps?q=Aceros+ocotlan";
-                Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse(map));
+                Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse(URL));
                 startActivity(i);
                 break;
 

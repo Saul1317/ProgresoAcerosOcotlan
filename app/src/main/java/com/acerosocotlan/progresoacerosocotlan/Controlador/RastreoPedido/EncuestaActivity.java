@@ -1,6 +1,5 @@
-package com.acerosocotlan.progresoacerosocotlan.Controlador;
+package com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido;
 
-import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;

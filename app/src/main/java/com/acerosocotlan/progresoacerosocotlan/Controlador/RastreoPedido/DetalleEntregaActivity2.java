@@ -1,11 +1,10 @@
-package com.acerosocotlan.progresoacerosocotlan.Controlador;
+package com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido;
 
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;

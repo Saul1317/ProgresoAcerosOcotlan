@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Controlador.VerOferta">
+    tools:context=".Controlador.RastreoPedido.VerOferta">
     <include layout="@layout/content_ver_oferta" />
     <FrameLayout
         android:layout_width="wrap_content"

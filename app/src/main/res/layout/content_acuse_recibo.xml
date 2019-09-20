@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".Controlador.AcuseRecibo"
+    tools:context=".Controlador.RastreoPedido.AcuseRecibo"
     tools:showIn="@layout/activity_acuse_recibo">
     <FrameLayout
         android:layout_width="match_parent"

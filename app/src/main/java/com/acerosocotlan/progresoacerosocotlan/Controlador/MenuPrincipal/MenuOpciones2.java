@@ -1,9 +1,8 @@
-package com.acerosocotlan.progresoacerosocotlan.Controlador;
+package com.acerosocotlan.progresoacerosocotlan.Controlador.MenuPrincipal;
 
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -14,10 +13,13 @@ import android.widget.ImageView;
 import com.acerosocotlan.progresoacerosocotlan.Controlador.Catalogo.CatalogoProductos;
 import com.acerosocotlan.progresoacerosocotlan.Controlador.Contacto.Contacto;
 import com.acerosocotlan.progresoacerosocotlan.Controlador.Otros.MenuOtrosApartados;
+import com.acerosocotlan.progresoacerosocotlan.Controlador.PortalClientes.PortalCliente;
+import com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.CodigoIngreso;
+import com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.FirmaSistemasActivity;
+import com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ProgresoEntregaActivity;
 import com.acerosocotlan.progresoacerosocotlan.Controlador.Sucuarsales.MenuSucursales;
 import com.acerosocotlan.progresoacerosocotlan.Modelo.MetodosSharedPreference;
 import com.acerosocotlan.progresoacerosocotlan.R;
-import com.squareup.picasso.Picasso;
 
 public class MenuOpciones2 extends AppCompatActivity implements View.OnClickListener {
 
@@ -122,7 +124,7 @@ public class MenuOpciones2 extends AppCompatActivity implements View.OnClickList
     }
 
     private void abrirRastreoPedido() {
-        Intent intentCodigoIngreso = new Intent(MenuOpciones2.this,CodigoIngreso.class);
+        Intent intentCodigoIngreso = new Intent(MenuOpciones2.this, CodigoIngreso.class);
         Intent intentProcesoEntrega = new Intent(MenuOpciones2.this, ProgresoEntregaActivity.class);
         if (!TextUtils.isEmpty(MetodosSharedPreference.ObtenerCodigoEntregaPref(prs))){
             startActivity(intentProcesoEntrega);
@@ -136,7 +138,7 @@ public class MenuOpciones2 extends AppCompatActivity implements View.OnClickList
         /*Uri uri = Uri.parse("https://portalcliente.acerosocotlan.mx/");
         Intent intent = new Intent(Intent.ACTION_VIEW, uri);
         startActivity(intent);*/
-        Intent intentCodigoIngreso = new Intent(MenuOpciones2.this,PortalCliente.class);
+        Intent intentCodigoIngreso = new Intent(MenuOpciones2.this, PortalCliente.class);
         startActivity(intentCodigoIngreso);
     }
 

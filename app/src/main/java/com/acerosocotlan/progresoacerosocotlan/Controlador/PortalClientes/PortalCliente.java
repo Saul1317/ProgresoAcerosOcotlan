@@ -1,14 +1,9 @@
-package com.acerosocotlan.progresoacerosocotlan.Controlador;
+package com.acerosocotlan.progresoacerosocotlan.Controlador.PortalClientes;
 
 import android.Manifest;
 import android.app.DownloadManager;
-import android.content.ActivityNotFoundException;
-import android.content.BroadcastReceiver;
-import android.content.Context;
 import android.content.Intent;
-import android.content.IntentFilter;
 import android.content.pm.PackageManager;
-import android.database.Cursor;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Environment;
@@ -16,11 +11,8 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.MotionEvent;
 import android.view.View;
 import android.webkit.CookieManager;
-import android.webkit.CookieSyncManager;
 import android.webkit.DownloadListener;
 import android.webkit.URLUtil;
 import android.webkit.WebChromeClient;
@@ -30,9 +22,8 @@ import android.webkit.WebViewClient;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.acerosocotlan.progresoacerosocotlan.Controlador.MenuPrincipal.MenuOpciones2;
 import com.acerosocotlan.progresoacerosocotlan.R;
-
-import java.io.File;
 
 
 /*

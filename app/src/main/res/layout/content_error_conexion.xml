@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".Controlador.ErrorConexionActivity"
+    tools:context=".Controlador.RastreoPedido.ErrorConexionActivity"
     tools:showIn="@layout/activity_error_conexion">
     <FrameLayout
         android:layout_width="match_parent"

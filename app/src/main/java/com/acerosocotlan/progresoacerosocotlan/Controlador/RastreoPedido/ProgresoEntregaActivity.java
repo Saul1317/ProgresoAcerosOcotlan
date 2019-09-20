@@ -1,7 +1,5 @@
-package com.acerosocotlan.progresoacerosocotlan.Controlador;
+package com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido;
 
-import android.Manifest;
-import android.app.DownloadManager;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
@@ -41,8 +39,6 @@ import java.util.List;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-
-import static android.Manifest.permission.CALL_PHONE;
 
 public class ProgresoEntregaActivity extends AppCompatActivity {
     private static final long VIBRACION_TIEMPO = 50;

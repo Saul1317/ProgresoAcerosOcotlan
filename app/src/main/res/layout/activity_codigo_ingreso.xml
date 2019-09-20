@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.acerosocotlan.progresoacerosocotlan.Controlador.CodigoIngreso">
+    tools:context="com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.CodigoIngreso">
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
