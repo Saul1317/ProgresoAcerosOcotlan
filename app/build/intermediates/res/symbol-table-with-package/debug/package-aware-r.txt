@@ -1425,6 +1425,7 @@ id firma_txt_nombre5
 id firma_verde0_simba
 id firma_verde1_simba
 id fixed
+id fondo_menu_sucursales
 id forever
 id foto_camion_entrega
 id ghost_view
@@ -1471,6 +1472,7 @@ id img_completado_encuesta_pregunta1
 id img_completado_encuesta_pregunta2
 id img_completado_encuesta_pregunta3
 id img_completado_encuesta_pregunta4
+id img_contacto_background
 id img_corrugados_background
 id img_estructurales_background
 id img_galvanizados_background

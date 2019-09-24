@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
+import com.acerosocotlan.progresoacerosocotlan.Modelo.URLs;
 import com.acerosocotlan.progresoacerosocotlan.R;
 import com.squareup.picasso.Picasso;
 
@@ -14,14 +15,16 @@ public class PerfilesTubulares extends AppCompatActivity implements View.OnClick
 
     Button btn_producto_tubo_cedula, btn_producto_lamina_galvanizada,
             btn_producto_tubo_estructural, btn_producto_tuberia_conduccio_fluidos, btn_producto_ptr, btn_producto_tubular_pintado;
-
     ImageView img_perfiles_background;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_perfiles_tubulares);
+        iniciador();
+    }
 
+    private void iniciador() {
         btn_producto_tubo_cedula = (Button) findViewById(R.id.btn_producto_tubo_cedula);
         btn_producto_tubo_cedula.setOnClickListener(this);
 
@@ -41,29 +44,30 @@ public class PerfilesTubulares extends AppCompatActivity implements View.OnClick
         btn_producto_tubular_pintado.setOnClickListener(this);
 
         img_perfiles_background = (ImageView) findViewById(R.id.img_perfiles_background);
-        //Picasso.with(this).load("https://acerosocotlan.mx/app/AO_Fondo_APP.png").placeholder(R.drawable.ao__fondomesa_de_trabajo_5).into(img_perfiles_background);
+
+        Picasso.with(this).load(URLs.URL_IMAGEN_FONDO_APP).error(R.drawable.ao_portada_fondo1).placeholder(R.drawable.ao_portada_fondo1).into(img_perfiles_background);
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.btn_producto_tubo_cedula:
-                nextActivity("perfiles/tubo_cedula.pdf");
+                nextActivity(URLs.URL_PERFILES_TUBO_CEDULA);
                 break;
             case R.id.btn_producto_lamina_galvanizada:
-                nextActivity("perfiles/lamina_galvanizada.pdf");
+                nextActivity(URLs.URL_PERFILES_LAMINA_GALVANIZADA);
                 break;
             case R.id.btn_producto_tubo_estructural:
-                nextActivity("perfiles/tubo_estructural.pdf");
+                nextActivity(URLs.URL_PERFILES_TUBO_ESTRUCTURAL);
                 break;
             case R.id.btn_producto_tuberia_conduccio_fluidos:
-                nextActivity("perfiles/tuberia_conduccion_fluidos.pdf");
+                nextActivity(URLs.URL_PERFILES_TUBO_CONDUCCION_FLUIDO);
                 break;
             case R.id.btn_producto_ptr:
-                nextActivity("perfiles/ptr.pdf");
+                nextActivity(URLs.URL_PERFILES_PTR);
                 break;
             case R.id.btn_producto_tubular_pintado:
-                nextActivity("perfiles/tubular_pintado.pdf");
+                nextActivity(URLs.URL_PERFILES_TUBULAR_PINTADO);
                 break;
             default:
                 break;

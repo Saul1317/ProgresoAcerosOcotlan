@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
+import com.acerosocotlan.progresoacerosocotlan.Modelo.URLs;
 import com.acerosocotlan.progresoacerosocotlan.R;
 import com.squareup.picasso.Picasso;
 
@@ -20,6 +21,10 @@ public class Estructurales extends AppCompatActivity implements View.OnClickList
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_estructurales);
+        iniciador();
+    }
+
+    private void iniciador() {
         btn_producto_viga_ipr = (Button) findViewById(R.id.btn_producto_viga_ipr);
         btn_producto_viga_ipr.setOnClickListener(this);
         btn_producto_viga_ips = (Button) findViewById(R.id.btn_producto_viga_ips);
@@ -35,7 +40,8 @@ public class Estructurales extends AppCompatActivity implements View.OnClickList
         btn_producto_placa_acero = (Button) findViewById(R.id.btn_producto_placa_acero);
         btn_producto_placa_acero.setOnClickListener(this);
         img_estructurales_background = (ImageView) findViewById(R.id.img_estructurales_background);
-        //Picasso.with(this).load("https://acerosocotlan.mx/app/AO_Fondo_APP.png").placeholder(R.drawable.ao__fondomesa_de_trabajo_5).into(img_estructurales_background);
+        //se descarga la imagen de fondo
+        Picasso.with(this).load(URLs.URL_IMAGEN_FONDO_APP).error(R.drawable.ao_portada_fondo1).placeholder(R.drawable.ao_portada_fondo1).into(img_estructurales_background);
     }
 
     @Override
@@ -43,31 +49,31 @@ public class Estructurales extends AppCompatActivity implements View.OnClickList
         switch (v.getId()){
 
             case R.id.btn_producto_viga_ipr:
-                nextActivity("estructurales/viga_ipr.pdf");
+                nextActivity(URLs.URL_ESTRUCTURALES_VIGA_IPR);
                 break;
 
             case R.id.btn_producto_viga_ips:
-                nextActivity("estructurales/viga_ips.pdf");
+                nextActivity(URLs.URL_ESTRUCTURALES_VIGA_IPS);
                 break;
 
             case R.id.btn_producto_canales:
-                nextActivity("estructurales/canales.pdf");
+                nextActivity(URLs.URL_ESTRUCTURALES_CANALES);
                 break;
 
             case R.id.btn_producto_angulos:
-                nextActivity("estructurales/angulos.pdf");
+                nextActivity(URLs.URL_ESTRUCTURALES_ANGULOS);
                 break;
 
             case R.id.btn_producto_perfiles_tubulares_reforzados:
-                nextActivity("estructurales/perfiles_tubulares_reforzados.pdf");
+                nextActivity(URLs.URL_ESTRUCTURALES_PERFILES_TUBULARES);
                 break;
 
             case R.id.btn_producto_monten2:
-                nextActivity("estructurales/monten.pdf");
+                nextActivity(URLs.URL_ESTRUCTURALES_MONTEN);
                 break;
 
             case R.id.btn_producto_placa_acero:
-                nextActivity("estructurales/placas_acero.pdf");
+                nextActivity(URLs.URL_ESTRUCTURALES_PLACAS);
                 break;
 
             default:

@@ -21,18 +21,29 @@ public class SucursalesDisponibles extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sucursales_disponibles);
+        //Se inician los componentes y se cargan las sucursales en el Recycler View
+        iniciador();
+
+    }
+
+    private void iniciador() {
         recyclerview_sucursales_disponibles = (RecyclerView) findViewById(R.id.recyclerview_sucursales_disponibles);
+
+        //Se inicializa el recycler view
         LinearLayoutManager l = new LinearLayoutManager(getApplicationContext());
         l.setOrientation(LinearLayoutManager.VERTICAL);
         recyclerview_sucursales_disponibles.setLayoutManager(l);
+        //cargarSucursales() regresa la lista de todas las sucursales con su dirección
         AdapterRecyclerViewSucursales arv = new AdapterRecyclerViewSucursales(cargarSucursales(), R.layout.cardview_sucursal, SucursalesDisponibles.this, getApplicationContext());
         recyclerview_sucursales_disponibles.setAdapter(arv);
     }
 
+    /*
+    * Se crea una lista de sucursales
+    * En caso de que la lista deje de estar estatica entonces simplemente se hace una peticion al web service para que regrese una lista de tipo sucursales
+    */
     private List<Sucursales> cargarSucursales(){
         sucursalesList = new ArrayList<>();
-        sucursales = new Sucursales("Baja California", "5 y 10", "5 y 10, Tijuana, Baja California. Blvd. Lázaro Cárdenas No. 888-B Fracc. Moreno La Mesa. C.P. 21105");
-        sucursalesList.add(sucursales);
         sucursales = new Sucursales("Jalisco", "Acatlán", "Acatlán, Jalisco Carr. Guadalajara-Barra de Navidad Km. 30 S/N");
         sucursalesList.add(sucursales);
         sucursales = new Sucursales("Jalisco", "Ajijic", "Ajijic, Jalisco. Carretera Poniente No.125 Col. Rancho del Oro. C.P. 45920");
@@ -95,6 +106,8 @@ public class SucursalesDisponibles extends AppCompatActivity {
         sucursalesList.add(sucursales);
         sucursales = new Sucursales("Michoacán", "Morelia", "Morelia, Michoacán. Paseo de la República No.3595 Col. Rincón Quinceo. C.P. 58149");
         sucursalesList.add(sucursales);
+        sucursales = new Sucursales("Nuevo León", "Nuevo León", "Carretera Libre Federal Monterrey a Nuevo Laredo 29.5 Km. No. Exterior 29.5 Colonia Real del Sol C.P. 65555 Cienega de Flores, N.L.");
+        sucursalesList.add(sucursales);
         sucursales = new Sucursales("Jalisco", "Ocotlán Caosa", "CAOSA, Ocotlán, Jalisco. Av. 20 de Noviembre No. 220 Col. Marcos Castellanos. C.P. 47870");
         sucursalesList.add(sucursales);
         sucursales = new Sucursales("Jalisco", "Ocotlán Ferretería", "Ferretería, Matriz Ocotlán, Jalisco. Francisco I. Madero No. 783-A Col. Florida. C.P. 47820");
@@ -131,7 +144,8 @@ public class SucursalesDisponibles extends AppCompatActivity {
         sucursalesList.add(sucursales);
         sucursales = new Sucursales("Jalisco", "Zapotlanejo", "Prol. Hidalgo #492 Col. Las Granjas, Zapotlanejo Jalisco");
         sucursalesList.add(sucursales);
-        sucursales = new Sucursales("Nuevo León", "Nuevo León", "Carretera Libre Federal Monterrey a Nuevo Laredo 29.5 Km. No. Exterior 29.5 Colonia Real del Sol C.P. 65555 Cienega de Flores, N.L.");
+        sucursales = new Sucursales("Baja California", "5 y 10", "5 y 10, Tijuana, Baja California. Blvd. Lázaro Cárdenas No. 888-B Fracc. Moreno La Mesa. C.P. 21105");
+        sucursalesList.add(sucursales);
         return sucursalesList;
     }
 }

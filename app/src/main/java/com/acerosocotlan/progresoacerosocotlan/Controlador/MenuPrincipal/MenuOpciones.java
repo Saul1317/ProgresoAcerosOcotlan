@@ -25,6 +25,7 @@ import com.acerosocotlan.progresoacerosocotlan.R;
 * - REASTREAR PEDIDO
 * - PORTAL DE CLIENTE
 *
+* AVISO: YA NO SE UTILIZA ESTA CLASE
 * */
 
 public class MenuOpciones extends AppCompatActivity implements View.OnTouchListener {

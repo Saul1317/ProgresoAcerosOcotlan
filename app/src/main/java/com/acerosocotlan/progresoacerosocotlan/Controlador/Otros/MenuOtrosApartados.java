@@ -10,20 +10,30 @@ import android.widget.ImageView;
 import com.acerosocotlan.progresoacerosocotlan.Controlador.Otros.AvisoPrivacidad.AvisoPrivacidad;
 import com.acerosocotlan.progresoacerosocotlan.Controlador.Otros.Convertidor.MenuConvertidor;
 import com.acerosocotlan.progresoacerosocotlan.Controlador.Otros.PortalTransaparencia.PortalTransparencia;
+import com.acerosocotlan.progresoacerosocotlan.Modelo.URLs;
 import com.acerosocotlan.progresoacerosocotlan.R;
+import com.squareup.picasso.Picasso;
 
+
+/*
+* Sub Menú en donde el usuario podrá encontrar varias funciones extra
+*/
 public class MenuOtrosApartados extends AppCompatActivity implements View.OnClickListener {
 
+    //Componentes
     CardView btn_conversiones, btn_portal_trasparencia, btn_aviso_privacidad;
     ImageView imagen_fondo_menu_otros_apartados;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_otros_apartados);
+        //inicializamos los componentes
+        iniciador();
+    }
 
-        imagen_fondo_menu_otros_apartados = (ImageView) findViewById(R.id.imagen_fondo_menu_otros_apartados);
-        //Picasso.with(this).load("https://acerosocotlan.mx/app/AO_Fondo_APP.png").placeholder(R.drawable.ao__fondomesa_de_trabajo_5).into(imagen_fondo_menu_otros_apartados);
-
+    private void iniciador() {
         btn_conversiones = (CardView) findViewById(R.id.btn_conversiones);
         btn_conversiones.setOnClickListener(this);
 
@@ -32,6 +42,10 @@ public class MenuOtrosApartados extends AppCompatActivity implements View.OnClic
 
         btn_aviso_privacidad = (CardView) findViewById(R.id.btn_aviso_privacidad);
         btn_aviso_privacidad.setOnClickListener(this);
+
+        imagen_fondo_menu_otros_apartados = (ImageView) findViewById(R.id.imagen_fondo_menu_otros_apartados);
+        //se descarga el fondo de la aplicación
+        Picasso.with(this).load(URLs.URL_IMAGEN_FONDO_APP).error(R.drawable.ao_portada_fondo1).placeholder(R.drawable.ao_portada_fondo1).into(imagen_fondo_menu_otros_apartados);
     }
 
     @Override

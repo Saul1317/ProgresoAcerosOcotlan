@@ -74,7 +74,7 @@
             android:screenOrientation="portrait"
             android:theme="@style/pantalla_completa2" />
         <activity
-            android:name=".Controlador.MenuPrincipal.MenuOpciones2"
+            android:name=".Controlador.MenuPrincipal.MenuPrincipal"
             android:screenOrientation="portrait"
             android:theme="@style/pantalla_completa2" />
         <activity

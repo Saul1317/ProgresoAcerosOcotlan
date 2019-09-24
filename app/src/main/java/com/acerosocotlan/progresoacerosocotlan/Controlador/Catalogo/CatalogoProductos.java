@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
+import com.acerosocotlan.progresoacerosocotlan.Modelo.URLs;
 import com.acerosocotlan.progresoacerosocotlan.R;
 import com.squareup.picasso.Picasso;
 
@@ -19,60 +20,55 @@ public class CatalogoProductos extends AppCompatActivity implements View.OnClick
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_catalogo_productos);
+        //Inicializamos los componentes
+        iniciador();
 
-        btn_catalogo_galvanizados = (Button) findViewById(R.id.btn_catalogo_galvanizados);
-        btn_catalogo_galvanizados.setOnClickListener(this);
-
-        btn_catalogo_comercial = (Button) findViewById(R.id.btn_catalogo_comercial);
-        btn_catalogo_comercial.setOnClickListener(this);
-
-        btn_catalogo_perfiles = (Button) findViewById(R.id.btn_catalogo_perfiles);
-        btn_catalogo_perfiles.setOnClickListener(this);
-
-        btn_catalogo_estructurales = (Button) findViewById(R.id.btn_catalogo_estructurales);
-        btn_catalogo_estructurales.setOnClickListener(this);
-
-        btn_catalogo_planos = (Button) findViewById(R.id.btn_catalogo_planos);
-        btn_catalogo_planos.setOnClickListener(this);
-
-        btn_catalogo_corrugados = (Button) findViewById(R.id.btn_catalogo_corrugados);
-        btn_catalogo_corrugados.setOnClickListener(this);
-
-        img_catalago_background = (ImageView) findViewById(R.id.img_catalago_background);
-        //Picasso.with(this).load("https://acerosocotlan.mx/app/AO_Fondo_APP.png").placeholder(R.drawable.ao__fondomesa_de_trabajo_5).into(img_catalago_background);
     }
 
+    private void iniciador() {
+        btn_catalogo_galvanizados = (Button) findViewById(R.id.btn_catalogo_galvanizados);
+        btn_catalogo_galvanizados.setOnClickListener(this);
+        btn_catalogo_comercial = (Button) findViewById(R.id.btn_catalogo_comercial);
+        btn_catalogo_comercial.setOnClickListener(this);
+        btn_catalogo_perfiles = (Button) findViewById(R.id.btn_catalogo_perfiles);
+        btn_catalogo_perfiles.setOnClickListener(this);
+        btn_catalogo_estructurales = (Button) findViewById(R.id.btn_catalogo_estructurales);
+        btn_catalogo_estructurales.setOnClickListener(this);
+        btn_catalogo_planos = (Button) findViewById(R.id.btn_catalogo_planos);
+        btn_catalogo_planos.setOnClickListener(this);
+        btn_catalogo_corrugados = (Button) findViewById(R.id.btn_catalogo_corrugados);
+        btn_catalogo_corrugados.setOnClickListener(this);
+        img_catalago_background = (ImageView) findViewById(R.id.img_catalago_background);
+        //se descarga la imagen de fondo
+        Picasso.with(this).load(URLs.URL_IMAGEN_FONDO_APP).error(R.drawable.ao_portada_fondo1).placeholder(R.drawable.ao_portada_fondo1).into(img_catalago_background);
+    }
+
+    //Eventos de click de los botones por medio de su id
     @Override
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.btn_catalogo_galvanizados:
-                Intent intent = new Intent(this, Galvanizados.class);
-                startActivity(intent);
+                abrirProductos(Galvanizados.class);
                 break;
 
             case R.id.btn_catalogo_comercial:
-                Intent comerciales = new Intent(this, Comerciales.class);
-                startActivity(comerciales);
+                abrirProductos(Comerciales.class);
                 break;
 
             case R.id.btn_catalogo_perfiles:
-                Intent perfiles = new Intent(this, PerfilesTubulares.class);
-                startActivity(perfiles);
+                abrirProductos(PerfilesTubulares.class);
                 break;
 
             case R.id.btn_catalogo_estructurales:
-                Intent estructurales = new Intent(this, Estructurales.class);
-                startActivity(estructurales);
+                abrirProductos(Estructurales.class);
                 break;
 
             case R.id.btn_catalogo_planos:
-                Intent planos = new Intent(this, Planos.class);
-                startActivity(planos);
+                abrirProductos(Planos.class);
                 break;
 
             case R.id.btn_catalogo_corrugados:
-                Intent corrugados = new Intent(this, CorrugadosTrefilados.class);
-                startActivity(corrugados);
+                abrirProductos(CorrugadosTrefilados.class);
                 break;
             default:
                 break;
@@ -80,5 +76,10 @@ public class CatalogoProductos extends AppCompatActivity implements View.OnClick
     }
 
 
+    //abrir el catálogo del tipo de acero seleccionado
+    public void abrirProductos(Class tipo_producto){
+        Intent intent = new Intent(this, tipo_producto);
+        startActivity(intent);
+    }
 
 }

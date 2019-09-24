@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
+import com.acerosocotlan.progresoacerosocotlan.Modelo.URLs;
 import com.acerosocotlan.progresoacerosocotlan.R;
 import com.squareup.picasso.Picasso;
 
@@ -20,17 +21,21 @@ public class Galvanizados extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_galvanizados);
+        iniciador();
+    }
+
+    private void iniciador() {
         btn_producto_galvanizados = (Button) findViewById(R.id.btn_producto_galvanizados);
         btn_producto_galvanizados.setOnClickListener(this);
         img_galvanizados_background = (ImageView) findViewById(R.id.img_galvanizados_background);
-        //Picasso.with(this).load("https://acerosocotlan.mx/app/AO_Fondo_APP.png").placeholder(R.drawable.ao__fondomesa_de_trabajo_5).into(img_galvanizados_background);
+        Picasso.with(this).load(URLs.URL_IMAGEN_FONDO_APP).error(R.drawable.ao_portada_fondo1).placeholder(R.drawable.ao_portada_fondo1).into(img_galvanizados_background);
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.btn_producto_galvanizados:
-                nextActivity("galvanizados/galvanizado.pdf");
+                nextActivity(URLs.URL_GALVANIZADO_GALVANIZADOS);
                 break;
 
             default:

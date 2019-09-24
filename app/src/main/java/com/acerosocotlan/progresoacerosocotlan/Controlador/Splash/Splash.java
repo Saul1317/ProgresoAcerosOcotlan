@@ -9,7 +9,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 
-import com.acerosocotlan.progresoacerosocotlan.Controlador.MenuPrincipal.MenuOpciones2;
+import com.acerosocotlan.progresoacerosocotlan.Controlador.MenuPrincipal.MenuPrincipal;
 import com.acerosocotlan.progresoacerosocotlan.R;
 
 public class Splash extends AppCompatActivity {
@@ -47,7 +47,7 @@ public class Splash extends AppCompatActivity {
     }
     public void CargarActivity(){
         //SE HACE REFERENCIA A LA SIGUIENTE CLASE MENUOPCIONES.CLASS
-        Intent intent = new Intent(Splash.this, MenuOpciones2.class);
+        Intent intent = new Intent(Splash.this, MenuPrincipal.class);
         //ESTA LINEA DE CODIGO SIRVE PARA QUE EL USUARIO AL MOMENTO DE PRESIONAR EL BOTON DE REGRESAR NO PUEDA REGRESARSE A ESTA CLASE
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         //SE INICIA LA SIGUIENTE ACTIVIDAD

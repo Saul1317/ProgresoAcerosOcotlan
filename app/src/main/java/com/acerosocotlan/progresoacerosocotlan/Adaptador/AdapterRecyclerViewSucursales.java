@@ -17,13 +17,22 @@ import com.acerosocotlan.progresoacerosocotlan.R;
 
 import java.util.List;
 
+/**
+ * Created by Saul.
+ *
+ * El adpatador funciona para configurar las propiedades y el comportamiento que tendrá el recyclerview
+ * Adaptador para cargar todas las sucursales de aceros ocotlan en el recyclerview de SucursalesDisponibles.class
+ */
 public class AdapterRecyclerViewSucursales extends RecyclerView.Adapter<AdapterRecyclerViewSucursales.AdapterRecyclerViewSucursalesHolder>{
 
+    //Lista de resultados obtenidos en una consulta
     private List<Sucursales> sucursalesList;
+    //el archivo xml que se utilizara para configurar el Cardview
     private int resource;
     private Activity activity;
     private Context context;
 
+    //Constructor donde recibira la lista con los resultados, el xml con la vista del cardview, la activity y el contexto
     public AdapterRecyclerViewSucursales(List<Sucursales> sucursalesList, int resource, Activity activity, Context context) {
         this.sucursalesList = sucursalesList;
         this.resource = resource;
@@ -31,13 +40,14 @@ public class AdapterRecyclerViewSucursales extends RecyclerView.Adapter<AdapterR
         this.context = context;
     }
 
-    @NonNull
+    //Se utiliza el xml del cardview que se utilizara para el recycler view
     @Override
     public AdapterRecyclerViewSucursalesHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         View view = LayoutInflater.from(viewGroup.getContext()).inflate(resource, viewGroup,false);
         return new AdapterRecyclerViewSucursales.AdapterRecyclerViewSucursalesHolder(view);
     }
 
+    //Se pasan los datos de la lista a los componentes del cardview
     @Override
     public void onBindViewHolder(@NonNull AdapterRecyclerViewSucursalesHolder holder, int i) {
         final Sucursales sucursales = sucursalesList.get(i);
@@ -55,11 +65,13 @@ public class AdapterRecyclerViewSucursales extends RecyclerView.Adapter<AdapterR
 
     }
 
+    //Número de items que se harán en base al número de filas que tiene la lista
     @Override
     public int getItemCount() {
         return sucursalesList.size();
     }
 
+    //Aquí se hacen las referencias del cardview y despues se manda llamar esta clase para acceder a los componentes y pasar los datos
     public class AdapterRecyclerViewSucursalesHolder extends RecyclerView.ViewHolder{
         private TextView sucursal_disponible, sucursal_estado,sucursal_direccion;
         private CardView cardview_sucursales_disponibles;

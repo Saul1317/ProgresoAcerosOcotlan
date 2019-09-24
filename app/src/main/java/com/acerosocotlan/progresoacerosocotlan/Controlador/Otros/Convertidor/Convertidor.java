@@ -47,11 +47,9 @@ public class Convertidor extends AppCompatActivity {
 
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerTipo.setAdapter(new Iconos_Unidades_SpinnerAdapter(this,item));
-        spinnerTipo.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener()
-        {
+        spinnerTipo.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id)
-            {
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
                 llenarAdapter(position, Tipo);
                 cantidad.setText("");

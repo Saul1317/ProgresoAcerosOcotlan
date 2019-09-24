@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
+import com.acerosocotlan.progresoacerosocotlan.Modelo.URLs;
 import com.acerosocotlan.progresoacerosocotlan.R;
 import com.squareup.picasso.Picasso;
 
@@ -19,6 +20,11 @@ public class CorrugadosTrefilados extends AppCompatActivity implements View.OnCl
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_corrugados_trefilados);
+        //se inicializa los componentes de la vista
+        iniciador();
+    }
+
+    public void iniciador(){
         btn_producto_varilla = (Button) findViewById(R.id.btn_producto_varilla);
         btn_producto_varilla.setOnClickListener(this);
         btn_producto_alambre = (Button) findViewById(R.id.btn_producto_alambre);
@@ -28,26 +34,28 @@ public class CorrugadosTrefilados extends AppCompatActivity implements View.OnCl
         btn_producto_malla = (Button) findViewById(R.id.btn_producto_malla);
         btn_producto_malla.setOnClickListener(this);
         img_corrugados_background = (ImageView) findViewById(R.id.img_corrugados_background);
-        //Picasso.with(this).load("https://acerosocotlan.mx/app/AO_Fondo_APP.png").placeholder(R.drawable.ao__fondomesa_de_trabajo_5).into(img_corrugados_background);
+        //Descarga imagen de fondo
+        Picasso.with(this).load(URLs.URL_IMAGEN_FONDO_APP).error(R.drawable.ao_portada_fondo1).placeholder(R.drawable.ao_portada_fondo1).into(img_corrugados_background);
     }
+
 
     @Override
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.btn_producto_varilla:
-                nextActivity("corrugados/varilla_corrugada.pdf");
+                nextActivity(URLs.URL_CORRUGADOS_VARILLA);
                 break;
 
             case R.id.btn_producto_alambre:
-                nextActivity("corrugados/alambre.pdf");
+                nextActivity(URLs.URL_CORRUGADOS_ALAMBRE);
                 break;
 
             case R.id.btn_producto_castillos:
-                nextActivity("corrugados/castillos.pdf");
+                nextActivity(URLs.URL_CORRUGADOS_CASTILLO);
                 break;
 
             case R.id.btn_producto_malla:
-                nextActivity("corrugados/malla.pdf");
+                nextActivity(URLs.URL_CORRUGADOS_MALLA);
                 break;
 
             default:
@@ -55,6 +63,7 @@ public class CorrugadosTrefilados extends AppCompatActivity implements View.OnCl
         }
     }
 
+    //Se abre CataloPDF.class para visualizar el producto seleccionado
     public void nextActivity(String nombre_pdf){
         Intent intent = new Intent(this, CatalogoPDF.class);
         intent.putExtra("url_pdf", nombre_pdf);

@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
+import com.acerosocotlan.progresoacerosocotlan.Modelo.URLs;
 import com.acerosocotlan.progresoacerosocotlan.R;
 import com.squareup.picasso.Picasso;
 
@@ -19,7 +20,10 @@ public class Planos extends AppCompatActivity implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_planos);
+        iniciador();
+    }
 
+    private void iniciador() {
         btn_producto_placa_acero2 = (Button) findViewById(R.id.btn_producto_placa_acero2);
         btn_producto_placa_acero2.setOnClickListener(this);
 
@@ -30,23 +34,22 @@ public class Planos extends AppCompatActivity implements View.OnClickListener {
         btn_producto_galvanizados2.setOnClickListener(this);
 
         img_planos_background = (ImageView) findViewById(R.id.img_planos_background);
-        //Picasso.with(this).load("https://acerosocotlan.mx/app/AO_Fondo_APP.png").placeholder(R.drawable.ao__fondomesa_de_trabajo_5).into(img_planos_background);
-
+        Picasso.with(this).load(URLs.URL_IMAGEN_FONDO_APP).error(R.drawable.ao_portada_fondo1).placeholder(R.drawable.ao_portada_fondo1).into(img_planos_background);
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.btn_producto_placa_acero2:
-                nextActivity("planos/placas_acero.pdf");
+                nextActivity(URLs.URL_PLANOS_PLACAS_ACEROS);
                 break;
 
             case R.id.btn_producto_lamina_negra:
-                nextActivity("planos/lamina_negra.pdf");
+                nextActivity(URLs.URL_PLANOS_LAMINA_NEGRA);
                 break;
 
             case R.id.btn_producto_galvanizados2:
-                nextActivity("planos/lamina_galvanizadas.pdf");
+                nextActivity(URLs.URL_PLANOS_LAMINA_GALVANIZADAS);
                 break;
 
             default:
