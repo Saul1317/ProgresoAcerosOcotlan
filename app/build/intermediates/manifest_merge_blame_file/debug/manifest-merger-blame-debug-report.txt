@@ -1,8 +1,8 @@
 1<?xml version="1.0" encoding="utf-8"?>
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
 3    package="com.acerosocotlan.progresoacerosocotlan"
-4    android:versionCode="10"
-5    android:versionName="2.0.0" >
+4    android:versionCode="11"
+5    android:versionName="2.0.1" >
 6
 7    <uses-sdk
 8        android:minSdkVersion="21"
@@ -41,258 +41,257 @@
 23-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:9:9-54
 24        android:supportsRtl="true"
 24-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:10:9-35
-25        android:testOnly="true"
-26        android:theme="@style/AppTheme"
-26-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:11:9-40
-27        android:usesCleartextTraffic="true" >
-27-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:12:9-44
-28        <activity
-28-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:13:9-16:66
-29            android:name="com.acerosocotlan.progresoacerosocotlan.Controlador.Sucuarsales.SucursalesDisponibles"
-29-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:14:13-74
-30            android:screenOrientation="portrait"
-30-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:15:13-49
-31            android:theme="@style/pantalla_completa2" />
-31-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:16:13-54
-32        <activity
-32-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:17:9-20:56
-33            android:name="com.acerosocotlan.progresoacerosocotlan.Controlador.Sucuarsales.MenuSucursales"
-33-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:18:13-67
-34            android:screenOrientation="portrait"
-34-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:19:13-49
-35            android:theme="@style/pantalla_completa2" />
-35-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:20:13-54
-36        <activity
-36-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:21:9-24:57
-37            android:name="com.acerosocotlan.progresoacerosocotlan.Controlador.Otros.AvisoPrivacidad.AvisoPrivacidad"
-37-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:22:13-78
-38            android:screenOrientation="portrait"
-38-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:23:13-49
-39            android:theme="@style/pantalla_completa2" />
-39-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:24:13-54
-40        <activity
-40-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:25:9-28:57
-41            android:name="com.acerosocotlan.progresoacerosocotlan.Controlador.Otros.PortalTransaparencia.PortalTransparencia"
-41-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:26:13-87
-42            android:screenOrientation="portrait"
-42-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:27:13-49
-43            android:theme="@style/pantalla_completa2" />
-43-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:28:13-54
-44        <activity
-44-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:29:9-32:57
-45            android:name="com.acerosocotlan.progresoacerosocotlan.Controlador.Otros.MenuOtrosApartados"
-45-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:30:13-65
-46            android:screenOrientation="portrait"
-46-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:31:13-49
-47            android:theme="@style/pantalla_completa2" />
-47-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:32:13-54
-48        <activity
-48-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:33:9-36:57
-49            android:name="com.acerosocotlan.progresoacerosocotlan.Controlador.Contacto.Contacto"
-49-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:34:13-58
-50            android:screenOrientation="portrait"
-50-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:35:13-49
-51            android:theme="@style/pantalla_completa2" />
-51-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:36:13-54
-52        <activity
-52-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:37:9-40:57
-53            android:name="com.acerosocotlan.progresoacerosocotlan.Controlador.Otros.Convertidor.Convertidor"
-53-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:38:13-70
-54            android:screenOrientation="portrait"
-54-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:39:13-49
-55            android:theme="@style/pantalla_completa2" />
-55-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:40:13-54
-56        <activity
-56-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:41:9-43:57
-57            android:name="com.acerosocotlan.progresoacerosocotlan.Controlador.Otros.Convertidor.MenuConvertidor"
-57-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:42:13-74
-58            android:theme="@style/pantalla_completa2" />
-58-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:43:13-54
-59        <activity
-59-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:44:9-47:57
-60            android:name="com.acerosocotlan.progresoacerosocotlan.Controlador.Catalogo.CatalogoPDF"
-60-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:45:13-61
-61            android:screenOrientation="portrait"
-61-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:46:13-49
-62            android:theme="@style/pantalla_completa2" />
-62-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:47:13-54
-63        <activity
-63-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:48:9-51:57
-64            android:name="com.acerosocotlan.progresoacerosocotlan.Controlador.Catalogo.Galvanizados"
-64-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:49:13-62
-65            android:screenOrientation="portrait"
-65-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:50:13-49
-66            android:theme="@style/pantalla_completa2" />
-66-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:51:13-54
-67        <activity
-67-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:52:9-55:57
-68            android:name="com.acerosocotlan.progresoacerosocotlan.Controlador.Catalogo.CorrugadosTrefilados"
-68-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:53:13-70
-69            android:screenOrientation="portrait"
-69-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:54:13-49
-70            android:theme="@style/pantalla_completa2" />
-70-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:55:13-54
-71        <activity
-71-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:56:9-59:57
-72            android:name="com.acerosocotlan.progresoacerosocotlan.Controlador.Catalogo.Planos"
-72-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:57:13-56
-73            android:screenOrientation="portrait"
-73-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:58:13-49
-74            android:theme="@style/pantalla_completa2" />
-74-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:59:13-54
-75        <activity
-75-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:60:9-63:57
-76            android:name="com.acerosocotlan.progresoacerosocotlan.Controlador.Catalogo.Estructurales"
-76-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:61:13-63
-77            android:label="@string/title_activity_estructurales"
-77-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:62:13-65
-78            android:theme="@style/pantalla_completa2" />
-78-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:63:13-54
-79        <activity
-79-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:64:9-67:57
-80            android:name="com.acerosocotlan.progresoacerosocotlan.Controlador.Catalogo.PerfilesTubulares"
-80-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:65:13-67
-81            android:screenOrientation="portrait"
-81-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:66:13-49
-82            android:theme="@style/pantalla_completa2" />
-82-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:67:13-54
-83        <activity
-83-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:68:9-71:57
-84            android:name="com.acerosocotlan.progresoacerosocotlan.Controlador.Catalogo.Comerciales"
-84-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:69:13-61
-85            android:screenOrientation="portrait"
-85-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:70:13-49
-86            android:theme="@style/pantalla_completa2" />
-86-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:71:13-54
-87        <activity
-87-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:72:9-75:57
-88            android:name="com.acerosocotlan.progresoacerosocotlan.Controlador.Catalogo.CatalogoProductos"
-88-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:73:13-67
-89            android:screenOrientation="portrait"
-89-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:74:13-49
-90            android:theme="@style/pantalla_completa2" />
-90-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:75:13-54
-91        <activity
-91-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:76:9-79:57
-92            android:name="com.acerosocotlan.progresoacerosocotlan.Controlador.MenuPrincipal.MenuPrincipal"
-92-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:77:13-68
-93            android:screenOrientation="portrait"
-93-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:78:13-49
-94            android:theme="@style/pantalla_completa2" />
-94-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:79:13-54
-95        <activity
-95-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:80:9-82:59
-96            android:name="com.acerosocotlan.progresoacerosocotlan.Controlador.PortalClientes.PortalCliente"
-96-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:81:13-69
-97            android:theme="@style/AppTheme.NoActionBar" />
-97-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:82:13-56
-98        <activity
-98-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:83:9-86:59
-99            android:name="com.acerosocotlan.progresoacerosocotlan.Controlador.MenuPrincipal.MenuOpciones"
-99-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:84:13-67
-100            android:screenOrientation="portrait"
-100-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:85:13-49
-101            android:theme="@style/AppTheme.NoActionBar" />
-101-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:86:13-56
-102        <activity
-102-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:87:9-97:20
-103            android:name="com.acerosocotlan.progresoacerosocotlan.Controlador.Splash.Splash"
-103-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:88:13-54
-104            android:label="@string/app_name"
-104-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:89:13-45
-105            android:screenOrientation="portrait"
-105-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:90:13-49
-106            android:theme="@style/pantalla_completa2" >
-106-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:91:13-54
-107            <intent-filter>
-107-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:92:13-96:29
-108                <action android:name="android.intent.action.MAIN" />
-108-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:93:17-69
-108-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:93:25-66
-109
-110                <category android:name="android.intent.category.LAUNCHER" />
-110-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:95:17-77
-110-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:95:27-74
-111            </intent-filter>
-112        </activity>
-113        <activity
-113-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:98:9-102:57
-114            android:name="com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ProgresoEntregaActivity"
-114-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:99:13-78
-115            android:label="@string/title_activity_progreso_entrega"
-115-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:100:13-68
-116            android:screenOrientation="landscape"
-116-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:101:13-50
-117            android:theme="@style/pantalla_completa2" />
-117-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:102:13-54
-118        <activity
-118-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:103:9-107:57
-119            android:name="com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.DetalleEntregaActivity2"
-119-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:104:13-78
-120            android:label="Detalles de su entrega"
-120-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:105:13-51
-121            android:screenOrientation="landscape"
-121-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:106:13-50
-122            android:theme="@style/pantalla_completa2" />
-122-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:107:13-54
-123        <activity
-123-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:108:9-112:67
-124            android:name="com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.CodigoIngreso"
-124-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:109:13-68
-125            android:screenOrientation="portrait"
-125-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:110:13-49
-126            android:theme="@style/Pantalla_codigo_ingreso"
-126-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:111:13-59
-127            android:windowSoftInputMode="stateHidden|adjustPan" />
-127-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:112:13-64
-128        <activity
-128-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:113:9-117:57
-129            android:name="com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.EncuestaActivity"
-129-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:114:13-71
-130            android:label="@string/title_activity_encuesta"
-130-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:115:13-60
-131            android:screenOrientation="landscape"
-131-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:116:13-50
-132            android:theme="@style/pantalla_completa2" />
-132-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:117:13-54
-133        <activity
-133-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:118:9-122:57
-134            android:name="com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.VerOferta"
-134-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:119:13-64
-135            android:label="@string/title_activity_ver_oferta"
-135-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:120:13-62
-136            android:screenOrientation="landscape"
-136-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:121:13-50
-137            android:theme="@style/pantalla_completa2" />
-137-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:122:13-54
-138        <activity
-138-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:123:9-127:57
-139            android:name="com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ErrorConexionActivity"
-139-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:124:13-76
-140            android:label="@string/title_activity_error_conexion"
-140-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:125:13-66
-141            android:screenOrientation="landscape"
-141-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:126:13-50
-142            android:theme="@style/pantalla_completa2" />
-142-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:127:13-54
-143        <activity
-143-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:128:9-131:57
-144            android:name="com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.FirmaSistemasActivity"
-144-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:129:13-76
-145            android:screenOrientation="landscape"
-145-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:130:13-50
-146            android:theme="@style/pantalla_completa2" />
-146-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:131:13-54
-147        <activity
-147-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:132:9-136:57
-148            android:name="com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.AcuseRecibo"
-148-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:133:13-66
-149            android:label="@string/title_activity_acuse_recibo"
-149-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:134:13-64
-150            android:screenOrientation="portrait"
-150-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:135:13-49
-151            android:theme="@style/pantalla_completa2" />
-151-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:136:13-54
-152    </application>
-153
-154</manifest>
+25        android:theme="@style/AppTheme"
+25-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:11:9-40
+26        android:usesCleartextTraffic="true" >
+26-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:12:9-44
+27        <activity
+27-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:13:9-16:66
+28            android:name="com.acerosocotlan.progresoacerosocotlan.Controlador.Sucuarsales.SucursalesDisponibles"
+28-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:14:13-74
+29            android:screenOrientation="portrait"
+29-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:15:13-49
+30            android:theme="@style/pantalla_completa2" />
+30-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:16:13-54
+31        <activity
+31-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:17:9-20:56
+32            android:name="com.acerosocotlan.progresoacerosocotlan.Controlador.Sucuarsales.MenuSucursales"
+32-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:18:13-67
+33            android:screenOrientation="portrait"
+33-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:19:13-49
+34            android:theme="@style/pantalla_completa2" />
+34-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:20:13-54
+35        <activity
+35-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:21:9-24:57
+36            android:name="com.acerosocotlan.progresoacerosocotlan.Controlador.Otros.AvisoPrivacidad.AvisoPrivacidad"
+36-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:22:13-78
+37            android:screenOrientation="portrait"
+37-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:23:13-49
+38            android:theme="@style/pantalla_completa2" />
+38-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:24:13-54
+39        <activity
+39-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:25:9-28:57
+40            android:name="com.acerosocotlan.progresoacerosocotlan.Controlador.Otros.PortalTransaparencia.PortalTransparencia"
+40-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:26:13-87
+41            android:screenOrientation="portrait"
+41-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:27:13-49
+42            android:theme="@style/pantalla_completa2" />
+42-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:28:13-54
+43        <activity
+43-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:29:9-32:57
+44            android:name="com.acerosocotlan.progresoacerosocotlan.Controlador.Otros.MenuOtrosApartados"
+44-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:30:13-65
+45            android:screenOrientation="portrait"
+45-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:31:13-49
+46            android:theme="@style/pantalla_completa2" />
+46-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:32:13-54
+47        <activity
+47-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:33:9-36:57
+48            android:name="com.acerosocotlan.progresoacerosocotlan.Controlador.Contacto.Contacto"
+48-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:34:13-58
+49            android:screenOrientation="portrait"
+49-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:35:13-49
+50            android:theme="@style/pantalla_completa2" />
+50-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:36:13-54
+51        <activity
+51-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:37:9-40:57
+52            android:name="com.acerosocotlan.progresoacerosocotlan.Controlador.Otros.Convertidor.Convertidor"
+52-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:38:13-70
+53            android:screenOrientation="portrait"
+53-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:39:13-49
+54            android:theme="@style/pantalla_completa2" />
+54-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:40:13-54
+55        <activity
+55-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:41:9-43:57
+56            android:name="com.acerosocotlan.progresoacerosocotlan.Controlador.Otros.Convertidor.MenuConvertidor"
+56-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:42:13-74
+57            android:theme="@style/pantalla_completa2" />
+57-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:43:13-54
+58        <activity
+58-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:44:9-47:57
+59            android:name="com.acerosocotlan.progresoacerosocotlan.Controlador.Catalogo.CatalogoPDF"
+59-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:45:13-61
+60            android:screenOrientation="portrait"
+60-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:46:13-49
+61            android:theme="@style/pantalla_completa2" />
+61-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:47:13-54
+62        <activity
+62-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:48:9-51:57
+63            android:name="com.acerosocotlan.progresoacerosocotlan.Controlador.Catalogo.Galvanizados"
+63-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:49:13-62
+64            android:screenOrientation="portrait"
+64-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:50:13-49
+65            android:theme="@style/pantalla_completa2" />
+65-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:51:13-54
+66        <activity
+66-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:52:9-55:57
+67            android:name="com.acerosocotlan.progresoacerosocotlan.Controlador.Catalogo.CorrugadosTrefilados"
+67-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:53:13-70
+68            android:screenOrientation="portrait"
+68-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:54:13-49
+69            android:theme="@style/pantalla_completa2" />
+69-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:55:13-54
+70        <activity
+70-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:56:9-59:57
+71            android:name="com.acerosocotlan.progresoacerosocotlan.Controlador.Catalogo.Planos"
+71-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:57:13-56
+72            android:screenOrientation="portrait"
+72-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:58:13-49
+73            android:theme="@style/pantalla_completa2" />
+73-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:59:13-54
+74        <activity
+74-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:60:9-63:57
+75            android:name="com.acerosocotlan.progresoacerosocotlan.Controlador.Catalogo.Estructurales"
+75-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:61:13-63
+76            android:label="@string/title_activity_estructurales"
+76-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:62:13-65
+77            android:theme="@style/pantalla_completa2" />
+77-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:63:13-54
+78        <activity
+78-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:64:9-67:57
+79            android:name="com.acerosocotlan.progresoacerosocotlan.Controlador.Catalogo.PerfilesTubulares"
+79-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:65:13-67
+80            android:screenOrientation="portrait"
+80-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:66:13-49
+81            android:theme="@style/pantalla_completa2" />
+81-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:67:13-54
+82        <activity
+82-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:68:9-71:57
+83            android:name="com.acerosocotlan.progresoacerosocotlan.Controlador.Catalogo.Comerciales"
+83-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:69:13-61
+84            android:screenOrientation="portrait"
+84-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:70:13-49
+85            android:theme="@style/pantalla_completa2" />
+85-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:71:13-54
+86        <activity
+86-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:72:9-75:57
+87            android:name="com.acerosocotlan.progresoacerosocotlan.Controlador.Catalogo.CatalogoProductos"
+87-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:73:13-67
+88            android:screenOrientation="portrait"
+88-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:74:13-49
+89            android:theme="@style/pantalla_completa2" />
+89-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:75:13-54
+90        <activity
+90-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:76:9-79:57
+91            android:name="com.acerosocotlan.progresoacerosocotlan.Controlador.MenuPrincipal.MenuPrincipal"
+91-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:77:13-68
+92            android:screenOrientation="portrait"
+92-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:78:13-49
+93            android:theme="@style/pantalla_completa2" />
+93-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:79:13-54
+94        <activity
+94-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:80:9-82:59
+95            android:name="com.acerosocotlan.progresoacerosocotlan.Controlador.PortalClientes.PortalCliente"
+95-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:81:13-69
+96            android:theme="@style/AppTheme.NoActionBar" />
+96-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:82:13-56
+97        <activity
+97-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:83:9-86:59
+98            android:name="com.acerosocotlan.progresoacerosocotlan.Controlador.MenuPrincipal.MenuOpciones"
+98-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:84:13-67
+99            android:screenOrientation="portrait"
+99-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:85:13-49
+100            android:theme="@style/AppTheme.NoActionBar" />
+100-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:86:13-56
+101        <activity
+101-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:87:9-97:20
+102            android:name="com.acerosocotlan.progresoacerosocotlan.Controlador.Splash.Splash"
+102-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:88:13-54
+103            android:label="@string/app_name"
+103-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:89:13-45
+104            android:screenOrientation="portrait"
+104-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:90:13-49
+105            android:theme="@style/pantalla_completa2" >
+105-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:91:13-54
+106            <intent-filter>
+106-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:92:13-96:29
+107                <action android:name="android.intent.action.MAIN" />
+107-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:93:17-69
+107-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:93:25-66
+108
+109                <category android:name="android.intent.category.LAUNCHER" />
+109-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:95:17-77
+109-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:95:27-74
+110            </intent-filter>
+111        </activity>
+112        <activity
+112-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:98:9-102:57
+113            android:name="com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ProgresoEntregaActivity"
+113-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:99:13-78
+114            android:label="@string/title_activity_progreso_entrega"
+114-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:100:13-68
+115            android:screenOrientation="landscape"
+115-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:101:13-50
+116            android:theme="@style/pantalla_completa2" />
+116-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:102:13-54
+117        <activity
+117-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:103:9-107:57
+118            android:name="com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.DetalleEntregaActivity2"
+118-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:104:13-78
+119            android:label="Detalles de su entrega"
+119-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:105:13-51
+120            android:screenOrientation="landscape"
+120-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:106:13-50
+121            android:theme="@style/pantalla_completa2" />
+121-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:107:13-54
+122        <activity
+122-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:108:9-112:67
+123            android:name="com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.CodigoIngreso"
+123-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:109:13-68
+124            android:screenOrientation="portrait"
+124-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:110:13-49
+125            android:theme="@style/Pantalla_codigo_ingreso"
+125-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:111:13-59
+126            android:windowSoftInputMode="stateHidden|adjustPan" />
+126-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:112:13-64
+127        <activity
+127-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:113:9-117:57
+128            android:name="com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.EncuestaActivity"
+128-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:114:13-71
+129            android:label="@string/title_activity_encuesta"
+129-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:115:13-60
+130            android:screenOrientation="landscape"
+130-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:116:13-50
+131            android:theme="@style/pantalla_completa2" />
+131-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:117:13-54
+132        <activity
+132-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:118:9-122:57
+133            android:name="com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.VerOferta"
+133-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:119:13-64
+134            android:label="@string/title_activity_ver_oferta"
+134-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:120:13-62
+135            android:screenOrientation="landscape"
+135-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:121:13-50
+136            android:theme="@style/pantalla_completa2" />
+136-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:122:13-54
+137        <activity
+137-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:123:9-127:57
+138            android:name="com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ErrorConexionActivity"
+138-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:124:13-76
+139            android:label="@string/title_activity_error_conexion"
+139-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:125:13-66
+140            android:screenOrientation="landscape"
+140-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:126:13-50
+141            android:theme="@style/pantalla_completa2" />
+141-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:127:13-54
+142        <activity
+142-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:128:9-131:57
+143            android:name="com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.FirmaSistemasActivity"
+143-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:129:13-76
+144            android:screenOrientation="landscape"
+144-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:130:13-50
+145            android:theme="@style/pantalla_completa2" />
+145-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:131:13-54
+146        <activity
+146-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:132:9-136:57
+147            android:name="com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.AcuseRecibo"
+147-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:133:13-66
+148            android:label="@string/title_activity_acuse_recibo"
+148-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:134:13-64
+149            android:screenOrientation="portrait"
+149-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:135:13-49
+150            android:theme="@style/pantalla_completa2" />
+150-->/Users/sauldelgado/AndroidStudioProjects/ProgresoAcerosOcotlan/app/src/main/AndroidManifest.xml:136:13-54
+151    </application>
+152
+153</manifest>
