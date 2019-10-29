@@ -1,7 +1,7 @@
 # compiler: R8
 # compiler_version: 1.5.64
 # min_api: 21
-# pg_map_id: 6e30954
+# pg_map_id: 97dd00f
 android.arch.core.executor.ArchTaskExecutor -> a.a.a.a.a:
     android.arch.core.executor.ArchTaskExecutor sInstance -> c
     android.arch.core.executor.TaskExecutor mDelegate -> a
@@ -10051,7 +10051,29 @@ com.acerosocotlan.progresoacerosocotlan.Adaptador.AdapterRecyclerViewOfertas$Ada
     android.widget.TextView access$100(com.acerosocotlan.progresoacerosocotlan.Adaptador.AdapterRecyclerViewOfertas$AdapterRecyclerHolder) -> b
     android.widget.TextView access$200(com.acerosocotlan.progresoacerosocotlan.Adaptador.AdapterRecyclerViewOfertas$AdapterRecyclerHolder) -> c
     android.widget.ImageView access$300(com.acerosocotlan.progresoacerosocotlan.Adaptador.AdapterRecyclerViewOfertas$AdapterRecyclerHolder) -> d
-com.acerosocotlan.progresoacerosocotlan.Adaptador.AdapterRecylerViewHistoricoEnvio -> b.a.a.a.c:
+com.acerosocotlan.progresoacerosocotlan.Adaptador.AdapterRecyclerViewSucursales -> b.a.a.a.c:
+    android.app.Activity activity -> e
+    java.util.List sucursalesList -> c
+    int resource -> d
+    android.app.Activity access$300(com.acerosocotlan.progresoacerosocotlan.Adaptador.AdapterRecyclerViewSucursales) -> a
+    int getItemCount() -> a
+    void onBindViewHolder(com.acerosocotlan.progresoacerosocotlan.Adaptador.AdapterRecyclerViewSucursales$AdapterRecyclerViewSucursalesHolder,int) -> a
+    void onBindViewHolder(android.support.v7.widget.RecyclerView$ViewHolder,int) -> b
+    android.support.v7.widget.RecyclerView$ViewHolder onCreateViewHolder(android.view.ViewGroup,int) -> b
+    com.acerosocotlan.progresoacerosocotlan.Adaptador.AdapterRecyclerViewSucursales$AdapterRecyclerViewSucursalesHolder onCreateViewHolder(android.view.ViewGroup,int) -> b
+com.acerosocotlan.progresoacerosocotlan.Adaptador.AdapterRecyclerViewSucursales$1 -> b.a.a.a.c$a:
+    com.acerosocotlan.progresoacerosocotlan.Controlador.Sucuarsales.Sucursales val$sucursales -> b
+    com.acerosocotlan.progresoacerosocotlan.Adaptador.AdapterRecyclerViewSucursales this$0 -> c
+com.acerosocotlan.progresoacerosocotlan.Adaptador.AdapterRecyclerViewSucursales$AdapterRecyclerViewSucursalesHolder -> b.a.a.a.c$b:
+    android.widget.TextView sucursal_estado -> u
+    android.widget.TextView sucursal_disponible -> t
+    android.widget.TextView sucursal_direccion -> v
+    android.support.v7.widget.CardView cardview_sucursales_disponibles -> w
+    android.widget.TextView access$000(com.acerosocotlan.progresoacerosocotlan.Adaptador.AdapterRecyclerViewSucursales$AdapterRecyclerViewSucursalesHolder) -> a
+    android.widget.TextView access$100(com.acerosocotlan.progresoacerosocotlan.Adaptador.AdapterRecyclerViewSucursales$AdapterRecyclerViewSucursalesHolder) -> b
+    android.widget.TextView access$200(com.acerosocotlan.progresoacerosocotlan.Adaptador.AdapterRecyclerViewSucursales$AdapterRecyclerViewSucursalesHolder) -> c
+    android.support.v7.widget.CardView access$400(com.acerosocotlan.progresoacerosocotlan.Adaptador.AdapterRecyclerViewSucursales$AdapterRecyclerViewSucursalesHolder) -> d
+com.acerosocotlan.progresoacerosocotlan.Adaptador.AdapterRecylerViewHistoricoEnvio -> b.a.a.a.d:
     java.util.List arraylistHistorico -> c
     int resource -> d
     int getItemCount() -> a
@@ -10059,75 +10081,43 @@ com.acerosocotlan.progresoacerosocotlan.Adaptador.AdapterRecylerViewHistoricoEnv
     void onBindViewHolder(android.support.v7.widget.RecyclerView$ViewHolder,int) -> b
     android.support.v7.widget.RecyclerView$ViewHolder onCreateViewHolder(android.view.ViewGroup,int) -> b
     com.acerosocotlan.progresoacerosocotlan.Adaptador.AdapterRecylerViewHistoricoEnvio$AdapterRecyclerHolder onCreateViewHolder(android.view.ViewGroup,int) -> b
-com.acerosocotlan.progresoacerosocotlan.Adaptador.AdapterRecylerViewHistoricoEnvio$AdapterRecyclerHolder -> b.a.a.a.c$a:
+com.acerosocotlan.progresoacerosocotlan.Adaptador.AdapterRecylerViewHistoricoEnvio$AdapterRecyclerHolder -> b.a.a.a.d$a:
     android.widget.TextView lista_procesos_historico -> u
     android.widget.TextView txt_fecha_historico -> t
     android.widget.TextView access$000(com.acerosocotlan.progresoacerosocotlan.Adaptador.AdapterRecylerViewHistoricoEnvio$AdapterRecyclerHolder) -> a
     android.widget.TextView access$100(com.acerosocotlan.progresoacerosocotlan.Adaptador.AdapterRecylerViewHistoricoEnvio$AdapterRecyclerHolder) -> b
-com.acerosocotlan.progresoacerosocotlan.Controlador.AcuseRecibo -> com.acerosocotlan.progresoacerosocotlan.Controlador.AcuseRecibo:
-    android.content.SharedPreferences prs -> t
-    int rotacion -> x
-    android.os.Vibrator vibrador -> u
-    android.widget.TextView txt_mensaje_acuse_recibo -> v
-    android.support.design.widget.FloatingActionButton fab_mandar_correo -> w
-    android.widget.ImageView img_rotateright_img -> r
-    it.sephiroth.android.library.imagezoom.ImageViewTouch img_acuse_recibo -> q
-    android.widget.ImageView btn_back -> s
-    android.os.Vibrator access$000(com.acerosocotlan.progresoacerosocotlan.Controlador.AcuseRecibo) -> a
-    void access$100(com.acerosocotlan.progresoacerosocotlan.Controlador.AcuseRecibo) -> b
-    it.sephiroth.android.library.imagezoom.ImageViewTouch access$200(com.acerosocotlan.progresoacerosocotlan.Controlador.AcuseRecibo) -> c
-    void access$300(com.acerosocotlan.progresoacerosocotlan.Controlador.AcuseRecibo) -> d
-    android.widget.TextView access$400(com.acerosocotlan.progresoacerosocotlan.Controlador.AcuseRecibo) -> e
-    android.support.design.widget.FloatingActionButton access$500(com.acerosocotlan.progresoacerosocotlan.Controlador.AcuseRecibo) -> f
-    android.widget.ImageView access$600(com.acerosocotlan.progresoacerosocotlan.Controlador.AcuseRecibo) -> g
-    void DialogoConfimacionEnviarAcuse() -> l
-    void IniciadorViews() -> m
-    void ReenviarAcuseRecibo() -> n
-    void VerAcuseRecibo() -> o
-com.acerosocotlan.progresoacerosocotlan.Controlador.AcuseRecibo$1 -> com.acerosocotlan.progresoacerosocotlan.Controlador.AcuseRecibo$a:
-    com.acerosocotlan.progresoacerosocotlan.Controlador.AcuseRecibo this$0 -> b
-com.acerosocotlan.progresoacerosocotlan.Controlador.AcuseRecibo$2 -> com.acerosocotlan.progresoacerosocotlan.Controlador.AcuseRecibo$b:
-    com.acerosocotlan.progresoacerosocotlan.Controlador.AcuseRecibo this$0 -> b
-com.acerosocotlan.progresoacerosocotlan.Controlador.AcuseRecibo$3 -> com.acerosocotlan.progresoacerosocotlan.Controlador.AcuseRecibo$c:
-    com.acerosocotlan.progresoacerosocotlan.Controlador.AcuseRecibo this$0 -> b
-com.acerosocotlan.progresoacerosocotlan.Controlador.AcuseRecibo$4 -> com.acerosocotlan.progresoacerosocotlan.Controlador.AcuseRecibo$d:
-    com.acerosocotlan.progresoacerosocotlan.Controlador.AcuseRecibo this$0 -> c
-    android.support.v7.app.AlertDialog val$alertDialog -> b
-com.acerosocotlan.progresoacerosocotlan.Controlador.AcuseRecibo$5 -> com.acerosocotlan.progresoacerosocotlan.Controlador.AcuseRecibo$e:
-    com.acerosocotlan.progresoacerosocotlan.Controlador.AcuseRecibo this$0 -> c
-    android.support.v7.app.AlertDialog val$alertDialog -> b
-com.acerosocotlan.progresoacerosocotlan.Controlador.AcuseRecibo$6 -> com.acerosocotlan.progresoacerosocotlan.Controlador.AcuseRecibo$f:
-    com.acerosocotlan.progresoacerosocotlan.Controlador.AcuseRecibo this$0 -> a
-    void onFailure(retrofit2.Call,java.lang.Throwable) -> a
-    void onResponse(retrofit2.Call,retrofit2.Response) -> a
-com.acerosocotlan.progresoacerosocotlan.Controlador.AcuseRecibo$7 -> com.acerosocotlan.progresoacerosocotlan.Controlador.AcuseRecibo$g:
-    com.acerosocotlan.progresoacerosocotlan.Controlador.AcuseRecibo this$0 -> a
-    void onFailure(retrofit2.Call,java.lang.Throwable) -> a
-    void onResponse(retrofit2.Call,retrofit2.Response) -> a
 com.acerosocotlan.progresoacerosocotlan.Controlador.Catalogo.CatalogoPDF -> com.acerosocotlan.progresoacerosocotlan.Controlador.Catalogo.CatalogoPDF:
-    android.webkit.WebView webview_pdf -> s
-    java.lang.String url_base -> q
-    java.lang.String url -> r
-com.acerosocotlan.progresoacerosocotlan.Controlador.Catalogo.CatalogoPDF$1 -> com.acerosocotlan.progresoacerosocotlan.Controlador.Catalogo.CatalogoPDF$a:
+    java.lang.String URL_TIPO_PRODUCTO -> q
+    android.webkit.WebView webview_pdf -> r
+    void configuracionWebViewCatalogoPDF() -> l
+    void iniciador() -> m
 com.acerosocotlan.progresoacerosocotlan.Controlador.Catalogo.CatalogoProductos -> com.acerosocotlan.progresoacerosocotlan.Controlador.Catalogo.CatalogoProductos:
     android.widget.Button btn_catalogo_corrugados -> v
+    android.widget.ImageView img_catalago_background -> w
     android.widget.Button btn_catalogo_galvanizados -> q
     android.widget.Button btn_catalogo_planos -> u
     android.widget.Button btn_catalogo_estructurales -> t
     android.widget.Button btn_catalogo_perfiles -> s
     android.widget.Button btn_catalogo_comercial -> r
+    void abrirProductos(java.lang.Class) -> a
+    void iniciador() -> l
 com.acerosocotlan.progresoacerosocotlan.Controlador.Catalogo.Comerciales -> com.acerosocotlan.progresoacerosocotlan.Controlador.Catalogo.Comerciales:
     android.widget.Button btn_producto_perfiles_comerciales -> q
+    android.widget.ImageView img_comerciales_background -> t
     android.widget.Button btn_producto_monten -> s
     android.widget.Button btn_producto_solera -> r
     void nextActivity(java.lang.String) -> a
+    void iniciador() -> l
 com.acerosocotlan.progresoacerosocotlan.Controlador.Catalogo.CorrugadosTrefilados -> com.acerosocotlan.progresoacerosocotlan.Controlador.Catalogo.CorrugadosTrefilados:
     android.widget.Button btn_producto_varilla -> q
     android.widget.Button btn_producto_malla -> t
+    android.widget.ImageView img_corrugados_background -> u
     android.widget.Button btn_producto_castillos -> s
     android.widget.Button btn_producto_alambre -> r
     void nextActivity(java.lang.String) -> a
+    void iniciador() -> l
 com.acerosocotlan.progresoacerosocotlan.Controlador.Catalogo.Estructurales -> com.acerosocotlan.progresoacerosocotlan.Controlador.Catalogo.Estructurales:
+    android.widget.ImageView img_estructurales_background -> x
     android.widget.Button btn_producto_placa_acero -> w
     android.widget.Button btn_producto_monten2 -> v
     android.widget.Button btn_producto_viga_ipr -> q
@@ -10136,287 +10126,72 @@ com.acerosocotlan.progresoacerosocotlan.Controlador.Catalogo.Estructurales -> co
     android.widget.Button btn_producto_canales -> s
     android.widget.Button btn_producto_viga_ips -> r
     void nextActivity(java.lang.String) -> a
+    void iniciador() -> l
 com.acerosocotlan.progresoacerosocotlan.Controlador.Catalogo.Galvanizados -> com.acerosocotlan.progresoacerosocotlan.Controlador.Catalogo.Galvanizados:
     android.widget.Button btn_producto_galvanizados -> q
+    android.widget.ImageView img_galvanizados_background -> r
     void nextActivity(java.lang.String) -> a
+    void iniciador() -> l
 com.acerosocotlan.progresoacerosocotlan.Controlador.Catalogo.PerfilesTubulares -> com.acerosocotlan.progresoacerosocotlan.Controlador.Catalogo.PerfilesTubulares:
     android.widget.Button btn_producto_tubular_pintado -> v
+    android.widget.ImageView img_perfiles_background -> w
     android.widget.Button btn_producto_tubo_cedula -> q
     android.widget.Button btn_producto_ptr -> u
     android.widget.Button btn_producto_tuberia_conduccio_fluidos -> t
     android.widget.Button btn_producto_tubo_estructural -> s
     android.widget.Button btn_producto_lamina_galvanizada -> r
     void nextActivity(java.lang.String) -> a
+    void iniciador() -> l
 com.acerosocotlan.progresoacerosocotlan.Controlador.Catalogo.Planos -> com.acerosocotlan.progresoacerosocotlan.Controlador.Catalogo.Planos:
     android.widget.Button btn_producto_placa_acero2 -> q
+    android.widget.ImageView img_planos_background -> t
     android.widget.Button btn_producto_galvanizados2 -> s
     android.widget.Button btn_producto_lamina_negra -> r
     void nextActivity(java.lang.String) -> a
-com.acerosocotlan.progresoacerosocotlan.Controlador.CodigoIngreso -> com.acerosocotlan.progresoacerosocotlan.Controlador.CodigoIngreso:
-    android.content.SharedPreferences prs -> v
-    android.app.ProgressDialog progressDoalog -> w
-    android.widget.Button boton_enviar_folio -> q
-    android.widget.ImageView camion_click -> A
-    android.support.design.widget.TextInputEditText codigo_rastreo -> r
-    int firma -> C
-    android.widget.ImageView camion_humo -> B
-    android.view.animation.Animation carro_salida_animacion -> u
-    java.lang.String txtprueba2 -> y
-    java.lang.String txtprueba1 -> x
-    java.lang.String txtprueba3 -> z
-    android.view.animation.Animation carro_animacion -> s
-    android.view.animation.Animation humo_animacion -> t
-    void access$000(com.acerosocotlan.progresoacerosocotlan.Controlador.CodigoIngreso) -> a
-    void access$100(com.acerosocotlan.progresoacerosocotlan.Controlador.CodigoIngreso) -> b
-    java.lang.String access$1000(com.acerosocotlan.progresoacerosocotlan.Controlador.CodigoIngreso) -> c
-    void access$200(com.acerosocotlan.progresoacerosocotlan.Controlador.CodigoIngreso) -> d
-    void access$300(com.acerosocotlan.progresoacerosocotlan.Controlador.CodigoIngreso) -> e
-    android.app.ProgressDialog access$400(com.acerosocotlan.progresoacerosocotlan.Controlador.CodigoIngreso) -> f
-    android.content.SharedPreferences access$500(com.acerosocotlan.progresoacerosocotlan.Controlador.CodigoIngreso) -> g
-    void access$600(com.acerosocotlan.progresoacerosocotlan.Controlador.CodigoIngreso) -> h
-    void access$700(com.acerosocotlan.progresoacerosocotlan.Controlador.CodigoIngreso) -> i
-    void access$800(com.acerosocotlan.progresoacerosocotlan.Controlador.CodigoIngreso) -> j
-    void access$900(com.acerosocotlan.progresoacerosocotlan.Controlador.CodigoIngreso) -> k
-    void AbrirFirma() -> l
-    void CarroAnimacion() -> m
-    void ConsultarCodigo() -> n
-    void Inicializador() -> o
-    void MostrarDialogCustomNoConexionServidor() -> p
-    void MostrarDialogCustomNoConfiguracion() -> q
-    void ValidarUsuario() -> r
-    void encryptar() -> s
-    void prueba() -> t
-    void prueba2() -> u
-com.acerosocotlan.progresoacerosocotlan.Controlador.CodigoIngreso$1 -> com.acerosocotlan.progresoacerosocotlan.Controlador.CodigoIngreso$a:
-    com.acerosocotlan.progresoacerosocotlan.Controlador.CodigoIngreso this$0 -> b
-com.acerosocotlan.progresoacerosocotlan.Controlador.CodigoIngreso$2 -> com.acerosocotlan.progresoacerosocotlan.Controlador.CodigoIngreso$b:
-    com.acerosocotlan.progresoacerosocotlan.Controlador.CodigoIngreso this$0 -> b
-com.acerosocotlan.progresoacerosocotlan.Controlador.CodigoIngreso$3 -> com.acerosocotlan.progresoacerosocotlan.Controlador.CodigoIngreso$c:
-    com.acerosocotlan.progresoacerosocotlan.Controlador.CodigoIngreso this$0 -> a
-com.acerosocotlan.progresoacerosocotlan.Controlador.CodigoIngreso$4 -> com.acerosocotlan.progresoacerosocotlan.Controlador.CodigoIngreso$d:
-    com.acerosocotlan.progresoacerosocotlan.Controlador.CodigoIngreso this$0 -> c
-    android.support.v7.app.AlertDialog val$alertDialog -> b
-com.acerosocotlan.progresoacerosocotlan.Controlador.CodigoIngreso$5 -> com.acerosocotlan.progresoacerosocotlan.Controlador.CodigoIngreso$e:
-    com.acerosocotlan.progresoacerosocotlan.Controlador.CodigoIngreso this$0 -> c
-    android.support.v7.app.AlertDialog val$alertDialog -> b
-com.acerosocotlan.progresoacerosocotlan.Controlador.CodigoIngreso$6 -> com.acerosocotlan.progresoacerosocotlan.Controlador.CodigoIngreso$f:
-    com.acerosocotlan.progresoacerosocotlan.Controlador.CodigoIngreso this$0 -> a
-    void onFailure(retrofit2.Call,java.lang.Throwable) -> a
-    void onResponse(retrofit2.Call,retrofit2.Response) -> a
-com.acerosocotlan.progresoacerosocotlan.Controlador.CodigoIngreso$7 -> com.acerosocotlan.progresoacerosocotlan.Controlador.CodigoIngreso$g:
-    com.acerosocotlan.progresoacerosocotlan.Controlador.CodigoIngreso this$0 -> a
-    void onFailure(retrofit2.Call,java.lang.Throwable) -> a
-    void onResponse(retrofit2.Call,retrofit2.Response) -> a
-com.acerosocotlan.progresoacerosocotlan.Controlador.CodigoIngreso$8 -> com.acerosocotlan.progresoacerosocotlan.Controlador.CodigoIngreso$h:
-    com.acerosocotlan.progresoacerosocotlan.Controlador.CodigoIngreso this$0 -> a
-    void onFailure(retrofit2.Call,java.lang.Throwable) -> a
-    void onResponse(retrofit2.Call,retrofit2.Response) -> a
+    void iniciador() -> l
 com.acerosocotlan.progresoacerosocotlan.Controlador.Contacto.Contacto -> com.acerosocotlan.progresoacerosocotlan.Controlador.Contacto.Contacto:
-    java.lang.String telefono -> w
     android.widget.ImageView btn_twitter -> v
-    java.lang.String email -> x
+    java.lang.String email -> y
+    android.widget.ImageView img_contacto_background -> w
+    java.lang.String telefono -> x
     android.widget.ImageView btn_correo -> q
     android.widget.ImageView btn_phone -> t
     android.widget.ImageView btn_sms -> u
     android.widget.ImageView btn_whatsapp -> r
     android.widget.ImageView btn_facebook -> s
     boolean whatsappInstalledOrNot(java.lang.String) -> a
-    void abrirAplicacionCorreo() -> l
-    void abrirAplicacionFacebook() -> m
-    void abrirAplicacionLlamadas() -> n
-    void abrirAplicacionMensajes() -> o
-    void abrirAplicacionTwitter() -> p
-    void abrirAplicacionWhatsapp() -> q
-com.acerosocotlan.progresoacerosocotlan.Controlador.DetalleEntregaActivity2 -> com.acerosocotlan.progresoacerosocotlan.Controlador.DetalleEntregaActivity2:
-    android.content.SharedPreferences prs -> t
-    android.support.v7.widget.RecyclerView detallesRecyclerview -> q
-    android.app.ProgressDialog progressDoalog -> u
-    android.widget.ImageView imageViewFondoDetallesEntrega -> r
-    android.widget.LinearLayout linear_layout_filtro_detalle -> s
-    void LlenarRecyclerView(java.util.List) -> a
-    android.app.ProgressDialog access$000(com.acerosocotlan.progresoacerosocotlan.Controlador.DetalleEntregaActivity2) -> a
-    void access$100(com.acerosocotlan.progresoacerosocotlan.Controlador.DetalleEntregaActivity2,java.util.List) -> a
-    void ValidarEstatusActualEntrega(java.util.List) -> b
-    void access$200(com.acerosocotlan.progresoacerosocotlan.Controlador.DetalleEntregaActivity2,java.util.List) -> b
-    void RecogerEstatusEntrega() -> l
-    void ObtenerDetalleEntrega() -> m
-    void inicializador() -> n
-com.acerosocotlan.progresoacerosocotlan.Controlador.DetalleEntregaActivity2$1 -> com.acerosocotlan.progresoacerosocotlan.Controlador.DetalleEntregaActivity2$a:
-    com.acerosocotlan.progresoacerosocotlan.Controlador.DetalleEntregaActivity2 this$0 -> a
-    void onFailure(retrofit2.Call,java.lang.Throwable) -> a
-    void onResponse(retrofit2.Call,retrofit2.Response) -> a
-com.acerosocotlan.progresoacerosocotlan.Controlador.DetalleEntregaActivity2$2 -> com.acerosocotlan.progresoacerosocotlan.Controlador.DetalleEntregaActivity2$b:
-    com.acerosocotlan.progresoacerosocotlan.Controlador.DetalleEntregaActivity2 this$0 -> a
-    void onFailure(retrofit2.Call,java.lang.Throwable) -> a
-    void onResponse(retrofit2.Call,retrofit2.Response) -> a
-com.acerosocotlan.progresoacerosocotlan.Controlador.EncuestaActivity -> com.acerosocotlan.progresoacerosocotlan.Controlador.EncuestaActivity:
-    android.widget.ImageView btn_contento_encuesta_pregunta2 -> x
-    android.widget.ImageView btn_triste_encuesta_pregunta1 -> v
-    android.widget.ImageView btn_feliz_encuesta_pregunta3 -> z
-    java.lang.String vendedor -> O
-    java.lang.String material -> Q
-    android.widget.ImageView btn_contento_encuesta_pregunta4 -> D
-    java.lang.String aplicacion -> S
-    android.widget.ImageView btn_triste_encuesta_pregunta3 -> B
-    android.widget.ImageView img_completado_encuesta_pregunta2 -> H
-    android.widget.ImageView img_completado_encuesta_pregunta0 -> F
-    android.widget.ImageView img_completado_encuesta_pregunta4 -> J
-    int contadorPreguntas -> V
-    android.widget.ImageView btn_feliz_encuesta_pregunta0 -> q
-    android.widget.ImageView btn_contento_encuesta_pregunta1 -> u
-    android.widget.TextView txt_finalizacion_encuesta -> M
-    android.widget.ImageView btn_triste_encuesta_pregunta0 -> s
-    android.content.SharedPreferences prs -> T
-    android.widget.ImageView btn_triste_encuesta_pregunta2 -> y
-    android.widget.TextView txt_descripcion_encuesta -> N
-    android.widget.ImageView btn_feliz_encuesta_pregunta2 -> w
-    android.support.v7.widget.GridLayout gridlayout_encuesta -> L
-    android.widget.ImageView btn_contento_encuesta_pregunta3 -> A
-    java.lang.String chofer -> P
-    android.widget.ImageView btn_triste_encuesta_pregunta4 -> E
-    java.lang.String tiempo -> R
-    android.widget.ImageView btn_feliz_encuesta_pregunta4 -> C
-    android.widget.ImageView img_completado_encuesta_pregunta3 -> I
-    android.widget.ImageView img_completado_encuesta_pregunta1 -> G
-    android.widget.ImageView imagen_fondo_detalles_encuesta -> K
-    android.os.Vibrator v -> U
-    android.widget.ImageView btn_feliz_encuesta_pregunta1 -> t
-    android.widget.ImageView btn_contento_encuesta_pregunta0 -> r
-    void ValidarEstatusActualEntrega(java.util.List) -> a
-    java.lang.String access$002(com.acerosocotlan.progresoacerosocotlan.Controlador.EncuestaActivity,java.lang.String) -> a
-    void access$100(com.acerosocotlan.progresoacerosocotlan.Controlador.EncuestaActivity,int) -> a
-    void access$600(com.acerosocotlan.progresoacerosocotlan.Controlador.EncuestaActivity,java.util.List) -> a
-    java.lang.String access$202(com.acerosocotlan.progresoacerosocotlan.Controlador.EncuestaActivity,java.lang.String) -> b
-    void EfectoPregunta(int) -> c
-    java.lang.String access$302(com.acerosocotlan.progresoacerosocotlan.Controlador.EncuestaActivity,java.lang.String) -> c
-    java.lang.String access$402(com.acerosocotlan.progresoacerosocotlan.Controlador.EncuestaActivity,java.lang.String) -> d
-    java.lang.String access$502(com.acerosocotlan.progresoacerosocotlan.Controlador.EncuestaActivity,java.lang.String) -> e
-    void EnviarEncuesta() -> l
-    void Inicializador() -> m
-    void RecogerEstatusEntrega() -> n
-    void ValidarContadorPreguntas() -> o
-com.acerosocotlan.progresoacerosocotlan.Controlador.EncuestaActivity$1 -> com.acerosocotlan.progresoacerosocotlan.Controlador.EncuestaActivity$i:
-    com.acerosocotlan.progresoacerosocotlan.Controlador.EncuestaActivity this$0 -> b
-com.acerosocotlan.progresoacerosocotlan.Controlador.EncuestaActivity$10 -> com.acerosocotlan.progresoacerosocotlan.Controlador.EncuestaActivity$a:
-    com.acerosocotlan.progresoacerosocotlan.Controlador.EncuestaActivity this$0 -> b
-com.acerosocotlan.progresoacerosocotlan.Controlador.EncuestaActivity$11 -> com.acerosocotlan.progresoacerosocotlan.Controlador.EncuestaActivity$b:
-    com.acerosocotlan.progresoacerosocotlan.Controlador.EncuestaActivity this$0 -> b
-com.acerosocotlan.progresoacerosocotlan.Controlador.EncuestaActivity$12 -> com.acerosocotlan.progresoacerosocotlan.Controlador.EncuestaActivity$c:
-    com.acerosocotlan.progresoacerosocotlan.Controlador.EncuestaActivity this$0 -> b
-com.acerosocotlan.progresoacerosocotlan.Controlador.EncuestaActivity$13 -> com.acerosocotlan.progresoacerosocotlan.Controlador.EncuestaActivity$d:
-    com.acerosocotlan.progresoacerosocotlan.Controlador.EncuestaActivity this$0 -> b
-com.acerosocotlan.progresoacerosocotlan.Controlador.EncuestaActivity$14 -> com.acerosocotlan.progresoacerosocotlan.Controlador.EncuestaActivity$e:
-    com.acerosocotlan.progresoacerosocotlan.Controlador.EncuestaActivity this$0 -> b
-com.acerosocotlan.progresoacerosocotlan.Controlador.EncuestaActivity$15 -> com.acerosocotlan.progresoacerosocotlan.Controlador.EncuestaActivity$f:
-    com.acerosocotlan.progresoacerosocotlan.Controlador.EncuestaActivity this$0 -> b
-com.acerosocotlan.progresoacerosocotlan.Controlador.EncuestaActivity$16 -> com.acerosocotlan.progresoacerosocotlan.Controlador.EncuestaActivity$g:
-    com.acerosocotlan.progresoacerosocotlan.Controlador.EncuestaActivity this$0 -> a
-    void onFailure(retrofit2.Call,java.lang.Throwable) -> a
-    void onResponse(retrofit2.Call,retrofit2.Response) -> a
-com.acerosocotlan.progresoacerosocotlan.Controlador.EncuestaActivity$17 -> com.acerosocotlan.progresoacerosocotlan.Controlador.EncuestaActivity$h:
-    com.acerosocotlan.progresoacerosocotlan.Controlador.EncuestaActivity this$0 -> a
-    void onFailure(retrofit2.Call,java.lang.Throwable) -> a
-    void onResponse(retrofit2.Call,retrofit2.Response) -> a
-com.acerosocotlan.progresoacerosocotlan.Controlador.EncuestaActivity$2 -> com.acerosocotlan.progresoacerosocotlan.Controlador.EncuestaActivity$j:
-    com.acerosocotlan.progresoacerosocotlan.Controlador.EncuestaActivity this$0 -> b
-com.acerosocotlan.progresoacerosocotlan.Controlador.EncuestaActivity$3 -> com.acerosocotlan.progresoacerosocotlan.Controlador.EncuestaActivity$k:
-    com.acerosocotlan.progresoacerosocotlan.Controlador.EncuestaActivity this$0 -> b
-com.acerosocotlan.progresoacerosocotlan.Controlador.EncuestaActivity$4 -> com.acerosocotlan.progresoacerosocotlan.Controlador.EncuestaActivity$l:
-    com.acerosocotlan.progresoacerosocotlan.Controlador.EncuestaActivity this$0 -> b
-com.acerosocotlan.progresoacerosocotlan.Controlador.EncuestaActivity$5 -> com.acerosocotlan.progresoacerosocotlan.Controlador.EncuestaActivity$m:
-    com.acerosocotlan.progresoacerosocotlan.Controlador.EncuestaActivity this$0 -> b
-com.acerosocotlan.progresoacerosocotlan.Controlador.EncuestaActivity$6 -> com.acerosocotlan.progresoacerosocotlan.Controlador.EncuestaActivity$n:
-    com.acerosocotlan.progresoacerosocotlan.Controlador.EncuestaActivity this$0 -> b
-com.acerosocotlan.progresoacerosocotlan.Controlador.EncuestaActivity$7 -> com.acerosocotlan.progresoacerosocotlan.Controlador.EncuestaActivity$o:
-    com.acerosocotlan.progresoacerosocotlan.Controlador.EncuestaActivity this$0 -> b
-com.acerosocotlan.progresoacerosocotlan.Controlador.EncuestaActivity$8 -> com.acerosocotlan.progresoacerosocotlan.Controlador.EncuestaActivity$p:
-    com.acerosocotlan.progresoacerosocotlan.Controlador.EncuestaActivity this$0 -> b
-com.acerosocotlan.progresoacerosocotlan.Controlador.EncuestaActivity$9 -> com.acerosocotlan.progresoacerosocotlan.Controlador.EncuestaActivity$q:
-    com.acerosocotlan.progresoacerosocotlan.Controlador.EncuestaActivity this$0 -> b
-com.acerosocotlan.progresoacerosocotlan.Controlador.ErrorConexionActivity -> com.acerosocotlan.progresoacerosocotlan.Controlador.ErrorConexionActivity:
-    android.view.animation.Animation corazonAnimacion -> v
-    android.widget.ImageView error_conexion_simba_gracias -> q
-    int contador -> w
-    android.widget.ImageView error_conexion_corazon_simba -> t
-    android.widget.ImageView error_conexion_corazon_amarillo_simba -> u
-    android.widget.ImageView error_conexion_simba_cola -> r
-    android.widget.ImageView error_conexion_simba -> s
-    int access$000(com.acerosocotlan.progresoacerosocotlan.Controlador.ErrorConexionActivity) -> a
-    int access$002(com.acerosocotlan.progresoacerosocotlan.Controlador.ErrorConexionActivity,int) -> a
-    android.view.animation.Animation access$202(com.acerosocotlan.progresoacerosocotlan.Controlador.ErrorConexionActivity,android.view.animation.Animation) -> a
-    android.widget.ImageView access$100(com.acerosocotlan.progresoacerosocotlan.Controlador.ErrorConexionActivity) -> b
-    android.view.animation.Animation access$200(com.acerosocotlan.progresoacerosocotlan.Controlador.ErrorConexionActivity) -> c
-    android.widget.ImageView access$300(com.acerosocotlan.progresoacerosocotlan.Controlador.ErrorConexionActivity) -> d
-    android.widget.ImageView access$400(com.acerosocotlan.progresoacerosocotlan.Controlador.ErrorConexionActivity) -> e
-    android.widget.ImageView access$500(com.acerosocotlan.progresoacerosocotlan.Controlador.ErrorConexionActivity) -> f
-    void IniciadorView() -> l
-com.acerosocotlan.progresoacerosocotlan.Controlador.ErrorConexionActivity$1 -> com.acerosocotlan.progresoacerosocotlan.Controlador.ErrorConexionActivity$a:
-    com.acerosocotlan.progresoacerosocotlan.Controlador.ErrorConexionActivity this$0 -> b
-com.acerosocotlan.progresoacerosocotlan.Controlador.ErrorConexionActivity$2 -> com.acerosocotlan.progresoacerosocotlan.Controlador.ErrorConexionActivity$b:
-    com.acerosocotlan.progresoacerosocotlan.Controlador.ErrorConexionActivity this$0 -> b
-com.acerosocotlan.progresoacerosocotlan.Controlador.ErrorConexionActivity$2$1 -> com.acerosocotlan.progresoacerosocotlan.Controlador.ErrorConexionActivity$b$a:
-    com.acerosocotlan.progresoacerosocotlan.Controlador.ErrorConexionActivity$2 this$1 -> b
-com.acerosocotlan.progresoacerosocotlan.Controlador.FirmaSistemasActivity -> com.acerosocotlan.progresoacerosocotlan.Controlador.FirmaSistemasActivity:
-    android.widget.ImageView firma_verde1_simba -> x
-    android.view.animation.Animation creditosAnimacion -> E
-    android.widget.ImageView firma_verde0_simba -> y
-    android.widget.FrameLayout firma_layoout_filtro_credito -> G
-    android.widget.ImageView firma_rojo1_simba -> v
-    android.widget.ImageView firma_rojo0_simba -> w
-    android.view.animation.Animation numero1Animacion -> B
-    android.widget.ImageView firma_amarillo1_simba -> z
-    android.view.animation.Animation numero0Animacion -> C
-    int contador -> H
-    android.view.animation.Animation cola_simbaAnimacion -> D
-    android.widget.ImageView firma_amarillo0_simba -> A
-    android.widget.LinearLayout firma_linearlayout_creditos -> F
-    android.widget.ImageView firma_simba_cola -> q
-    android.widget.ImageView firma_azul0_simba -> t
-    android.widget.ImageView firma_azul1_simba -> u
-    android.widget.ImageView firma_simba -> r
-    android.widget.ImageView firma_simba_gracias -> s
-    android.support.design.widget.FloatingActionButton btn_fab_creditos -> I
-    void access$000(com.acerosocotlan.progresoacerosocotlan.Controlador.FirmaSistemasActivity) -> a
-    int access$202(com.acerosocotlan.progresoacerosocotlan.Controlador.FirmaSistemasActivity,int) -> a
-    void access$100(com.acerosocotlan.progresoacerosocotlan.Controlador.FirmaSistemasActivity) -> b
-    android.widget.ImageView access$300(com.acerosocotlan.progresoacerosocotlan.Controlador.FirmaSistemasActivity) -> c
-    android.widget.FrameLayout access$400(com.acerosocotlan.progresoacerosocotlan.Controlador.FirmaSistemasActivity) -> d
-    android.support.design.widget.FloatingActionButton access$500(com.acerosocotlan.progresoacerosocotlan.Controlador.FirmaSistemasActivity) -> e
-    void AnimacionCreditos() -> l
-    void AnimacionSimba() -> m
-    void IniciadorView() -> n
-com.acerosocotlan.progresoacerosocotlan.Controlador.FirmaSistemasActivity$1 -> com.acerosocotlan.progresoacerosocotlan.Controlador.FirmaSistemasActivity$a:
-    com.acerosocotlan.progresoacerosocotlan.Controlador.FirmaSistemasActivity this$0 -> b
-com.acerosocotlan.progresoacerosocotlan.Controlador.FirmaSistemasActivity$2 -> com.acerosocotlan.progresoacerosocotlan.Controlador.FirmaSistemasActivity$b:
-    com.acerosocotlan.progresoacerosocotlan.Controlador.FirmaSistemasActivity this$0 -> b
-com.acerosocotlan.progresoacerosocotlan.Controlador.FirmaSistemasActivity$3 -> com.acerosocotlan.progresoacerosocotlan.Controlador.FirmaSistemasActivity$c:
-    com.acerosocotlan.progresoacerosocotlan.Controlador.FirmaSistemasActivity this$0 -> b
-com.acerosocotlan.progresoacerosocotlan.Controlador.FirmaSistemasActivity$4 -> com.acerosocotlan.progresoacerosocotlan.Controlador.FirmaSistemasActivity$d:
-    com.acerosocotlan.progresoacerosocotlan.Controlador.FirmaSistemasActivity this$0 -> b
-com.acerosocotlan.progresoacerosocotlan.Controlador.MenuOpciones -> com.acerosocotlan.progresoacerosocotlan.Controlador.MenuOpciones:
+    void iniciador() -> l
+    void abrirAplicacionCorreo() -> m
+    void abrirAplicacionFacebook() -> n
+    void abrirAplicacionLlamadas() -> o
+    void abrirAplicacionMensajes() -> p
+    void abrirAplicacionTwitter() -> q
+    void abrirAplicacionWhatsapp() -> r
+com.acerosocotlan.progresoacerosocotlan.Controlador.MenuPrincipal.MenuOpciones -> com.acerosocotlan.progresoacerosocotlan.Controlador.MenuPrincipal.MenuOpciones:
     android.content.SharedPreferences prs -> s
     android.support.v7.widget.CardView cardview_portal_cliente -> r
     android.support.v7.widget.CardView cardview_rastreo_pedido -> q
-    void access$000(com.acerosocotlan.progresoacerosocotlan.Controlador.MenuOpciones) -> a
+    void access$000(com.acerosocotlan.progresoacerosocotlan.Controlador.MenuPrincipal.MenuOpciones) -> a
     void animationCardPushDown(android.support.v7.widget.CardView) -> a
     void getActionCardview(int,android.support.v7.widget.CardView,int) -> a
-    void access$100(com.acerosocotlan.progresoacerosocotlan.Controlador.MenuOpciones) -> b
+    void access$100(com.acerosocotlan.progresoacerosocotlan.Controlador.MenuPrincipal.MenuOpciones) -> b
     void animationCardPushUp(android.support.v7.widget.CardView) -> b
     void abrirPortalCliente() -> l
     void abrirRastreoPedido() -> m
     void inicializadorViews() -> n
-com.acerosocotlan.progresoacerosocotlan.Controlador.MenuOpciones$1 -> com.acerosocotlan.progresoacerosocotlan.Controlador.MenuOpciones$a:
-    com.acerosocotlan.progresoacerosocotlan.Controlador.MenuOpciones this$0 -> b
-com.acerosocotlan.progresoacerosocotlan.Controlador.MenuOpciones$2 -> com.acerosocotlan.progresoacerosocotlan.Controlador.MenuOpciones$b:
-    com.acerosocotlan.progresoacerosocotlan.Controlador.MenuOpciones this$0 -> b
-com.acerosocotlan.progresoacerosocotlan.Controlador.MenuOpciones2 -> com.acerosocotlan.progresoacerosocotlan.Controlador.MenuOpciones2:
-    android.widget.FrameLayout Framelayout_background_menu -> w
+com.acerosocotlan.progresoacerosocotlan.Controlador.MenuPrincipal.MenuOpciones$1 -> com.acerosocotlan.progresoacerosocotlan.Controlador.MenuPrincipal.MenuOpciones$a:
+    com.acerosocotlan.progresoacerosocotlan.Controlador.MenuPrincipal.MenuOpciones this$0 -> b
+com.acerosocotlan.progresoacerosocotlan.Controlador.MenuPrincipal.MenuOpciones$2 -> com.acerosocotlan.progresoacerosocotlan.Controlador.MenuPrincipal.MenuOpciones$b:
+    com.acerosocotlan.progresoacerosocotlan.Controlador.MenuPrincipal.MenuOpciones this$0 -> b
+com.acerosocotlan.progresoacerosocotlan.Controlador.MenuPrincipal.MenuPrincipal -> com.acerosocotlan.progresoacerosocotlan.Controlador.MenuPrincipal.MenuPrincipal:
+    android.widget.FrameLayout Framelayout_background_menu -> x
     android.widget.ImageView button_otros -> v
-    int count -> y
+    android.widget.ImageView imagen_fondo_menu -> w
+    int count -> z
     android.widget.ImageView button_rastreo -> q
     android.widget.ImageView button_ubicacion_sucursales -> t
-    android.content.SharedPreferences prs -> x
     android.widget.ImageView button_contacto -> u
+    android.content.SharedPreferences prs -> y
     android.widget.ImageView btn_portal_cliente -> r
     android.widget.ImageView button_producto -> s
     void abrirCatalogo() -> l
@@ -10425,10 +10200,11 @@ com.acerosocotlan.progresoacerosocotlan.Controlador.MenuOpciones2 -> com.aceroso
     void abrirPortalCliente() -> o
     void abrirRastreoPedido() -> p
     void abrirUbicaciones() -> q
-    void validarPantallaSecreta() -> r
+    void iniciador() -> r
+    void validarPantallaSecreta() -> s
 com.acerosocotlan.progresoacerosocotlan.Controlador.Otros.AvisoPrivacidad.AvisoPrivacidad -> com.acerosocotlan.progresoacerosocotlan.Controlador.Otros.AvisoPrivacidad.AvisoPrivacidad:
     android.webkit.WebView webview_aviso_privacidad -> q
-    java.lang.String url_base -> r
+    void iniciador() -> l
 com.acerosocotlan.progresoacerosocotlan.Controlador.Otros.Convertidor.Asignacion_Formulas -> com.acerosocotlan.progresoacerosocotlan.Controlador.Otros.Convertidor.a:
     com.acerosocotlan.progresoacerosocotlan.Controlador.Otros.Convertidor.Formulas formulas -> c
     java.text.DecimalFormat formato -> a
@@ -10507,22 +10283,289 @@ com.acerosocotlan.progresoacerosocotlan.Controlador.Otros.Convertidor.adapter_sp
     android.widget.TextView getTextView() -> a
     void setTextView(android.widget.TextView) -> a
 com.acerosocotlan.progresoacerosocotlan.Controlador.Otros.MenuOtrosApartados -> com.acerosocotlan.progresoacerosocotlan.Controlador.Otros.MenuOtrosApartados:
-    android.widget.ImageView btn_conversiones -> q
-    android.widget.ImageView btn_portal_trasparencia -> r
-    android.widget.ImageView btn_aviso_privacidad -> s
+    android.support.v7.widget.CardView btn_portal_trasparencia -> r
+    android.support.v7.widget.CardView btn_conversiones -> q
+    android.support.v7.widget.CardView btn_aviso_privacidad -> s
+    android.widget.ImageView imagen_fondo_menu_otros_apartados -> t
+    void iniciador() -> l
 com.acerosocotlan.progresoacerosocotlan.Controlador.Otros.PortalTransaparencia.PortalTransparencia -> com.acerosocotlan.progresoacerosocotlan.Controlador.Otros.PortalTransaparencia.PortalTransparencia:
     android.webkit.WebView webview_portal_transparencia -> q
-    java.lang.String url_base -> r
-com.acerosocotlan.progresoacerosocotlan.Controlador.PortalCliente -> com.acerosocotlan.progresoacerosocotlan.Controlador.PortalCliente:
+    void iniciador() -> l
+com.acerosocotlan.progresoacerosocotlan.Controlador.PortalClientes.PortalCliente -> com.acerosocotlan.progresoacerosocotlan.Controlador.PortalClientes.PortalCliente:
     android.webkit.WebView webview_portal_cliente -> q
     android.app.DownloadManager dm -> t
     android.widget.ImageView webview_back -> r
     android.widget.ImageView webview_sigout -> s
     void solicitarPermisos() -> l
     boolean validarPermisos() -> m
-    void inicializadorViews() -> n
-    void settingsPortalCliente() -> o
-com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity -> com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity:
+    void configurarPortalCliente() -> n
+    void inicializadorViews() -> o
+com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.AcuseRecibo -> com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.AcuseRecibo:
+    android.content.SharedPreferences prs -> t
+    int rotacion -> x
+    android.os.Vibrator vibrador -> u
+    android.widget.TextView txt_mensaje_acuse_recibo -> v
+    android.support.design.widget.FloatingActionButton fab_mandar_correo -> w
+    android.widget.ImageView img_rotateright_img -> r
+    it.sephiroth.android.library.imagezoom.ImageViewTouch img_acuse_recibo -> q
+    android.widget.ImageView btn_back -> s
+    android.os.Vibrator access$000(com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.AcuseRecibo) -> a
+    void access$100(com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.AcuseRecibo) -> b
+    it.sephiroth.android.library.imagezoom.ImageViewTouch access$200(com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.AcuseRecibo) -> c
+    void access$300(com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.AcuseRecibo) -> d
+    android.widget.TextView access$400(com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.AcuseRecibo) -> e
+    android.support.design.widget.FloatingActionButton access$500(com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.AcuseRecibo) -> f
+    android.widget.ImageView access$600(com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.AcuseRecibo) -> g
+    void DialogoConfimacionEnviarAcuse() -> l
+    void IniciadorViews() -> m
+    void ReenviarAcuseRecibo() -> n
+    void VerAcuseRecibo() -> o
+com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.AcuseRecibo$1 -> com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.AcuseRecibo$a:
+    com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.AcuseRecibo this$0 -> b
+com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.AcuseRecibo$2 -> com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.AcuseRecibo$b:
+    com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.AcuseRecibo this$0 -> b
+com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.AcuseRecibo$3 -> com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.AcuseRecibo$c:
+    com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.AcuseRecibo this$0 -> b
+com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.AcuseRecibo$4 -> com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.AcuseRecibo$d:
+    com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.AcuseRecibo this$0 -> c
+    android.support.v7.app.AlertDialog val$alertDialog -> b
+com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.AcuseRecibo$5 -> com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.AcuseRecibo$e:
+    com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.AcuseRecibo this$0 -> c
+    android.support.v7.app.AlertDialog val$alertDialog -> b
+com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.AcuseRecibo$6 -> com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.AcuseRecibo$f:
+    com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.AcuseRecibo this$0 -> a
+    void onFailure(retrofit2.Call,java.lang.Throwable) -> a
+    void onResponse(retrofit2.Call,retrofit2.Response) -> a
+com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.AcuseRecibo$7 -> com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.AcuseRecibo$g:
+    com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.AcuseRecibo this$0 -> a
+    void onFailure(retrofit2.Call,java.lang.Throwable) -> a
+    void onResponse(retrofit2.Call,retrofit2.Response) -> a
+com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.CodigoIngreso -> com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.CodigoIngreso:
+    android.content.SharedPreferences prs -> v
+    android.app.ProgressDialog progressDoalog -> w
+    android.widget.Button boton_enviar_folio -> q
+    android.widget.ImageView camion_click -> A
+    android.support.design.widget.TextInputEditText codigo_rastreo -> r
+    int firma -> C
+    android.widget.ImageView camion_humo -> B
+    android.view.animation.Animation carro_salida_animacion -> u
+    java.lang.String txtprueba2 -> y
+    java.lang.String txtprueba1 -> x
+    java.lang.String txtprueba3 -> z
+    android.view.animation.Animation carro_animacion -> s
+    android.view.animation.Animation humo_animacion -> t
+    void access$000(com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.CodigoIngreso) -> a
+    void access$100(com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.CodigoIngreso) -> b
+    java.lang.String access$1000(com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.CodigoIngreso) -> c
+    void access$200(com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.CodigoIngreso) -> d
+    void access$300(com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.CodigoIngreso) -> e
+    android.app.ProgressDialog access$400(com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.CodigoIngreso) -> f
+    android.content.SharedPreferences access$500(com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.CodigoIngreso) -> g
+    void access$600(com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.CodigoIngreso) -> h
+    void access$700(com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.CodigoIngreso) -> i
+    void access$800(com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.CodigoIngreso) -> j
+    void access$900(com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.CodigoIngreso) -> k
+    void AbrirFirma() -> l
+    void CarroAnimacion() -> m
+    void ConsultarCodigo() -> n
+    void Inicializador() -> o
+    void MostrarDialogCustomNoConexionServidor() -> p
+    void MostrarDialogCustomNoConfiguracion() -> q
+    void ValidarUsuario() -> r
+    void encryptar() -> s
+    void prueba() -> t
+    void prueba2() -> u
+com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.CodigoIngreso$1 -> com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.CodigoIngreso$a:
+    com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.CodigoIngreso this$0 -> b
+com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.CodigoIngreso$2 -> com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.CodigoIngreso$b:
+    com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.CodigoIngreso this$0 -> b
+com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.CodigoIngreso$3 -> com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.CodigoIngreso$c:
+    com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.CodigoIngreso this$0 -> a
+com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.CodigoIngreso$4 -> com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.CodigoIngreso$d:
+    android.support.v7.app.AlertDialog val$alertDialog -> b
+    com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.CodigoIngreso this$0 -> c
+com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.CodigoIngreso$5 -> com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.CodigoIngreso$e:
+    android.support.v7.app.AlertDialog val$alertDialog -> b
+    com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.CodigoIngreso this$0 -> c
+com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.CodigoIngreso$6 -> com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.CodigoIngreso$f:
+    com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.CodigoIngreso this$0 -> a
+    void onFailure(retrofit2.Call,java.lang.Throwable) -> a
+    void onResponse(retrofit2.Call,retrofit2.Response) -> a
+com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.CodigoIngreso$7 -> com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.CodigoIngreso$g:
+    com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.CodigoIngreso this$0 -> a
+    void onFailure(retrofit2.Call,java.lang.Throwable) -> a
+    void onResponse(retrofit2.Call,retrofit2.Response) -> a
+com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.CodigoIngreso$8 -> com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.CodigoIngreso$h:
+    com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.CodigoIngreso this$0 -> a
+    void onFailure(retrofit2.Call,java.lang.Throwable) -> a
+    void onResponse(retrofit2.Call,retrofit2.Response) -> a
+com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.DetalleEntregaActivity2 -> com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.DetalleEntregaActivity2:
+    android.content.SharedPreferences prs -> t
+    android.support.v7.widget.RecyclerView detallesRecyclerview -> q
+    android.app.ProgressDialog progressDoalog -> u
+    android.widget.ImageView imageViewFondoDetallesEntrega -> r
+    android.widget.LinearLayout linear_layout_filtro_detalle -> s
+    void LlenarRecyclerView(java.util.List) -> a
+    android.app.ProgressDialog access$000(com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.DetalleEntregaActivity2) -> a
+    void access$100(com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.DetalleEntregaActivity2,java.util.List) -> a
+    void ValidarEstatusActualEntrega(java.util.List) -> b
+    void access$200(com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.DetalleEntregaActivity2,java.util.List) -> b
+    void RecogerEstatusEntrega() -> l
+    void ObtenerDetalleEntrega() -> m
+    void inicializador() -> n
+com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.DetalleEntregaActivity2$1 -> com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.DetalleEntregaActivity2$a:
+    com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.DetalleEntregaActivity2 this$0 -> a
+    void onFailure(retrofit2.Call,java.lang.Throwable) -> a
+    void onResponse(retrofit2.Call,retrofit2.Response) -> a
+com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.DetalleEntregaActivity2$2 -> com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.DetalleEntregaActivity2$b:
+    com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.DetalleEntregaActivity2 this$0 -> a
+    void onFailure(retrofit2.Call,java.lang.Throwable) -> a
+    void onResponse(retrofit2.Call,retrofit2.Response) -> a
+com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.EncuestaActivity -> com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.EncuestaActivity:
+    android.widget.ImageView btn_contento_encuesta_pregunta2 -> x
+    android.widget.ImageView btn_triste_encuesta_pregunta1 -> v
+    android.widget.ImageView btn_feliz_encuesta_pregunta3 -> z
+    java.lang.String vendedor -> O
+    java.lang.String material -> Q
+    android.widget.ImageView btn_contento_encuesta_pregunta4 -> D
+    java.lang.String aplicacion -> S
+    android.widget.ImageView btn_triste_encuesta_pregunta3 -> B
+    android.widget.ImageView img_completado_encuesta_pregunta2 -> H
+    android.widget.ImageView img_completado_encuesta_pregunta0 -> F
+    android.widget.ImageView img_completado_encuesta_pregunta4 -> J
+    int contadorPreguntas -> V
+    android.widget.ImageView btn_feliz_encuesta_pregunta0 -> q
+    android.widget.ImageView btn_contento_encuesta_pregunta1 -> u
+    android.widget.TextView txt_finalizacion_encuesta -> M
+    android.widget.ImageView btn_triste_encuesta_pregunta0 -> s
+    android.content.SharedPreferences prs -> T
+    android.widget.ImageView btn_triste_encuesta_pregunta2 -> y
+    android.widget.TextView txt_descripcion_encuesta -> N
+    android.widget.ImageView btn_feliz_encuesta_pregunta2 -> w
+    android.support.v7.widget.GridLayout gridlayout_encuesta -> L
+    android.widget.ImageView btn_contento_encuesta_pregunta3 -> A
+    java.lang.String chofer -> P
+    android.widget.ImageView btn_triste_encuesta_pregunta4 -> E
+    java.lang.String tiempo -> R
+    android.widget.ImageView btn_feliz_encuesta_pregunta4 -> C
+    android.widget.ImageView img_completado_encuesta_pregunta3 -> I
+    android.widget.ImageView img_completado_encuesta_pregunta1 -> G
+    android.widget.ImageView imagen_fondo_detalles_encuesta -> K
+    android.os.Vibrator v -> U
+    android.widget.ImageView btn_feliz_encuesta_pregunta1 -> t
+    android.widget.ImageView btn_contento_encuesta_pregunta0 -> r
+    void ValidarEstatusActualEntrega(java.util.List) -> a
+    java.lang.String access$002(com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.EncuestaActivity,java.lang.String) -> a
+    void access$100(com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.EncuestaActivity,int) -> a
+    void access$600(com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.EncuestaActivity,java.util.List) -> a
+    java.lang.String access$202(com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.EncuestaActivity,java.lang.String) -> b
+    void EfectoPregunta(int) -> c
+    java.lang.String access$302(com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.EncuestaActivity,java.lang.String) -> c
+    java.lang.String access$402(com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.EncuestaActivity,java.lang.String) -> d
+    java.lang.String access$502(com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.EncuestaActivity,java.lang.String) -> e
+    void EnviarEncuesta() -> l
+    void Inicializador() -> m
+    void RecogerEstatusEntrega() -> n
+    void ValidarContadorPreguntas() -> o
+com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.EncuestaActivity$1 -> com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.EncuestaActivity$i:
+    com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.EncuestaActivity this$0 -> b
+com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.EncuestaActivity$10 -> com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.EncuestaActivity$a:
+    com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.EncuestaActivity this$0 -> b
+com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.EncuestaActivity$11 -> com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.EncuestaActivity$b:
+    com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.EncuestaActivity this$0 -> b
+com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.EncuestaActivity$12 -> com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.EncuestaActivity$c:
+    com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.EncuestaActivity this$0 -> b
+com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.EncuestaActivity$13 -> com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.EncuestaActivity$d:
+    com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.EncuestaActivity this$0 -> b
+com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.EncuestaActivity$14 -> com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.EncuestaActivity$e:
+    com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.EncuestaActivity this$0 -> b
+com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.EncuestaActivity$15 -> com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.EncuestaActivity$f:
+    com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.EncuestaActivity this$0 -> b
+com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.EncuestaActivity$16 -> com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.EncuestaActivity$g:
+    com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.EncuestaActivity this$0 -> a
+    void onFailure(retrofit2.Call,java.lang.Throwable) -> a
+    void onResponse(retrofit2.Call,retrofit2.Response) -> a
+com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.EncuestaActivity$17 -> com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.EncuestaActivity$h:
+    com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.EncuestaActivity this$0 -> a
+    void onFailure(retrofit2.Call,java.lang.Throwable) -> a
+    void onResponse(retrofit2.Call,retrofit2.Response) -> a
+com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.EncuestaActivity$2 -> com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.EncuestaActivity$j:
+    com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.EncuestaActivity this$0 -> b
+com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.EncuestaActivity$3 -> com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.EncuestaActivity$k:
+    com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.EncuestaActivity this$0 -> b
+com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.EncuestaActivity$4 -> com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.EncuestaActivity$l:
+    com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.EncuestaActivity this$0 -> b
+com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.EncuestaActivity$5 -> com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.EncuestaActivity$m:
+    com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.EncuestaActivity this$0 -> b
+com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.EncuestaActivity$6 -> com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.EncuestaActivity$n:
+    com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.EncuestaActivity this$0 -> b
+com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.EncuestaActivity$7 -> com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.EncuestaActivity$o:
+    com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.EncuestaActivity this$0 -> b
+com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.EncuestaActivity$8 -> com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.EncuestaActivity$p:
+    com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.EncuestaActivity this$0 -> b
+com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.EncuestaActivity$9 -> com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.EncuestaActivity$q:
+    com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.EncuestaActivity this$0 -> b
+com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ErrorConexionActivity -> com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ErrorConexionActivity:
+    android.view.animation.Animation corazonAnimacion -> v
+    android.widget.ImageView error_conexion_simba_gracias -> q
+    int contador -> w
+    android.widget.ImageView error_conexion_corazon_simba -> t
+    android.widget.ImageView error_conexion_corazon_amarillo_simba -> u
+    android.widget.ImageView error_conexion_simba_cola -> r
+    android.widget.ImageView error_conexion_simba -> s
+    int access$000(com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ErrorConexionActivity) -> a
+    int access$002(com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ErrorConexionActivity,int) -> a
+    android.view.animation.Animation access$202(com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ErrorConexionActivity,android.view.animation.Animation) -> a
+    android.widget.ImageView access$100(com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ErrorConexionActivity) -> b
+    android.view.animation.Animation access$200(com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ErrorConexionActivity) -> c
+    android.widget.ImageView access$300(com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ErrorConexionActivity) -> d
+    android.widget.ImageView access$400(com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ErrorConexionActivity) -> e
+    android.widget.ImageView access$500(com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ErrorConexionActivity) -> f
+    void IniciadorView() -> l
+com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ErrorConexionActivity$1 -> com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ErrorConexionActivity$a:
+    com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ErrorConexionActivity this$0 -> b
+com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ErrorConexionActivity$2 -> com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ErrorConexionActivity$b:
+    com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ErrorConexionActivity this$0 -> b
+com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ErrorConexionActivity$2$1 -> com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ErrorConexionActivity$b$a:
+    com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ErrorConexionActivity$2 this$1 -> b
+com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.FirmaSistemasActivity -> com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.FirmaSistemasActivity:
+    android.widget.ImageView firma_verde1_simba -> x
+    android.view.animation.Animation creditosAnimacion -> E
+    android.widget.ImageView firma_verde0_simba -> y
+    android.widget.FrameLayout firma_layoout_filtro_credito -> G
+    android.widget.ImageView firma_rojo1_simba -> v
+    android.widget.ImageView firma_rojo0_simba -> w
+    android.view.animation.Animation numero1Animacion -> B
+    android.widget.ImageView firma_amarillo1_simba -> z
+    android.view.animation.Animation numero0Animacion -> C
+    int contador -> H
+    android.view.animation.Animation cola_simbaAnimacion -> D
+    android.widget.ImageView firma_amarillo0_simba -> A
+    android.widget.LinearLayout firma_linearlayout_creditos -> F
+    android.widget.ImageView firma_simba_cola -> q
+    android.widget.ImageView firma_azul0_simba -> t
+    android.widget.ImageView firma_azul1_simba -> u
+    android.widget.ImageView firma_simba -> r
+    android.widget.ImageView firma_simba_gracias -> s
+    android.support.design.widget.FloatingActionButton btn_fab_creditos -> I
+    void access$000(com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.FirmaSistemasActivity) -> a
+    int access$202(com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.FirmaSistemasActivity,int) -> a
+    void access$100(com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.FirmaSistemasActivity) -> b
+    android.widget.ImageView access$300(com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.FirmaSistemasActivity) -> c
+    android.widget.FrameLayout access$400(com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.FirmaSistemasActivity) -> d
+    android.support.design.widget.FloatingActionButton access$500(com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.FirmaSistemasActivity) -> e
+    void AnimacionCreditos() -> l
+    void AnimacionSimba() -> m
+    void IniciadorView() -> n
+com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.FirmaSistemasActivity$1 -> com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.FirmaSistemasActivity$a:
+    com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.FirmaSistemasActivity this$0 -> b
+com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.FirmaSistemasActivity$2 -> com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.FirmaSistemasActivity$b:
+    com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.FirmaSistemasActivity this$0 -> b
+com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.FirmaSistemasActivity$3 -> com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.FirmaSistemasActivity$c:
+    com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.FirmaSistemasActivity this$0 -> b
+com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.FirmaSistemasActivity$4 -> com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.FirmaSistemasActivity$d:
+    com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.FirmaSistemasActivity this$0 -> b
+com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ProgresoEntregaActivity -> com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ProgresoEntregaActivity:
     android.widget.ImageView imagen_progress_bar -> x
     android.widget.ImageView imagen_mano_click2 -> z
     boolean ofertas -> V
@@ -10559,148 +10602,106 @@ com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity -> c
     android.widget.ImageView foto_camion_entrega -> Q
     android.widget.TextView placas_camion -> H
     void ReenviarFactura() -> A
-    void access$900(com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity) -> A
+    void access$900(com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ProgresoEntregaActivity) -> A
     void ValidarVerOfertas() -> B
     void remover_variables_sharedpreference() -> C
     void LlenarRecyclerView(java.util.List) -> a
-    android.os.Vibrator access$000(com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity) -> a
-    android.view.animation.Animation access$1302(com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity,android.view.animation.Animation) -> a
-    void access$2100(com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity,java.util.List) -> a
-    boolean access$702(com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity,boolean) -> a
+    android.os.Vibrator access$000(com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ProgresoEntregaActivity) -> a
+    android.view.animation.Animation access$1302(com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ProgresoEntregaActivity,android.view.animation.Animation) -> a
+    void access$2100(com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ProgresoEntregaActivity,java.util.List) -> a
+    boolean access$702(com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ProgresoEntregaActivity,boolean) -> a
     void ValidarEstatusActualEntrega(java.util.List) -> b
-    void access$100(com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity) -> b
-    android.view.animation.Animation access$1402(com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity,android.view.animation.Animation) -> b
-    void access$2300(com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity,java.util.List) -> b
-    void access$1000(com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity) -> c
-    android.widget.Button access$1100(com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity) -> d
-    android.widget.ImageView access$1200(com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity) -> e
-    android.view.animation.Animation access$1300(com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity) -> f
-    android.view.animation.Animation access$1400(com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity) -> g
-    android.widget.ImageView access$1500(com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity) -> h
-    android.widget.ImageView access$1600(com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity) -> i
-    android.app.ProgressDialog access$1700(com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity) -> j
-    android.widget.TextView access$1800(com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity) -> k
+    void access$100(com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ProgresoEntregaActivity) -> b
+    android.view.animation.Animation access$1402(com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ProgresoEntregaActivity,android.view.animation.Animation) -> b
+    void access$2300(com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ProgresoEntregaActivity,java.util.List) -> b
+    void access$1000(com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ProgresoEntregaActivity) -> c
+    android.widget.Button access$1100(com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ProgresoEntregaActivity) -> d
+    android.widget.ImageView access$1200(com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ProgresoEntregaActivity) -> e
+    android.view.animation.Animation access$1300(com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ProgresoEntregaActivity) -> f
+    android.view.animation.Animation access$1400(com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ProgresoEntregaActivity) -> g
+    android.widget.ImageView access$1500(com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ProgresoEntregaActivity) -> h
+    android.widget.ImageView access$1600(com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ProgresoEntregaActivity) -> i
+    android.app.ProgressDialog access$1700(com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ProgresoEntregaActivity) -> j
+    android.widget.TextView access$1800(com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ProgresoEntregaActivity) -> k
     void AbrirHistoricoProcesoEntrega() -> l
-    android.widget.TextView access$1900(com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity) -> l
+    android.widget.TextView access$1900(com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ProgresoEntregaActivity) -> l
     void AbrirMenuUsuario() -> m
-    void access$200(com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity) -> m
+    void access$200(com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ProgresoEntregaActivity) -> m
     void BloquearBotones() -> n
-    android.widget.ImageView access$2000(com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity) -> n
+    android.widget.ImageView access$2000(com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ProgresoEntregaActivity) -> n
     void Desbloquearbotones() -> o
-    void access$2200(com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity) -> o
+    void access$2200(com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ProgresoEntregaActivity) -> o
     void Inicializador() -> p
-    android.widget.Button access$2400(com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity) -> p
+    android.widget.Button access$2400(com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ProgresoEntregaActivity) -> p
     void MostrarDialogCustomFactura() -> q
-    boolean access$2500(com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity) -> q
+    boolean access$2500(com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ProgresoEntregaActivity) -> q
     void MostrarDialogCustomOfertas() -> r
-    boolean access$2600(com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity) -> r
+    boolean access$2600(com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ProgresoEntregaActivity) -> r
     void MostrarHistorico() -> s
-    void access$2700(com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity) -> s
+    void access$2700(com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ProgresoEntregaActivity) -> s
     void MostrarMenu() -> t
-    void access$2800(com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity) -> t
+    void access$2800(com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ProgresoEntregaActivity) -> t
     void MostrarTutorial() -> u
-    android.view.GestureDetector access$300(com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity) -> u
+    android.view.GestureDetector access$300(com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ProgresoEntregaActivity) -> u
     void NuevaVentanaAcuseRecibo() -> v
-    void access$400(com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity) -> v
+    void access$400(com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ProgresoEntregaActivity) -> v
     void OcultarHistorico() -> w
-    void access$500(com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity) -> w
+    void access$500(com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ProgresoEntregaActivity) -> w
     void OcultarMenu() -> x
-    void access$600(com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity) -> x
+    void access$600(com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ProgresoEntregaActivity) -> x
     void RecogerEstatusEntrega() -> y
-    boolean access$700(com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity) -> y
+    boolean access$700(com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ProgresoEntregaActivity) -> y
     void RecogerHistorialEntrega() -> z
-    void access$800(com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity) -> z
-com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity$1 -> com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity$i:
-    com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity this$0 -> b
-com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity$10 -> com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity$a:
-    com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity this$0 -> c
+    void access$800(com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ProgresoEntregaActivity) -> z
+com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ProgresoEntregaActivity$1 -> com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ProgresoEntregaActivity$i:
+    com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ProgresoEntregaActivity this$0 -> b
+com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ProgresoEntregaActivity$10 -> com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ProgresoEntregaActivity$a:
+    com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ProgresoEntregaActivity this$0 -> c
     android.support.v7.app.AlertDialog val$alertDialog -> b
-com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity$11 -> com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity$b:
-    com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity this$0 -> c
+com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ProgresoEntregaActivity$11 -> com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ProgresoEntregaActivity$b:
+    com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ProgresoEntregaActivity this$0 -> c
     android.support.v7.app.AlertDialog val$alertDialog -> b
-com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity$12 -> com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity$c:
-    com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity this$0 -> c
+com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ProgresoEntregaActivity$12 -> com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ProgresoEntregaActivity$c:
+    com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ProgresoEntregaActivity this$0 -> c
     android.support.v7.app.AlertDialog val$alertDialog -> b
-com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity$13 -> com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity$d:
-    com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity this$0 -> a
-com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity$14 -> com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity$e:
-    com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity this$0 -> a
+com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ProgresoEntregaActivity$13 -> com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ProgresoEntregaActivity$d:
+    com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ProgresoEntregaActivity this$0 -> a
+com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ProgresoEntregaActivity$14 -> com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ProgresoEntregaActivity$e:
+    com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ProgresoEntregaActivity this$0 -> a
     void onFailure(retrofit2.Call,java.lang.Throwable) -> a
     void onResponse(retrofit2.Call,retrofit2.Response) -> a
-com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity$15 -> com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity$f:
-    com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity this$0 -> a
+com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ProgresoEntregaActivity$15 -> com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ProgresoEntregaActivity$f:
+    com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ProgresoEntregaActivity this$0 -> a
     void onFailure(retrofit2.Call,java.lang.Throwable) -> a
     void onResponse(retrofit2.Call,retrofit2.Response) -> a
-com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity$16 -> com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity$g:
-    com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity this$0 -> a
+com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ProgresoEntregaActivity$16 -> com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ProgresoEntregaActivity$g:
+    com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ProgresoEntregaActivity this$0 -> a
     void onFailure(retrofit2.Call,java.lang.Throwable) -> a
     void onResponse(retrofit2.Call,retrofit2.Response) -> a
-com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity$17 -> com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity$h:
-    com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity this$0 -> a
+com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ProgresoEntregaActivity$17 -> com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ProgresoEntregaActivity$h:
+    com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ProgresoEntregaActivity this$0 -> a
     void onFailure(retrofit2.Call,java.lang.Throwable) -> a
     void onResponse(retrofit2.Call,retrofit2.Response) -> a
-com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity$2 -> com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity$j:
-    com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity this$0 -> b
-com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity$3 -> com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity$k:
-    com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity this$0 -> b
-com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity$4 -> com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity$l:
-    com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity this$0 -> b
-com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity$5 -> com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity$m:
-    com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity this$0 -> b
-com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity$6 -> com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity$n:
-    com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity this$0 -> b
-com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity$7 -> com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity$o:
-    com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity this$0 -> b
-com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity$8 -> com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity$p:
-    com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity this$0 -> b
-com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity$9 -> com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity$q:
-    com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity this$0 -> c
+com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ProgresoEntregaActivity$2 -> com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ProgresoEntregaActivity$j:
+    com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ProgresoEntregaActivity this$0 -> b
+com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ProgresoEntregaActivity$3 -> com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ProgresoEntregaActivity$k:
+    com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ProgresoEntregaActivity this$0 -> b
+com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ProgresoEntregaActivity$4 -> com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ProgresoEntregaActivity$l:
+    com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ProgresoEntregaActivity this$0 -> b
+com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ProgresoEntregaActivity$5 -> com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ProgresoEntregaActivity$m:
+    com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ProgresoEntregaActivity this$0 -> b
+com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ProgresoEntregaActivity$6 -> com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ProgresoEntregaActivity$n:
+    com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ProgresoEntregaActivity this$0 -> b
+com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ProgresoEntregaActivity$7 -> com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ProgresoEntregaActivity$o:
+    com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ProgresoEntregaActivity this$0 -> b
+com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ProgresoEntregaActivity$8 -> com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ProgresoEntregaActivity$p:
+    com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ProgresoEntregaActivity this$0 -> b
+com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ProgresoEntregaActivity$9 -> com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ProgresoEntregaActivity$q:
+    com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ProgresoEntregaActivity this$0 -> c
     android.support.v7.app.AlertDialog val$alertDialog -> b
-com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity$GestureListener -> com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity$r:
-    com.acerosocotlan.progresoacerosocotlan.Controlador.ProgresoEntregaActivity this$0 -> b
-com.acerosocotlan.progresoacerosocotlan.Controlador.Splash -> com.acerosocotlan.progresoacerosocotlan.Controlador.Splash:
-    void CargarActivity() -> l
-com.acerosocotlan.progresoacerosocotlan.Controlador.Splash$1 -> com.acerosocotlan.progresoacerosocotlan.Controlador.Splash$a:
-    com.acerosocotlan.progresoacerosocotlan.Controlador.Splash this$0 -> b
-com.acerosocotlan.progresoacerosocotlan.Controlador.Sucuarsales.AdapterRecyclerViewSucursales -> com.acerosocotlan.progresoacerosocotlan.Controlador.Sucuarsales.a:
-    android.app.Activity activity -> e
-    java.util.List sucursalesList -> c
-    int resource -> d
-    android.app.Activity access$300(com.acerosocotlan.progresoacerosocotlan.Controlador.Sucuarsales.AdapterRecyclerViewSucursales) -> a
-    int getItemCount() -> a
-    void onBindViewHolder(com.acerosocotlan.progresoacerosocotlan.Controlador.Sucuarsales.AdapterRecyclerViewSucursales$AdapterRecyclerViewSucursalesHolder,int) -> a
-    void onBindViewHolder(android.support.v7.widget.RecyclerView$ViewHolder,int) -> b
-    android.support.v7.widget.RecyclerView$ViewHolder onCreateViewHolder(android.view.ViewGroup,int) -> b
-    com.acerosocotlan.progresoacerosocotlan.Controlador.Sucuarsales.AdapterRecyclerViewSucursales$AdapterRecyclerViewSucursalesHolder onCreateViewHolder(android.view.ViewGroup,int) -> b
-com.acerosocotlan.progresoacerosocotlan.Controlador.Sucuarsales.AdapterRecyclerViewSucursales$1 -> com.acerosocotlan.progresoacerosocotlan.Controlador.Sucuarsales.a$a:
-    com.acerosocotlan.progresoacerosocotlan.Controlador.Sucuarsales.Sucursales val$sucursales -> b
-    com.acerosocotlan.progresoacerosocotlan.Controlador.Sucuarsales.AdapterRecyclerViewSucursales this$0 -> c
-com.acerosocotlan.progresoacerosocotlan.Controlador.Sucuarsales.AdapterRecyclerViewSucursales$AdapterRecyclerViewSucursalesHolder -> com.acerosocotlan.progresoacerosocotlan.Controlador.Sucuarsales.a$b:
-    android.widget.TextView sucursal_estado -> u
-    android.widget.TextView sucursal_disponible -> t
-    android.widget.TextView sucursal_direccion -> v
-    android.support.v7.widget.CardView cardview_sucursales_disponibles -> w
-    android.widget.TextView access$000(com.acerosocotlan.progresoacerosocotlan.Controlador.Sucuarsales.AdapterRecyclerViewSucursales$AdapterRecyclerViewSucursalesHolder) -> a
-    android.widget.TextView access$100(com.acerosocotlan.progresoacerosocotlan.Controlador.Sucuarsales.AdapterRecyclerViewSucursales$AdapterRecyclerViewSucursalesHolder) -> b
-    android.widget.TextView access$200(com.acerosocotlan.progresoacerosocotlan.Controlador.Sucuarsales.AdapterRecyclerViewSucursales$AdapterRecyclerViewSucursalesHolder) -> c
-    android.support.v7.widget.CardView access$400(com.acerosocotlan.progresoacerosocotlan.Controlador.Sucuarsales.AdapterRecyclerViewSucursales$AdapterRecyclerViewSucursalesHolder) -> d
-com.acerosocotlan.progresoacerosocotlan.Controlador.Sucuarsales.MenuSucursales -> com.acerosocotlan.progresoacerosocotlan.Controlador.Sucuarsales.MenuSucursales:
-    android.widget.ImageView btn_localizar_sucursal -> q
-    android.widget.ImageView btn_sucursales_disponibles -> r
-com.acerosocotlan.progresoacerosocotlan.Controlador.Sucuarsales.Sucursales -> com.acerosocotlan.progresoacerosocotlan.Controlador.Sucuarsales.b:
-    java.lang.String sucursales -> c
-    java.lang.String estado -> b
-    int id_sucursales -> a
-    java.lang.String direccion -> d
-    java.lang.String getDireccion() -> a
-    java.lang.String getEstado() -> b
-    java.lang.String getSucursales() -> c
-com.acerosocotlan.progresoacerosocotlan.Controlador.Sucuarsales.SucursalesDisponibles -> com.acerosocotlan.progresoacerosocotlan.Controlador.Sucuarsales.SucursalesDisponibles:
-    android.support.v7.widget.RecyclerView recyclerview_sucursales_disponibles -> r
-    com.acerosocotlan.progresoacerosocotlan.Controlador.Sucuarsales.Sucursales sucursales -> q
-    java.util.List sucursalesList -> s
-    java.util.List cargarSucursales() -> l
-com.acerosocotlan.progresoacerosocotlan.Controlador.VerOferta -> com.acerosocotlan.progresoacerosocotlan.Controlador.VerOferta:
+com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ProgresoEntregaActivity$GestureListener -> com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ProgresoEntregaActivity$r:
+    com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.ProgresoEntregaActivity this$0 -> b
+com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.VerOferta -> com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.VerOferta:
     android.widget.ImageView imagen_touch_mano_ver_ofertas_azul -> v
     android.support.v7.widget.RecyclerView ofertasRecyclerView -> s
     android.widget.ImageView imagen_touch_mano_ver_ofertas_verde -> w
@@ -10714,61 +10715,83 @@ com.acerosocotlan.progresoacerosocotlan.Controlador.VerOferta -> com.acerosocotl
     android.app.ProgressDialog progressDoalog -> z
     void LlenarRecyclerView(java.util.List) -> a
     void RealizarLLamada(java.lang.String) -> a
-    void access$000(com.acerosocotlan.progresoacerosocotlan.Controlador.VerOferta) -> a
-    void access$1000(com.acerosocotlan.progresoacerosocotlan.Controlador.VerOferta,java.lang.String) -> a
-    void access$200(com.acerosocotlan.progresoacerosocotlan.Controlador.VerOferta,java.util.List) -> a
+    void access$000(com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.VerOferta) -> a
+    void access$1000(com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.VerOferta,java.lang.String) -> a
+    void access$200(com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.VerOferta,java.util.List) -> a
     void ValidarEstatusActualEntrega(java.util.List) -> b
-    android.app.ProgressDialog access$100(com.acerosocotlan.progresoacerosocotlan.Controlador.VerOferta) -> b
-    void access$700(com.acerosocotlan.progresoacerosocotlan.Controlador.VerOferta,java.util.List) -> b
-    android.widget.ImageView access$300(com.acerosocotlan.progresoacerosocotlan.Controlador.VerOferta) -> c
-    android.view.animation.Animation access$400(com.acerosocotlan.progresoacerosocotlan.Controlador.VerOferta) -> d
-    android.widget.ImageView access$500(com.acerosocotlan.progresoacerosocotlan.Controlador.VerOferta) -> e
-    void access$600(com.acerosocotlan.progresoacerosocotlan.Controlador.VerOferta) -> f
-    android.os.Vibrator access$800(com.acerosocotlan.progresoacerosocotlan.Controlador.VerOferta) -> g
-    void access$900(com.acerosocotlan.progresoacerosocotlan.Controlador.VerOferta) -> h
+    android.app.ProgressDialog access$100(com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.VerOferta) -> b
+    void access$700(com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.VerOferta,java.util.List) -> b
+    android.widget.ImageView access$300(com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.VerOferta) -> c
+    android.view.animation.Animation access$400(com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.VerOferta) -> d
+    android.widget.ImageView access$500(com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.VerOferta) -> e
+    void access$600(com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.VerOferta) -> f
+    android.os.Vibrator access$800(com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.VerOferta) -> g
+    void access$900(com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.VerOferta) -> h
     void Inicializador() -> l
     void MostrarDialogCustomLLamada() -> m
     void MostrarDialogCustomSinOfertas() -> n
     void ObtenerOfertas() -> o
     void RecogerEstatusEntrega() -> p
     void SolicitarTelefono() -> q
-com.acerosocotlan.progresoacerosocotlan.Controlador.VerOferta$1 -> com.acerosocotlan.progresoacerosocotlan.Controlador.VerOferta$f:
-    com.acerosocotlan.progresoacerosocotlan.Controlador.VerOferta this$0 -> b
-com.acerosocotlan.progresoacerosocotlan.Controlador.VerOferta$10 -> com.acerosocotlan.progresoacerosocotlan.Controlador.VerOferta$a:
-    com.acerosocotlan.progresoacerosocotlan.Controlador.VerOferta this$0 -> a
+com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.VerOferta$1 -> com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.VerOferta$f:
+    com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.VerOferta this$0 -> b
+com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.VerOferta$10 -> com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.VerOferta$a:
+    com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.VerOferta this$0 -> a
     void onFailure(retrofit2.Call,java.lang.Throwable) -> a
     void onResponse(retrofit2.Call,retrofit2.Response) -> a
-com.acerosocotlan.progresoacerosocotlan.Controlador.VerOferta$11 -> com.acerosocotlan.progresoacerosocotlan.Controlador.VerOferta$b:
-    com.acerosocotlan.progresoacerosocotlan.Controlador.VerOferta this$0 -> c
+com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.VerOferta$11 -> com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.VerOferta$b:
+    com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.VerOferta this$0 -> c
     android.support.v7.app.AlertDialog val$alertDialog -> b
-com.acerosocotlan.progresoacerosocotlan.Controlador.VerOferta$12 -> com.acerosocotlan.progresoacerosocotlan.Controlador.VerOferta$c:
-    com.acerosocotlan.progresoacerosocotlan.Controlador.VerOferta this$0 -> c
+com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.VerOferta$12 -> com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.VerOferta$c:
+    com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.VerOferta this$0 -> c
     android.support.v7.app.AlertDialog val$alertDialog -> b
-com.acerosocotlan.progresoacerosocotlan.Controlador.VerOferta$13 -> com.acerosocotlan.progresoacerosocotlan.Controlador.VerOferta$d:
-    com.acerosocotlan.progresoacerosocotlan.Controlador.VerOferta this$0 -> c
+com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.VerOferta$13 -> com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.VerOferta$d:
+    com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.VerOferta this$0 -> c
     android.support.v7.app.AlertDialog val$alertDialog -> b
-com.acerosocotlan.progresoacerosocotlan.Controlador.VerOferta$14 -> com.acerosocotlan.progresoacerosocotlan.Controlador.VerOferta$e:
-    com.acerosocotlan.progresoacerosocotlan.Controlador.VerOferta this$0 -> a
+com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.VerOferta$14 -> com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.VerOferta$e:
+    com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.VerOferta this$0 -> a
     void onFailure(retrofit2.Call,java.lang.Throwable) -> a
     void onResponse(retrofit2.Call,retrofit2.Response) -> a
-com.acerosocotlan.progresoacerosocotlan.Controlador.VerOferta$2 -> com.acerosocotlan.progresoacerosocotlan.Controlador.VerOferta$g:
-    com.acerosocotlan.progresoacerosocotlan.Controlador.VerOferta this$0 -> a
+com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.VerOferta$2 -> com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.VerOferta$g:
+    com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.VerOferta this$0 -> a
     void onFailure(retrofit2.Call,java.lang.Throwable) -> a
     void onResponse(retrofit2.Call,retrofit2.Response) -> a
-com.acerosocotlan.progresoacerosocotlan.Controlador.VerOferta$3 -> com.acerosocotlan.progresoacerosocotlan.Controlador.VerOferta$h:
-    com.acerosocotlan.progresoacerosocotlan.Controlador.VerOferta this$0 -> b
-com.acerosocotlan.progresoacerosocotlan.Controlador.VerOferta$4 -> com.acerosocotlan.progresoacerosocotlan.Controlador.VerOferta$i:
-    com.acerosocotlan.progresoacerosocotlan.Controlador.VerOferta this$0 -> b
-com.acerosocotlan.progresoacerosocotlan.Controlador.VerOferta$5 -> com.acerosocotlan.progresoacerosocotlan.Controlador.VerOferta$j:
-    com.acerosocotlan.progresoacerosocotlan.Controlador.VerOferta this$0 -> b
-com.acerosocotlan.progresoacerosocotlan.Controlador.VerOferta$6 -> com.acerosocotlan.progresoacerosocotlan.Controlador.VerOferta$k:
-    com.acerosocotlan.progresoacerosocotlan.Controlador.VerOferta this$0 -> b
-com.acerosocotlan.progresoacerosocotlan.Controlador.VerOferta$7 -> com.acerosocotlan.progresoacerosocotlan.Controlador.VerOferta$l:
-    com.acerosocotlan.progresoacerosocotlan.Controlador.VerOferta this$0 -> b
-com.acerosocotlan.progresoacerosocotlan.Controlador.VerOferta$8 -> com.acerosocotlan.progresoacerosocotlan.Controlador.VerOferta$m:
-    com.acerosocotlan.progresoacerosocotlan.Controlador.VerOferta this$0 -> b
-com.acerosocotlan.progresoacerosocotlan.Controlador.VerOferta$9 -> com.acerosocotlan.progresoacerosocotlan.Controlador.VerOferta$n:
-    com.acerosocotlan.progresoacerosocotlan.Controlador.VerOferta this$0 -> b
+com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.VerOferta$3 -> com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.VerOferta$h:
+    com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.VerOferta this$0 -> b
+com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.VerOferta$4 -> com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.VerOferta$i:
+    com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.VerOferta this$0 -> b
+com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.VerOferta$5 -> com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.VerOferta$j:
+    com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.VerOferta this$0 -> b
+com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.VerOferta$6 -> com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.VerOferta$k:
+    com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.VerOferta this$0 -> b
+com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.VerOferta$7 -> com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.VerOferta$l:
+    com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.VerOferta this$0 -> b
+com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.VerOferta$8 -> com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.VerOferta$m:
+    com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.VerOferta this$0 -> b
+com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.VerOferta$9 -> com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.VerOferta$n:
+    com.acerosocotlan.progresoacerosocotlan.Controlador.RastreoPedido.VerOferta this$0 -> b
+com.acerosocotlan.progresoacerosocotlan.Controlador.Splash.Splash -> com.acerosocotlan.progresoacerosocotlan.Controlador.Splash.Splash:
+    void CargarActivity() -> l
+com.acerosocotlan.progresoacerosocotlan.Controlador.Splash.Splash$1 -> com.acerosocotlan.progresoacerosocotlan.Controlador.Splash.Splash$a:
+    com.acerosocotlan.progresoacerosocotlan.Controlador.Splash.Splash this$0 -> b
+com.acerosocotlan.progresoacerosocotlan.Controlador.Sucuarsales.MenuSucursales -> com.acerosocotlan.progresoacerosocotlan.Controlador.Sucuarsales.MenuSucursales:
+    android.support.v7.widget.CardView btn_sucursales_disponibles -> r
+    android.support.v7.widget.CardView btn_localizar_sucursal -> q
+    android.widget.ImageView fondo_menu_sucursales -> s
+    void iniciador() -> l
+com.acerosocotlan.progresoacerosocotlan.Controlador.Sucuarsales.Sucursales -> com.acerosocotlan.progresoacerosocotlan.Controlador.Sucuarsales.a:
+    java.lang.String estado -> a
+    java.lang.String direccion -> c
+    java.lang.String sucursales -> b
+    java.lang.String getDireccion() -> a
+    java.lang.String getEstado() -> b
+    java.lang.String getSucursales() -> c
+com.acerosocotlan.progresoacerosocotlan.Controlador.Sucuarsales.SucursalesDisponibles -> com.acerosocotlan.progresoacerosocotlan.Controlador.Sucuarsales.SucursalesDisponibles:
+    android.support.v7.widget.RecyclerView recyclerview_sucursales_disponibles -> r
+    com.acerosocotlan.progresoacerosocotlan.Controlador.Sucuarsales.Sucursales sucursales -> q
+    java.util.List sucursalesList -> s
+    java.util.List cargarSucursales() -> l
+    void iniciador() -> m
 com.acerosocotlan.progresoacerosocotlan.Modelo.AcuseRecibo_retrofit -> b.a.a.b.a:
     java.lang.String resp -> a
     java.lang.String getResp() -> a
